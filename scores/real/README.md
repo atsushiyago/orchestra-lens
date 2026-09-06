@@ -20,3 +20,8 @@ Retrieved on 2026-09-06 for offline parser validation. The generated file
 `src/data/generated/brahms-op68-movement4-manifest.json` is derived directly
 from this MusicXML file by `tools/generateScoreManifest.ts` without manual
 editing.
+
+`Brahms_Op68_Movement4_positions.csv` is the CC0 score-position table from the
+same upstream score. It maps each score qstamp to a measure and beat, and is
+used only to validate the coordinate mapping for the separately licensed
+Hauptstimme annotations in `hauptstimme/`.

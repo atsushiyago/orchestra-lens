@@ -102,8 +102,10 @@ The data flow deliberately keeps automatic facts apart from editorial choices:
 ```text
 MusicXML → automatic objective analysis → full generated score manifest
                                         → compact runtime score facts ─┐
-curated musical interpretation ────────────────────────────────────────┼→ merged runtime cue → Fire TV presentation
-                                                                         ┘
+                                                                         │
+Hauptstimme annotations → human-authored main-voice evidence ───────────┼→ eventual Smart Score selection
+                                                                         │
+curated Orchestra Lens interpretation → presentation semantics ─────────┘
 ```
 
 `generate:runtime-score-facts` selects only m.30, m.47, m.62, m.285, and
@@ -124,6 +126,28 @@ remain in `src/data/orchestraXRay.ts` and `src/data/themeLens.ts`; the
 generator never writes or overwrites them. Labels such as “Main Theme,”
 “Alphorn Theme,” and “Climactic Return” are human-authored, and active source
 parts never automatically add rows to Score Peek.
+
+### Hauptstimme main-voice evidence
+
+Hauptstimme annotations are a third, distinct layer: published human
+judgements of the prominent melodic part. They are **CC BY-SA**, whereas the
+OpenScore Orchestra score and position data are **CC0**. Their source files,
+attribution, license separation, and the inspected-but-unused melody MXL are
+documented in [`scores/real/hauptstimme/README.md`](scores/real/hauptstimme/README.md).
+
+```sh
+npm run generate:hauptstimme-evidence -- \
+  ./scores/real/hauptstimme/Brahms_Op68_Movement4_annotations.csv \
+  ./scores/real/Brahms_Op68_Movement4_positions.csv
+```
+
+The command generates `src/data/generated/hauptstimmeEvidence.json`. It
+validates every annotation qstamp against the score-position table and treats
+each annotation as a half-open span ending at the next distinct annotation
+qstamp. `src/data/hauptstimmeEvidence.ts` can then answer which annotated part
+is active at a measure's first score qstamp. It is intentionally not imported
+by the Fire TV UI: annotation evidence neither changes Smart Score rows nor
+replaces curated roles or Theme Lens relationships in this milestone.
 
 ### Real-score validation
 
@@ -160,10 +184,14 @@ it has not been connected to the Fire TV app or used to alter curated roles.
   score assets and presentation.
 - `src/data/runtimeCue.ts` merges compact generated score facts with curated
   score selection, Orchestra X-Ray roles, and Theme Lens relationships.
+- `src/data/hauptstimmeEvidence.ts` queries generated CC BY-SA main-voice
+  evidence without changing presentation or curated interpretation.
 - `src/data/brahms1Movement4.ts` contains the demo cue timeline.
 - `tools/generateScoreManifest.ts` parses MusicXML into objective offline score
   facts; `tools/generateRuntimeScoreFacts.ts` extracts the compact data used at
   runtime.
+- `tools/generateHauptstimmeEvidence.ts` validates Hauptstimme qstamps against
+  score positions and produces human-authored main-voice evidence.
 - `src/assets/` contains the cropped public-domain notation excerpts.
 - `test/synchronization.test.ts` covers cue selection, player-control behavior,
   and resolution of Smart Score and Theme Lens data.
