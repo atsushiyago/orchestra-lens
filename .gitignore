@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Vega / React Native build products
+build/
+bundle/
+generated/
+*.vpkg
+*.vpk
+buildinfo.json
+
+# Generated local media and runtime diagnostics
+assets/demo*.mp4
+playback-vvd.log
+VERIFICATION.md
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and machine-local configuration
+.env
+.env.*
+!.env.example
+*.local
+.npmrc
+.netrc
+*.pem
+*.key
+*.p12
+
+# Temporary files and editor state
+.DS_Store
+.cache/
+.tmp/
+tmp/
+temp/
+coverage/
+.vscode/
+.idea/
+*.swp
+*~

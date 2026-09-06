@@ -1,0 +1,73 @@
+schema-version = 1
+[package]
+id = "com.orchestralens.prototype"
+title = "Orchestra Lens"
+version = "0.1.7"
+icon = "@image/OrchestraLens.png"
+[os.version]
+min = "1.2"
+target = "1.2"
+[components]
+[[components.interactive]]
+id = "com.orchestralens.prototype.main"
+runtime-module = "/com.amazon.kepler.runtime.react_native_kepler_4@IReactNativeKepler_0"
+categories = ["com.amazon.category.main"]
+launch-type = "singleton"
+[wants]
+[[wants.service]]
+id = "com.amazon.media.server"
+[[wants.service]]
+id = "com.amazon.mediametrics.service"
+[[wants.service]]
+id = "com.amazon.inputd.service"
+[[wants.service]]
+id = "com.amazon.media.playersession.service"
+[[wants.service]]
+id = "com.amazon.mediabuffer.service"
+[[wants.service]]
+id = "com.amazon.mediatransform.service"
+[[wants.service]]
+id = "com.amazon.gipc.uuid.*"
+[[wants.service]]
+id = "com.amazon.audio.stream"
+[[wants.service]]
+id = "com.amazon.audio.control"
+[[wants.service]]
+id = "com.amazon.audio.system"
+[[wants.service]]
+id = "com.amazon.network.service"
+[needs]
+[[needs.privilege]]
+id = "com.amazon.network.privilege.net-info"
+[[needs.privilege]]
+id = "com.amazon.media.secureplayback"
+[[needs.module]]
+id = "/com.amazon.vega.os@IVega_1_2"
+
+[[needs.module]]
+id = "/com.amazon.kepler.kepler_media_controls_1@IKeplerMediaControls_0"
+
+[[needs.module]]
+id = "/com.amazon.kepler.keplermediadescriptor_1@IKeplermediadescriptor_1"
+
+[[needs.module]]
+id = "/com.amazon.kepler.keplerscript_4@IKeplerScript_0"
+
+[[needs.module]]
+id = "/com.amazon.kepler.w3cmedia_2@IW3cmedia_3"
+
+
+
+
+[offers]
+[[offers.service]]
+id = "com.amazon.gipc.uuid.*"
+[[offers.interaction]]
+id = "com.orchestralens.prototype.main"
+[[offers.module]]
+id = "/com.orchestralens.prototype.main@IMod1"
+includes-messages = ["pkg://com.orchestralens.prototype.main"]
+[[message]]
+uri = "pkg://com.orchestralens.prototype.main"
+sender-privileges = ["*"]
+receiver-privileges = ["self"]

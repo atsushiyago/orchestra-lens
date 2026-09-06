@@ -1,0 +1,40 @@
+{
+  "name": "orchestra-lens",
+  "version": "0.1.7",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "build:app": "react-native build-vega --build-type Release",
+    "start": "react-native start",
+    "demo:serve": "node scripts/serve-demo.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-native": "0.83.0",
+    "@amazon-devices/react-native-kepler": "~4.0.0+rn0.83.0",
+    "@amazon-devices/react-native-w3cmedia": "2.3.2"
+  },
+  "devDependencies": {
+    "@amazon-devices/kepler-cli-platform": "0.22.14",
+    "@react-native-community/cli": "^20.0.0",
+    "@react-native/babel-preset": "0.83.0",
+    "@react-native/metro-config": "0.83.0",
+    "@babel/core": "^7.25.2",
+    "@types/react": "^19.2.0",
+    "typescript": "5.8.3",
+    "tsx": "^4.20.0",
+    "@types/node": "^22.0.0"
+  },
+  "kepler": {
+    "projectType": "application",
+    "appName": "OrchestraLens",
+    "targets": [
+      "tv"
+    ],
+    "os": [
+      "vega"
+    ],
+    "api": 0.1
+  }
+}
