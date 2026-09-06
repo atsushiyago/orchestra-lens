@@ -18,6 +18,8 @@
   "include": [
     "src",
     "test",
-    "tools"
+    "tools",
+    "shared",
+    "backend/ask-the-score/src"
   ]
 }

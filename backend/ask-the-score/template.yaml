@@ -1,0 +1,59 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Orchestra Lens explicit Ask the Score backend.
+Parameters:
+  DemoAccessToken:
+    Type: String
+    NoEcho: true
+    MinLength: 32
+Resources:
+  AskTheScoreApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 2
+        ThrottlingRateLimit: 1
+      CorsConfiguration:
+        AllowMethods: [POST]
+        AllowHeaders: [Content-Type, X-Orchestra-Lens-Token]
+        AllowOrigins: ['*']
+  AskTheScoreLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${AWS::StackName}-ask-the-score
+      RetentionInDays: 7
+  AskTheScoreFunction:
+    DependsOn: AskTheScoreLogGroup
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub ${AWS::StackName}-ask-the-score
+      CodeUri: .
+      Handler: src/handler.handler
+      Runtime: nodejs22.x
+      Timeout: 15
+      MemorySize: 256
+      Environment:
+        Variables:
+          BEDROCK_MODEL_ID: amazon.nova-micro-v1:0
+          ORCHESTRA_LENS_DEMO_TOKEN: !Ref DemoAccessToken
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - Statement:
+            Effect: Allow
+            Action: bedrock:InvokeModel
+            Resource: !Sub arn:${AWS::Partition}:bedrock:${AWS::Region}::foundation-model/amazon.nova-micro-v1:0
+      Events:
+        Ask:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref AskTheScoreApi
+            Path: /ask-the-score
+            Method: POST
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        EntryPoints: [src/handler.ts]
+        Target: es2022
+Outputs:
+  AskTheScoreEndpoint:
+    Value: !Sub https://${AskTheScoreApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/ask-the-score

@@ -25,6 +25,7 @@ pnpm-debug.log*
 .env.*
 !.env.example
 *.local
+src/config/askTheScore.demo.ts
 .npmrc
 .netrc
 *.pem

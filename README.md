@@ -149,6 +149,78 @@ is active at a measure's first score qstamp. It is intentionally not imported
 by the Fire TV UI: annotation evidence neither changes Smart Score rows nor
 replaces curated roles or Theme Lens relationships in this milestone.
 
+## Ask the Score (Bedrock prototype)
+
+Ask the Score is an explicit, fixed-question feature for m.62 only. It never
+calls Bedrock at launch, during playback or `currentTime` updates, when a cue
+changes, or when Score Peek, Theme Lens, or COMPARE opens. The Fire TV user
+must select **ASK THE SCORE** before the app sends one request.
+
+```text
+Fire TV — explicit ASK THE SCORE press → HTTPS POST /ask-the-score
+       → API Gateway HTTP API → Lambda → Amazon Bedrock on-demand inference
+       → short grounded answer → Fire TV
+```
+
+The request contains the m.62 work/movement/measure, compact generated
+objective facts, Hauptstimme evidence, and curated role labels. It never sends
+MusicXML or the full-score manifest. The Lambda accepts only the fixed question
+“What am I hearing here?” for m.62 and instructs Bedrock to use only this
+context. It requests at most 160 output tokens and returns at most four
+sentences.
+
+The three score layers remain separate:
+
+- **Generated MusicXML facts:** activity/rests, note counts, pitch ranges,
+  dynamics, articulations, and texture density.
+- **Hauptstimme evidence:** published, CC BY-SA human annotations of a main
+  voice. This evidence does not automatically select Smart Score rows.
+- **Curated Orchestra Lens interpretation:** roles, selected score excerpts,
+  and Theme Lens relationships.
+
+The endpoint and demo token are set only in the ignored local file
+`src/config/askTheScore.demo.ts`; copy the committed
+`askTheScore.demo.example.ts` after deployment. The token is sent as
+`X-Orchestra-Lens-Token`; Lambda returns `401` before Bedrock for a missing or
+incorrect token. This is a demo safeguard, not production authentication. AWS
+credentials must remain outside the app; Lambda uses its execution role.
+
+### Backend and deployment preparation
+
+The deployable Lambda code and SAM template are in `backend/ask-the-score/`.
+Required backend environment variables are:
+
+```text
+AWS_REGION=us-east-1          # supplied automatically by Lambda
+BEDROCK_REGION=us-east-1      # optional explicit override
+BEDROCK_MODEL_ID=amazon.nova-micro-v1:0
+```
+
+`BEDROCK_MODEL_ID` is configurable; the default is Amazon Nova Micro using
+on-demand inference. No Provisioned Throughput resource is defined. After
+explicit deployment approval, install backend dependencies, then use the
+following approximate flow:
+
+```sh
+cd backend/ask-the-score
+npm install
+sam build
+sam deploy --guided
+```
+
+Set the resulting HTTPS route in `src/config/askTheScore.demo.ts`, rebuild the TV
+app, and install it in VVD. The SAM template creates an HTTP API, one Lambda
+function, its least-privilege execution role (`bedrock:InvokeModel` for the
+configured Nova Micro model), and a CloudWatch log group retained for seven
+days. It does not create a Bedrock provisioned-throughput resource.
+
+Client safeguards are one explicit button press, a loading state while a
+request is in flight, a fixed m.62 request, and a visible error state. The
+backend independently rejects other questions and measures, caps generation,
+and returns a safe error response. The undeployed template caps the endpoint at
+one request per second with a burst of two; it makes no automatic retries. Use
+stronger authentication and abuse controls before any wider distribution.
+
 ### Real-score validation
 
 The generator has also been run, without hand-editing the output, against the
@@ -186,12 +258,17 @@ it has not been connected to the Fire TV app or used to alter curated roles.
   score selection, Orchestra X-Ray roles, and Theme Lens relationships.
 - `src/data/hauptstimmeEvidence.ts` queries generated CC BY-SA main-voice
   evidence without changing presentation or curated interpretation.
+- `src/askTheScore.ts` builds the compact m.62 request only after an explicit
+  user action; `src/hooks/useAskTheScore.ts` owns its loading, success, and
+  error state.
 - `src/data/brahms1Movement4.ts` contains the demo cue timeline.
 - `tools/generateScoreManifest.ts` parses MusicXML into objective offline score
   facts; `tools/generateRuntimeScoreFacts.ts` extracts the compact data used at
   runtime.
 - `tools/generateHauptstimmeEvidence.ts` validates Hauptstimme qstamps against
   score positions and produces human-authored main-voice evidence.
+- `backend/ask-the-score/` contains the independently deployable Lambda,
+  mocked backend tests, and an undeployed SAM template for Ask the Score.
 - `src/assets/` contains the cropped public-domain notation excerpts.
 - `test/synchronization.test.ts` covers cue selection, player-control behavior,
   and resolution of Smart Score and Theme Lens data.
