@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import {Image, View, Text, StyleSheet} from 'react-native';
 import type {ScoreEvent} from '../types/score';
-import {getOrchestraXRay} from '../data/orchestraXRay';
-import {getSmartScoreParts, type SmartScoreAsset} from '../data/smartScore';
-import {getThemeLens} from '../data/themeLens';
+import {getRuntimeCue} from '../data/runtimeCue';
+import type {SmartScoreAsset} from '../data/smartScore';
 import {TVButton} from './TVButton';
 
 const scoreAssets: Record<SmartScoreAsset, number> = {
@@ -20,15 +19,12 @@ const scoreAssets: Record<SmartScoreAsset, number> = {
 
 export function ScorePeek({event, onClose}: {event?: ScoreEvent; onClose: () => void}) {
   const [comparisonOpen, setComparisonOpen] = useState(false);
-  const orchestraXRay = getOrchestraXRay(event?.measure);
-  const scoreParts = getSmartScoreParts(event?.measure);
-  const scoreRows = scoreParts.flatMap(part => {
-    const role = orchestraXRay.find(candidate => candidate.instrument === part.instrument);
-    return role ? [{...part, ...role}] : [];
-  });
-  const themeLens = getThemeLens(event?.measure);
+  const runtimeCue = getRuntimeCue(event?.measure);
+  const scoreParts = runtimeCue?.smartScoreParts ?? [];
+  const scoreRows = scoreParts.flatMap(part => part.curatedRole ? [{...part, ...part.curatedRole}] : []);
+  const themeLens = runtimeCue?.themeLens;
   const themeAsset = scoreParts[0] && scoreAssets[scoreParts[0].asset];
-  const firstHeardParts = getSmartScoreParts(themeLens?.firstHeard.measure);
+  const firstHeardParts = getRuntimeCue(themeLens?.firstHeard.measure)?.smartScoreParts ?? [];
   const firstHeardAsset = firstHeardParts[0] && scoreAssets[firstHeardParts[0].asset];
   const firstHeardDescription = themeLens?.firstHeard.instrument ? `${themeLens.firstHeard.instrument} · ${themeLens.firstHeard.label}` : themeLens?.firstHeard.label;
   const hasThemeLensBody = Boolean(themeLens && themeAsset && firstHeardAsset);

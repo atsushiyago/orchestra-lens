@@ -4,7 +4,7 @@ node_modules/
 # Vega / React Native build products
 build/
 bundle/
-generated/
+/generated/
 *.vpkg
 *.vpk
 buildinfo.json

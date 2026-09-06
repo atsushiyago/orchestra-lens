@@ -80,6 +80,70 @@ vega device launch-app --device VirtualDevice \
 The cue times are intentionally placeholder annotations for the demo video, not
 timestamps for a specific Brahms recording.
 
+## Offline MusicXML preprocessing
+
+`generate:score-manifest` is a development-time Node/TypeScript tool. It never
+runs in the Fire TV app and only extracts objective score facts: part activity,
+note counts, pitch ranges, written dynamics, simple articulations, and the
+measure's total sounding-note count (`textureDensity`). It does not infer themes,
+roles, transformations, or any other musical meaning.
+
+```sh
+npm run generate:score-manifest -- ./scores/example.musicxml
+```
+
+The command writes `src/data/generated/scoreManifest.json` by default. Pass an
+optional second path to write elsewhere. The included `scores/example.musicxml`
+fixture is original test data with three instrumental parts and no copyrighted
+score content.
+
+The data flow deliberately keeps automatic facts apart from editorial choices:
+
+```text
+MusicXML → automatic objective analysis → full generated score manifest
+                                        → compact runtime score facts ─┐
+curated musical interpretation ────────────────────────────────────────┼→ merged runtime cue → Fire TV presentation
+                                                                         ┘
+```
+
+`generate:runtime-score-facts` selects only m.30, m.47, m.62, m.285, and
+m.407 from a full generated manifest. This produces the 31 KiB
+`src/data/generated/runtimeScoreFacts.json` bundled by the app instead of the
+2.63 MiB full-score manifest.
+
+```sh
+npm run generate:runtime-score-facts -- \
+  ./src/data/generated/brahms-op68-movement4-manifest.json
+```
+
+Generated facts live in `src/data/generated/`: part activity/rests, note
+counts, pitch ranges, written dynamics, articulations, and texture density.
+`src/data/runtimeCue.ts` merges them with selected score assets and curated
+interpretation. Curated Orchestra X-Ray roles and Theme Lens relationships
+remain in `src/data/orchestraXRay.ts` and `src/data/themeLens.ts`; the
+generator never writes or overwrites them. Labels such as “Main Theme,”
+“Alphorn Theme,” and “Climactic Return” are human-authored, and active source
+parts never automatically add rows to Score Peek.
+
+### Real-score validation
+
+The generator has also been run, without hand-editing the output, against the
+full 24-part, 458-measure MusicXML score for Brahms's *Symphony No. 1*,
+movement IV. The source is the CC0 score data in the OpenScore Orchestra
+collection maintained by [Hauptstimme](https://github.com/MarkGotham/Hauptstimme);
+the exact upstream path, license, retrieval date, and extraction details are in
+[`scores/real/README.md`](scores/real/README.md).
+
+```sh
+npm run generate:score-manifest -- \
+  ./scores/real/Brahms_Op68_Movement4.musicxml \
+  ./src/data/generated/brahms-op68-movement4-manifest.json
+```
+
+The resulting `brahms-op68-movement4-manifest.json` is approximately 2.63 MiB
+and includes measures 30, 62, 285, and 407. It remains objective source data;
+it has not been connected to the Fire TV app or used to alter curated roles.
+
 ## Architecture
 
 - `src/hooks/usePlayback.ts` owns Vega player initialization, media events,
@@ -94,7 +158,12 @@ timestamps for a specific Brahms recording.
   of the UI.
 - `src/data/themeLens.ts` stores hand-authored relationships independently of
   score assets and presentation.
+- `src/data/runtimeCue.ts` merges compact generated score facts with curated
+  score selection, Orchestra X-Ray roles, and Theme Lens relationships.
 - `src/data/brahms1Movement4.ts` contains the demo cue timeline.
+- `tools/generateScoreManifest.ts` parses MusicXML into objective offline score
+  facts; `tools/generateRuntimeScoreFacts.ts` extracts the compact data used at
+  runtime.
 - `src/assets/` contains the cropped public-domain notation excerpts.
 - `test/synchronization.test.ts` covers cue selection, player-control behavior,
   and resolution of Smart Score and Theme Lens data.
@@ -102,4 +171,5 @@ timestamps for a specific Brahms recording.
 ## References
 
 - [IMSLP: Brahms Symphony No. 1, Op. 68](https://imslp.org/wiki/Symphony_No.1%2C_Op.68_(Brahms%2C_Johannes))
+- [Hauptstimme / OpenScore Orchestra data](https://github.com/MarkGotham/Hauptstimme)
 - [Amazon Vega video sample](https://github.com/AmazonAppDev/vega-video-sample)

@@ -1,0 +1,130 @@
+{
+  "work": {
+    "title": "Orchestra Lens Generator Fixture",
+    "composer": "Test Composer"
+  },
+  "measures": {
+    "1": {
+      "parts": [
+        {
+          "name": "Violin I",
+          "active": true,
+          "noteCount": 2,
+          "lowestPitch": "C4",
+          "highestPitch": "E5",
+          "dynamics": [
+            "mf"
+          ],
+          "articulations": [
+            "staccato"
+          ]
+        },
+        {
+          "name": "Viola",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
+          "dynamics": [
+            "p"
+          ],
+          "articulations": []
+        },
+        {
+          "name": "Cello",
+          "active": true,
+          "noteCount": 1,
+          "lowestPitch": "G2",
+          "highestPitch": "G2",
+          "dynamics": [],
+          "articulations": []
+        }
+      ],
+      "activeInstruments": [
+        "Violin I",
+        "Cello"
+      ],
+      "textureDensity": 3
+    },
+    "2": {
+      "parts": [
+        {
+          "name": "Violin I",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
+          "dynamics": [
+            "p"
+          ],
+          "articulations": []
+        },
+        {
+          "name": "Viola",
+          "active": true,
+          "noteCount": 2,
+          "lowestPitch": "Db3",
+          "highestPitch": "A4",
+          "dynamics": [
+            "f"
+          ],
+          "articulations": [
+            "tenuto"
+          ]
+        },
+        {
+          "name": "Cello",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
+          "dynamics": [],
+          "articulations": []
+        }
+      ],
+      "activeInstruments": [
+        "Viola"
+      ],
+      "textureDensity": 2
+    },
+    "3": {
+      "parts": [
+        {
+          "name": "Violin I",
+          "active": true,
+          "noteCount": 1,
+          "lowestPitch": "G4",
+          "highestPitch": "G4",
+          "dynamics": [],
+          "articulations": []
+        },
+        {
+          "name": "Viola",
+          "active": true,
+          "noteCount": 1,
+          "lowestPitch": "F3",
+          "highestPitch": "F3",
+          "dynamics": [],
+          "articulations": []
+        },
+        {
+          "name": "Cello",
+          "active": true,
+          "noteCount": 2,
+          "lowestPitch": "C2",
+          "highestPitch": "G2",
+          "dynamics": [
+            "ff"
+          ],
+          "articulations": []
+        }
+      ],
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Cello"
+      ],
+      "textureDensity": 4
+    }
+  }
+}
