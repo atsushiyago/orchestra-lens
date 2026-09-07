@@ -1,12 +1,11 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import {work} from '../data/brahms1Movement4';
 import type {ScoreEvent} from '../types/score';
-export function MusicalContextOverlay({event}: {event?: ScoreEvent}) {
+export function MusicalContextOverlay({event, composer, workTitle, movementTitle}: {event?: ScoreEvent; composer: string; workTitle: string; movementTitle: string}) {
   return <View pointerEvents="none" style={styles.context}>
-    <Text style={styles.work}>{work.composer} — {work.title}</Text>
-    <Text style={styles.movement}>{work.movement}</Text>
-    <Text style={styles.title}>{event ? `Measure ${event.measure} · ${event.title.toUpperCase()}` : 'No score cue at this position'}</Text>
+    <Text style={styles.work}>{composer} — {workTitle}</Text>
+    <Text style={styles.movement}>{movementTitle}</Text>
+    {event && <Text style={styles.title}>Measure {event.measure} · {event.title.toUpperCase()}</Text>}
     <Text style={styles.instrument}>{event?.primaryInstruments?.join(' · ') || ' '}</Text>
   </View>;
 }

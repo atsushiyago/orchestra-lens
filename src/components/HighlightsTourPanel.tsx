@@ -3,13 +3,14 @@ import {StyleSheet, Text, View} from 'react-native';
 import type {HighlightReviewCandidate} from '../playback/highlightReview';
 import {TVButton} from './TVButton';
 
-export function HighlightsTourPanel({candidate, total, nextMeasure, onNext, onPrevious, onScore, onToggle, paused, onExit}: {
+export function HighlightsTourPanel({candidate, total, nextMeasure, onNext, onPrevious, onScore, showScore = true, onToggle, paused, onExit}: {
   candidate: HighlightReviewCandidate;
   total: number;
   nextMeasure?: number;
   onNext: () => void;
   onPrevious: () => void;
   onScore: () => void;
+  showScore?: boolean;
   onToggle: () => void;
   paused: boolean;
   onExit: () => void;
@@ -25,7 +26,7 @@ export function HighlightsTourPanel({candidate, total, nextMeasure, onNext, onPr
       <TVButton compact label={paused ? 'PLAY' : 'PAUSE'} onPress={onToggle}/>
       <TVButton compact label="PREVIOUS" onPress={onPrevious}/>
       <TVButton compact label="NEXT" onPress={onNext}/>
-      <TVButton compact label="SCORE" onPress={onScore}/>
+      {showScore && <TVButton compact label="SCORE" onPress={onScore}/>} 
       <TVButton compact label="EXIT TOUR" preferred onPress={onExit}/>
     </View>
   </View>;

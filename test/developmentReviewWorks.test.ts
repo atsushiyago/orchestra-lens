@@ -9,6 +9,6 @@ test('DEV review resolves each work to its own approved media source', () => {
   assert.notEqual(developmentReviewMediaFor('brahms-op68-4'), developmentReviewMediaFor('beethoven-op67-1'));
 });
 
-test('Release continues to resolve only the existing Brahms media source', () => {
+test('Brahms retains its approved CloudFront media source', () => {
   assert.match(mediaSource.uri, /brahms-op68-movement4-musopen-cc0\.m4a$/);
 });

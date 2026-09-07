@@ -1,13 +1,16 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {highlightsTourSummary} from '../data/listeningExperiences';
+import type {OrchestraLensWork} from '../data/workCatalog';
 import {TVButton} from './TVButton';
 
-export function ExperienceEntry({highlightCount, ready, onFullMovement, onHighlightsTour, showHighlightReview = false, onHighlightReview, showTourSelectorReview = false, onTourSelectorReview}: {
+export function ExperienceEntry({work, highlightCount, ready, onFullMovement, onHighlightsTour, onBackToCatalog, showHighlightReview = false, onHighlightReview, showTourSelectorReview = false, onTourSelectorReview}: {
+  work: OrchestraLensWork;
   highlightCount: number;
   ready: boolean;
   onFullMovement: () => void;
   onHighlightsTour: () => void;
+  onBackToCatalog: () => void;
   showHighlightReview?: boolean;
   onHighlightReview?: () => void;
   showTourSelectorReview?: boolean;
@@ -16,15 +19,16 @@ export function ExperienceEntry({highlightCount, ready, onFullMovement, onHighli
   return <View style={styles.screen}>
     <View style={styles.content}>
       <Text style={styles.brand}>ORCHESTRA LENS</Text>
-      <Text style={styles.composer}>BRAHMS</Text>
-      <Text style={styles.title}>Symphony No. 1 in C minor, Op. 68</Text>
-      <Text style={styles.movement}>Movement IV</Text>
+      <Text style={styles.composer}>{work.composer}</Text>
+      <Text style={styles.title}>{work.workTitle}</Text>
+      <Text style={styles.movement}>Movement {work.movementNumber}</Text>
       <Text style={styles.invitation}>See what you’re hearing.</Text>
       <View style={styles.actions}>
         {showHighlightReview && onHighlightReview && <TVButton label="HIGHLIGHT REVIEW" onPress={onHighlightReview}/>} 
         {showTourSelectorReview && onTourSelectorReview && <TVButton label="TOUR SELECTOR REVIEW" onPress={onTourSelectorReview}/>} 
-        <TVButton label="PLAY FULL MOVEMENT" preferred onPress={onFullMovement}/>
-        <TVButton label="HIGHLIGHTS TOUR" onPress={onHighlightsTour}/>
+        {work.capabilities.fullMovement && <TVButton label="PLAY FULL MOVEMENT" preferred onPress={onFullMovement}/>} 
+        {work.capabilities.highlightsTour && <TVButton label="HIGHLIGHTS TOUR" onPress={onHighlightsTour}/>} 
+        <TVButton label="BACK TO CATALOG" onPress={onBackToCatalog}/>
       </View>
       <Text style={styles.summary}>{ready ? highlightsTourSummary(highlightCount) : 'Preparing recording…'}</Text>
     </View>

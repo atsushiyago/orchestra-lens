@@ -21,7 +21,7 @@ test('DEV selector-review tours read only generated selector moments in performa
   }
 });
 
-test('selector review uses work descriptor media URIs while Release remains Brahms-only', () => {
+test('selector review uses work descriptor media URIs while the Release Brahms tour remains its own catalog entry', () => {
   assert.match(developmentReviewMediaFor('brahms-op68-4'), /brahms/i);
   assert.match(developmentReviewMediaFor('beethoven-op67-1'), /beethoven/i);
   assert.deepEqual(highlightsTourCandidates.map(candidate => candidate.measure), brahmsSelection.selected.map(moment => moment.measure));

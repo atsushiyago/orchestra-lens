@@ -1,8 +1,10 @@
 # Orchestra Lens — non-AI prototype
 
-Orchestra Lens is a React Native TV prototype for Amazon Vega OS. It uses the
-media clock to select Brahms score cues. Score Peek presents real public-domain
-excerpts from the IMSLP score alongside manually authored musical context.
+Orchestra Lens is a React Native TV prototype for Amazon Vega OS. Its Release
+catalog currently offers Brahms Symphony No. 1, movement IV and Beethoven
+Symphony No. 5, movement I. The media clock drives each selected work’s
+generated Highlights Tour. Brahms additionally has curated Score Peek content
+from real public-domain IMSLP excerpts.
 
 ## Implemented milestones
 
@@ -19,12 +21,14 @@ excerpts from the IMSLP score alongside manually authored musical context.
   COMPARE shows the m.47 and m.407 excerpts in the same in-place view.
 - **Ask the Score:** an explicit m.62 action sends compact structured context to
   the protected Bedrock backend and displays a short, grounded response.
-- **Highlights Tour:** the entry screen offers normal full-movement listening
-  and a nine-moment tour drawn directly from the deterministic, ranked score
-  analysis. The tour seeks the existing player, confirms audible playback, and
-  measures each 20-second excerpt by advancing media time. SCORE opens the
-  usual curated view when available, or a generated Score Insight panel for an
-  automatically selected moment without a notation asset.
+- **Multi-work catalog:** the Release entry screen selects Brahms or Beethoven
+  from data-driven work descriptors. Each descriptor declares its media,
+  generated analysis artifacts, selector tour, and feature capabilities.
+- **Highlights Tour:** Brahms has a nine-moment selector tour; Beethoven has a
+  six-moment selector tour. Both reuse the same existing player, confirm
+  audible playback, and measure each 20-second excerpt by advancing media
+  time. Brahms retains SCORE; Beethoven does not render editorial controls that
+  have not been authored or validated.
 
 All musical roles and relationships are static data. The source excerpts are
 cropped from the existing IMSLP public-domain Brahms Symphony No. 1 score.
@@ -68,14 +72,15 @@ vega device launch-app --device VirtualDevice \
 
 ## Manual demo flow
 
-1. Launch the app and choose **PLAY FULL MOVEMENT** for the existing normal
-   playback screen, or **HIGHLIGHTS TOUR** for nine recommended moments.
+1. Launch the app, choose **BRAHMS** or **BEETHOVEN**, then choose **PLAY FULL
+   MOVEMENT** or that work’s generated **HIGHLIGHTS TOUR**.
 2. In a Highlights Tour, use **Previous**, **Next**, **SCORE**, and **EXIT
    TOUR**. Exiting stops the tour cleanly and returns to the entry screen.
 3. Use **SCORE** during the
    recording-specific cue windows below.
-4. Use **BACK** or the VVD remote Back button to return to playback. The player
-   remains mounted, preserving time, pause state, and the active cue.
+4. Use **BACK** or the VVD remote Back button to return through the selected
+   work and catalog without exiting to the Vega app picker. The player remains
+   mounted when returning inside a work, preserving time and pause state.
 5. At m.290 and m.407, select **COMPARE**. It replaces the Theme Lens body in
    place; **BACK** returns to that cue's Theme Lens without resetting playback.
 

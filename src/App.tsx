@@ -8,8 +8,8 @@ import {ExperienceEntry} from './components/ExperienceEntry';
 import {HighlightReviewPanel} from './components/HighlightReviewPanel';
 import {HighlightsTourPanel} from './components/HighlightsTourPanel';
 import {TourSelectorReviewPanel} from './components/TourSelectorReviewPanel';
-import {scoreEvents, work} from './data/brahms1Movement4';
-import {mediaSource} from './data/media';
+import {WorkCatalog} from './components/WorkCatalog';
+import {defaultWork, workCatalog, workSwitchNeedsSourceReload, type OrchestraLensWork} from './data/workCatalog';
 import {developmentReviewMediaFor} from './data/developmentReviewWorks';
 import {selectorTourCandidatesFor, selectorTourCountFor} from './data/developmentTourSelectorWorks';
 import {ReviewTransitionCoordinator, reviewTransitionReady} from './playback/reviewTransitionCoordinator';
@@ -17,19 +17,20 @@ import {showDevelopmentControls} from './data/listeningExperiences';
 import {usePlayback} from './hooks/usePlayback';
 import {useScoreSynchronization} from './hooks/useScoreSynchronization';
 import {developmentCueTarget} from './playback/developmentCueNavigation';
-import {leaveFullMovementForMenu} from './playback/listeningNavigation';
 import {developmentValidationScoreEvents} from './playback/developmentScoreEvents';
+import {leaveFullMovementForMenu} from './playback/listeningNavigation';
 import {clearHighlightReviewDecision, highlightReviewCandidates, highlightReviewCandidatesFor, highlightReviewDecision, highlightReviewTarget, highlightReviewWorkLabels, isHighlightReviewAvailable, setHighlightReviewDecision, type HighlightReviewCandidate, type HighlightReviewDecisions, type HighlightReviewWork} from './playback/highlightReview';
 import {highlightsTourCandidates, useHighlightsTour} from './hooks/useHighlightsTour';
 
 const clock = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
-type Experience = 'entry' | 'full-movement' | 'review-selector' | 'tour-selector-review-selector';
+type Experience = 'catalog' | 'work-entry' | 'full-movement' | 'review-selector' | 'tour-selector-review-selector';
 
 export default function App() {
-  const [activeMediaUri, setActiveMediaUri] = useState<string>(mediaSource.uri);
-  const playback = usePlayback(activeMediaUri, mediaSource.diagnosticUri, false);
-  const event = useScoreSynchronization(__DEV__ ? developmentValidationScoreEvents : scoreEvents, playback.time);
-  const [experience, setExperience] = useState<Experience>('entry');
+  const [selectedWork, setSelectedWork] = useState<OrchestraLensWork>(defaultWork);
+  const [activeMediaUri, setActiveMediaUri] = useState<string>(defaultWork.media.uri);
+  const playback = usePlayback(activeMediaUri, undefined, false);
+  const event = useScoreSynchronization(selectedWork.capabilities.smartScore ? (__DEV__ ? developmentValidationScoreEvents : selectedWork.scoreEvents) : [], playback.time);
+  const [experience, setExperience] = useState<Experience>('catalog');
   const [peekOpen, setPeekOpen] = useState(false);
   const [debugCue, setDebugCue] = useState<{measure: number; timeSeconds: number; automatic: boolean} | undefined>();
   const [highlightReviewOpen, setHighlightReviewOpen] = useState(false);
@@ -41,7 +42,7 @@ export default function App() {
   const [selectorTourWork, setSelectorTourWork] = useState<HighlightReviewWork>('brahms-op68-4');
   const [pendingSelectorTourStart, setPendingSelectorTourStart] = useState(false);
   const [reviewDecisions, setReviewDecisions] = useState<HighlightReviewDecisions>({});
-  const tour = useHighlightsTour({player: playback.player, ready: playback.ready, paused: playback.paused, seek: playback.seek, reportError: playback.reportError, debugLog: playback.debugLog});
+  const tour = useHighlightsTour({player: playback.player, ready: playback.ready, paused: playback.paused, seek: playback.seek, reportError: playback.reportError, debugLog: playback.debugLog}, selectedWork.tourCandidates);
   const selectorTourCandidates = selectorTourCandidatesFor(selectorTourWork);
   const selectorTour = useHighlightsTour({player: playback.player, ready: playback.ready, paused: playback.paused, seek: playback.seek, reportError: playback.reportError, debugLog: playback.debugLog}, selectorTourCandidates);
   const close = () => {
@@ -49,21 +50,22 @@ export default function App() {
     if (playback.player) void playback.peek.leave(playback.player).catch(playback.reportError);
   };
   const open = () => {
-    if (!playback.player || !playback.ready || playback.error) return;
+    if (!selectedWork.capabilities.smartScore || !playback.player || !playback.ready || playback.error) return;
     playback.peek.enter(playback.player);
     setPeekOpen(true);
   };
-  const playFullMovement = () => { setExperience('full-movement'); playback.play(); };
-  const backToMenu = () => {
-    const action = leaveFullMovementForMenu();
-    if (action.pause) playback.pause();
-    setExperience(action.destination);
+  const selectWork = (work: OrchestraLensWork) => {
+    tour.exit(); selectorTour.exit(); reviewCoordinator.current.cancel(); playback.pause(); setPendingTourStart(false); setPendingSelectorTourStart(false); setSelectedWork(work); setExperience('work-entry');
+    if (workSwitchNeedsSourceReload(selectedWork, work)) setActiveMediaUri(work.media.uri);
   };
+  const playFullMovement = () => { setExperience('full-movement'); playback.play(); };
+  const backToWorkEntry = () => { const action = leaveFullMovementForMenu(); if (action.pause) playback.pause(); setExperience(action.destination); };
+  const backToCatalog = () => { playback.pause(); setExperience('catalog'); };
   const startTour = () => {
-    if (!playback.ready || playback.error) return;
+    if (!selectedWork.capabilities.highlightsTour || playback.error) return;
     setExperience('full-movement');
-    if (activeMediaUri !== mediaSource.uri) { playback.pause(); setPendingTourStart(true); setActiveMediaUri(mediaSource.uri); return; }
-    tour.start();
+    setPendingTourStart(true);
+    if (activeMediaUri !== selectedWork.media.uri) { playback.pause(); setActiveMediaUri(selectedWork.media.uri); }
   };
   const openReviewSelector = () => { playback.pause(); setExperience('review-selector'); };
   const openTourSelectorReview = () => { playback.pause(); setExperience('tour-selector-review-selector'); };
@@ -71,7 +73,7 @@ export default function App() {
     tour.exit();
     playback.pause();
     close();
-    setExperience('entry');
+    setExperience('work-entry');
   };
   const startSelectorTour = (work: HighlightReviewWork) => {
     selectorTour.exit();
@@ -136,11 +138,11 @@ export default function App() {
     void run();
   }, [activeMediaUri, highlightReviewOpen, playback.ready, playback.readyUri, reviewCandidate, reviewTransition, reviewWork]);
   useEffect(() => {
-    if (!pendingTourStart || !playback.ready || playback.readyUri !== mediaSource.uri) return;
+    if (!pendingTourStart || !playback.ready || playback.readyUri !== selectedWork.media.uri) return;
     setPendingTourStart(false);
-    playback.debugLog(`tour source ready uri=${mediaSource.uri}; starting validated coordinator`);
+    playback.debugLog(`tour source ready uri=${selectedWork.media.uri}; starting validated coordinator`);
     tour.start();
-  }, [pendingTourStart, playback.ready, playback.readyUri, tour]);
+  }, [pendingTourStart, playback.ready, playback.readyUri, selectedWork.media.uri, tour]);
   useEffect(() => {
     const uri = developmentReviewMediaFor(selectorTourWork);
     if (!pendingSelectorTourStart || !playback.ready || playback.readyUri !== uri) return;
@@ -169,10 +171,10 @@ export default function App() {
       if (tour.active) { exitTour(); return true; }
       if (selectorTour.active) { exitSelectorTour(); return true; }
       if (__DEV__ && highlightReviewOpen) { reviewCoordinator.current.cancel(); playback.pause(); setHighlightReviewOpen(false); setExperience('review-selector'); return true; }
-      if (experience === 'review-selector') { setExperience('entry'); return true; }
-      if (experience === 'tour-selector-review-selector') { setExperience('entry'); return true; }
-      if (experience === 'full-movement') { backToMenu(); return true; }
-      return false;
+      if (experience === 'review-selector' || experience === 'tour-selector-review-selector') { setExperience('catalog'); return true; }
+      if (experience === 'full-movement') { backToWorkEntry(); return true; }
+      if (experience === 'work-entry') { backToCatalog(); return true; }
+      return true;
     });
     return () => subscription.remove();
   });
@@ -194,7 +196,7 @@ export default function App() {
       moveHighlightReview(remote.eventType === 'right' ? 'next' : 'previous');
       return;
     }
-    if (__DEV__ && experience === 'full-movement' && (remote.eventType === 'right' || remote.eventType === 'left')) {
+    if (__DEV__ && selectedWork.id === 'brahms-op68-4' && experience === 'full-movement' && (remote.eventType === 'right' || remote.eventType === 'left')) {
       const target = developmentCueTarget(playback.time, remote.eventType === 'right' ? 'next' : 'previous');
       if (target) { playback.seek(target.timeSeconds); setDebugCue(target); }
       return;
@@ -203,29 +205,32 @@ export default function App() {
     if (experience === 'full-movement' && remote.eventType === 'rewind') playback.seek(playback.time - 10);
     if (experience === 'full-movement' && remote.eventType === 'forward') playback.seek(playback.time + 10);
   });
-  const insight = tour.active ? tour.candidate : highlightReviewOpen ? reviewCandidate : undefined;
+  const insight = selectedWork.capabilities.smartScore ? (tour.active ? tour.candidate : highlightReviewOpen ? reviewCandidate : undefined) : undefined;
   const peekEvent = insight ? {startTime: insight.timeSeconds ?? playback.time, measure: insight.measure, title: 'Highlight'} : event;
   return <View style={styles.screen}>
     <VideoPlayer player={playback.player}/>
-    {!peekOpen && experience === 'entry' && (
-      <ExperienceEntry highlightCount={highlightsTourCandidates.length} ready={playback.ready} onFullMovement={playFullMovement} onHighlightsTour={startTour} showHighlightReview={__DEV__} onHighlightReview={openReviewSelector} showTourSelectorReview={__DEV__} onTourSelectorReview={openTourSelectorReview}/>
+    {!peekOpen && experience === 'catalog' && (
+      <WorkCatalog works={workCatalog} onSelect={selectWork}/>
+    )}
+    {!peekOpen && experience === 'work-entry' && (
+      <ExperienceEntry work={selectedWork} highlightCount={selectedWork.tourCandidates.length} ready={playback.ready} onFullMovement={playFullMovement} onHighlightsTour={startTour} onBackToCatalog={backToCatalog} showHighlightReview={__DEV__} onHighlightReview={openReviewSelector} showTourSelectorReview={__DEV__} onTourSelectorReview={openTourSelectorReview}/>
     )}
     {!peekOpen && __DEV__ && experience === 'review-selector' && <View style={styles.reviewScreen}>
       <Text style={styles.brand}>HIGHLIGHT REVIEW</Text>
       <Text style={styles.selectorHint}>Choose a generated score-analysis work</Text>
       <TVButton label={highlightReviewWorkLabels['brahms-op68-4']} preferred onPress={() => enterHighlightReview('brahms-op68-4')}/>
       <TVButton label={highlightReviewWorkLabels['beethoven-op67-1']} onPress={() => enterHighlightReview('beethoven-op67-1')}/>
-      <TVButton label="BACK" onPress={() => setExperience('entry')}/>
+      <TVButton label="BACK" onPress={() => setExperience('catalog')}/>
     </View>}
     {!peekOpen && __DEV__ && experience === 'tour-selector-review-selector' && <View style={styles.reviewScreen}>
       <Text style={styles.brand}>TOUR SELECTOR REVIEW</Text>
       <Text style={styles.selectorHint}>AUTOMATIC SELECTOR TOUR · CURRENT RELEASE TOUR remains unchanged</Text>
       <TVButton label={`${highlightReviewWorkLabels['brahms-op68-4']} — ${selectorTourCountFor('brahms-op68-4')} MOMENTS`} preferred onPress={() => startSelectorTour('brahms-op68-4')}/>
       <TVButton label={`${highlightReviewWorkLabels['beethoven-op67-1']} — ${selectorTourCountFor('beethoven-op67-1')} MOMENTS`} onPress={() => startSelectorTour('beethoven-op67-1')}/>
-      <TVButton label="BACK" onPress={() => setExperience('entry')}/>
+      <TVButton label="BACK" onPress={() => setExperience('catalog')}/>
     </View>}
     {!peekOpen && experience === 'full-movement' && <View style={styles.chrome}>
-      <View style={styles.top}><Text style={styles.brand}>ORCHESTRA LENS</Text><Text style={styles.demo}>{work.timingStatus}</Text></View>
+      <View style={styles.top}><Text style={styles.brand}>ORCHESTRA LENS</Text><Text style={styles.demo}>{selectedWork.composer} · {selectedWork.movementNumber}</Text></View>
       {showDevelopmentControls(__DEV__) && <View style={styles.debugArea}>
         <Text style={styles.debugCue}>DEBUG TIME: {playback.time.toFixed(3)}s</Text>
         {debugCue && <Text style={styles.debugCue}>{debugCue.automatic ? 'AUTO ALIGNMENT' : 'CONFIRMED ALIGNMENT'} · m.{debugCue.measure} · predicted {debugCue.timeSeconds.toFixed(3)}s</Text>}
@@ -234,7 +239,7 @@ export default function App() {
         )}
       </View>}
       {tour.active && tour.candidate && (
-        <HighlightsTourPanel candidate={tour.candidate} total={highlightsTourCandidates.length} nextMeasure={highlightsTourCandidates[tour.index + 1]?.measure} onNext={tour.next} onPrevious={tour.previous} onScore={open} onToggle={playback.toggle} paused={playback.paused} onExit={exitTour}/>
+        <HighlightsTourPanel candidate={tour.candidate} total={selectedWork.tourCandidates.length} nextMeasure={selectedWork.tourCandidates[tour.index + 1]?.measure} onNext={tour.next} onPrevious={tour.previous} onScore={open} onToggle={playback.toggle} paused={playback.paused} onExit={exitTour} showScore={selectedWork.capabilities.smartScore}/>
       )}
       {__DEV__ && selectorTour.active && selectorTour.candidate && (
         <TourSelectorReviewPanel work={selectorTourWork} candidate={selectorTour.candidate} total={selectorTourCandidates.length} paused={playback.paused} onPrevious={selectorTour.previous} onNext={selectorTour.next} onToggle={playback.toggle} onExit={exitSelectorTour}/>
@@ -243,11 +248,11 @@ export default function App() {
         <HighlightReviewPanel work={reviewWork} candidate={reviewCandidate} decision={highlightReviewDecision(reviewDecisions, reviewCandidate.measure)} onDecision={decideHighlightReview} onPrevious={() => moveHighlightReview('previous')} onNext={() => moveHighlightReview('next')} onScore={open} onExit={() => { reviewCoordinator.current.cancel(); playback.pause(); setHighlightReviewOpen(false); setExperience('review-selector'); }}/>
       )}
       {!tour.active && !selectorTour.active && <View style={styles.bottom}>
-        {playback.error ? <View style={styles.error}><Text style={styles.message}>VIDEO UNAVAILABLE</Text><Text style={styles.detail}>{playback.error}</Text></View> : <MusicalContextOverlay event={event}/>}
+        {playback.error ? <View style={styles.error}><Text style={styles.message}>VIDEO UNAVAILABLE</Text><Text style={styles.detail}>{playback.error}</Text></View> : <MusicalContextOverlay event={event} composer={selectedWork.composer} workTitle={selectedWork.workTitle} movementTitle={selectedWork.movementTitle}/>} 
         <View style={styles.progress}><View style={[styles.fill, {width: `${playback.duration ? Math.min(100, playback.time / playback.duration * 100) : 0}%`}]}/></View>
         <View style={styles.transport}>
           {playback.error ? <TVButton label="RETRY" preferred onPress={playback.retry}/> : <>
-            <TVButton compact label="SCORE" preferred onPress={open}/><TVButton compact label={playback.paused ? 'PLAY' : 'PAUSE'} onPress={playback.toggle}/><TVButton compact label="−10 SEC" onPress={() => playback.seek(playback.time - 10)}/><TVButton compact label="+10 SEC" onPress={() => playback.seek(playback.time + 10)}/><TVButton compact label="BACK TO MENU" onPress={backToMenu}/>
+            {selectedWork.capabilities.smartScore && <TVButton compact label="SCORE" preferred onPress={open}/>}<TVButton compact label={playback.paused ? 'PLAY' : 'PAUSE'} onPress={playback.toggle}/><TVButton compact label="−10 SEC" onPress={() => playback.seek(playback.time - 10)}/><TVButton compact label="+10 SEC" onPress={() => playback.seek(playback.time + 10)}/><TVButton compact label="BACK TO WORK" onPress={backToWorkEntry}/>
             {showDevelopmentControls(__DEV__) && <><TVButton compact label="−1 SEC" onPress={() => playback.seek(playback.time - 1)}/><TVButton compact label="+1 SEC" onPress={() => playback.seek(playback.time + 1)}/></>}
           </>}
           <Text style={styles.time}>{clock(playback.time)} / {clock(playback.duration)}{playback.buffering ? ' · Loading' : ''}</Text>
