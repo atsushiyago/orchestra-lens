@@ -54,7 +54,7 @@
         <volume>78.7402</volume>
         <pan>0</pan>
         </midi-instrument>
-      </score-part></part-list><part id="P20"><measure number="61" width="143.94"><attributes><divisions>24</divisions><key>
+      </score-part></part-list><part id="P20"><measure number="62" width="56.99"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -63,34 +63,15 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2078.24">
-        <rest/>
-        <duration>48</duration>
-        <voice>1</voice>
-        <type>half</type>
-        </note>
-      <note default-x="95.43" default-y="-2078.24">
-        <rest/>
-        <duration>24</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <notations>
-          <fermata type="upright" relative-y="5"/>
-          </notations>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="62" width="56.99">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="12.89" default-y="-81.37" relative-y="-25">
-            <other-dynamics>poco </other-dynamics>
+
             <f/>
             </dynamics>
           </direction-type>
         <sound dynamics="106.67"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>poco</words></direction-type></direction>
       <note default-x="13.98" default-y="-2123.24">
         <pitch>
           <step>G</step>
@@ -103,7 +84,7 @@
         <notations>
           <slur type="start" bezier-x="28.975062" bezier-y="-19.077709" number="1"/>
           </notations>
-        
+
         </note>
       </measure><measure number="63" width="179.65">
       <note default-x="13" default-y="-2108.24">
@@ -179,7 +160,63 @@
           <slur type="start" bezier-x="29.271958" bezier-y="-22.187859" number="1"/>
           </notations>
         </note>
-      </measure></part><part id="P21"><measure number="61" width="143.94"><attributes><divisions>24</divisions><key>
+      </measure><measure number="65" width="193.39">
+      <note default-x="13" default-y="-2103.24">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="54.21" default-y="-2098.24">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <beam number="1">begin</beam>
+        </note>
+      <note default-x="81.69" default-y="-2103.24">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <beam number="1">end</beam>
+        </note>
+      <note default-x="109.16" default-y="-2098.24">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="150.38" default-y="-2108.24">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <slur type="stop" number="1" bezier-x="-29.271958" bezier-y="-22.187859"/>
+          </notations>
+        </note>
+      </measure></part><part id="P21"><measure number="62" width="56.99"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -188,34 +225,15 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2242.96">
-        <rest/>
-        <duration>48</duration>
-        <voice>1</voice>
-        <type>half</type>
-        </note>
-      <note default-x="95.43" default-y="-2242.96">
-        <rest/>
-        <duration>24</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <notations>
-          <fermata type="upright" relative-y="5"/>
-          </notations>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="62" width="56.99">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="12.89" default-y="-84.9" relative-y="-25">
-            <other-dynamics>poco </other-dynamics>
+
             <f/>
             </dynamics>
           </direction-type>
         <sound dynamics="106.67"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>poco</words></direction-type></direction>
       <note default-x="13.98" default-y="-2287.96">
         <pitch>
           <step>G</step>
@@ -293,7 +311,63 @@
           <slur type="start" bezier-x="27.553554" bezier-y="-24.425067" number="1"/>
           </notations>
         </note>
-      </measure></part><part id="P22"><measure number="61" width="143.94"><attributes><divisions>24</divisions><key>
+      </measure><measure number="65" width="193.39">
+      <note default-x="13" default-y="-2277.96">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="54.21" default-y="-2272.96">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <beam number="1">begin</beam>
+        </note>
+      <note default-x="81.69" default-y="-2277.96">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <beam number="1">end</beam>
+        </note>
+      <note default-x="109.16" default-y="-2272.96">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="150.38" default-y="-2287.96">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <slur type="stop" number="1" bezier-x="-30.990361" bezier-y="-19.884158"/>
+          </notations>
+        </note>
+      </measure></part><part id="P22"><measure number="62" width="56.99"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -302,34 +376,15 @@
           <sign>C</sign>
           <line>3</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2366.13">
-        <rest/>
-        <duration>48</duration>
-        <voice>1</voice>
-        <type>half</type>
-        </note>
-      <note default-x="95.43" default-y="-2366.13">
-        <rest/>
-        <duration>24</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <notations>
-          <fermata type="upright" relative-y="5"/>
-          </notations>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="62" width="56.99">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="12.89" default-y="-57.9" relative-y="-25">
-            <other-dynamics>poco </other-dynamics>
+
             <f/>
             </dynamics>
           </direction-type>
         <sound dynamics="106.67"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>poco</words></direction-type></direction>
       <note default-x="13.98" default-y="-2381.13">
         <pitch>
           <step>G</step>
@@ -417,7 +472,47 @@
           <slur type="start" bezier-x="16.245669" bezier-y="-9.325051" number="1"/>
           </notations>
         </note>
-      </measure></part><part id="P23"><measure number="61" width="143.94"><attributes><divisions>24</divisions><key>
+      </measure><measure number="65" width="193.39">
+      <note default-x="13" default-y="-2381.13">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>48</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <slur type="stop" number="1" bezier-x="-12.015278" bezier-y="-14.370505"/>
+          </notations>
+        </note>
+      <note default-x="109.16" default-y="-2401.13">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <slur type="start" bezier-x="12.846879" bezier-y="-7.574555" number="1"/>
+          </notations>
+        </note>
+      <note default-x="150.38" default-y="-2391.13">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <slur type="stop" number="1" bezier-x="-7.946795" bezier-y="-12.620009"/>
+          </notations>
+        </note>
+      </measure></part><part id="P23"><measure number="62" width="56.99"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -426,25 +521,6 @@
           <sign>F</sign>
           <line>4</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2492.83">
-        <rest/>
-        <duration>48</duration>
-        <voice>1</voice>
-        <type>half</type>
-        </note>
-      <note default-x="95.43" default-y="-2492.83">
-        <rest/>
-        <duration>24</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <notations>
-          <fermata type="upright" relative-y="5"/>
-          </notations>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="62" width="56.99">
       <direction placement="above">
         <direction-type>
           <words default-y="6.58" relative-y="10">pizz.</words>
@@ -539,6 +615,43 @@
         <stem>down</stem>
         </note>
       <note default-x="136.64" default-y="-2497.83">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      </measure><measure number="65" width="193.39">
+      <note default-x="13" default-y="-2512.83">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="54.21" default-y="-2477.83">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        </note>
+      <note default-x="109.16" default-y="-2492.83">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        </note>
+      <note default-x="150.38" default-y="-2497.83">
         <pitch>
           <step>C</step>
           <octave>3</octave>

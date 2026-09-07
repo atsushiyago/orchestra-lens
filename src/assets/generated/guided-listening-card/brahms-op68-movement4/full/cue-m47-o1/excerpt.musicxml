@@ -54,7 +54,7 @@
         <volume>78.7402</volume>
         <pan>0</pan>
         </midi-instrument>
-      </score-part></part-list><part id="P7"><measure number="46" width="258.96"><attributes><divisions>24</divisions><key>
+      </score-part></part-list><part id="P7"><measure number="47" width="190.35"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -63,26 +63,15 @@
           <sign>F</sign>
           <line>4</line>
           </clef></attributes>
-      <print new-page="yes" page-number="9">
-        <staff-layout number="1">
-          <staff-distance>67</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="165.27" default-y="-652.01">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="47" width="190.35">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="22.48" default-y="-40" relative-y="-25">
             <p/>
-            <other-dynamics> dolce</other-dynamics>
+
             </dynamics>
           </direction-type>
         <sound dynamics="44.44"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>dolce</words></direction-type></direction>
       <note default-x="21.36" default-y="-632.01">
         <pitch>
           <step>C</step>
@@ -94,7 +83,7 @@
         <type>half</type>
         <accidental>sharp</accidental>
         <stem>down</stem>
-        
+
         </note>
       <note default-x="94.25" default-y="-632.01">
         <pitch>
@@ -228,7 +217,17 @@
             </articulations>
           </notations>
         </note>
-      </measure></part><part id="P8"><measure number="46" width="258.96"><attributes><divisions>24</divisions><key>
+      </measure><measure number="50" width="97.76">
+      <note default-x="13" default-y="-642.01">
+        <pitch>
+          <step>A</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>96</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        </note>
+      </measure></part><part id="P8"><measure number="47" width="190.35"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -237,26 +236,15 @@
           <sign>F</sign>
           <line>4</line>
           </clef></attributes>
-      <print new-page="yes" page-number="9">
-        <staff-layout number="1">
-          <staff-distance>103.42</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="165.27" default-y="-795.43">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="47" width="190.35">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="22.48" default-y="-40" relative-y="-25">
             <p/>
-            <other-dynamics> dolce</other-dynamics>
+
             </dynamics>
           </direction-type>
         <sound dynamics="44.44"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>dolce</words></direction-type></direction>
       <note default-x="21.36" default-y="-785.43">
         <pitch>
           <step>A</step>
@@ -396,7 +384,17 @@
             </articulations>
           </notations>
         </note>
-      </measure></part><part id="P9"><measure number="46" width="258.96"><attributes><divisions>24</divisions><key>
+      </measure><measure number="50" width="97.76">
+      <note default-x="13" default-y="-795.43">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>96</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        </note>
+      </measure></part><part id="P9"><measure number="47" width="190.35"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -409,26 +407,15 @@
           <chromatic>0</chromatic>
           <octave-change>-1</octave-change>
           </transpose></attributes>
-      <print new-page="yes" page-number="9">
-        <staff-layout number="1">
-          <staff-distance>67</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="165.27" default-y="-902.43">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="47" width="190.35">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="22.48" default-y="-40" relative-y="-25">
             <p/>
-            <other-dynamics> dolce</other-dynamics>
+
             </dynamics>
           </direction-type>
         <sound dynamics="44.44"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>dolce</words></direction-type></direction>
       <note default-x="21.36" default-y="-927.43">
         <pitch>
           <step>A</step>
@@ -546,7 +533,17 @@
           <slur type="stop" number="1" bezier-x="-36.940131" bezier-y="-17.568585"/>
           </notations>
         </note>
-      </measure></part><part id="P16"><measure number="46" width="258.96"><attributes><divisions>24</divisions><key>
+      </measure><measure number="50" width="97.76">
+      <note default-x="13" default-y="-937.43">
+        <pitch>
+          <step>F</step>
+          <octave>2</octave>
+          </pitch>
+        <duration>96</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        </note>
+      </measure></part><part id="P16"><measure number="47" width="190.35"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -555,26 +552,15 @@
           <sign>C</sign>
           <line>4</line>
           </clef></attributes>
-      <print new-page="yes" page-number="9">
-        <staff-layout number="1">
-          <staff-distance>67</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="165.27" default-y="-1691.41">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="47" width="190.35">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="22.48" default-y="-40" relative-y="-25">
             <p/>
-            <other-dynamics> dolce</other-dynamics>
+
             </dynamics>
           </direction-type>
         <sound dynamics="44.44"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>dolce</words></direction-type></direction>
       <note default-x="21.36" default-y="-1666.41">
         <pitch>
           <step>A</step>
@@ -713,5 +699,15 @@
             <staccato default-x="4.93" default-y="9.3"/>
             </articulations>
           </notations>
+        </note>
+      </measure><measure number="50" width="97.76">
+      <note default-x="13" default-y="-1676.41">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>96</duration>
+        <voice>1</voice>
+        <type>whole</type>
         </note>
       </measure></part></score-partwise>

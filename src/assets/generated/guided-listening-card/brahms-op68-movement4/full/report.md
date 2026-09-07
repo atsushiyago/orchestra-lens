@@ -5,11 +5,14 @@ Generated cards: 26
 Generation failures: 0
 Cards with Hauptstimme MAIN VOICE: 11
 Cards without MAIN VOICE: 15
-Analytical lyric annotations removed: 31
+Analytical lyric annotations removed: 33
+other-dynamics expressions normalized: 10
+Source/excerpt integrity failures: 0
+SVG glyph validation failures: 0
 Stray colored analytical letters remaining: 0
-Cards with boundary tie/slur warnings: 12
-Cards with Verovio warnings: 3
-Cards with multiple-voice complexity: 0
+Cards with boundary tie/slur warnings: 8
+Cards with Verovio warnings: 1
+Cards with multiple-voice complexity: 1
 Cards with tuplet complexity: 3
 Semantic-consistency failures: 0
 
@@ -23,11 +26,15 @@ Main Voice: none
 
 Staves: Violin 1, Violin 2, Viola, Violoncello
 
-Window: m.1–3
+Window: m.1–4
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -41,7 +48,11 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Violin 2, Violoncello
 
-Window: m.11–14
+Window: m.12–15
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -59,11 +70,15 @@ Main Voice: none
 
 Staves: Viola, Violoncello, Contrabass, C Horn 1
 
-Window: m.19–22
+Window: m.20–23
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -77,11 +92,15 @@ Main Voice: none
 
 Staves: C Horn 1, Trombone 1, Trombone 2, Trombone 3
 
-Window: m.29–32
+Window: m.30–33
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -95,11 +114,15 @@ Main Voice: Flute I
 
 Staves: Flute 1, Bassoon 1, Bb Clarinet 1, Bb Clarinet 2
 
-Window: m.37–40
+Window: m.38–41
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -113,7 +136,11 @@ Main Voice: Bassoon I
 
 Staves: Bassoon 1, Bassoon 2, Contrabassoon, Trombone 1
 
-Window: m.46–49
+Window: m.47–50
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -131,11 +158,15 @@ Main Voice: none
 
 Staves: Violin 1, Violin 2, Viola, Violoncello
 
-Window: m.61–64
+Window: m.62–65
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -149,11 +180,15 @@ Main Voice: Flute I
 
 Staves: Flute 1, Flute 2, Bb Clarinet 1, Bb Clarinet 2
 
-Window: m.77–80
+Window: m.78–81
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -167,11 +202,15 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Contrabass, Violin 2
 
-Window: m.96–99
+Window: m.97–100
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Removed 2 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 3 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -185,11 +224,15 @@ Main Voice: Flute I
 
 Staves: Flute 1, Bassoon 1, Bassoon 2, Bb Clarinet 1
 
-Window: m.114–117
+Window: m.115–118
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -203,13 +246,17 @@ Main Voice: Oboe I
 
 Staves: Oboe 1, Contrabass, Viola, Violin 1
 
-Window: m.132–135
+Window: m.133–136
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
 
-Complexity: Oboe 1, m.135: Tuplets are shown at their written positions but are not bracketed or numbered.
+Complexity: Oboe 1, m.135: Tuplets are shown at their written positions but are not bracketed or numbered. Oboe 1, m.136: Tuplets are shown at their written positions but are not bracketed or numbered.
 
 Semantic consistency: PASS
 
@@ -221,7 +268,11 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Violin 2, Contrabass
 
-Window: m.148–151
+Window: m.149–152
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -239,7 +290,11 @@ Main Voice: Flute I
 
 Staves: Flute 1, Flute 2, Contrabassoon, Bassoon 1
 
-Window: m.164–167
+Window: m.165–168
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -257,11 +312,15 @@ Main Voice: none
 
 Staves: E Horn 3, E Horn 4, Contrabass, Violin 2
 
-Window: m.180–183
+Window: m.181–184
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -275,11 +334,15 @@ Main Voice: Oboe I
 
 Staves: Oboe 1, Flute 1, Flute 2, Oboe 2
 
-Window: m.211–214
+Window: m.212–215
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -293,11 +356,15 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Contrabass, Violoncello
 
-Window: m.225–228
+Window: m.226–229
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Removed 2 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Removed 2 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -311,11 +378,15 @@ Main Voice: none
 
 Staves: Violin 1, Violin 2, Contrabass, Viola
 
-Window: m.257–260
+Window: m.258–261
 
-Verovio warnings: [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.
+Integrity: PASS
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML slur. Removed 2 red single-character analytical lyric annotation(s).
+SVG glyph validation: PASS
+
+Verovio warnings: none recorded
+
+Boundary/extraction warnings: Removed 2 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -329,7 +400,11 @@ Main Voice: Flute I
 
 Staves: Flute 1, Flute 2, Bassoon 1, Bassoon 2
 
-Window: m.279–282
+Window: m.280–283
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -347,13 +422,17 @@ Main Voice: none
 
 Staves: C Horn 1, Timpani, Violoncello, Viola
 
-Window: m.289–292
+Window: m.290–293
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Removed 2 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 2 red single-character analytical lyric annotation(s).
 
-Complexity: Timpani, m.290: Tuplets are shown at their written positions but are not bracketed or numbered. Timpani, m.291: Tuplets are shown at their written positions but are not bracketed or numbered. Timpani, m.292: Tuplets are shown at their written positions but are not bracketed or numbered.
+Complexity: Timpani, m.290: Tuplets are shown at their written positions but are not bracketed or numbered. Timpani, m.291: Tuplets are shown at their written positions but are not bracketed or numbered. Timpani, m.292: Tuplets are shown at their written positions but are not bracketed or numbered. Timpani, m.293: Tuplets are shown at their written positions but are not bracketed or numbered. Viola, m.293: Multiple voices (1, 2) are simplified into one horizontal stream. Violoncello, m.293: Multiple voices (1, 2) are simplified into one horizontal stream.
 
 Semantic consistency: PASS
 
@@ -365,11 +444,15 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Violoncello, Violin 2
 
-Window: m.297–300
+Window: m.298–301
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: [Warning] tie '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 2 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -383,9 +466,13 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Violin 2, Contrabass
 
-Window: m.314–317
+Window: m.315–318
 
-Verovio warnings: [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'. [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'. [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'. [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'. [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'. [Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.
+Integrity: PASS
+
+SVG glyph validation: PASS
+
+Verovio warnings: none recorded
 
 Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Excerpt boundary intersects an open MusicXML slur. Removed 2 red single-character analytical lyric annotation(s).
 
@@ -401,7 +488,11 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Violin 2, Contrabass
 
-Window: m.332–335
+Window: m.333–336
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -419,7 +510,11 @@ Main Voice: Flute I
 
 Staves: Flute 1, Flute 2, Oboe 1, Oboe 2
 
-Window: m.352–355
+Window: m.353–356
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -437,11 +532,15 @@ Main Voice: Flute I
 
 Staves: Flute 1, Flute 2, Oboe 1, Oboe 2
 
-Window: m.371–374
+Window: m.372–375
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
-Boundary/extraction warnings: Excerpt boundary intersects an open MusicXML tie. Excerpt boundary intersects an open MusicXML slur. Removed 1 red single-character analytical lyric annotation(s).
+Boundary/extraction warnings: Removed 1 red single-character analytical lyric annotation(s).
 
 Complexity: no multi-voice or tuplet warning
 
@@ -455,7 +554,11 @@ Main Voice: Flute I
 
 Staves: Flute 1, Flute 2, Oboe 1, Oboe 2
 
-Window: m.403–406
+Window: m.404–407
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 
@@ -473,7 +576,11 @@ Main Voice: none
 
 Staves: Violin 1, Viola, Violin 2, Contrabass
 
-Window: m.447–450
+Window: m.448–451
+
+Integrity: PASS
+
+SVG glyph validation: PASS
 
 Verovio warnings: none recorded
 

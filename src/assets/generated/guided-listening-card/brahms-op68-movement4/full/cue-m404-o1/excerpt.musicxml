@@ -54,7 +54,7 @@
         <volume>78.7402</volume>
         <pan>0</pan>
         </midi-instrument>
-      </score-part></part-list><part id="P1"><measure number="403" width="207.14"><attributes><divisions>24</divisions><key>
+      </score-part></part-list><part id="P1"><measure number="404" width="203.5"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="cut">
           <beats>2</beats>
@@ -63,12 +63,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="96.17" default-y="-10">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="404" width="203.5">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="-3.62" default-y="-40" relative-y="-25">
@@ -91,7 +85,7 @@
             <accent default-x="-0.72" default-y="39.3"/>
             </articulations>
           </notations>
-        
+
         </note>
       <note default-x="59.45" default-y="25">
         <pitch>
@@ -362,7 +356,105 @@
             </articulations>
           </notations>
         </note>
-      </measure></part><part id="P2"><measure number="403" width="207.14"><attributes><divisions>24</divisions><key>
+      </measure><measure number="407" width="196.1">
+      <note default-x="13.96" default-y="40">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="49.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="52.04" default-y="35">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="44.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="77.43" default-y="40">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="49.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="102.82" default-y="40">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="49.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="140.91" default-y="35">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="44.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="166.3" default-y="40">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="49.3"/>
+            </articulations>
+          </notations>
+        </note>
+      </measure></part><part id="P2"><measure number="404" width="203.5"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="cut">
           <beats>2</beats>
@@ -371,12 +463,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="96.17" default-y="-197.62">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="404" width="203.5">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="-3.62" default-y="-40" relative-y="-25">
@@ -672,7 +758,105 @@
             </articulations>
           </notations>
         </note>
-      </measure></part><part id="P3"><measure number="403" width="207.14"><attributes><divisions>24</divisions><key>
+      </measure><measure number="407" width="196.1">
+      <note default-x="13.96" default-y="-157.62">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="39.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="52.04" default-y="-162.62">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="34.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="77.43" default-y="-157.62">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="39.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="102.82" default-y="-157.62">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="39.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="140.91" default-y="-162.62">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="34.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="166.3" default-y="-157.62">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="39.3"/>
+            </articulations>
+          </notations>
+        </note>
+      </measure></part><part id="P3"><measure number="404" width="203.5"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="cut">
           <beats>2</beats>
@@ -681,12 +865,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="96.17" default-y="-303.48">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="404" width="203.5">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="-3.62" default-y="-40" relative-y="-25">
@@ -979,7 +1157,105 @@
             </articulations>
           </notations>
         </note>
-      </measure></part><part id="P4"><measure number="403" width="207.14"><attributes><divisions>24</divisions><key>
+      </measure><measure number="407" width="196.1">
+      <note default-x="13.96" default-y="-288.48">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="14.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="52.04" default-y="-293.48">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="9.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="77.43" default-y="-288.48">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="14.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="102.82" default-y="-288.48">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="14.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="140.91" default-y="-293.48">
+        <pitch>
+          <step>F</step>
+          <alter>1</alter>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="9.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="166.3" default-y="-288.48">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="14.3"/>
+            </articulations>
+          </notations>
+        </note>
+      </measure></part><part id="P4"><measure number="404" width="203.5"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="cut">
           <beats>2</beats>
@@ -988,12 +1264,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="96.17" default-y="-409.34">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="404" width="203.5">
       <direction placement="below">
         <direction-type>
           <dynamics default-x="-3.62" default-y="-40" relative-y="-25">
@@ -1286,6 +1556,104 @@
         <notations>
           <articulations>
             <staccato default-x="4.93" default-y="3.44"/>
+            </articulations>
+          </notations>
+        </note>
+      </measure><measure number="407" width="196.1">
+      <note default-x="13.96" default-y="-404.34">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="4.55"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="52.04" default-y="-409.34">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>sharp</accidental>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="3.44"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="77.43" default-y="-404.34">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="4.3"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="102.82" default-y="-404.34">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <articulations>
+            <accent default-x="-0.72" default-y="4.55"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="140.91" default-y="-409.34">
+        <pitch>
+          <step>D</step>
+          <alter>1</alter>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="3.44"/>
+            </articulations>
+          </notations>
+        </note>
+      <note default-x="166.3" default-y="-404.34">
+        <pitch>
+          <step>E</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <articulations>
+            <staccato default-x="4.93" default-y="4.3"/>
             </articulations>
           </notations>
         </note>

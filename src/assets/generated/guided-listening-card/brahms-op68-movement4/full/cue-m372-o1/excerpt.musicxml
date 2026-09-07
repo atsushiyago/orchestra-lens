@@ -54,7 +54,7 @@
         <volume>78.7402</volume>
         <pan>0</pan>
         </midi-instrument>
-      </score-part></part-list><part id="P1"><measure number="371" width="183.22"><attributes><divisions>24</divisions><key>
+      </score-part></part-list><part id="P1"><measure number="372" width="225.36"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -63,12 +63,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="84.21" default-y="-10">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="372" width="225.36">
       <note default-x="13.96" default-y="-20">
         <rest/>
         <duration>24</duration>
@@ -95,7 +89,7 @@
         <notations>
           <slur type="start" bezier-x="18.82228" bezier-y="8.686123" number="1"/>
           </notations>
-        
+
         </note>
       <note default-x="146.57" default-y="20">
         <pitch>
@@ -165,7 +159,35 @@
           <slur type="stop" number="1" bezier-x="-5.68414" bezier-y="13.524092"/>
           </notations>
         </note>
-      </measure></part><part id="P2"><measure number="371" width="183.22"><attributes><divisions>24</divisions><key>
+      </measure><measure number="375" width="179.5">
+      <note default-x="23.72" default-y="25">
+        <pitch>
+          <step>D</step>
+          <alter>-1</alter>
+          <octave>6</octave>
+          </pitch>
+        <duration>24</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>down</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="62.21" default-y="-20">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        </note>
+      <note default-x="100.71" default-y="-20">
+        <rest/>
+        <duration>48</duration>
+        <voice>1</voice>
+        <type>half</type>
+        </note>
+      </measure></part><part id="P2"><measure number="372" width="225.36"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -174,12 +196,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="84.21" default-y="-135.71">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="372" width="225.36">
       <note default-x="13.96" default-y="-145.71">
         <rest/>
         <duration>48</duration>
@@ -254,7 +270,35 @@
           <slur type="start" bezier-x="17.374214" bezier-y="11.785462" number="1"/>
           </notations>
         </note>
-      </measure></part><part id="P3"><measure number="371" width="183.22"><attributes><divisions>24</divisions><key>
+      </measure><measure number="375" width="179.5">
+      <note default-x="23.72" default-y="-125.71">
+        <pitch>
+          <step>F</step>
+          <alter>-1</alter>
+          <octave>5</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <accidental>flat</accidental>
+        <stem>down</stem>
+        <notations>
+          <slur type="stop" number="1" bezier-x="-12.092045" bezier-y="16.176248"/>
+          </notations>
+        </note>
+      <note default-x="62.21" default-y="-145.71">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        </note>
+      <note default-x="100.71" default-y="-145.71">
+        <rest/>
+        <duration>48</duration>
+        <voice>1</voice>
+        <type>half</type>
+        </note>
+      </measure></part><part id="P3"><measure number="372" width="225.36"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -263,12 +307,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="84.21" default-y="-242.56">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="372" width="225.36">
       <note default-x="13.96" default-y="-252.56">
         <rest/>
         <duration>24</duration>
@@ -364,7 +402,22 @@
           <slur type="stop" number="1" bezier-x="-7.037054" bezier-y="11.043989"/>
           </notations>
         </note>
-      </measure></part><part id="P4"><measure number="371" width="183.22"><attributes><divisions>24</divisions><key>
+      </measure><measure number="375" width="179.5">
+      <note default-x="22.76" default-y="-242.56">
+        <pitch>
+          <step>D</step>
+          <alter>-1</alter>
+          <octave>5</octave>
+          </pitch>
+        <duration>96</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>whole</type>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      </measure></part><part id="P4"><measure number="372" width="225.36"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -373,12 +426,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="84.21" default-y="-349.4">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      </measure><measure number="372" width="225.36">
       <note default-x="13.96" default-y="-359.4">
         <rest/>
         <duration>48</duration>
@@ -451,6 +498,21 @@
         <stem>up</stem>
         <notations>
           <slur type="start" bezier-x="14.166986" bezier-y="-15.211584" number="1"/>
+          </notations>
+        </note>
+      </measure><measure number="375" width="179.5">
+      <note default-x="22.76" default-y="-374.4">
+        <pitch>
+          <step>F</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+          </pitch>
+        <duration>96</duration>
+        <voice>1</voice>
+        <type>whole</type>
+        <accidental>flat</accidental>
+        <notations>
+          <slur type="stop" number="1" bezier-x="-18.131343" bezier-y="-10.166129"/>
           </notations>
         </note>
       </measure></part></score-partwise>

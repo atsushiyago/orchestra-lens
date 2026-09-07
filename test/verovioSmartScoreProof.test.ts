@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
-import {extractMusicXmlExcerpt, filterNonPerformanceAnnotations} from '../tools/generateVerovioSmartScoreProof';
+import {extractMusicXmlExcerpt, extractMusicXmlExcerptWithReport, filterNonPerformanceAnnotations, validateExcerptIntegrity, validateSvgGlyphs} from '../tools/generateVerovioSmartScoreProof';
 import type {ListeningCueManifest} from '../tools/generateListeningCues';
 
 const scorePath = new URL('../scores/real/Brahms_Op68_Movement4.musicxml', import.meta.url);
@@ -32,4 +32,31 @@ test('analysis-code lyric filtering removes only colored single-letter analytica
   assert.match(filtered.musicxml, /allegrо/);
   assert.match(filtered.musicxml, /sempre e passionato/);
   assert.match(filtered.musicxml, /<f\/>/);
+});
+
+test('excerpt integrity fingerprints source-position measures and catches a wrong tail after a correct prefix', () => {
+  const source = `<?xml version="1.0"?><score-partwise><part-list><score-part id="P1"><part-name>Violin I</part-name></score-part></part-list><part id="P1"><measure number="1"><attributes><divisions>1</divisions></attributes><note><pitch><step>C</step><octave>4</octave></pitch><duration>1</duration></note></measure><measure number="2"><note><rest/><duration>1</duration></note></measure><measure number="3"><note><pitch><step>D</step><octave>4</octave></pitch><duration>1</duration><voice>2</voice><chord/></note></measure><measure number="4"><note><pitch><step>E</step><octave>4</octave></pitch><duration>1</duration></note></measure></part></score-partwise>`;
+  const extracted = extractMusicXmlExcerptWithReport(source, ['Violin I'], {startMeasure: 1, endMeasure: 3});
+  assert.equal(extracted.integrity.valid, true);
+  assert.deepEqual(extracted.integrity.parts[0]?.measures.map(measure => [measure.sourceMeasureIndex, measure.sourceMeasureNumber, measure.outputMeasureIndex, measure.outputMeasureNumber]), [[0, '1', 0, '1'], [1, '2', 1, '2'], [2, '3', 2, '3']]);
+  const corrupted = extracted.musicxml.replace('<measure number="3"><note><pitch><step>D</step>', '<measure number="4"><note><pitch><step>E</step>');
+  const check = validateExcerptIntegrity(source, corrupted, [{id: 'P1', name: 'Violin I'}], {startMeasure: 1, endMeasure: 3});
+  assert.equal(check.valid, false);
+  assert.match(check.mismatches.join(' '), /fingerprint mismatch/);
+});
+
+test('instrumental filtering preserves dynamic expression text while normalizing other-dynamics away from private-use SVG text', () => {
+  const source = `<?xml version="1.0"?><score-partwise><part-list><score-part id="P1"><part-name>Horn I</part-name></score-part></part-list><part id="P1"><measure number="1"><direction placement="below"><direction-type><dynamics><f/><other-dynamics>sempre e passionato</other-dynamics></dynamics></direction-type></direction></measure></part></score-partwise>`;
+  const filtered = filterNonPerformanceAnnotations(source);
+  assert.equal(filtered.normalizedOtherDynamics, 1);
+  assert.match(filtered.musicxml, /<f\/>/);
+  assert.match(filtered.musicxml, /<words>sempre e passionato<\/words>/);
+  assert.doesNotMatch(filtered.musicxml, /other-dynamics/);
+});
+
+test('SVG glyph validation rejects private-use text but permits Verovio use-based notation glyphs', () => {
+  assert.equal(validateSvgGlyphs('<svg><use href="#E0A2"/><text>Allegro</text></svg>', true).valid, true);
+  const invalid = validateSvgGlyphs('<svg><text>\ue522</text></svg>', true);
+  assert.equal(invalid.valid, false);
+  assert.equal(invalid.privateUseTextGlyphs, 1);
 });

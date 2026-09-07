@@ -54,7 +54,7 @@
         <volume>78.7402</volume>
         <pan>0</pan>
         </midi-instrument>
-      </score-part></part-list><part id="P10"><measure number="29" width="268.77"><attributes><divisions>24</divisions><key>
+      </score-part></part-list><part id="P10"><measure number="30" width="224.51"><attributes><divisions>24</divisions><key>
           <fifths>-3</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -63,20 +63,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <print new-page="yes" page-number="7">
-        <staff-layout number="1">
-          <staff-distance>70.27</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="173.97" default-y="-1002.45">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="30" width="224.51">
       <attributes>
         <key>
           <fifths>0</fifths>
@@ -86,11 +72,11 @@
         <direction-type>
           <dynamics default-x="55.38" default-y="-42.82" relative-y="-25">
             <f/>
-            <other-dynamics> sempre e passionato</other-dynamics>
+
             </dynamics>
           </direction-type>
         <sound dynamics="87.78"/>
-        </direction>
+        </direction><direction placement="below"><direction-type><words>sempre e passionato</words></direction-type></direction>
       <note default-x="63.98" default-y="-997.45">
         <pitch>
           <step>E</step>
@@ -101,7 +87,7 @@
         <type>half</type>
         <dot default-x="81.99" default-y="-997.45"/>
         <stem>down</stem>
-        
+
         </note>
       <note default-x="171.63" default-y="-1002.45">
         <pitch>
@@ -173,7 +159,25 @@
           <slur type="stop" number="1" bezier-x="-24.223008" bezier-y="17.045709"/>
           </notations>
         </note>
-      </measure></part><part id="P16"><measure number="29" width="268.77"><attributes><divisions>24</divisions><key>
+      </measure><measure number="33" width="209.56">
+      <note default-x="13.96" default-y="-1007.45">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+          </pitch>
+        <duration>72</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot default-x="31.96" default-y="-1007.45"/>
+        <stem>down</stem>
+        </note>
+      <note default-x="149.25" default-y="-1012.45">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        </note>
+      </measure></part><part id="P16"><measure number="30" width="224.51"><attributes><divisions>24</divisions><key>
           <fifths>-3</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -182,20 +186,6 @@
           <sign>C</sign>
           <line>4</line>
           </clef></attributes>
-      <print new-page="yes" page-number="7">
-        <staff-layout number="1">
-          <staff-distance>70.27</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="173.97" default-y="-1680.32">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="30" width="224.51">
       <attributes>
         <key>
           <fifths>0</fifths>
@@ -283,7 +273,25 @@
         <type>half</type>
         <stem>down</stem>
         </note>
-      </measure></part><part id="P17"><measure number="29" width="268.77"><attributes><divisions>24</divisions><key>
+      </measure><measure number="33" width="209.56">
+      <note default-x="13.96" default-y="-1680.32">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>72</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot default-x="31.96" default-y="-1675.32"/>
+        <stem>down</stem>
+        </note>
+      <note default-x="149.25" default-y="-1690.32">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        </note>
+      </measure></part><part id="P17"><measure number="30" width="224.51"><attributes><divisions>24</divisions><key>
           <fifths>-3</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -292,20 +300,6 @@
           <sign>C</sign>
           <line>4</line>
           </clef></attributes>
-      <print new-page="yes" page-number="7">
-        <staff-layout number="1">
-          <staff-distance>70.27</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="173.97" default-y="-1790.6">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="30" width="224.51">
       <attributes>
         <key>
           <fifths>0</fifths>
@@ -371,7 +365,25 @@
         <type>half</type>
         <stem>up</stem>
         </note>
-      </measure></part><part id="P18"><measure number="29" width="268.77"><attributes><divisions>24</divisions><key>
+      </measure><measure number="33" width="209.56">
+      <note default-x="13.96" default-y="-1815.6">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>72</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <dot default-x="31.96" default-y="-1815.6"/>
+        <stem>up</stem>
+        </note>
+      <note default-x="149.25" default-y="-1800.6">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        </note>
+      </measure></part><part id="P18"><measure number="30" width="224.51"><attributes><divisions>24</divisions><key>
           <fifths>-3</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -380,20 +392,6 @@
           <sign>F</sign>
           <line>4</line>
           </clef></attributes>
-      <print new-page="yes" page-number="7">
-        <staff-layout number="1">
-          <staff-distance>70.27</staff-distance>
-          </staff-layout>
-        </print>
-      <note default-x="173.97" default-y="-1900.87">
-        <rest measure="yes"/>
-        <duration>96</duration>
-        <voice>1</voice>
-        </note>
-      <barline location="right">
-        <bar-style>light-light</bar-style>
-        </barline>
-      </measure><measure number="30" width="224.51">
       <attributes>
         <key>
           <fifths>0</fifths>
@@ -464,5 +462,36 @@
           <tied type="stop"/>
           <tied type="start"/>
           </notations>
+        </note>
+      </measure><measure number="33" width="209.56">
+      <note default-x="13.96" default-y="-1930.87">
+        <pitch>
+          <step>G</step>
+          <octave>2</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="92.25" default-y="-1915.87">
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="149.25" default-y="-1910.87">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
         </note>
       </measure></part></score-partwise>

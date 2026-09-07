@@ -54,7 +54,7 @@
         <volume>78.7402</volume>
         <pan>0</pan>
         </midi-instrument>
-      </score-part></part-list><part id="P20"><measure number="297" width="203.8"><attributes><divisions>24</divisions><key>
+      </score-part></part-list><part id="P20"><measure number="298" width="201.45"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -63,61 +63,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2130.21">
-        <pitch>
-          <step>D</step>
-          <octave>5</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="31" default-y="-2125.21"/>
-        <stem>down</stem>
-        <notations>
-          <slur type="start" bezier-x="16.192523" bezier-y="13.340955" number="1"/>
-          </notations>
-        </note>
-      <note default-x="78.51" default-y="-2125.21">
-        <pitch>
-          <step>E</step>
-          <octave>5</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <notations>
-          <slur type="stop" number="1" bezier-x="-16.862619" bezier-y="12.483228"/>
-          </notations>
-        </note>
-      <note default-x="105.58" default-y="-2130.21">
-        <pitch>
-          <step>D</step>
-          <octave>5</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="123.58" default-y="-2125.21"/>
-        <stem>down</stem>
-        <notations>
-          <slur type="start" bezier-x="15.515291" bezier-y="13.076255" number="1"/>
-          </notations>
-        </note>
-      <note default-x="168.43" default-y="-2125.21">
-        <pitch>
-          <step>E</step>
-          <octave>5</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <notations>
-          <slur type="stop" number="1" bezier-x="-16.199391" bezier-y="12.218527"/>
-          </notations>
-        </note>
-      </measure><measure number="298" width="201.45">
       <note default-x="16.19" default-y="-2135.21">
         <pitch>
           <step>C</step>
@@ -131,7 +76,7 @@
         <notations>
           <slur type="start" bezier-x="14.164868" bezier-y="14.677738" number="1"/>
           </notations>
-        
+
         </note>
       <note default-x="78.94" default-y="-2130.21">
         <pitch>
@@ -273,7 +218,37 @@
           <wedge type="stop" spread="11.5" number="1"/>
           </direction-type>
         </direction>
-      </measure></part><part id="P22"><measure number="297" width="203.8"><attributes><divisions>24</divisions><key>
+      </measure><measure number="301" width="139.87">
+      <note default-x="13" default-y="-2150.21">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="84.47" default-y="-2150.21">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="start"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="start"/>
+          </notations>
+
+        </note>
+      </measure></part><part id="P22"><measure number="298" width="201.45"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -282,140 +257,6 @@
           <sign>C</sign>
           <line>3</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2373.53">
-        <pitch>
-          <step>B</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <tie type="stop"/>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <beam number="1">begin</beam>
-        <notations>
-          <tied type="stop"/>
-          </notations>
-        </note>
-      <note default-x="13" default-y="-2348.53">
-        <chord/>
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>12</duration>
-        <tie type="stop"/>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <notations>
-          <tied type="stop"/>
-          </notations>
-        </note>
-      <note default-x="36.82" default-y="-2378.53">
-        <pitch>
-          <step>A</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <beam number="1">end</beam>
-        </note>
-      <note default-x="36.82" default-y="-2353.53">
-        <chord/>
-        <pitch>
-          <step>F</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        </note>
-      <note default-x="60.65" default-y="-2373.53">
-        <pitch>
-          <step>B</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="78.65" default-y="-2373.53"/>
-        <stem>down</stem>
-        <notations>
-          <slur type="start" bezier-x="16.847018" bezier-y="11.362221" number="1"/>
-          </notations>
-        </note>
-      <note default-x="60.65" default-y="-2348.53">
-        <chord/>
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="78.65" default-y="-2343.53"/>
-        <stem>down</stem>
-        </note>
-      <note default-x="123.44" default-y="-2378.53">
-        <pitch>
-          <step>A</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <notations>
-          <slur type="stop" number="1" bezier-x="-14.836789" bezier-y="13.884948"/>
-          </notations>
-        </note>
-      <note default-x="123.44" default-y="-2353.53">
-        <chord/>
-        <pitch>
-          <step>F</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        </note>
-      <note default-x="150.57" default-y="-2373.53">
-        <pitch>
-          <step>B</step>
-          <alter>-1</alter>
-          <octave>3</octave>
-          </pitch>
-        <duration>24</duration>
-        <tie type="start"/>
-        <voice>1</voice>
-        <type>quarter</type>
-        <accidental>flat</accidental>
-        <stem>down</stem>
-        <notations>
-          <tied type="start"/>
-          </notations>
-        </note>
-      <note default-x="150.57" default-y="-2348.53">
-        <chord/>
-        <pitch>
-          <step>G</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>24</duration>
-        <tie type="start"/>
-        <voice>1</voice>
-        <type>quarter</type>
-        <stem>down</stem>
-        <notations>
-          <tied type="start"/>
-          </notations>
-        </note>
-      </measure><measure number="298" width="201.45">
       <note default-x="16.19" default-y="-2373.53">
         <pitch>
           <step>B</step>
@@ -814,7 +655,51 @@
           <wedge type="stop" spread="11.5" number="1"/>
           </direction-type>
         </direction>
-      </measure></part><part id="P23"><measure number="297" width="203.8"><attributes><divisions>24</divisions><key>
+      </measure><measure number="301" width="139.87">
+      <note default-x="13" default-y="-2393.53">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="13" default-y="-2368.53">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="84.47" default-y="-2393.53">
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="start"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="start"/>
+          </notations>
+        </note>
+      </measure></part><part id="P23"><measure number="298" width="201.45"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -823,140 +708,6 @@
           <sign>F</sign>
           <line>4</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2488.16">
-        <pitch>
-          <step>B</step>
-          <octave>2</octave>
-          </pitch>
-        <duration>12</duration>
-        <tie type="stop"/>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <beam number="1">begin</beam>
-        <notations>
-          <tied type="stop"/>
-          </notations>
-        </note>
-      <note default-x="13" default-y="-2463.16">
-        <chord/>
-        <pitch>
-          <step>G</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <tie type="stop"/>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <notations>
-          <tied type="stop"/>
-          </notations>
-        </note>
-      <note default-x="36.82" default-y="-2493.16">
-        <pitch>
-          <step>A</step>
-          <octave>2</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        <beam number="1">end</beam>
-        </note>
-      <note default-x="36.82" default-y="-2468.16">
-        <chord/>
-        <pitch>
-          <step>F</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>down</stem>
-        </note>
-      <note default-x="60.65" default-y="-2488.16">
-        <pitch>
-          <step>B</step>
-          <octave>2</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="78.65" default-y="-2483.16"/>
-        <stem>down</stem>
-        <notations>
-          <slur type="start" bezier-x="16.18412" bezier-y="12.212365" number="1"/>
-          </notations>
-        </note>
-      <note default-x="60.65" default-y="-2463.16">
-        <chord/>
-        <pitch>
-          <step>G</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="78.65" default-y="-2463.16"/>
-        <stem>down</stem>
-        </note>
-      <note default-x="123.44" default-y="-2493.16">
-        <pitch>
-          <step>A</step>
-          <octave>2</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>up</stem>
-        <notations>
-          <slur type="stop" number="1" bezier-x="-15.499687" bezier-y="13.070092"/>
-          </notations>
-        </note>
-      <note default-x="123.44" default-y="-2468.16">
-        <chord/>
-        <pitch>
-          <step>F</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>up</stem>
-        </note>
-      <note default-x="150.57" default-y="-2488.16">
-        <pitch>
-          <step>B</step>
-          <alter>-1</alter>
-          <octave>2</octave>
-          </pitch>
-        <duration>24</duration>
-        <tie type="start"/>
-        <voice>1</voice>
-        <type>quarter</type>
-        <accidental>flat</accidental>
-        <stem>down</stem>
-        <notations>
-          <tied type="start"/>
-          </notations>
-        </note>
-      <note default-x="150.57" default-y="-2463.16">
-        <chord/>
-        <pitch>
-          <step>G</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>24</duration>
-        <tie type="start"/>
-        <voice>1</voice>
-        <type>quarter</type>
-        <stem>down</stem>
-        <notations>
-          <tied type="start"/>
-          </notations>
-        </note>
-      </measure><measure number="298" width="201.45">
       <note default-x="16.19" default-y="-2488.16">
         <pitch>
           <step>B</step>
@@ -1355,7 +1106,67 @@
           <wedge type="stop" spread="11.5" number="1"/>
           </direction-type>
         </direction>
-      </measure></part><part id="P21"><measure number="297" width="203.8"><attributes><divisions>24</divisions><key>
+      </measure><measure number="301" width="139.87">
+      <note default-x="13" default-y="-2508.16">
+        <pitch>
+          <step>E</step>
+          <octave>2</octave>
+          </pitch>
+        <duration>24</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="13" default-y="-2483.16">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>3</octave>
+          </pitch>
+        <duration>24</duration>
+        <tie type="stop"/>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="stop"/>
+          </notations>
+        </note>
+      <note default-x="48.74" default-y="-2493.16">
+        <pitch>
+          <step>A</step>
+          <octave>2</octave>
+          </pitch>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem>up</stem>
+        <notations>
+          <slur type="start" bezier-x="8.609484" bezier-y="-8.623553" number="1"/>
+          </notations>
+        </note>
+      <note default-x="84.47" default-y="-2488.16">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>2</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="start"/>
+        <voice>1</voice>
+        <type>half</type>
+        <accidental>flat</accidental>
+        <stem>up</stem>
+        <notations>
+          <tied type="start"/>
+          <slur type="stop" number="1" bezier-x="-7.654685" bezier-y="-9.48128"/>
+          </notations>
+        </note>
+      </measure></part><part id="P21"><measure number="298" width="201.45"><attributes><divisions>24</divisions><key>
           <fifths>0</fifths>
           </key><time symbol="common">
           <beats>4</beats>
@@ -1364,61 +1175,6 @@
           <sign>G</sign>
           <line>2</line>
           </clef></attributes>
-      <note default-x="13" default-y="-2270.41">
-        <pitch>
-          <step>F</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="31" default-y="-2270.41"/>
-        <stem>up</stem>
-        <notations>
-          <slur type="start" bezier-x="10.888803" bezier-y="-19.882254" number="1"/>
-          </notations>
-        </note>
-      <note default-x="78.51" default-y="-2300.41">
-        <pitch>
-          <step>G</step>
-          <octave>3</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>up</stem>
-        <notations>
-          <slur type="stop" number="1" bezier-x="-22.166339" bezier-y="-4.74589"/>
-          </notations>
-        </note>
-      <note default-x="105.58" default-y="-2270.41">
-        <pitch>
-          <step>F</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>36</duration>
-        <voice>1</voice>
-        <type>quarter</type>
-        <dot default-x="123.58" default-y="-2270.41"/>
-        <stem>up</stem>
-        <notations>
-          <slur type="start" bezier-x="14.852713" bezier-y="-13.891136" number="1"/>
-          </notations>
-        </note>
-      <note default-x="168.43" default-y="-2275.41">
-        <pitch>
-          <step>E</step>
-          <octave>4</octave>
-          </pitch>
-        <duration>12</duration>
-        <voice>1</voice>
-        <type>eighth</type>
-        <stem>up</stem>
-        <notations>
-          <slur type="stop" number="1" bezier-x="-16.86197" bezier-y="-11.368409"/>
-          </notations>
-        </note>
-      </measure><measure number="298" width="201.45">
       <note default-x="16.19" default-y="-2275.41">
         <pitch>
           <step>E</step>
@@ -1563,4 +1319,29 @@
           <wedge type="stop" spread="11.5" number="1"/>
           </direction-type>
         </direction>
+      </measure><measure number="301" width="139.87">
+      <note default-x="13" default-y="-2285.41">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>48</duration>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        </note>
+      <note default-x="84.47" default-y="-2285.41">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+          </pitch>
+        <duration>48</duration>
+        <tie type="start"/>
+        <voice>1</voice>
+        <type>half</type>
+        <stem>up</stem>
+        <notations>
+          <tied type="start"/>
+          </notations>
+        </note>
       </measure></part></score-partwise>

@@ -4,7 +4,18 @@ import {parseScoreParts, selectPrototypeCues} from './generateSmartScorePrototyp
 import type {ListeningCue, ListeningCueManifest} from './generateListeningCues';
 
 export type ExcerptWindow = {startMeasure: number; endMeasure: number};
-export type MusicXmlExcerpt = {musicxml: string; removedAnalyticalLyrics: number};
+export type ExcerptMeasureProvenance = {
+  sourcePartId: string;
+  sourceMeasureIndex: number;
+  sourceMeasureNumber: string;
+  outputMeasureIndex: number;
+  outputMeasureNumber: string;
+  fingerprint: string;
+};
+export type ExcerptPartProvenance = {sourcePartId: string; partName: string; measures: ExcerptMeasureProvenance[]};
+export type ExcerptIntegrity = {valid: boolean; parts: ExcerptPartProvenance[]; mismatches: string[]};
+export type SvgGlyphValidation = {valid: boolean; replacementCharacters: number; controlCharacters: number; privateUseTextGlyphs: number; suspiciousInstrumentalLyrics: number; issues: string[]};
+export type MusicXmlExcerpt = {musicxml: string; removedAnalyticalLyrics: number; normalizedOtherDynamics: number; integrity: ExcerptIntegrity};
 export type VerovioToolkit = {setOptions(options: Record<string, unknown>): void; loadData(data: string): number; renderToSVG(page: number, options?: Record<string, unknown>): string; getVersion(): string; getLog(): string};
 type VerovioModule = {module: {onRuntimeInitialized?: () => void}; toolkit: new () => VerovioToolkit; enableLogToBuffer?: (value: boolean, module: unknown) => void};
 let sharedToolkit: VerovioToolkit | undefined;
@@ -25,9 +36,32 @@ const matchingPart = (parts: ReturnType<typeof parseScoreParts>, staff: string) 
   const matches = parts.filter(part => compact(part.name).includes(target) || target.includes(compact(part.name)));
   return matches.length === 1 ? matches[0] : undefined;
 };
-const betweenMeasures = (partXml: string, window: ExcerptWindow) => [...partXml.matchAll(/<measure\b([^>]*)>([\s\S]*?)<\/measure>/g)]
-  .filter(match => { const measure = Number(attr(match[1], 'number')); return measure >= window.startMeasure && measure <= window.endMeasure; })
-  .map(match => `<measure${match[1]}>${match[2]}</measure>`);
+type XmlMeasure = {index: number; number: string; xml: string};
+const measuresForPart = (partXml: string): XmlMeasure[] => [...partXml.matchAll(/<measure\b([^>]*)>([\s\S]*?)<\/measure>/g)]
+  .map((match, index) => ({index, number: attr(match[1], 'number') ?? '', xml: `<measure${match[1]}>${match[2]}</measure>`}));
+const windowForPart = (partXml: string, window: ExcerptWindow): XmlMeasure[] => {
+  const measures = measuresForPart(partXml);
+  const start = measures.findIndex(measure => Number(measure.number) === window.startMeasure);
+  const expectedLength = window.endMeasure - window.startMeasure + 1;
+  if (start < 0) return [];
+  const selected = measures.slice(start, start + expectedLength);
+  if (selected.length !== expectedLength || selected.some((measure, index) => Number(measure.number) !== window.startMeasure + index)) return [];
+  return selected;
+};
+const noteFingerprint = (measureXml: string): string => {
+  const events = [...measureXml.matchAll(/<note\b[^>]*>([\s\S]*?)<\/note>/g)].map(match => {
+    const body = match[1]!;
+    const pitch = body.match(/<pitch\b[^>]*>[\s\S]*?<step>([^<]+)<\/step>(?:[\s\S]*?<alter>([^<]+)<\/alter>)?[\s\S]*?<octave>([^<]+)<\/octave>[\s\S]*?<\/pitch>/);
+    return {
+      kind: /<rest\b/.test(body) ? 'rest' : 'note',
+      pitch: pitch ? `${pitch[1]}${pitch[2] ? `:${pitch[2]}` : ''}${pitch[3]}` : null,
+      duration: elementText(body, 'duration') ?? null,
+      voice: elementText(body, 'voice') ?? '1',
+      chord: /<chord\b/.test(body),
+    };
+  });
+  return JSON.stringify(events);
+};
 const mergedAttributes = (xml: string): string | undefined => {
   const blocks = [...xml.matchAll(/<attributes\b[^>]*>([\s\S]*?)<\/attributes>/g)].map(match => match[1]!);
   if (!blocks.length) return undefined;
@@ -38,24 +72,91 @@ const mergedAttributes = (xml: string): string | undefined => {
   return components.length ? `<attributes>${components.join('')}</attributes>` : undefined;
 };
 
+const vocalPartIds = (musicxml: string): ReadonlySet<string> => new Set([...musicxml.matchAll(/<score-part\s+([^>]*)>([\s\S]*?)<\/score-part>/g)]
+  // “Bass” alone frequently denotes a contrabass orchestral part. Treat only
+  // unambiguously vocal names as vocal so instrumental analysis marks remain
+  // eligible for removal.
+  .filter(match => /<(?:part-name|score-instrument)[^>]*>[^<]*(?:soprano|alto|tenor|baritone|voice|choir|chorus)[^<]*/i.test(match[2]!))
+  .map(match => attr(match[1], 'id')).filter((id): id is string => !!id));
+const stripAnalyticalLyrics = (partXml: string, isVocal: boolean, counter: {value: number}) => isVocal ? partXml : partXml.replace(/<lyric\b([^>]*)>([\s\S]*?)<\/lyric>/g, (whole, attributes: string, body: string) => {
+  const lyricText = elementText(body, 'text')?.replace(/\s+/g, ' ').trim() ?? '';
+  const analytical = /\bcolor\s*=\s*["']#(?:ff)?0000["']/i.test(attributes)
+    && /\brelative-y\s*=\s*["']-?\d+["']/i.test(attributes)
+    && /<syllabic>single<\/syllabic>/.test(body)
+    && /^[A-Za-z]$/.test(lyricText);
+  if (!analytical) return whole;
+  counter.value += 1;
+  return '';
+});
+
 /**
- * Removes source-analysis codes encoded as red, single-character MusicXML
- * lyrics with a synthetic relative offset. It deliberately leaves ordinary
- * lyrics, directions, dynamics, tempo/expression text, and rehearsal marks.
+ * Verovio encodes an <other-dynamics> string inside a Leipzig private-use
+ * glyph run. Native SVG-to-PNG renderers cannot reliably resolve that embedded
+ * WOFF2 glyph. Preserve both the notated dynamic and expression wording by
+ * emitting the wording as the equivalent MusicXML direction text instead.
  */
-export const filterNonPerformanceAnnotations = (musicxml: string): MusicXmlExcerpt => {
-  let removedAnalyticalLyrics = 0;
-  const filtered = musicxml.replace(/<lyric\b([^>]*)>([\s\S]*?)<\/lyric>/g, (whole, attributes: string, body: string) => {
-    const lyricText = elementText(body, 'text')?.replace(/\s+/g, ' ').trim() ?? '';
-    const analytical = /\bcolor\s*=\s*["']#(?:ff)?0000["']/i.test(attributes)
-      && /\brelative-y\s*=\s*["']-?\d+["']/i.test(attributes)
-      && /<syllabic>single<\/syllabic>/.test(body)
-      && /^[A-Za-z]$/.test(lyricText);
-    if (!analytical) return whole;
-    removedAnalyticalLyrics += 1;
-    return '';
+const normalizeOtherDynamics = (musicxml: string, counter: {value: number}) => musicxml.replace(/<direction(?:\s+([^>]*))?>([\s\S]*?)<\/direction>/g, (whole, directionAttributes: string | undefined, directionBody: string) => {
+  const dynamics = directionBody.match(/<dynamics\b([^>]*)>([\s\S]*?)<\/dynamics>/);
+  if (!dynamics) return whole;
+  const entries = [...dynamics[2]!.matchAll(/<other-dynamics\b[^>]*>([\s\S]*?)<\/other-dynamics>/g)].map(match => match[1]!.trim()).filter(Boolean);
+  if (!entries.length) return whole;
+  counter.value += entries.length;
+  const retainedDynamics = dynamics[2]!.replace(/<other-dynamics\b[^>]*>[\s\S]*?<\/other-dynamics>/g, '');
+  const retainedDirection = whole.replace(dynamics[0], `<dynamics${dynamics[1]}>${retainedDynamics}</dynamics>`);
+  const directionStart = `<direction${directionAttributes ? ` ${directionAttributes}` : ''}>`;
+  const wordsDirections = entries.map(text => `${directionStart}<direction-type><words>${text}</words></direction-type></direction>`).join('');
+  return `${retainedDirection}${wordsDirections}`;
+});
+
+/** Removes only synthetic analysis lyrics in instrumental parts and normalizes portable dynamic text. */
+export const filterNonPerformanceAnnotations = (musicxml: string): Pick<MusicXmlExcerpt, 'musicxml' | 'removedAnalyticalLyrics' | 'normalizedOtherDynamics'> => {
+  const vocalIds = vocalPartIds(musicxml); const removed = {value: 0}; const normalized = {value: 0};
+  const lyricsFiltered = /<part\s+/.test(musicxml) ? musicxml.replace(/<part\s+([^>]*)>([\s\S]*?)<\/part>/g, (whole, attributes: string, body: string) => {
+    const id = attr(attributes, 'id') ?? '';
+    return `<part ${attributes}>${stripAnalyticalLyrics(body, vocalIds.has(id), removed)}</part>`;
+  }) : stripAnalyticalLyrics(musicxml, false, removed);
+  return {musicxml: normalizeOtherDynamics(lyricsFiltered, normalized).replace(/[ \t]+(?=\r?\n)/g, ''), removedAnalyticalLyrics: removed.value, normalizedOtherDynamics: normalized.value};
+};
+
+const partsById = (musicxml: string): Map<string, string> => new Map([...musicxml.matchAll(/<part\s+([^>]*)>([\s\S]*?)<\/part>/g)]
+  .map(match => [attr(match[1], 'id'), match[2]]).filter((entry): entry is [string, string] => !!entry[0]));
+
+/** Validates every output bar against its contiguous source-position counterpart. */
+export const validateExcerptIntegrity = (source: string, excerpt: string, selectedParts: readonly {id: string; name: string}[], window: ExcerptWindow): ExcerptIntegrity => {
+  const sourceParts = partsById(source); const outputParts = partsById(excerpt); const mismatches: string[] = [];
+  const parts = selectedParts.map(part => {
+    const expected = windowForPart(sourceParts.get(part.id) ?? '', window);
+    const output = measuresForPart(outputParts.get(part.id) ?? '');
+    const measures = expected.map((sourceMeasure, outputMeasureIndex) => {
+      const outputMeasure = output[outputMeasureIndex];
+      const fingerprint = noteFingerprint(sourceMeasure.xml);
+      if (!outputMeasure) mismatches.push(`${part.name}: missing output measure ${sourceMeasure.number} at source index ${sourceMeasure.index}.`);
+      else if (noteFingerprint(outputMeasure.xml) !== fingerprint) mismatches.push(`${part.name}: fingerprint mismatch at output index ${outputMeasureIndex}; expected source index ${sourceMeasure.index} (m.${sourceMeasure.number}), got m.${outputMeasure.number}.`);
+      if (sourceMeasure.index !== (expected[0]?.index ?? sourceMeasure.index) + outputMeasureIndex) mismatches.push(`${part.name}: non-contiguous source index at m.${sourceMeasure.number}.`);
+      return {sourcePartId: part.id, sourceMeasureIndex: sourceMeasure.index, sourceMeasureNumber: sourceMeasure.number, outputMeasureIndex, outputMeasureNumber: outputMeasure?.number ?? '', fingerprint};
+    });
+    if (expected.length !== window.endMeasure - window.startMeasure + 1) mismatches.push(`${part.name}: requested window m.${window.startMeasure}–${window.endMeasure} is not a contiguous source sequence.`);
+    if (output.length !== expected.length) mismatches.push(`${part.name}: expected ${expected.length} output measures, found ${output.length}.`);
+    return {sourcePartId: part.id, partName: part.name, measures};
   });
-  return {musicxml: filtered, removedAnalyticalLyrics};
+  return {valid: mismatches.length === 0, parts, mismatches};
+};
+
+const textNodes = (svg: string) => [...svg.matchAll(/<(?:text|tspan)\b[^>]*>([\s\S]*?)<\/(?:text|tspan)>/g)].map(match => match[1]!.replace(/<[^>]+>/g, ''));
+/** Detects unsupported ordinary-text glyphs while allowing Verovio's <use>-based notation glyphs. */
+export const validateSvgGlyphs = (svg: string, instrumental: boolean): SvgGlyphValidation => {
+  const ordinaryText = textNodes(svg).join('');
+  const replacementCharacters = (ordinaryText.match(/\uFFFD/g) ?? []).length;
+  const controlCharacters = [...ordinaryText].filter(char => /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(char)).length;
+  const privateUseTextGlyphs = [...ordinaryText].filter(char => { const code = char.codePointAt(0) ?? 0; return code >= 0xE000 && code <= 0xF8FF; }).length;
+  const suspiciousInstrumentalLyrics = instrumental ? (svg.match(/class="verse"/g) ?? []).length : 0;
+  const issues = [
+    ...(replacementCharacters ? [`${replacementCharacters} replacement character(s) in SVG text.`] : []),
+    ...(controlCharacters ? [`${controlCharacters} control character(s) in SVG text.`] : []),
+    ...(privateUseTextGlyphs ? [`${privateUseTextGlyphs} private-use glyph(s) emitted as ordinary SVG text.`] : []),
+    ...(suspiciousInstrumentalLyrics ? [`${suspiciousInstrumentalLyrics} lyric group(s) in instrumental SVG.`] : []),
+  ];
+  return {valid: issues.length === 0, replacementCharacters, controlCharacters, privateUseTextGlyphs, suspiciousInstrumentalLyrics, issues};
 };
 
 /** Creates a valid, standalone MusicXML score while retaining source MusicXML payloads verbatim. */
@@ -71,17 +172,20 @@ export function extractMusicXmlExcerptWithReport(source: string, staves: readonl
   const partList = `<part-list>${scoreParts}</part-list>`;
   const excerptParts = selected.map(part => {
     const original = sourcePartXml.get(part!.id)!;
-    const prior = original.slice(0, original.indexOf(`<measure number="${window.startMeasure}"`));
+    const sourceMeasures = windowForPart(original, window);
+    if (!sourceMeasures.length) throw new Error(`${part!.name} has no contiguous source-position window for m.${window.startMeasure}–${window.endMeasure}.`);
+    const prior = original.slice(0, original.indexOf(sourceMeasures[0]!.xml));
     // Attribute elements are incremental in MusicXML. Preserve the last known
     // value of each relevant component and inject it into the first excerpt bar.
     const attributes = mergedAttributes(prior) ?? mergedAttributes(original);
-    const measures = betweenMeasures(original, window);
-    if (!measures.length) throw new Error(`${part!.name} has no measures in requested window.`);
-    const first = measures[0]!;
-    measures[0] = first.replace(/(<measure\b[^>]*>)/, `$1${attributes ?? ''}`);
+    const measures = sourceMeasures.map(measure => measure.xml);
+    measures[0] = measures[0]!.replace(/(<measure\b[^>]*>)/, `$1${attributes ?? ''}`);
     return `<part id="${part!.id}">${measures.join('')}</part>`;
   }).join('');
-  return filterNonPerformanceAnnotations(`<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd"><score-partwise version="3.1">${partList}${excerptParts}</score-partwise>`);
+  const filtered = filterNonPerformanceAnnotations(`<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd"><score-partwise version="3.1">${partList}${excerptParts}</score-partwise>`);
+  const integrity = validateExcerptIntegrity(source, filtered.musicxml, selected.map(part => ({id: part!.id, name: part!.name})), window);
+  if (!integrity.valid) throw new Error(`Extracted score integrity failure: ${integrity.mismatches.join(' ')}`);
+  return {...filtered, integrity};
 }
 export function extractMusicXmlExcerpt(source: string, staves: readonly string[], window: ExcerptWindow): string { return extractMusicXmlExcerptWithReport(source, staves, window).musicxml; }
 

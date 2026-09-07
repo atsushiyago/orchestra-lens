@@ -18,6 +18,12 @@ test('all generated Brahms Listening Cues receive deterministic, conservative Gu
     assert.equal(card.status, 'generated');
     if (card.status !== 'generated') continue;
     assert.ok(card.semanticConsistency);
+    assert.equal(card.renderWindow.startMeasure, card.measure);
+    assert.equal(card.renderWindow.endMeasure, card.measure + 3);
+    assert.ok(card.integrity.valid);
+    assert.equal(card.integrity.mismatches.length, 0);
+    assert.ok(card.glyphValidation.valid);
+    assert.equal(card.glyphValidation.privateUseTextGlyphs, 0);
     assert.ok(card.noStrayAnalyticalLetters);
     assert.ok(card.listenerHint.length > 0);
   }
