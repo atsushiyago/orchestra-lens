@@ -37,7 +37,7 @@ test('only the current transition token can change the player after a manual rep
   assert.equal(coordinator.isCurrent(second), false);
 });
 
-test('diagnostic tour uses bounded stabilization, no fade settings, and actual media time for excerpts', () => {
+test('tour uses bounded stabilization, no fade settings, and actual media time for excerpts', () => {
   assert.ok(highlightsTourConfig.seekReadyTimeoutMilliseconds > 0);
   assert.ok(highlightsTourConfig.firstPlayStabilizationMilliseconds >= 400);
   assert.ok(highlightsTourConfig.kickPauseMilliseconds >= 100);

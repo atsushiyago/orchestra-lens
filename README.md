@@ -19,6 +19,12 @@ excerpts from the IMSLP score alongside manually authored musical context.
   COMPARE shows the m.47 and m.407 excerpts in the same in-place view.
 - **Ask the Score:** an explicit m.62 action sends compact structured context to
   the protected Bedrock backend and displays a short, grounded response.
+- **Highlights Tour:** the entry screen offers normal full-movement listening
+  and a nine-moment tour drawn directly from the deterministic, ranked score
+  analysis. The tour seeks the existing player, confirms audible playback, and
+  measures each 20-second excerpt by advancing media time. SCORE opens the
+  usual curated view when available, or a generated Score Insight panel for an
+  automatically selected moment without a notation asset.
 
 All musical roles and relationships are static data. The source excerpts are
 cropped from the existing IMSLP public-domain Brahms Symphony No. 1 score.
@@ -62,13 +68,15 @@ vega device launch-app --device VirtualDevice \
 
 ## Manual demo flow
 
-1. Launch the app and confirm the main playback screen shows Orchestra Lens,
-   Brahms Symphony No. 1, transport controls, current cue, and playback time.
-2. Once the prepared Brahms media has been deployed, use **SCORE** during the
+1. Launch the app and choose **PLAY FULL MOVEMENT** for the existing normal
+   playback screen, or **HIGHLIGHTS TOUR** for nine recommended moments.
+2. In a Highlights Tour, use **Previous**, **Next**, **SCORE**, and **EXIT
+   TOUR**. Exiting stops the tour cleanly and returns to the entry screen.
+3. Use **SCORE** during the
    recording-specific cue windows below.
-3. Use **BACK** or the VVD remote Back button to return to playback. The player
+4. Use **BACK** or the VVD remote Back button to return to playback. The player
    remains mounted, preserving time, pause state, and the active cue.
-4. At m.290 and m.407, select **COMPARE**. It replaces the Theme Lens body in
+5. At m.290 and m.407, select **COMPARE**. It replaces the Theme Lens body in
    place; **BACK** returns to that cue's Theme Lens without resetting playback.
 
 | Recording seconds | Cue | Score Peek content |
@@ -193,6 +201,12 @@ The weights and 12-measure event-deduplication window are recorded in each
 output. They intentionally form an explainable heuristic, not an automatic
 claim that a passage is a climax, theme, or definitive musical highlight.
 Human review decides whether a ranked candidate becomes an Orchestra Lens cue.
+
+The product tour deliberately preserves the detector's tested ordering instead
+of treating only loud or dense passages as worthwhile. Its listener-facing
+“Why this moment?” text comes from the generated evidence; it does not expose
+raw heuristic scores or debug timestamps. Highlight Review, alignment clocks,
+and fine seek controls remain development-only.
 
 ```text
 MusicXML → objective score analysis ──────┐

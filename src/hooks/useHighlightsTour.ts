@@ -32,7 +32,7 @@ async function waitForAdvance(player: VideoPlayer, baseline: number, millisecond
   }
   return !player.paused && player.currentTime > baseline + .05;
 }
-/** Debug-only serial tour: no fades, one controlled pause/play recovery per seek. */
+/** Serial no-fade tour: one controlled pause/play recovery per seek. */
 export function useHighlightsTour(access: PlayerAccess) {
   const accessRef = useRef(access); accessRef.current = access;
   const coordinator = useRef(new TourTransitionCoordinator());

@@ -13,7 +13,7 @@ function mediaError(player: VideoPlayer): string {
 }
 
 /** Keeps native player creation, surface attachment, source loading and clock reads separate. */
-export function usePlayback(uri: string, diagnosticUri?: string) {
+export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true) {
   const playerRef = useRef<VideoPlayer | null>(null);
   if (playerRef.current === null) playerRef.current = new VideoPlayer();
   const player = playerRef.current;
@@ -24,6 +24,7 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
   const loadedAttemptRef = useRef(-1);
   const lastLoggedSecond = useRef(-1);
   const pendingSeek = useRef(new PendingSeekQueue());
+  const shouldPlayWhenReady = useRef(autoPlay);
   const log = useCallback((message: string) => {
     LogUtil.info(`[OrchestraLens Playback] ${message}`);
     // The VVD's release log stream omits JavaScript console output. Mirror the
@@ -74,7 +75,7 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
       if (!disposed) setState(previous => ({...previous, buffering: false, ready: true}));
       const target = pendingSeek.current.flush(true, executeSeek);
       if (target !== undefined) log(`pending seek executed target=${target.toFixed(3)}`);
-      if (player.paused) {
+      if (player.paused && shouldPlayWhenReady.current) {
         log('play requested after canplay');
         void player.play().then(() => log('play resolved after canplay')).catch(error => {
           log(`play rejected after canplay ${String(error)}`);
@@ -157,10 +158,16 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
       });
       if (disposition === 'queued') log(`pending seek target=${seconds.toFixed(3)}; waiting for canplay`);
     },
+    play: () => {
+      shouldPlayWhenReady.current = true;
+      if (!state.ready) { log('play queued until canplay'); return; }
+      if (player.ended) player.currentTime = 0;
+      log('play requested by user'); void player.play().catch(reportError);
+    },
+    pause: () => { shouldPlayWhenReady.current = false; player.pause(); },
     toggle: () => {
-      if (!state.ready) return;
-      if (player.paused) {if (player.ended) player.currentTime = 0; log('play requested by user'); void player.play().catch(reportError);}
-      else player.pause();
+      if (player.paused) { shouldPlayWhenReady.current = true; if (!state.ready) {log('play queued until canplay'); return;} if (player.ended) player.currentTime = 0; log('play requested by user'); void player.play().catch(reportError); }
+      else { shouldPlayWhenReady.current = false; player.pause(); }
     },
     reportError,
   };
