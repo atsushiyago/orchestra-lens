@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
-import generatedHighlights from '../src/data/generated/brahms-op68-movement4-highlights.json';
+import generatedSelection from '../src/data/generated/brahms-op68-movement4-tour-selection.json';
 import {listeningExperiences, highlightsTourSummary, showDevelopmentControls} from '../src/data/listeningExperiences';
 import {highlightsTourCandidates, highlightsTourConfig, hasPlayedExcerpt, mayBeginExcerpt, transitionSteps} from '../src/hooks/useHighlightsTour';
 
@@ -9,9 +9,10 @@ test('Release entry offers normal listening and the generated Highlights Tour', 
   assert.equal(highlightsTourSummary(highlightsTourCandidates.length), `${highlightsTourCandidates.length} recommended moments · about 3 minutes`);
 });
 
-test('Release tour takes its first nine ranked candidates directly from generated data', () => {
-  const expected = generatedHighlights.candidates.slice().sort((left, right) => left.rank - right.rank).slice(0, highlightsTourConfig.candidateCount);
-  assert.deepEqual(highlightsTourCandidates.map(candidate => [candidate.rank, candidate.measure, candidate.timeSeconds]), expected.map(candidate => [candidate.rank, candidate.measure, candidate.timeSeconds]));
+test('Release tour count and moments are driven by the generated Brahms selector artifact', () => {
+  assert.equal(highlightsTourCandidates.length, generatedSelection.selected.length);
+  assert.equal(highlightsTourSummary(), `${generatedSelection.selected.length} recommended moments · about 3 minutes`);
+  assert.deepEqual(highlightsTourCandidates.map(candidate => candidate.measure), generatedSelection.selected.map(moment => moment.measure));
 });
 
 test('Release tour retains the proven no-fade media-time coordinator', () => {

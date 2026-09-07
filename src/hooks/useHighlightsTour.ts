@@ -1,10 +1,11 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 import type {VideoPlayer} from '@amazon-devices/react-native-w3cmedia';
-import {highlightReviewCandidates, type HighlightReviewCandidate} from '../playback/highlightReview';
+import type {HighlightReviewCandidate} from '../playback/highlightReview';
+import {releaseHighlightsTourCandidates} from '../data/releaseHighlightsTour';
 import {TourTransitionCoordinator} from '../playback/tourTransitionCoordinator';
 
-export const highlightsTourConfig = {candidateCount: 9, leadInSeconds: 3, excerptSeconds: 20, firstPlayStabilizationMilliseconds: 600, kickPauseMilliseconds: 150, secondPlayStabilizationMilliseconds: 1000, excerptWatchdogMilliseconds: 90000, seekReadyTimeoutMilliseconds: 3500} as const;
-export const highlightsTourCandidates = highlightReviewCandidates.slice(0, highlightsTourConfig.candidateCount);
+export const highlightsTourConfig = {leadInSeconds: 3, excerptSeconds: 20, firstPlayStabilizationMilliseconds: 600, kickPauseMilliseconds: 150, secondPlayStabilizationMilliseconds: 1000, excerptWatchdogMilliseconds: 90000, seekReadyTimeoutMilliseconds: 3500} as const;
+export const highlightsTourCandidates = releaseHighlightsTourCandidates;
 export type HighlightsTourPhase = 'idle' | 'seeking' | 'waiting-to-play' | 'stabilizing' | 'playing' | 'paused' | 'complete';
 export const transitionSteps: readonly HighlightsTourPhase[] = ['seeking', 'waiting-to-play', 'stabilizing', 'playing'];
 export const mayBeginExcerpt = (playbackAdvanced: boolean): boolean => playbackAdvanced;
@@ -33,7 +34,12 @@ async function waitForAdvance(player: VideoPlayer, baseline: number, millisecond
   return !player.paused && player.currentTime > baseline + .05;
 }
 /** Serial no-fade tour: one controlled pause/play recovery per seek. */
-export function useHighlightsTour(access: PlayerAccess) {
+/**
+ * The no-fade coordinator is shared by the Release detector tour and DEV-only
+ * selector-review tours. Candidate data, not player lifecycle, varies.
+ */
+export function useHighlightsTour<T extends HighlightReviewCandidate = HighlightReviewCandidate>(access: PlayerAccess, suppliedCandidates?: readonly T[]) {
+  const candidates = (suppliedCandidates ?? highlightsTourCandidates) as readonly T[];
   const accessRef = useRef(access); accessRef.current = access;
   const coordinator = useRef(new TourTransitionCoordinator());
   const [active, setActive] = useState(false), activeRef = useRef(false);
@@ -42,10 +48,10 @@ export function useHighlightsTour(access: PlayerAccess) {
   const [excerptStart, setExcerptStart] = useState<{id: number; time: number} | undefined>();
   const tourPause = useRef(false);
   const setTourPhase = (value: HighlightsTourPhase) => { phaseRef.current = value; setPhase(value); };
-  const candidate = active ? highlightsTourCandidates[index] : undefined;
+  const candidate = active ? candidates[index] : undefined;
 
   const transitionTo = useCallback(async (nextIndex: number) => {
-    const stop = highlightsTourCandidates[nextIndex];
+    const stop = candidates[nextIndex];
     if (!stop || stop.timeSeconds === null || !accessRef.current.ready) return;
     const id = coordinator.current.begin(); indexRef.current = nextIndex; setIndex(nextIndex); setExcerptStart(undefined);
     const {player, seek, reportError, debugLog} = accessRef.current;
@@ -79,10 +85,10 @@ export function useHighlightsTour(access: PlayerAccess) {
     const startTime = player.currentTime;
     debugLog(`transition ${id} EXCERPT START rank=${stop.rank} timestamp=${stop.timeSeconds.toFixed(3)} actualCurrentTime=${startTime.toFixed(3)}`);
     setExcerptStart({id, time: startTime}); setTourPhase('playing');
-  }, []);
-  const start = useCallback(() => { if (!accessRef.current.ready || !highlightsTourCandidates.length) return; tourPause.current = false; activeRef.current = true; setActive(true); void transitionTo(0); }, [transitionTo]);
+  }, [candidates]);
+  const start = useCallback(() => { if (!accessRef.current.ready || !candidates.length) return; tourPause.current = false; activeRef.current = true; setActive(true); void transitionTo(0); }, [candidates.length, transitionTo]);
   const exit = useCallback(() => { coordinator.current.cancel(); setExcerptStart(undefined); activeRef.current = false; setActive(false); setTourPhase('idle'); }, []);
-  const next = useCallback(() => { if (!activeRef.current) return; const nextIndex = indexRef.current + 1; if (nextIndex < highlightsTourCandidates.length) void transitionTo(nextIndex); else setTourPhase('complete'); }, [transitionTo]);
+  const next = useCallback(() => { if (!activeRef.current) return; const nextIndex = indexRef.current + 1; if (nextIndex < candidates.length) void transitionTo(nextIndex); else setTourPhase('complete'); }, [candidates.length, transitionTo]);
   const previous = useCallback(() => { if (activeRef.current && indexRef.current > 0) void transitionTo(indexRef.current - 1); }, [transitionTo]);
 
   useEffect(() => {
@@ -99,12 +105,12 @@ export function useHighlightsTour(access: PlayerAccess) {
       const played = player.currentTime - excerptStart.time;
       if (hasPlayedExcerpt(excerptStart.time, player.currentTime, highlightsTourConfig.excerptSeconds)) {
         clearInterval(timer); debugLog(`transition ${excerptStart.id} EXCERPT END currentTime=${player.currentTime.toFixed(3)} mediaSecondsPlayed=${played.toFixed(3)}`);
-        if (indexRef.current + 1 < highlightsTourCandidates.length) void transitionTo(indexRef.current + 1); else setTourPhase('complete');
+        if (indexRef.current + 1 < candidates.length) void transitionTo(indexRef.current + 1); else setTourPhase('complete');
       } else if (Date.now() - watchdogStarted >= highlightsTourConfig.excerptWatchdogMilliseconds) {
         clearInterval(timer); debugLog(`transition ${excerptStart.id} excerpt watchdog expired mediaSecondsPlayed=${played.toFixed(3)}`); setTourPhase('paused');
       }
     }, 200);
     return () => clearInterval(timer);
-  }, [access.paused, active, excerptStart, phase, transitionTo]);
+  }, [access.paused, active, candidates.length, excerptStart, phase, transitionTo]);
   return {active, candidate, index, phase, start, exit, next, previous};
 }

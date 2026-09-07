@@ -25,6 +25,15 @@ test('qstamp mapping uses corpus score positions and leaves unannotated measures
   assert.equal(evidence.measureStartQstamps['2'], undefined);
 });
 
+test('repeat-expanded position labels do not reject the annotation CSV’s continuous measure identifiers', () => {
+  const evidence = parseHauptstimmeEvidence(
+    'qstamp,measure,beat,measure_fraction,label,part,part_num,instrument\n256.5,129,1.5,0.25,a,Vln 1,13,Vln\n',
+    'qstamp,tstamp,measure,beat\n256,70,1,1\n256.5,70.1,1,1.5\n',
+  );
+  assert.equal(evidence.spans[0]?.startMeasure, 129);
+  assert.match(evidence.source.coordinateMapping, /continuous measure/i);
+});
+
 test('real Hauptstimme evidence covers the demo measures without changing curated Theme Lens', () => {
   assert.deepEqual(getHauptstimmeAnnotationsAtMeasure(30).map(span => [span.part, span.label]), [['Hn 1', 'e']]);
   assert.deepEqual(getHauptstimmeAnnotationsAtMeasure(62).map(span => [span.part, span.label]), [['Vln 1', 'a']]);

@@ -43,10 +43,13 @@ export function parseHauptstimmeEvidence(
     instrument: row.instrument,
   })).filter(row => Number.isFinite(row.qstamp) && Number.isInteger(row.measure) && Number.isFinite(row.beat));
 
-  for (const row of annotationRows) {
-    const mappedMeasure = measureAtQstamp(row.qstamp, positions);
-    if (mappedMeasure !== row.measure) throw new Error(`Annotation ${row.id} qstamp ${row.qstamp} maps to measure ${mappedMeasure ?? 'none'}, not ${row.measure}.`);
-  }
+  // Position CSVs describe the rendered score stream.  In scores with written
+  // repeats they can reset their displayed `measure` column while qstamp keeps
+  // advancing, and sparse rests can omit an exact barline altogether.  The
+  // Hauptstimme CSV's own measure field is therefore the authoritative
+  // *continuous score-measure* identifier for a measure-level application.
+  // Keep the raw qstamps for traceability, but do not reject valid repeat-
+  // expanded annotations by comparing them to the display-oriented CSV label.
 
   const spans: HauptstimmeAnnotationSpan[] = annotationRows.map((row, index) => {
     const next = annotationRows.slice(index + 1).find(candidate => candidate.qstamp > row.qstamp);
@@ -73,7 +76,7 @@ export function parseHauptstimmeEvidence(
     source: {
       project: 'Hauptstimme / OpenScore Orchestra',
       license: 'CC BY-SA (as stated by the upstream Hauptstimme repository)',
-      coordinateMapping: 'Annotation qstamps are validated against the CC0 score-position CSV; a measure query uses that measure’s earliest qstamp and the half-open annotation span [startQstamp, endQstamp).',
+      coordinateMapping: 'Annotation qstamps are retained from the corpus. Annotation-declared continuous measures are canonical for measure-level lookup because score-position CSVs may be sparse at rests and reset displayed measure numbers through written repeats.',
     },
     measureStartQstamps,
     spans,

@@ -21,7 +21,10 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
   const [state, setState] = useState<PlaybackState>(initialState);
   const [attempt, setAttempt] = useState(0);
   const [initialized, setInitialized] = useState(false);
+  const [readyUri, setReadyUri] = useState<string | undefined>();
   const loadedAttemptRef = useRef(-1);
+  const loadedUriRef = useRef<string | undefined>(undefined);
+  const requestedUriRef = useRef(uri); requestedUriRef.current = uri;
   const lastLoggedSecond = useRef(-1);
   const pendingSeek = useRef(new PendingSeekQueue());
   const shouldPlayWhenReady = useRef(autoPlay);
@@ -72,7 +75,7 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
     };
     const onCanPlay = () => {
       log(`canplay duration=${player.duration.toFixed(2)}`);
-      if (!disposed) setState(previous => ({...previous, buffering: false, ready: true}));
+      if (!disposed) { setReadyUri(requestedUriRef.current); setState(previous => ({...previous, buffering: false, ready: true})); }
       const target = pendingSeek.current.flush(true, executeSeek);
       if (target !== undefined) log(`pending seek executed target=${target.toFixed(3)}`);
       if (player.paused && shouldPlayWhenReady.current) {
@@ -131,9 +134,14 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
   // KeplerVideoView stays mounted for the whole application lifecycle. For URL
   // mode, initialize first, attach listeners, assign src, then explicitly load.
   useLayoutEffect(() => {
-    if (!initialized || loadedAttemptRef.current === attempt) return;
+    if (!initialized || (loadedAttemptRef.current === attempt && loadedUriRef.current === uri)) return;
     loadedAttemptRef.current = attempt;
+    loadedUriRef.current = uri;
     try {
+      shouldPlayWhenReady.current = false;
+      pendingSeek.current.clear();
+      setReadyUri(undefined);
+      setState(initialState);
       player.preload = 'auto';
       player.src = uri;
       log(`src assigned uri=${player.src}`);
@@ -147,7 +155,7 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
   }, [attempt, initialized, log, player, reportError, uri]);
 
   return {
-    player, peek, ...state, debugLog: log,
+    player, peek, readyUri, ...state, debugLog: log,
     retry: () => setAttempt(value => value + 1),
     seek: (seconds: number) => {
       const disposition = pendingSeek.current.request(seconds, state.ready, target => {

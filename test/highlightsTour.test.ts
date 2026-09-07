@@ -1,23 +1,25 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
-import generatedHighlights from '../src/data/generated/brahms-op68-movement4-highlights.json';
+import generatedSelection from '../src/data/generated/brahms-op68-movement4-tour-selection.json';
 import {scoreEvents} from '../src/data/brahms1Movement4';
-import {highlightReviewCandidates} from '../src/playback/highlightReview';
 import {hasPlayedExcerpt, highlightsTourCandidates, highlightsTourConfig, mayBeginExcerpt, transitionSteps} from '../src/hooks/useHighlightsTour';
 import {TourTransitionCoordinator} from '../src/playback/tourTransitionCoordinator';
 
-test('Auto Highlights Tour uses the generated ranking order and timestamps without authored measures', () => {
-  const expected = generatedHighlights.candidates.slice().sort((left, right) => left.rank - right.rank).slice(0, highlightsTourConfig.candidateCount);
-  assert.deepEqual(highlightsTourCandidates.map(candidate => [candidate.rank, candidate.measure, candidate.timeSeconds]), expected.map(candidate => [candidate.rank, candidate.measure, candidate.timeSeconds]));
-  assert.deepEqual(highlightsTourCandidates, highlightReviewCandidates.slice(0, highlightsTourConfig.candidateCount));
-  assert.ok(highlightsTourCandidates.every(candidate => candidate.timeSeconds !== null));
+test('Release Highlights Tour reads generated selector moments in performance order without authored measures', () => {
+  assert.deepEqual(
+    highlightsTourCandidates.map(candidate => [candidate.rank, candidate.detectorRank, candidate.measure, candidate.occurrence, candidate.timeSeconds, candidate.score, candidate.selectorScore, candidate.selectorReasons]),
+    generatedSelection.selected.map((moment, index) => [index + 1, moment.detectorRank, moment.measure, moment.occurrence, moment.timeSeconds, moment.detectorScore, moment.selectorScore, moment.selectorReasons]),
+  );
+  assert.ok(highlightsTourCandidates.every((candidate, index) => index === 0 || candidate.timeSeconds > highlightsTourCandidates[index - 1]!.timeSeconds));
 });
 
-test('Tour overlay explanations and scores are the generated detector values', () => {
+test('Tour overlay uses concise selector-derived reasons while retaining generated scores for traceability', () => {
   const candidate = highlightsTourCandidates[0]!;
-  const generated = generatedHighlights.candidates.find(item => item.rank === candidate.rank)!;
-  assert.deepEqual(candidate.reasons, generated.reasons);
-  assert.equal(candidate.score, generated.score);
+  const generated = generatedSelection.selected[0]!;
+  assert.deepEqual(candidate.selectorReasons, generated.selectorReasons);
+  assert.equal(candidate.score, generated.detectorScore);
+  assert.equal(candidate.selectorScore, generated.selectorScore);
+  assert.ok(candidate.reasons.every(reason => !reason.startsWith('High detector score')));
 });
 
 test('Tour transition seeks, explicitly stabilizes with a pause/play kick, then starts playback', () => {
@@ -49,7 +51,6 @@ test('tour uses bounded stabilization, no fade settings, and actual media time f
 });
 
 test('Tour data does not modify detector results or Release cue behavior', () => {
-  const scores = highlightsTourCandidates.map(candidate => candidate.score);
-  assert.deepEqual(scores, generatedHighlights.candidates.slice().sort((left, right) => left.rank - right.rank).slice(0, highlightsTourConfig.candidateCount).map(candidate => candidate.score));
+  assert.equal(highlightsTourCandidates.length, generatedSelection.selected.length);
   assert.deepEqual(scoreEvents.map(event => event.measure), [30, 62, 290, 407]);
 });

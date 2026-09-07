@@ -29,3 +29,19 @@ machine-readable input for this repository's evidence generator.
 `src/data/generated/hauptstimmeEvidence.json` is generated without manual
 editing by `tools/generateHauptstimmeEvidence.ts`. Its qstamp-to-measure mapping
 is checked against the CC0 `../Brahms_Op68_Movement4_positions.csv` table.
+
+## Beethoven validation annotations
+
+`beethoven-op67-movement1/` contains the upstream `Beethoven_Op.67_1_annotations.csv`
+and `Beethoven_Op.67_1_part_relations.csv` from:
+
+```text
+data/Beethoven,_Ludwig_van/Symphony_No.5,_Op.67/1/
+```
+
+They remain human-authored Hauptstimme material under the upstream **CC BY-SA**
+terms, separate from the CC0 Beethoven score and position data. The MXL and
+the upstream compressed measure map are retained for source traceability.
+The generated `beethoven-op67-movement1-hauptstimme-evidence.json` preserves
+the annotation CSV's continuous measure field because a repeat-expanded
+position stream can reuse displayed measure labels and omit silent barlines.

@@ -49,6 +49,22 @@ test('Highlight Detector output is deterministic, ordered, and explains source f
   assert.ok(candidate.reasons.includes('New Hauptstimme span begins in Violin 1 (label a)'));
 });
 
+test('repeat-aware alignments select the first performed occurrence without changing detector weights', () => {
+  const repeated = {occurrences: [
+    {measure: 1, occurrence: 1, performanceIndex: 1, timeSeconds: 10},
+    {measure: 2, occurrence: 1, performanceIndex: 2, timeSeconds: 20},
+    {measure: 1, occurrence: 2, performanceIndex: 3, timeSeconds: 30},
+  ]};
+  const result = detectHighlights(score([
+    {active: ['Cello'], density: 1},
+    {active: ['Violin 1', 'Flute 1', 'Horn 1', 'Cello'], density: 20, dynamics: ['f']},
+  ]), evidence([hsAtTwo]), repeated, {minimumSeparationMeasures: 1});
+  const candidate = result.candidates.find(item => item.measure === 2);
+  assert.equal(candidate?.timeSeconds, 20);
+  assert.equal(candidate?.occurrence, 1);
+  assert.deepEqual(result.detector.config.weights, defaultHighlightConfig.weights);
+});
+
 test('nearby measures deduplicate unless they begin distinct Hauptstimme evidence', () => {
   const source = score([
     {active: ['Cello'], density: 1},

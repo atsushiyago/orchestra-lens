@@ -25,3 +25,20 @@ editing.
 same upstream score. It maps each score qstamp to a measure and beat, and is
 used only to validate the coordinate mapping for the separately licensed
 Hauptstimme annotations in `hauptstimme/`.
+
+## Beethoven validation source: Symphony No. 5, movement I
+
+`Beethoven_Op67_Movement1.musicxml` is the unmodified `score.xml` member
+extracted from the MusicXML container at:
+
+```text
+data/Beethoven,_Ludwig_van/Symphony_No.5,_Op.67/1/Beethoven_Op.67_1.mxl
+```
+
+Source repository: <https://github.com/MarkGotham/Hauptstimme/tree/main/data/Beethoven,_Ludwig_van/Symphony_No.5,_Op.67/1>
+
+As documented by the upstream Hauptstimme README, its OpenScore Orchestra score
+data is CC0 1.0. `Beethoven_Op67_Movement1_positions.csv` is the associated CC0
+position table. Both were retrieved on 2026-09-07 for offline second-work
+generalization validation. The generated Beethoven manifest is derived without
+manual editing.

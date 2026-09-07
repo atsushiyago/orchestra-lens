@@ -208,11 +208,59 @@ of treating only loud or dense passages as worthwhile. Its listener-facing
 raw heuristic scores or debug timestamps. Highlight Review, alignment clocks,
 and fine seek controls remain development-only.
 
+### Offline Tour Selector
+
+`generate:tour-selection` is a second offline step that is intentionally
+separate from the Highlight Detector. The **Highlight Detector** asks, “Is this
+a musically interesting moment?” The **Tour Selector** asks, “Does this moment
+add something distinct to the listening tour?” It treats the detector's Top 15
+as valid candidate moments and selects **up to** nine that cover more of a
+performance while avoiding nearby candidates with similar objective score
+fingerprints. It does not alter detector scores or detector artifacts.
+
+The selector uses only generated candidate fields: occurrence-aware playback
+timestamp, active/entering/dropping instrument sets, texture density, written
+dynamics, and Hauptstimme instrument/label profiles. Its deterministic greedy
+formula combines normalized detector quality, distance from the nearest
+selected timestamp, and novelty relative to the most similar selected profile.
+Within a 38-second window, a candidate is retained only when its generated
+profile is objectively distinct. This is a transparent diversity policy, not a
+claim about themes, form, or musical value.
+
+```sh
+npm run generate:tour-selection -- \
+  ./src/data/generated/brahms-op68-movement4-highlights.json \
+  ./src/data/generated/brahms-op68-movement4-tour-selection.json \
+  ./reports/brahms-op68-movement4-tour-selection.md
+```
+
+Run the same command for Beethoven by replacing the work prefix. The generated
+JSON records selected moments in performance order plus every rejected Top-15
+candidate and its comparison evidence. The reports at
+`reports/brahms-op68-movement4-tour-selection.md` and
+`reports/beethoven-op67-movement1-tour-selection.md` are the first listening
+review outputs.
+
+The validated Brahms selector artifact now drives the Release **HIGHLIGHTS
+TOUR**. Its nine generated moments are m.30, m.62, m.169, m.212, m.260, m.292,
+m.353, m.370, and m.404, in performance-time order. The player coordinator is
+unchanged; this promotion replaces only its candidate-data source. The product
+UI shows concise selector-derived listening reasons rather than raw detector or
+selector scores. Those scores remain in the generated artifact for traceability
+and in DEV review tools.
+
+Beethoven’s Symphony No. 5, movement I was the second-work validation. Its
+repeat-aware performance timeline has 626 occurrences and used zero manual
+alignment anchors. The unchanged detector supplied the same Top-15 input; the
+generic selector produced six diverse moments. USER listening found that this
+substantially reduced the redundancy heard in the Top 15. Beethoven remains
+available only in development review; it is not part of the Release catalog.
+
 ```text
-MusicXML → objective score analysis ──────┐
-                                           ├→ Highlight Detector → ranked candidate moments → human review → Fire TV presentation
-Hauptstimme → main-voice evidence ────────┘                                      ↑
-performance alignment → candidate timestamps ───────────────────────────────────┘
+MusicXML + performance → objective score analysis ──────┐
+                                                         ├→ Highlight Detector → Tour Selector → Release Highlights Tour
+Hauptstimme → human main-voice evidence ────────────────┤           ↑
+occurrence-aware score/audio alignment → timestamps ────┘      human listening review
 ```
 
 `generate:runtime-score-facts` selects only m.30, m.47, m.62, m.290, and

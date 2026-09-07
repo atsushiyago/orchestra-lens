@@ -3,7 +3,10 @@ import {dirname, resolve} from 'node:path';
 import type {ScoreManifest, ScoreManifestMeasure, ScoreManifestPart} from './generateScoreManifest';
 import type {HauptstimmeAnnotationSpan, HauptstimmeEvidenceManifest} from '../src/types/hauptstimme';
 
-export type PerformanceAlignment = {measures: Record<string, {timeSeconds: number}>};
+export type PerformanceAlignment = {
+  measures?: Record<string, {timeSeconds: number}>;
+  occurrences?: Array<{measure: number; occurrence: number; performanceIndex: number; timeSeconds: number}>;
+};
 
 export type HighlightFeature = {
   activeInstrumentCount: number;
@@ -26,12 +29,19 @@ export type HighlightFeature = {
 export type HighlightCandidate = {
   rank: number;
   measure: number;
+  occurrence: number;
   timeSeconds: number | null;
   score: number;
   activeInstruments: string[];
   hauptstimme: Array<{part: string; instrument: string; label: string; startsHere: boolean}>;
   reasons: string[];
   features: HighlightFeature;
+};
+
+const occurrenceTime = (alignment: PerformanceAlignment, measure: number): {timeSeconds: number | null; occurrence: number} => {
+  const occurrence = alignment.occurrences?.find(item => item.measure === measure && item.occurrence === 1);
+  if (occurrence) return {timeSeconds: occurrence.timeSeconds, occurrence: occurrence.occurrence};
+  return {timeSeconds: alignment.measures?.[String(measure)]?.timeSeconds ?? null, occurrence: 1};
 };
 
 export type HighlightConfig = {
@@ -108,9 +118,12 @@ const marks = (parts: readonly ScoreManifestPart[], property: 'dynamics' | 'arti
   [...new Set(parts.flatMap(part => part[property]))].sort();
 
 const annotationsAtMeasure = (evidence: HauptstimmeEvidenceManifest, measure: number): HauptstimmeAnnotationSpan[] => {
-  const qstamp = evidence.measureStartQstamps[String(measure)];
-  if (qstamp === undefined) return [];
-  return evidence.spans.filter(span => span.startQstamp <= qstamp && (span.endQstamp === null || qstamp < span.endQstamp));
+  // Highlight detection is deliberately measure-granular.  Use the
+  // annotation CSV's continuous measure labels rather than a position CSV
+  // qstamp lookup: repeat-expanded score-position files can reuse displayed
+  // measure numbers and omit silent barlines.
+  return evidence.spans.filter(span => span.startMeasure <= measure
+    && (span.endMeasureExclusive === null || measure < span.endMeasureExclusive));
 };
 
 const quantile = (values: readonly number[], proportion: number): number => {
@@ -255,9 +268,11 @@ export function detectHighlights(
     if (!score || !reasons.length) continue;
     const annotations = annotationsAtMeasure(evidence, measure);
     const annotationEvidence = [...annotations, ...feature.hauptstimmeStarts.filter(start => !annotations.some(active => active.id === start.id))];
+    const timing = occurrenceTime(alignment, measure);
     raw.push({
       measure,
-      timeSeconds: alignment.measures[String(measure)]?.timeSeconds ?? null,
+      occurrence: timing.occurrence,
+      timeSeconds: timing.timeSeconds,
       score,
       activeInstruments: [...source.measures[String(measure)]!.activeInstruments],
       hauptstimme: annotationEvidence.map(span => ({part: span.part, instrument: span.instrument, label: span.label, startsHere: span.startMeasure === measure})),
@@ -287,7 +302,7 @@ export const markdownReport = (manifest: HighlightManifest, topCount = manifest.
   const top = manifest.candidates.slice(0, topCount);
   const curated = [30, 62, 285, 407].map(measure => ({measure, rank: manifest.candidates.find(candidate => candidate.measure === measure)?.rank ?? null}));
   const lines = [
-    '# Brahms Op. 68, Movement IV — Highlight Detector',
+    `# ${manifest.work.composer ?? 'Unknown composer'}, ${manifest.work.title ?? 'Untitled work'} — Highlight Detector`,
     '',
     'This deterministic offline ranking identifies measurable score transitions for human review. It does not claim musicological importance and does not use Orchestra Lens curated cue points as inputs.',
     '',
@@ -297,14 +312,18 @@ export const markdownReport = (manifest: HighlightManifest, topCount = manifest.
     '',
   ];
   for (const candidate of top) {
-    lines.push(`### ${candidate.rank}. m.${candidate.measure} — ${candidate.timeSeconds?.toFixed(3) ?? 'timestamp unavailable'}s — score ${candidate.score}`);
+    lines.push(`### ${candidate.rank}. m.${candidate.measure} (occurrence ${candidate.occurrence}) — ${candidate.timeSeconds?.toFixed(3) ?? 'timestamp unavailable'}s — score ${candidate.score}`);
     lines.push(`Active instruments (${candidate.activeInstruments.length}): ${candidate.activeInstruments.join(', ') || 'none'}`);
     lines.push(`Hauptstimme: ${candidate.hauptstimme.length ? candidate.hauptstimme.map(span => `${span.part} (${span.label})${span.startsHere ? ', starts here' : ''}`).join('; ') : 'none'}`);
     for (const reason of candidate.reasons) lines.push(`- ${reason}`);
     lines.push('');
   }
   lines.push('## Existing curated measures (not detector inputs)', '');
-  for (const entry of curated) lines.push(`- m.${entry.measure}: ${entry.rank === null ? 'not retained after event deduplication' : `rank ${entry.rank}`}`);
+  if (manifest.work.composer?.includes('Brahms')) {
+    for (const entry of curated) lines.push(`- m.${entry.measure}: ${entry.rank === null ? 'not retained after event deduplication' : `rank ${entry.rank}`}`);
+  } else {
+    lines.push('- Not applicable to this work.');
+  }
   lines.push('', '## Scoring weights', '');
   for (const [name, value] of Object.entries(manifest.detector.config.weights)) lines.push(`- ${name}: ${value}`);
   return `${lines.join('\n')}\n`;

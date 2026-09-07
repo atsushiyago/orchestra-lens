@@ -1,0 +1,548 @@
+{
+  "work": {
+    "title": "Symphony No.1",
+    "composer": "Brahms, Johannes"
+  },
+  "selector": {
+    "version": 1,
+    "description": "Deterministic selection of a diverse, representative tour from the Highlight Detector candidate pool.",
+    "config": {
+      "candidatePoolSize": 15,
+      "maxHighlights": 9,
+      "minimumTimeSeparationSeconds": 38,
+      "closeTimeDistinctnessThreshold": 0.3,
+      "weights": {
+        "quality": 42,
+        "coverage": 28,
+        "novelty": 30
+      }
+    },
+    "candidatePoolSize": 15
+  },
+  "selected": [
+    {
+      "detectorRank": 12,
+      "measure": 30,
+      "occurrence": 1,
+      "timeSeconds": 126.36,
+      "detectorScore": 60,
+      "selectorScore": 83.11,
+      "selectorReasons": [
+        "High detector score (60)",
+        "Extends performance coverage; nearest selected moment is 2:24 away",
+        "Adds a distinct score profile (similarity 21%)",
+        "Hauptstimme profile: Hn:e"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 4 parts",
+        "6 instruments enter",
+        "2 instruments drop out",
+        "New written dynamic markings: f, other-dynamics, pp",
+        "Written pitch range expands by 17 semitones",
+        "New Hauptstimme span begins in Hn 1 (label e)",
+        "Hauptstimme instrument changes",
+        "Hauptstimme label changes"
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Contrabassoon",
+        "C Horn 1",
+        "Trombone 1",
+        "Trombone 2",
+        "Trombone 3",
+        "Timpani",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Hn 1",
+          "instrument": "Hn",
+          "label": "e",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 7,
+      "measure": 62,
+      "occurrence": 1,
+      "timeSeconds": 271,
+      "detectorScore": 63,
+      "selectorScore": 85.22,
+      "selectorReasons": [
+        "High detector score (63)",
+        "Extends performance coverage; nearest selected moment is 11:11 away",
+        "Adds a distinct score profile (similarity 19%)",
+        "Hauptstimme profile: Vln:a"
+      ],
+      "detectorReasons": [
+        "7 instruments enter",
+        "6 instruments drop out",
+        "New written dynamic markings: f, mp, other-dynamics, p",
+        "New articulation marking: staccato",
+        "New Hauptstimme span begins in Vln 1 (label a)",
+        "Hauptstimme instrument changes",
+        "Hauptstimme label changes",
+        "Previously seen Hauptstimme label returns: a"
+      ],
+      "activeInstruments": [
+        "C Horn 1",
+        "C Horn 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 3,
+      "measure": 169,
+      "occurrence": 1,
+      "timeSeconds": 471.892,
+      "detectorScore": 68,
+      "selectorScore": 79.79,
+      "selectorReasons": [
+        "High detector score (68)",
+        "Extends performance coverage; nearest selected moment is 3:20 away",
+        "Adds a distinct score profile (similarity 46%)",
+        "Hauptstimme profile: Vln:m"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 6 parts",
+        "6 instruments enter",
+        "Note-event density increases by 123",
+        "New articulation marking: staccato",
+        "New Hauptstimme span begins in Vln 1 (label m)",
+        "Hauptstimme instrument changes",
+        "Hauptstimme label changes",
+        "Texture reaches the score’s upper orchestration range"
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Contrabassoon",
+        "C Horn 1",
+        "C Horn 2",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "Timpani",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "m",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 6,
+      "measure": 212,
+      "occurrence": 1,
+      "timeSeconds": 551.959,
+      "detectorScore": 65,
+      "selectorScore": 67.96,
+      "selectorReasons": [
+        "High detector score (65)",
+        "Extends performance coverage; nearest selected moment is 1:20 away",
+        "Adds a distinct score profile (similarity 57%)",
+        "Hauptstimme profile: Ob:g, Vln:b"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 8 parts",
+        "8 instruments enter",
+        "Note-event density increases by 14",
+        "New written dynamic marking: f",
+        "Written pitch range expands by 15 semitones",
+        "New Hauptstimme span begins in Ob 1 (label g)",
+        "Previously seen Hauptstimme label returns: g",
+        "Texture reaches the score’s upper orchestration range"
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "C Horn 1",
+        "C Horn 2",
+        "E Horn 3",
+        "E Horn 4",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "b",
+          "startsHere": false
+        },
+        {
+          "part": "Ob 1",
+          "instrument": "Ob",
+          "label": "g",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 10,
+      "measure": 260,
+      "occurrence": 1,
+      "timeSeconds": 637.759,
+      "detectorScore": 62,
+      "selectorScore": 68.75,
+      "selectorReasons": [
+        "High detector score (62)",
+        "Extends performance coverage; nearest selected moment is 1:23 away",
+        "Adds a distinct score profile (similarity 52%)",
+        "Hauptstimme profile: Vln:c"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 8 parts",
+        "8 instruments enter",
+        "Note-event density increases by 75",
+        "New written dynamic markings: f, sf",
+        "New Hauptstimme span begins in Vln 1 (label c)",
+        "Hauptstimme label changes",
+        "Previously seen Hauptstimme label returns: c"
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "C Horn 1",
+        "C Horn 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "c",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 11,
+      "measure": 292,
+      "occurrence": 1,
+      "timeSeconds": 721.209,
+      "detectorScore": 62,
+      "selectorScore": 79.6,
+      "selectorReasons": [
+        "High detector score (62)",
+        "Extends performance coverage; nearest selected moment is 3:41 away",
+        "Adds a distinct score profile (similarity 37%)",
+        "Hauptstimme profile: Hn:e"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 5 parts",
+        "5 instruments enter",
+        "Note-event density increases by 23",
+        "New written dynamic markings: mf, p",
+        "New Hauptstimme span begins in Hn 1 (label e)",
+        "Hauptstimme instrument changes",
+        "Previously seen Hauptstimme label returns: e"
+      ],
+      "activeInstruments": [
+        "Oboe 1",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Contrabassoon",
+        "C Horn 1",
+        "C Horn 2",
+        "Timpani",
+        "Violin 1",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Hn 1",
+          "instrument": "Hn",
+          "label": "e",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 2,
+      "measure": 353,
+      "occurrence": 1,
+      "timeSeconds": 860.573,
+      "detectorScore": 76,
+      "selectorScore": 74.74,
+      "selectorReasons": [
+        "High detector score (76)",
+        "Extends performance coverage; nearest selected moment is 1:22 away",
+        "Adds a distinct score profile (similarity 55%)",
+        "Hauptstimme profile: Fl:j"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 11 parts",
+        "11 instruments enter",
+        "Note-event density increases by 112",
+        "New written dynamic marking: f",
+        "New articulation marking: staccato",
+        "New Hauptstimme span begins in Fl 1 (label j)",
+        "Hauptstimme instrument changes",
+        "Hauptstimme label changes",
+        "Previously seen Hauptstimme label returns: j",
+        "Texture reaches the score’s upper orchestration range"
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Contrabassoon",
+        "C Horn 1",
+        "C Horn 2",
+        "E Horn 3",
+        "E Horn 4",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Fl 1",
+          "instrument": "Fl",
+          "label": "j",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 8,
+      "measure": 370,
+      "occurrence": 1,
+      "timeSeconds": 891.959,
+      "detectorScore": 63,
+      "selectorScore": 62.07,
+      "selectorReasons": [
+        "High detector score (63)",
+        "Extends performance coverage; nearest selected moment is 0:31 away",
+        "Adds a distinct score profile (similarity 31%)",
+        "Hauptstimme profile: Hn:a, Hn:a, Vln:a"
+      ],
+      "detectorReasons": [
+        "4 instruments enter",
+        "4 instruments drop out",
+        "New Hauptstimme span begins in Hn 4 (label a)",
+        "New Hauptstimme span begins in Hn 3 (label a)",
+        "Hauptstimme instrument changes",
+        "Previously seen Hauptstimme label returns: a"
+      ],
+      "activeInstruments": [
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "E Horn 3",
+        "E Horn 4",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": false
+        },
+        {
+          "part": "Hn 4",
+          "instrument": "Hn",
+          "label": "a",
+          "startsHere": true
+        },
+        {
+          "part": "Hn 3",
+          "instrument": "Hn",
+          "label": "a",
+          "startsHere": true
+        }
+      ]
+    },
+    {
+      "detectorRank": 1,
+      "measure": 404,
+      "occurrence": 1,
+      "timeSeconds": 942.83,
+      "detectorScore": 80,
+      "selectorScore": 100,
+      "selectorReasons": [
+        "High detector score (80)",
+        "Establishes the first tour reference point",
+        "Establishes an objective instrumentation profile",
+        "Hauptstimme profile: Fl:q"
+      ],
+      "detectorReasons": [
+        "Active instrumentation changes by 15 parts",
+        "15 instruments enter",
+        "Note-event density increases by 50",
+        "New written dynamic markings: f, ff, p",
+        "New articulation markings: accent, staccato",
+        "Written pitch range expands by 14 semitones",
+        "New Hauptstimme span begins in Fl 1 (label q)",
+        "Hauptstimme instrument changes",
+        "Previously seen Hauptstimme label returns: q",
+        "Texture reaches the score’s upper orchestration range"
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "C Horn 1",
+        "C Horn 2",
+        "E Horn 3",
+        "E Horn 4",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "Timpani",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Fl 1",
+          "instrument": "Fl",
+          "label": "q",
+          "startsHere": true
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "detectorRank": 4,
+      "measure": 280,
+      "occurrence": 1,
+      "timeSeconds": 676.493,
+      "reason": "Lower-scoring member of a similar tour profile.",
+      "comparedWithDetectorRank": 2,
+      "comparedWithMeasure": 353,
+      "similarity": 0.56,
+      "timeDistanceSeconds": 184.08
+    },
+    {
+      "detectorRank": 5,
+      "measure": 147,
+      "occurrence": 1,
+      "timeSeconds": 432.826,
+      "reason": "Lower-scoring member of a similar tour profile.",
+      "comparedWithDetectorRank": 6,
+      "comparedWithMeasure": 212,
+      "similarity": 0.633,
+      "timeDistanceSeconds": 119.133
+    },
+    {
+      "detectorRank": 9,
+      "measure": 420,
+      "occurrence": 1,
+      "timeSeconds": 964.973,
+      "reason": "Excluded as a nearby similar candidate.",
+      "comparedWithDetectorRank": 1,
+      "comparedWithMeasure": 404,
+      "similarity": 0.599,
+      "timeDistanceSeconds": 22.143
+    },
+    {
+      "detectorRank": 13,
+      "measure": 165,
+      "occurrence": 1,
+      "timeSeconds": 464.639,
+      "reason": "Lower-scoring member of a similar tour profile.",
+      "comparedWithDetectorRank": 11,
+      "comparedWithMeasure": 292,
+      "similarity": 0.38,
+      "timeDistanceSeconds": 256.57
+    },
+    {
+      "detectorRank": 14,
+      "measure": 186,
+      "occurrence": 1,
+      "timeSeconds": 503.426,
+      "reason": "Lower-scoring member of a similar tour profile.",
+      "comparedWithDetectorRank": 7,
+      "comparedWithMeasure": 62,
+      "similarity": 0.466,
+      "timeDistanceSeconds": 232.426
+    },
+    {
+      "detectorRank": 15,
+      "measure": 149,
+      "occurrence": 1,
+      "timeSeconds": 436.439,
+      "reason": "Lower-scoring member of a similar tour profile.",
+      "comparedWithDetectorRank": 7,
+      "comparedWithMeasure": 62,
+      "similarity": 0.357,
+      "timeDistanceSeconds": 165.439
+    }
+  ]
+}

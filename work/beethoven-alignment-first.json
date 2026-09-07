@@ -1,0 +1,5655 @@
+{
+  "recording": "beethoven-op67-movement1-musopen-pd",
+  "method": "CQT chroma dynamic time warping without manual constraints",
+  "anchorPolicy": {
+    "usedAsConstraints": {}
+  },
+  "durationSeconds": 500.088,
+  "audioFeatures": {
+    "sampleRate": 22050,
+    "hopLength": 512,
+    "featureType": "CQT chroma",
+    "frameRate": 5
+  },
+  "inputSha256": {
+    "musicxml": "5de9f153c72b3831757d43584c5d5ec792510d36cc5a389a4160aa90697fc17b",
+    "positions": "31ed31046fb8d2ad75049bc07a3cc0907cdade73ee13864b747cb86036e03918",
+    "audio": "663cfa62707be850a51ec8cd7b51b95595a9ee010f3eefea16e1dd46d54a9d95"
+  },
+  "occurrences": [
+    {
+      "performanceIndex": 1,
+      "measure": 1,
+      "occurrence": 1,
+      "scoreQstamp": 0.0,
+      "positionQstamp": 0.5,
+      "scoreTime": 0.1389,
+      "timeSeconds": 0.986
+    },
+    {
+      "performanceIndex": 2,
+      "measure": 2,
+      "occurrence": 1,
+      "scoreQstamp": 2.0,
+      "positionQstamp": 2.0,
+      "scoreTime": 0.5556,
+      "timeSeconds": 2.256
+    },
+    {
+      "performanceIndex": 3,
+      "measure": 3,
+      "occurrence": 1,
+      "scoreQstamp": 4.0,
+      "positionQstamp": 4.0,
+      "scoreTime": 1.11112,
+      "timeSeconds": 3.911
+    },
+    {
+      "performanceIndex": 4,
+      "measure": 4,
+      "occurrence": 1,
+      "scoreQstamp": 6.0,
+      "positionQstamp": 6.0,
+      "scoreTime": 1.6667,
+      "timeSeconds": 5.134
+    },
+    {
+      "performanceIndex": 5,
+      "measure": 5,
+      "occurrence": 1,
+      "scoreQstamp": 8.0,
+      "positionQstamp": 8.0,
+      "scoreTime": 2.2222,
+      "timeSeconds": 7.022
+    },
+    {
+      "performanceIndex": 6,
+      "measure": 6,
+      "occurrence": 1,
+      "scoreQstamp": 10.0,
+      "positionQstamp": 10.0,
+      "scoreTime": 2.7778,
+      "timeSeconds": 7.578
+    },
+    {
+      "performanceIndex": 7,
+      "measure": 7,
+      "occurrence": 1,
+      "scoreQstamp": 12.0,
+      "positionQstamp": 12.0,
+      "scoreTime": 3.3333,
+      "timeSeconds": 8.133
+    },
+    {
+      "performanceIndex": 8,
+      "measure": 8,
+      "occurrence": 1,
+      "scoreQstamp": 14.0,
+      "positionQstamp": 14.0,
+      "scoreTime": 3.8889,
+      "timeSeconds": 8.911
+    },
+    {
+      "performanceIndex": 9,
+      "measure": 9,
+      "occurrence": 1,
+      "scoreQstamp": 16.0,
+      "positionQstamp": 16.0,
+      "scoreTime": 4.4444,
+      "timeSeconds": 10.289
+    },
+    {
+      "performanceIndex": 10,
+      "measure": 10,
+      "occurrence": 1,
+      "scoreQstamp": 18.0,
+      "positionQstamp": 18.0,
+      "scoreTime": 5.0,
+      "timeSeconds": 11.2
+    },
+    {
+      "performanceIndex": 11,
+      "measure": 11,
+      "occurrence": 1,
+      "scoreQstamp": 20.0,
+      "positionQstamp": 20.0,
+      "scoreTime": 5.5556,
+      "timeSeconds": 12.156
+    },
+    {
+      "performanceIndex": 12,
+      "measure": 12,
+      "occurrence": 1,
+      "scoreQstamp": 22.0,
+      "positionQstamp": 22.0,
+      "scoreTime": 6.1111,
+      "timeSeconds": 12.911
+    },
+    {
+      "performanceIndex": 13,
+      "measure": 13,
+      "occurrence": 1,
+      "scoreQstamp": 24.0,
+      "positionQstamp": 24.0,
+      "scoreTime": 6.6667,
+      "timeSeconds": 13.9
+    },
+    {
+      "performanceIndex": 14,
+      "measure": 14,
+      "occurrence": 1,
+      "scoreQstamp": 26.0,
+      "positionQstamp": 26.0,
+      "scoreTime": 7.2222,
+      "timeSeconds": 14.622
+    },
+    {
+      "performanceIndex": 15,
+      "measure": 15,
+      "occurrence": 1,
+      "scoreQstamp": 28.0,
+      "positionQstamp": 28.0,
+      "scoreTime": 7.7778,
+      "timeSeconds": 15.267
+    },
+    {
+      "performanceIndex": 16,
+      "measure": 16,
+      "occurrence": 1,
+      "scoreQstamp": 30.0,
+      "positionQstamp": 30.0,
+      "scoreTime": 8.3333,
+      "timeSeconds": 15.933
+    },
+    {
+      "performanceIndex": 17,
+      "measure": 17,
+      "occurrence": 1,
+      "scoreQstamp": 32.0,
+      "positionQstamp": 32.0,
+      "scoreTime": 8.8889,
+      "timeSeconds": 16.633
+    },
+    {
+      "performanceIndex": 18,
+      "measure": 18,
+      "occurrence": 1,
+      "scoreQstamp": 34.0,
+      "positionQstamp": 34.0,
+      "scoreTime": 9.4444,
+      "timeSeconds": 17.244
+    },
+    {
+      "performanceIndex": 19,
+      "measure": 19,
+      "occurrence": 1,
+      "scoreQstamp": 36.0,
+      "positionQstamp": 36.0,
+      "scoreTime": 10.0,
+      "timeSeconds": 18.4
+    },
+    {
+      "performanceIndex": 20,
+      "measure": 20,
+      "occurrence": 1,
+      "scoreQstamp": 38.0,
+      "positionQstamp": 38.0,
+      "scoreTime": 10.5556,
+      "timeSeconds": 18.956
+    },
+    {
+      "performanceIndex": 21,
+      "measure": 21,
+      "occurrence": 1,
+      "scoreQstamp": 40.0,
+      "positionQstamp": 40.0,
+      "scoreTime": 11.1111,
+      "timeSeconds": 20.067
+    },
+    {
+      "performanceIndex": 22,
+      "measure": 22,
+      "occurrence": 1,
+      "scoreQstamp": 42.0,
+      "positionQstamp": 42.0,
+      "scoreTime": 11.6667,
+      "timeSeconds": 22.067
+    },
+    {
+      "performanceIndex": 23,
+      "measure": 23,
+      "occurrence": 1,
+      "scoreQstamp": 44.0,
+      "positionQstamp": 44.0,
+      "scoreTime": 12.2222,
+      "timeSeconds": 23.133
+    },
+    {
+      "performanceIndex": 24,
+      "measure": 24,
+      "occurrence": 1,
+      "scoreQstamp": 46.0,
+      "positionQstamp": 46.0,
+      "scoreTime": 12.7778,
+      "timeSeconds": 25.578
+    },
+    {
+      "performanceIndex": 25,
+      "measure": 25,
+      "occurrence": 1,
+      "scoreQstamp": 48.0,
+      "positionQstamp": 48.0,
+      "scoreTime": 13.33332,
+      "timeSeconds": 26.133
+    },
+    {
+      "performanceIndex": 26,
+      "measure": 26,
+      "occurrence": 1,
+      "scoreQstamp": 50.0,
+      "positionQstamp": 50.0,
+      "scoreTime": 13.8889,
+      "timeSeconds": 26.689
+    },
+    {
+      "performanceIndex": 27,
+      "measure": 27,
+      "occurrence": 1,
+      "scoreQstamp": 52.0,
+      "positionQstamp": 52.0,
+      "scoreTime": 14.4444,
+      "timeSeconds": 27.489
+    },
+    {
+      "performanceIndex": 28,
+      "measure": 28,
+      "occurrence": 1,
+      "scoreQstamp": 54.0,
+      "positionQstamp": 54.0,
+      "scoreTime": 15.0,
+      "timeSeconds": 28.4
+    },
+    {
+      "performanceIndex": 29,
+      "measure": 29,
+      "occurrence": 1,
+      "scoreQstamp": 56.0,
+      "positionQstamp": 56.0,
+      "scoreTime": 15.5556,
+      "timeSeconds": 29.156
+    },
+    {
+      "performanceIndex": 30,
+      "measure": 30,
+      "occurrence": 1,
+      "scoreQstamp": 58.0,
+      "positionQstamp": 58.0,
+      "scoreTime": 16.1111,
+      "timeSeconds": 29.911
+    },
+    {
+      "performanceIndex": 31,
+      "measure": 31,
+      "occurrence": 1,
+      "scoreQstamp": 60.0,
+      "positionQstamp": 60.0,
+      "scoreTime": 16.6667,
+      "timeSeconds": 30.467
+    },
+    {
+      "performanceIndex": 32,
+      "measure": 32,
+      "occurrence": 1,
+      "scoreQstamp": 62.0,
+      "positionQstamp": 62.0,
+      "scoreTime": 17.2222,
+      "timeSeconds": 31.244
+    },
+    {
+      "performanceIndex": 33,
+      "measure": 33,
+      "occurrence": 1,
+      "scoreQstamp": 64.0,
+      "positionQstamp": 64.0,
+      "scoreTime": 17.7778,
+      "timeSeconds": 32.267
+    },
+    {
+      "performanceIndex": 34,
+      "measure": 34,
+      "occurrence": 1,
+      "scoreQstamp": 66.0,
+      "positionQstamp": 66.0,
+      "scoreTime": 18.3333,
+      "timeSeconds": 32.933
+    },
+    {
+      "performanceIndex": 35,
+      "measure": 35,
+      "occurrence": 1,
+      "scoreQstamp": 68.0,
+      "positionQstamp": 68.0,
+      "scoreTime": 18.8889,
+      "timeSeconds": 33.578
+    },
+    {
+      "performanceIndex": 36,
+      "measure": 36,
+      "occurrence": 1,
+      "scoreQstamp": 70.0,
+      "positionQstamp": 70.0,
+      "scoreTime": 19.4444,
+      "timeSeconds": 34.444
+    },
+    {
+      "performanceIndex": 37,
+      "measure": 37,
+      "occurrence": 1,
+      "scoreQstamp": 72.0,
+      "positionQstamp": 72.0,
+      "scoreTime": 20.0,
+      "timeSeconds": 35.3
+    },
+    {
+      "performanceIndex": 38,
+      "measure": 38,
+      "occurrence": 1,
+      "scoreQstamp": 74.0,
+      "positionQstamp": 74.0,
+      "scoreTime": 20.5556,
+      "timeSeconds": 36.156
+    },
+    {
+      "performanceIndex": 39,
+      "measure": 39,
+      "occurrence": 1,
+      "scoreQstamp": 76.0,
+      "positionQstamp": 76.0,
+      "scoreTime": 21.1111,
+      "timeSeconds": 36.767
+    },
+    {
+      "performanceIndex": 40,
+      "measure": 40,
+      "occurrence": 1,
+      "scoreQstamp": 78.0,
+      "positionQstamp": 78.0,
+      "scoreTime": 21.6667,
+      "timeSeconds": 37.5
+    },
+    {
+      "performanceIndex": 41,
+      "measure": 41,
+      "occurrence": 1,
+      "scoreQstamp": 80.0,
+      "positionQstamp": 80.0,
+      "scoreTime": 22.2222,
+      "timeSeconds": 38.244
+    },
+    {
+      "performanceIndex": 42,
+      "measure": 42,
+      "occurrence": 1,
+      "scoreQstamp": 82.0,
+      "positionQstamp": 82.0,
+      "scoreTime": 22.7778,
+      "timeSeconds": 39.178
+    },
+    {
+      "performanceIndex": 43,
+      "measure": 43,
+      "occurrence": 1,
+      "scoreQstamp": 84.0,
+      "positionQstamp": 84.0,
+      "scoreTime": 23.3333,
+      "timeSeconds": 39.733
+    },
+    {
+      "performanceIndex": 44,
+      "measure": 44,
+      "occurrence": 1,
+      "scoreQstamp": 86.0,
+      "positionQstamp": 86.0,
+      "scoreTime": 23.8889,
+      "timeSeconds": 40.489
+    },
+    {
+      "performanceIndex": 45,
+      "measure": 45,
+      "occurrence": 1,
+      "scoreQstamp": 88.0,
+      "positionQstamp": 88.0,
+      "scoreTime": 24.4444,
+      "timeSeconds": 41.044
+    },
+    {
+      "performanceIndex": 46,
+      "measure": 46,
+      "occurrence": 1,
+      "scoreQstamp": 90.0,
+      "positionQstamp": 90.0,
+      "scoreTime": 25.0,
+      "timeSeconds": 41.6
+    },
+    {
+      "performanceIndex": 47,
+      "measure": 47,
+      "occurrence": 1,
+      "scoreQstamp": 92.0,
+      "positionQstamp": 92.0,
+      "scoreTime": 25.5556,
+      "timeSeconds": 42.511
+    },
+    {
+      "performanceIndex": 48,
+      "measure": 48,
+      "occurrence": 1,
+      "scoreQstamp": 94.0,
+      "positionQstamp": 94.0,
+      "scoreTime": 26.1111,
+      "timeSeconds": 43.589
+    },
+    {
+      "performanceIndex": 49,
+      "measure": 49,
+      "occurrence": 1,
+      "scoreQstamp": 96.0,
+      "positionQstamp": 96.0,
+      "scoreTime": 26.6667,
+      "timeSeconds": 44.667
+    },
+    {
+      "performanceIndex": 50,
+      "measure": 50,
+      "occurrence": 1,
+      "scoreQstamp": 98.0,
+      "positionQstamp": 98.0,
+      "scoreTime": 27.2222,
+      "timeSeconds": 45.222
+    },
+    {
+      "performanceIndex": 51,
+      "measure": 51,
+      "occurrence": 1,
+      "scoreQstamp": 100.0,
+      "positionQstamp": 100.0,
+      "scoreTime": 27.7778,
+      "timeSeconds": 45.967
+    },
+    {
+      "performanceIndex": 52,
+      "measure": 52,
+      "occurrence": 1,
+      "scoreQstamp": 102.0,
+      "positionQstamp": 102.0,
+      "scoreTime": 28.3333,
+      "timeSeconds": 46.533
+    },
+    {
+      "performanceIndex": 53,
+      "measure": 53,
+      "occurrence": 1,
+      "scoreQstamp": 104.0,
+      "positionQstamp": 104.0,
+      "scoreTime": 28.8889,
+      "timeSeconds": 47.089
+    },
+    {
+      "performanceIndex": 54,
+      "measure": 54,
+      "occurrence": 1,
+      "scoreQstamp": 106.0,
+      "positionQstamp": 106.0,
+      "scoreTime": 29.4444,
+      "timeSeconds": 47.644
+    },
+    {
+      "performanceIndex": 55,
+      "measure": 55,
+      "occurrence": 1,
+      "scoreQstamp": 108.0,
+      "positionQstamp": 108.0,
+      "scoreTime": 30.0,
+      "timeSeconds": 48.2
+    },
+    {
+      "performanceIndex": 56,
+      "measure": 56,
+      "occurrence": 1,
+      "scoreQstamp": 110.0,
+      "positionQstamp": 110.0,
+      "scoreTime": 30.5556,
+      "timeSeconds": 48.911
+    },
+    {
+      "performanceIndex": 57,
+      "measure": 57,
+      "occurrence": 1,
+      "scoreQstamp": 112.0,
+      "positionQstamp": 113.0,
+      "scoreTime": 31.3889,
+      "timeSeconds": 49.989
+    },
+    {
+      "performanceIndex": 58,
+      "measure": 58,
+      "occurrence": 1,
+      "scoreQstamp": 114.0,
+      "positionQstamp": 116.0,
+      "scoreTime": 32.2222,
+      "timeSeconds": 50.855
+    },
+    {
+      "performanceIndex": 59,
+      "measure": 59,
+      "occurrence": 1,
+      "scoreQstamp": 116.0,
+      "positionQstamp": 118.0,
+      "scoreTime": 32.7778,
+      "timeSeconds": 51.978
+    },
+    {
+      "performanceIndex": 60,
+      "measure": 60,
+      "occurrence": 1,
+      "scoreQstamp": 118.0,
+      "positionQstamp": 120.0,
+      "scoreTime": 33.3333,
+      "timeSeconds": 52.733
+    },
+    {
+      "performanceIndex": 61,
+      "measure": 61,
+      "occurrence": 1,
+      "scoreQstamp": 120.0,
+      "positionQstamp": 122.0,
+      "scoreTime": 33.8889,
+      "timeSeconds": 53.333
+    },
+    {
+      "performanceIndex": 62,
+      "measure": 62,
+      "occurrence": 1,
+      "scoreQstamp": 122.0,
+      "positionQstamp": 124.0,
+      "scoreTime": 34.4444,
+      "timeSeconds": 54.133
+    },
+    {
+      "performanceIndex": 63,
+      "measure": 63,
+      "occurrence": 1,
+      "scoreQstamp": 124.0,
+      "positionQstamp": 126.0,
+      "scoreTime": 35.0,
+      "timeSeconds": 55.4
+    },
+    {
+      "performanceIndex": 64,
+      "measure": 64,
+      "occurrence": 1,
+      "scoreQstamp": 126.0,
+      "positionQstamp": 128.0,
+      "scoreTime": 35.5556,
+      "timeSeconds": 55.956
+    },
+    {
+      "performanceIndex": 65,
+      "measure": 65,
+      "occurrence": 1,
+      "scoreQstamp": 128.0,
+      "positionQstamp": 130.0,
+      "scoreTime": 36.1111,
+      "timeSeconds": 56.722
+    },
+    {
+      "performanceIndex": 66,
+      "measure": 66,
+      "occurrence": 1,
+      "scoreQstamp": 130.0,
+      "positionQstamp": 132.0,
+      "scoreTime": 36.6667,
+      "timeSeconds": 57.533
+    },
+    {
+      "performanceIndex": 67,
+      "measure": 67,
+      "occurrence": 1,
+      "scoreQstamp": 132.0,
+      "positionQstamp": 134.0,
+      "scoreTime": 37.2222,
+      "timeSeconds": 58.422
+    },
+    {
+      "performanceIndex": 68,
+      "measure": 68,
+      "occurrence": 1,
+      "scoreQstamp": 134.0,
+      "positionQstamp": 136.0,
+      "scoreTime": 37.7778,
+      "timeSeconds": 59.167
+    },
+    {
+      "performanceIndex": 69,
+      "measure": 69,
+      "occurrence": 1,
+      "scoreQstamp": 136.0,
+      "positionQstamp": 138.0,
+      "scoreTime": 38.3333,
+      "timeSeconds": 59.733
+    },
+    {
+      "performanceIndex": 70,
+      "measure": 70,
+      "occurrence": 1,
+      "scoreQstamp": 138.0,
+      "positionQstamp": 140.0,
+      "scoreTime": 38.8889,
+      "timeSeconds": 60.522
+    },
+    {
+      "performanceIndex": 71,
+      "measure": 71,
+      "occurrence": 1,
+      "scoreQstamp": 140.0,
+      "positionQstamp": 142.0,
+      "scoreTime": 39.4444,
+      "timeSeconds": 61.444
+    },
+    {
+      "performanceIndex": 72,
+      "measure": 72,
+      "occurrence": 1,
+      "scoreQstamp": 142.0,
+      "positionQstamp": 144.0,
+      "scoreTime": 40.0,
+      "timeSeconds": 62.2
+    },
+    {
+      "performanceIndex": 73,
+      "measure": 73,
+      "occurrence": 1,
+      "scoreQstamp": 144.0,
+      "positionQstamp": 146.0,
+      "scoreTime": 40.5556,
+      "timeSeconds": 62.933
+    },
+    {
+      "performanceIndex": 74,
+      "measure": 74,
+      "occurrence": 1,
+      "scoreQstamp": 146.0,
+      "positionQstamp": 148.0,
+      "scoreTime": 41.1111,
+      "timeSeconds": 63.778
+    },
+    {
+      "performanceIndex": 75,
+      "measure": 75,
+      "occurrence": 1,
+      "scoreQstamp": 148.0,
+      "positionQstamp": 150.0,
+      "scoreTime": 41.6667,
+      "timeSeconds": 64.667
+    },
+    {
+      "performanceIndex": 76,
+      "measure": 76,
+      "occurrence": 1,
+      "scoreQstamp": 150.0,
+      "positionQstamp": 152.0,
+      "scoreTime": 42.2222,
+      "timeSeconds": 65.222
+    },
+    {
+      "performanceIndex": 77,
+      "measure": 77,
+      "occurrence": 1,
+      "scoreQstamp": 152.0,
+      "positionQstamp": 154.0,
+      "scoreTime": 42.7778,
+      "timeSeconds": 65.967
+    },
+    {
+      "performanceIndex": 78,
+      "measure": 78,
+      "occurrence": 1,
+      "scoreQstamp": 154.0,
+      "positionQstamp": 156.0,
+      "scoreTime": 43.3333,
+      "timeSeconds": 66.767
+    },
+    {
+      "performanceIndex": 79,
+      "measure": 79,
+      "occurrence": 1,
+      "scoreQstamp": 156.0,
+      "positionQstamp": 158.0,
+      "scoreTime": 43.8889,
+      "timeSeconds": 67.489
+    },
+    {
+      "performanceIndex": 80,
+      "measure": 80,
+      "occurrence": 1,
+      "scoreQstamp": 158.0,
+      "positionQstamp": 160.0,
+      "scoreTime": 44.4444,
+      "timeSeconds": 68.267
+    },
+    {
+      "performanceIndex": 81,
+      "measure": 81,
+      "occurrence": 1,
+      "scoreQstamp": 160.0,
+      "positionQstamp": 162.0,
+      "scoreTime": 45.0,
+      "timeSeconds": 69.1
+    },
+    {
+      "performanceIndex": 82,
+      "measure": 82,
+      "occurrence": 1,
+      "scoreQstamp": 162.0,
+      "positionQstamp": 164.0,
+      "scoreTime": 45.5556,
+      "timeSeconds": 69.833
+    },
+    {
+      "performanceIndex": 83,
+      "measure": 83,
+      "occurrence": 1,
+      "scoreQstamp": 164.0,
+      "positionQstamp": 166.0,
+      "scoreTime": 46.1111,
+      "timeSeconds": 70.567
+    },
+    {
+      "performanceIndex": 84,
+      "measure": 84,
+      "occurrence": 1,
+      "scoreQstamp": 166.0,
+      "positionQstamp": 168.0,
+      "scoreTime": 46.6667,
+      "timeSeconds": 71.467
+    },
+    {
+      "performanceIndex": 85,
+      "measure": 85,
+      "occurrence": 1,
+      "scoreQstamp": 168.0,
+      "positionQstamp": 170.0,
+      "scoreTime": 47.2222,
+      "timeSeconds": 72.044
+    },
+    {
+      "performanceIndex": 86,
+      "measure": 86,
+      "occurrence": 1,
+      "scoreQstamp": 170.0,
+      "positionQstamp": 172.0,
+      "scoreTime": 47.7778,
+      "timeSeconds": 72.978
+    },
+    {
+      "performanceIndex": 87,
+      "measure": 87,
+      "occurrence": 1,
+      "scoreQstamp": 172.0,
+      "positionQstamp": 174.0,
+      "scoreTime": 48.3333,
+      "timeSeconds": 73.7
+    },
+    {
+      "performanceIndex": 88,
+      "measure": 88,
+      "occurrence": 1,
+      "scoreQstamp": 174.0,
+      "positionQstamp": 176.0,
+      "scoreTime": 48.8889,
+      "timeSeconds": 74.478
+    },
+    {
+      "performanceIndex": 89,
+      "measure": 89,
+      "occurrence": 1,
+      "scoreQstamp": 176.0,
+      "positionQstamp": 178.0,
+      "scoreTime": 49.4444,
+      "timeSeconds": 75.267
+    },
+    {
+      "performanceIndex": 90,
+      "measure": 90,
+      "occurrence": 1,
+      "scoreQstamp": 178.0,
+      "positionQstamp": 180.0,
+      "scoreTime": 50.0,
+      "timeSeconds": 76.2
+    },
+    {
+      "performanceIndex": 91,
+      "measure": 91,
+      "occurrence": 1,
+      "scoreQstamp": 180.0,
+      "positionQstamp": 182.0,
+      "scoreTime": 50.5556,
+      "timeSeconds": 76.933
+    },
+    {
+      "performanceIndex": 92,
+      "measure": 92,
+      "occurrence": 1,
+      "scoreQstamp": 182.0,
+      "positionQstamp": 184.0,
+      "scoreTime": 51.1111,
+      "timeSeconds": 77.567
+    },
+    {
+      "performanceIndex": 93,
+      "measure": 93,
+      "occurrence": 1,
+      "scoreQstamp": 184.0,
+      "positionQstamp": 186.0,
+      "scoreTime": 51.6667,
+      "timeSeconds": 78.3
+    },
+    {
+      "performanceIndex": 94,
+      "measure": 94,
+      "occurrence": 1,
+      "scoreQstamp": 186.0,
+      "positionQstamp": 188.0,
+      "scoreTime": 52.2222,
+      "timeSeconds": 79.022
+    },
+    {
+      "performanceIndex": 95,
+      "measure": 95,
+      "occurrence": 1,
+      "scoreQstamp": 188.0,
+      "positionQstamp": 190.0,
+      "scoreTime": 52.7778,
+      "timeSeconds": 79.578
+    },
+    {
+      "performanceIndex": 96,
+      "measure": 96,
+      "occurrence": 1,
+      "scoreQstamp": 190.0,
+      "positionQstamp": 192.0,
+      "scoreTime": 53.3333,
+      "timeSeconds": 80.7
+    },
+    {
+      "performanceIndex": 97,
+      "measure": 97,
+      "occurrence": 1,
+      "scoreQstamp": 192.0,
+      "positionQstamp": 194.0,
+      "scoreTime": 53.8889,
+      "timeSeconds": 81.333
+    },
+    {
+      "performanceIndex": 98,
+      "measure": 98,
+      "occurrence": 1,
+      "scoreQstamp": 194.0,
+      "positionQstamp": 196.0,
+      "scoreTime": 54.4444,
+      "timeSeconds": 82.089
+    },
+    {
+      "performanceIndex": 99,
+      "measure": 99,
+      "occurrence": 1,
+      "scoreQstamp": 196.0,
+      "positionQstamp": 198.0,
+      "scoreTime": 55.0,
+      "timeSeconds": 83.0
+    },
+    {
+      "performanceIndex": 100,
+      "measure": 100,
+      "occurrence": 1,
+      "scoreQstamp": 198.0,
+      "positionQstamp": 200.0,
+      "scoreTime": 55.5556,
+      "timeSeconds": 83.633
+    },
+    {
+      "performanceIndex": 101,
+      "measure": 101,
+      "occurrence": 1,
+      "scoreQstamp": 200.0,
+      "positionQstamp": 202.0,
+      "scoreTime": 56.1111,
+      "timeSeconds": 84.367
+    },
+    {
+      "performanceIndex": 102,
+      "measure": 102,
+      "occurrence": 1,
+      "scoreQstamp": 202.0,
+      "positionQstamp": 204.0,
+      "scoreTime": 56.6667,
+      "timeSeconds": 85.1
+    },
+    {
+      "performanceIndex": 103,
+      "measure": 103,
+      "occurrence": 1,
+      "scoreQstamp": 204.0,
+      "positionQstamp": 206.0,
+      "scoreTime": 57.2222,
+      "timeSeconds": 85.844
+    },
+    {
+      "performanceIndex": 104,
+      "measure": 104,
+      "occurrence": 1,
+      "scoreQstamp": 206.0,
+      "positionQstamp": 208.0,
+      "scoreTime": 57.7778,
+      "timeSeconds": 86.867
+    },
+    {
+      "performanceIndex": 105,
+      "measure": 105,
+      "occurrence": 1,
+      "scoreQstamp": 208.0,
+      "positionQstamp": 210.0,
+      "scoreTime": 58.3333,
+      "timeSeconds": 87.533
+    },
+    {
+      "performanceIndex": 106,
+      "measure": 106,
+      "occurrence": 1,
+      "scoreQstamp": 210.0,
+      "positionQstamp": 212.0,
+      "scoreTime": 58.8889,
+      "timeSeconds": 88.133
+    },
+    {
+      "performanceIndex": 107,
+      "measure": 107,
+      "occurrence": 1,
+      "scoreQstamp": 212.0,
+      "positionQstamp": 214.0,
+      "scoreTime": 59.4444,
+      "timeSeconds": 88.844
+    },
+    {
+      "performanceIndex": 108,
+      "measure": 108,
+      "occurrence": 1,
+      "scoreQstamp": 214.0,
+      "positionQstamp": 216.0,
+      "scoreTime": 60.0,
+      "timeSeconds": 89.6
+    },
+    {
+      "performanceIndex": 109,
+      "measure": 109,
+      "occurrence": 1,
+      "scoreQstamp": 216.0,
+      "positionQstamp": 218.0,
+      "scoreTime": 60.5556,
+      "timeSeconds": 90.333
+    },
+    {
+      "performanceIndex": 110,
+      "measure": 110,
+      "occurrence": 1,
+      "scoreQstamp": 218.0,
+      "positionQstamp": 220.0,
+      "scoreTime": 61.1111,
+      "timeSeconds": 90.911
+    },
+    {
+      "performanceIndex": 111,
+      "measure": 111,
+      "occurrence": 1,
+      "scoreQstamp": 220.0,
+      "positionQstamp": 222.0,
+      "scoreTime": 61.6667,
+      "timeSeconds": 91.667
+    },
+    {
+      "performanceIndex": 112,
+      "measure": 112,
+      "occurrence": 1,
+      "scoreQstamp": 222.0,
+      "positionQstamp": 224.0,
+      "scoreTime": 62.2222,
+      "timeSeconds": 92.433
+    },
+    {
+      "performanceIndex": 113,
+      "measure": 113,
+      "occurrence": 1,
+      "scoreQstamp": 224.0,
+      "positionQstamp": 226.0,
+      "scoreTime": 62.7778,
+      "timeSeconds": 93.267
+    },
+    {
+      "performanceIndex": 114,
+      "measure": 114,
+      "occurrence": 1,
+      "scoreQstamp": 226.0,
+      "positionQstamp": 228.0,
+      "scoreTime": 63.3333,
+      "timeSeconds": 93.933
+    },
+    {
+      "performanceIndex": 115,
+      "measure": 115,
+      "occurrence": 1,
+      "scoreQstamp": 228.0,
+      "positionQstamp": 230.0,
+      "scoreTime": 63.8889,
+      "timeSeconds": 94.533
+    },
+    {
+      "performanceIndex": 116,
+      "measure": 116,
+      "occurrence": 1,
+      "scoreQstamp": 230.0,
+      "positionQstamp": 232.0,
+      "scoreTime": 64.4444,
+      "timeSeconds": 95.289
+    },
+    {
+      "performanceIndex": 117,
+      "measure": 117,
+      "occurrence": 1,
+      "scoreQstamp": 232.0,
+      "positionQstamp": 234.0,
+      "scoreTime": 65.0,
+      "timeSeconds": 96.2
+    },
+    {
+      "performanceIndex": 118,
+      "measure": 118,
+      "occurrence": 1,
+      "scoreQstamp": 234.0,
+      "positionQstamp": 236.0,
+      "scoreTime": 65.5556,
+      "timeSeconds": 96.756
+    },
+    {
+      "performanceIndex": 119,
+      "measure": 119,
+      "occurrence": 1,
+      "scoreQstamp": 236.0,
+      "positionQstamp": 238.0,
+      "scoreTime": 66.11112,
+      "timeSeconds": 97.311
+    },
+    {
+      "performanceIndex": 120,
+      "measure": 120,
+      "occurrence": 1,
+      "scoreQstamp": 238.0,
+      "positionQstamp": 240.0,
+      "scoreTime": 66.6667,
+      "timeSeconds": 98.3
+    },
+    {
+      "performanceIndex": 121,
+      "measure": 121,
+      "occurrence": 1,
+      "scoreQstamp": 240.0,
+      "positionQstamp": 242.0,
+      "scoreTime": 67.22222,
+      "timeSeconds": 99.044
+    },
+    {
+      "performanceIndex": 122,
+      "measure": 122,
+      "occurrence": 1,
+      "scoreQstamp": 242.0,
+      "positionQstamp": 244.0,
+      "scoreTime": 67.7778,
+      "timeSeconds": 99.978
+    },
+    {
+      "performanceIndex": 123,
+      "measure": 123,
+      "occurrence": 1,
+      "scoreQstamp": 244.0,
+      "positionQstamp": 247.84615384615384,
+      "scoreTime": 68.84616923076923,
+      "timeSeconds": 100.2
+    },
+    {
+      "performanceIndex": 124,
+      "measure": 124,
+      "occurrence": 1,
+      "scoreQstamp": 246.0,
+      "positionQstamp": 251.69230769230768,
+      "scoreTime": 69.91453846153846,
+      "timeSeconds": 101.115
+    },
+    {
+      "performanceIndex": 125,
+      "measure": 1,
+      "occurrence": 2,
+      "scoreQstamp": 248.0,
+      "positionQstamp": 255.53846153846155,
+      "scoreTime": 70.98290769230769,
+      "timeSeconds": 102.183
+    },
+    {
+      "performanceIndex": 126,
+      "measure": 2,
+      "occurrence": 2,
+      "scoreQstamp": 250.0,
+      "positionQstamp": 258.0,
+      "scoreTime": 71.6667,
+      "timeSeconds": 103.667
+    },
+    {
+      "performanceIndex": 127,
+      "measure": 3,
+      "occurrence": 2,
+      "scoreQstamp": 252.0,
+      "positionQstamp": 260.0,
+      "scoreTime": 72.22222,
+      "timeSeconds": 106.244
+    },
+    {
+      "performanceIndex": 128,
+      "measure": 4,
+      "occurrence": 2,
+      "scoreQstamp": 254.0,
+      "positionQstamp": 262.0,
+      "scoreTime": 72.7778,
+      "timeSeconds": 108.067
+    },
+    {
+      "performanceIndex": 129,
+      "measure": 5,
+      "occurrence": 2,
+      "scoreQstamp": 256.0,
+      "positionQstamp": 264.0,
+      "scoreTime": 73.3333,
+      "timeSeconds": 109.733
+    },
+    {
+      "performanceIndex": 130,
+      "measure": 6,
+      "occurrence": 2,
+      "scoreQstamp": 258.0,
+      "positionQstamp": 266.0,
+      "scoreTime": 73.88889999999999,
+      "timeSeconds": 110.289
+    },
+    {
+      "performanceIndex": 131,
+      "measure": 7,
+      "occurrence": 2,
+      "scoreQstamp": 260.0,
+      "positionQstamp": 268.0,
+      "scoreTime": 74.4444,
+      "timeSeconds": 111.044
+    },
+    {
+      "performanceIndex": 132,
+      "measure": 8,
+      "occurrence": 2,
+      "scoreQstamp": 262.0,
+      "positionQstamp": 270.0,
+      "scoreTime": 75.0,
+      "timeSeconds": 111.9
+    },
+    {
+      "performanceIndex": 133,
+      "measure": 9,
+      "occurrence": 2,
+      "scoreQstamp": 264.0,
+      "positionQstamp": 272.0,
+      "scoreTime": 75.5556,
+      "timeSeconds": 112.833
+    },
+    {
+      "performanceIndex": 134,
+      "measure": 10,
+      "occurrence": 2,
+      "scoreQstamp": 266.0,
+      "positionQstamp": 274.0,
+      "scoreTime": 76.1111,
+      "timeSeconds": 113.511
+    },
+    {
+      "performanceIndex": 135,
+      "measure": 11,
+      "occurrence": 2,
+      "scoreQstamp": 268.0,
+      "positionQstamp": 276.0,
+      "scoreTime": 76.6667,
+      "timeSeconds": 114.267
+    },
+    {
+      "performanceIndex": 136,
+      "measure": 12,
+      "occurrence": 2,
+      "scoreQstamp": 270.0,
+      "positionQstamp": 278.0,
+      "scoreTime": 77.2222,
+      "timeSeconds": 114.822
+    },
+    {
+      "performanceIndex": 137,
+      "measure": 13,
+      "occurrence": 2,
+      "scoreQstamp": 272.0,
+      "positionQstamp": 280.0,
+      "scoreTime": 77.7778,
+      "timeSeconds": 115.645
+    },
+    {
+      "performanceIndex": 138,
+      "measure": 14,
+      "occurrence": 2,
+      "scoreQstamp": 274.0,
+      "positionQstamp": 282.0,
+      "scoreTime": 78.3333,
+      "timeSeconds": 116.533
+    },
+    {
+      "performanceIndex": 139,
+      "measure": 15,
+      "occurrence": 2,
+      "scoreQstamp": 276.0,
+      "positionQstamp": 284.0,
+      "scoreTime": 78.8889,
+      "timeSeconds": 117.289
+    },
+    {
+      "performanceIndex": 140,
+      "measure": 16,
+      "occurrence": 2,
+      "scoreQstamp": 278.0,
+      "positionQstamp": 286.0,
+      "scoreTime": 79.4444,
+      "timeSeconds": 117.989
+    },
+    {
+      "performanceIndex": 141,
+      "measure": 17,
+      "occurrence": 2,
+      "scoreQstamp": 280.0,
+      "positionQstamp": 288.0,
+      "scoreTime": 80.0,
+      "timeSeconds": 118.8
+    },
+    {
+      "performanceIndex": 142,
+      "measure": 18,
+      "occurrence": 2,
+      "scoreQstamp": 282.0,
+      "positionQstamp": 290.0,
+      "scoreTime": 80.5556,
+      "timeSeconds": 119.556
+    },
+    {
+      "performanceIndex": 143,
+      "measure": 19,
+      "occurrence": 2,
+      "scoreQstamp": 284.0,
+      "positionQstamp": 292.0,
+      "scoreTime": 81.1111,
+      "timeSeconds": 120.311
+    },
+    {
+      "performanceIndex": 144,
+      "measure": 20,
+      "occurrence": 2,
+      "scoreQstamp": 286.0,
+      "positionQstamp": 294.0,
+      "scoreTime": 81.6667,
+      "timeSeconds": 120.867
+    },
+    {
+      "performanceIndex": 145,
+      "measure": 21,
+      "occurrence": 2,
+      "scoreQstamp": 288.0,
+      "positionQstamp": 296.0,
+      "scoreTime": 82.2222,
+      "timeSeconds": 121.555
+    },
+    {
+      "performanceIndex": 146,
+      "measure": 22,
+      "occurrence": 2,
+      "scoreQstamp": 290.0,
+      "positionQstamp": 298.0,
+      "scoreTime": 82.7778,
+      "timeSeconds": 124.378
+    },
+    {
+      "performanceIndex": 147,
+      "measure": 23,
+      "occurrence": 2,
+      "scoreQstamp": 292.0,
+      "positionQstamp": 300.0,
+      "scoreTime": 83.3333,
+      "timeSeconds": 125.733
+    },
+    {
+      "performanceIndex": 148,
+      "measure": 24,
+      "occurrence": 2,
+      "scoreQstamp": 294.0,
+      "positionQstamp": 302.0,
+      "scoreTime": 83.8889,
+      "timeSeconds": 127.489
+    },
+    {
+      "performanceIndex": 149,
+      "measure": 25,
+      "occurrence": 2,
+      "scoreQstamp": 296.0,
+      "positionQstamp": 304.0,
+      "scoreTime": 84.44442,
+      "timeSeconds": 128.044
+    },
+    {
+      "performanceIndex": 150,
+      "measure": 26,
+      "occurrence": 2,
+      "scoreQstamp": 298.0,
+      "positionQstamp": 306.0,
+      "scoreTime": 85.0,
+      "timeSeconds": 128.6
+    },
+    {
+      "performanceIndex": 151,
+      "measure": 27,
+      "occurrence": 2,
+      "scoreQstamp": 300.0,
+      "positionQstamp": 308.0,
+      "scoreTime": 85.5556,
+      "timeSeconds": 129.356
+    },
+    {
+      "performanceIndex": 152,
+      "measure": 28,
+      "occurrence": 2,
+      "scoreQstamp": 302.0,
+      "positionQstamp": 310.0,
+      "scoreTime": 86.1111,
+      "timeSeconds": 130.111
+    },
+    {
+      "performanceIndex": 153,
+      "measure": 29,
+      "occurrence": 2,
+      "scoreQstamp": 304.0,
+      "positionQstamp": 312.0,
+      "scoreTime": 86.6667,
+      "timeSeconds": 130.9
+    },
+    {
+      "performanceIndex": 154,
+      "measure": 30,
+      "occurrence": 2,
+      "scoreQstamp": 306.0,
+      "positionQstamp": 314.0,
+      "scoreTime": 87.2222,
+      "timeSeconds": 131.633
+    },
+    {
+      "performanceIndex": 155,
+      "measure": 31,
+      "occurrence": 2,
+      "scoreQstamp": 308.0,
+      "positionQstamp": 316.0,
+      "scoreTime": 87.7778,
+      "timeSeconds": 132.378
+    },
+    {
+      "performanceIndex": 156,
+      "measure": 32,
+      "occurrence": 2,
+      "scoreQstamp": 310.0,
+      "positionQstamp": 318.0,
+      "scoreTime": 88.3333,
+      "timeSeconds": 133.133
+    },
+    {
+      "performanceIndex": 157,
+      "measure": 33,
+      "occurrence": 2,
+      "scoreQstamp": 312.0,
+      "positionQstamp": 320.0,
+      "scoreTime": 88.8889,
+      "timeSeconds": 133.933
+    },
+    {
+      "performanceIndex": 158,
+      "measure": 34,
+      "occurrence": 2,
+      "scoreQstamp": 314.0,
+      "positionQstamp": 322.0,
+      "scoreTime": 89.4444,
+      "timeSeconds": 134.444
+    },
+    {
+      "performanceIndex": 159,
+      "measure": 35,
+      "occurrence": 2,
+      "scoreQstamp": 316.0,
+      "positionQstamp": 324.0,
+      "scoreTime": 90.0,
+      "timeSeconds": 135.0
+    },
+    {
+      "performanceIndex": 160,
+      "measure": 36,
+      "occurrence": 2,
+      "scoreQstamp": 318.0,
+      "positionQstamp": 326.0,
+      "scoreTime": 90.5556,
+      "timeSeconds": 136.156
+    },
+    {
+      "performanceIndex": 161,
+      "measure": 37,
+      "occurrence": 2,
+      "scoreQstamp": 320.0,
+      "positionQstamp": 328.0,
+      "scoreTime": 91.1111,
+      "timeSeconds": 136.822
+    },
+    {
+      "performanceIndex": 162,
+      "measure": 38,
+      "occurrence": 2,
+      "scoreQstamp": 322.0,
+      "positionQstamp": 330.0,
+      "scoreTime": 91.6667,
+      "timeSeconds": 137.8
+    },
+    {
+      "performanceIndex": 163,
+      "measure": 39,
+      "occurrence": 2,
+      "scoreQstamp": 324.0,
+      "positionQstamp": 332.0,
+      "scoreTime": 92.2222,
+      "timeSeconds": 138.433
+    },
+    {
+      "performanceIndex": 164,
+      "measure": 40,
+      "occurrence": 2,
+      "scoreQstamp": 326.0,
+      "positionQstamp": 334.0,
+      "scoreTime": 92.7778,
+      "timeSeconds": 139.267
+    },
+    {
+      "performanceIndex": 165,
+      "measure": 41,
+      "occurrence": 2,
+      "scoreQstamp": 328.0,
+      "positionQstamp": 336.0,
+      "scoreTime": 93.3333,
+      "timeSeconds": 140.0
+    },
+    {
+      "performanceIndex": 166,
+      "measure": 42,
+      "occurrence": 2,
+      "scoreQstamp": 330.0,
+      "positionQstamp": 338.0,
+      "scoreTime": 93.8889,
+      "timeSeconds": 140.689
+    },
+    {
+      "performanceIndex": 167,
+      "measure": 43,
+      "occurrence": 2,
+      "scoreQstamp": 332.0,
+      "positionQstamp": 340.0,
+      "scoreTime": 94.4444,
+      "timeSeconds": 141.289
+    },
+    {
+      "performanceIndex": 168,
+      "measure": 44,
+      "occurrence": 2,
+      "scoreQstamp": 334.0,
+      "positionQstamp": 342.0,
+      "scoreTime": 95.0,
+      "timeSeconds": 142.2
+    },
+    {
+      "performanceIndex": 169,
+      "measure": 45,
+      "occurrence": 2,
+      "scoreQstamp": 336.0,
+      "positionQstamp": 344.0,
+      "scoreTime": 95.5556,
+      "timeSeconds": 142.756
+    },
+    {
+      "performanceIndex": 170,
+      "measure": 46,
+      "occurrence": 2,
+      "scoreQstamp": 338.0,
+      "positionQstamp": 346.0,
+      "scoreTime": 96.1111,
+      "timeSeconds": 143.911
+    },
+    {
+      "performanceIndex": 171,
+      "measure": 47,
+      "occurrence": 2,
+      "scoreQstamp": 340.0,
+      "positionQstamp": 348.0,
+      "scoreTime": 96.6667,
+      "timeSeconds": 144.467
+    },
+    {
+      "performanceIndex": 172,
+      "measure": 48,
+      "occurrence": 2,
+      "scoreQstamp": 342.0,
+      "positionQstamp": 350.0,
+      "scoreTime": 97.2222,
+      "timeSeconds": 145.022
+    },
+    {
+      "performanceIndex": 173,
+      "measure": 49,
+      "occurrence": 2,
+      "scoreQstamp": 344.0,
+      "positionQstamp": 352.0,
+      "scoreTime": 97.7778,
+      "timeSeconds": 145.578
+    },
+    {
+      "performanceIndex": 174,
+      "measure": 50,
+      "occurrence": 2,
+      "scoreQstamp": 346.0,
+      "positionQstamp": 354.0,
+      "scoreTime": 98.3333,
+      "timeSeconds": 146.933
+    },
+    {
+      "performanceIndex": 175,
+      "measure": 51,
+      "occurrence": 2,
+      "scoreQstamp": 348.0,
+      "positionQstamp": 356.0,
+      "scoreTime": 98.8889,
+      "timeSeconds": 147.489
+    },
+    {
+      "performanceIndex": 176,
+      "measure": 52,
+      "occurrence": 2,
+      "scoreQstamp": 350.0,
+      "positionQstamp": 358.0,
+      "scoreTime": 99.4444,
+      "timeSeconds": 148.044
+    },
+    {
+      "performanceIndex": 177,
+      "measure": 53,
+      "occurrence": 2,
+      "scoreQstamp": 352.0,
+      "positionQstamp": 360.0,
+      "scoreTime": 100.0,
+      "timeSeconds": 148.6
+    },
+    {
+      "performanceIndex": 178,
+      "measure": 54,
+      "occurrence": 2,
+      "scoreQstamp": 354.0,
+      "positionQstamp": 362.0,
+      "scoreTime": 100.5556,
+      "timeSeconds": 149.156
+    },
+    {
+      "performanceIndex": 179,
+      "measure": 55,
+      "occurrence": 2,
+      "scoreQstamp": 356.0,
+      "positionQstamp": 364.0,
+      "scoreTime": 101.1111,
+      "timeSeconds": 149.711
+    },
+    {
+      "performanceIndex": 180,
+      "measure": 56,
+      "occurrence": 2,
+      "scoreQstamp": 358.0,
+      "positionQstamp": 366.0,
+      "scoreTime": 101.6667,
+      "timeSeconds": 150.3
+    },
+    {
+      "performanceIndex": 181,
+      "measure": 57,
+      "occurrence": 2,
+      "scoreQstamp": 360.0,
+      "positionQstamp": 369.0,
+      "scoreTime": 102.5,
+      "timeSeconds": 151.3
+    },
+    {
+      "performanceIndex": 182,
+      "measure": 58,
+      "occurrence": 2,
+      "scoreQstamp": 362.0,
+      "positionQstamp": 372.0,
+      "scoreTime": 103.3333,
+      "timeSeconds": 152.333
+    },
+    {
+      "performanceIndex": 183,
+      "measure": 59,
+      "occurrence": 2,
+      "scoreQstamp": 364.0,
+      "positionQstamp": 374.0,
+      "scoreTime": 103.88889999999999,
+      "timeSeconds": 153.289
+    },
+    {
+      "performanceIndex": 184,
+      "measure": 60,
+      "occurrence": 2,
+      "scoreQstamp": 366.0,
+      "positionQstamp": 376.0,
+      "scoreTime": 104.4444,
+      "timeSeconds": 154.067
+    },
+    {
+      "performanceIndex": 185,
+      "measure": 61,
+      "occurrence": 2,
+      "scoreQstamp": 368.0,
+      "positionQstamp": 378.0,
+      "scoreTime": 105.0,
+      "timeSeconds": 154.9
+    },
+    {
+      "performanceIndex": 186,
+      "measure": 62,
+      "occurrence": 2,
+      "scoreQstamp": 370.0,
+      "positionQstamp": 380.0,
+      "scoreTime": 105.5556,
+      "timeSeconds": 155.711
+    },
+    {
+      "performanceIndex": 187,
+      "measure": 63,
+      "occurrence": 2,
+      "scoreQstamp": 372.0,
+      "positionQstamp": 382.0,
+      "scoreTime": 106.1111,
+      "timeSeconds": 156.511
+    },
+    {
+      "performanceIndex": 188,
+      "measure": 64,
+      "occurrence": 2,
+      "scoreQstamp": 374.0,
+      "positionQstamp": 384.0,
+      "scoreTime": 106.6667,
+      "timeSeconds": 157.1
+    },
+    {
+      "performanceIndex": 189,
+      "measure": 65,
+      "occurrence": 2,
+      "scoreQstamp": 376.0,
+      "positionQstamp": 386.0,
+      "scoreTime": 107.2222,
+      "timeSeconds": 158.222
+    },
+    {
+      "performanceIndex": 190,
+      "measure": 66,
+      "occurrence": 2,
+      "scoreQstamp": 378.0,
+      "positionQstamp": 388.0,
+      "scoreTime": 107.7778,
+      "timeSeconds": 158.867
+    },
+    {
+      "performanceIndex": 191,
+      "measure": 67,
+      "occurrence": 2,
+      "scoreQstamp": 380.0,
+      "positionQstamp": 390.0,
+      "scoreTime": 108.3333,
+      "timeSeconds": 159.7
+    },
+    {
+      "performanceIndex": 192,
+      "measure": 68,
+      "occurrence": 2,
+      "scoreQstamp": 382.0,
+      "positionQstamp": 392.0,
+      "scoreTime": 108.8889,
+      "timeSeconds": 160.289
+    },
+    {
+      "performanceIndex": 193,
+      "measure": 69,
+      "occurrence": 2,
+      "scoreQstamp": 384.0,
+      "positionQstamp": 394.0,
+      "scoreTime": 109.4444,
+      "timeSeconds": 161.044
+    },
+    {
+      "performanceIndex": 194,
+      "measure": 70,
+      "occurrence": 2,
+      "scoreQstamp": 386.0,
+      "positionQstamp": 396.0,
+      "scoreTime": 110.0,
+      "timeSeconds": 161.9
+    },
+    {
+      "performanceIndex": 195,
+      "measure": 71,
+      "occurrence": 2,
+      "scoreQstamp": 388.0,
+      "positionQstamp": 398.0,
+      "scoreTime": 110.5556,
+      "timeSeconds": 162.556
+    },
+    {
+      "performanceIndex": 196,
+      "measure": 72,
+      "occurrence": 2,
+      "scoreQstamp": 390.0,
+      "positionQstamp": 400.0,
+      "scoreTime": 111.1111,
+      "timeSeconds": 163.267
+    },
+    {
+      "performanceIndex": 197,
+      "measure": 73,
+      "occurrence": 2,
+      "scoreQstamp": 392.0,
+      "positionQstamp": 402.0,
+      "scoreTime": 111.6667,
+      "timeSeconds": 163.9
+    },
+    {
+      "performanceIndex": 198,
+      "measure": 74,
+      "occurrence": 2,
+      "scoreQstamp": 394.0,
+      "positionQstamp": 404.0,
+      "scoreTime": 112.2222,
+      "timeSeconds": 164.644
+    },
+    {
+      "performanceIndex": 199,
+      "measure": 75,
+      "occurrence": 2,
+      "scoreQstamp": 396.0,
+      "positionQstamp": 406.0,
+      "scoreTime": 112.7778,
+      "timeSeconds": 165.578
+    },
+    {
+      "performanceIndex": 200,
+      "measure": 76,
+      "occurrence": 2,
+      "scoreQstamp": 398.0,
+      "positionQstamp": 408.0,
+      "scoreTime": 113.3333,
+      "timeSeconds": 166.3
+    },
+    {
+      "performanceIndex": 201,
+      "measure": 77,
+      "occurrence": 2,
+      "scoreQstamp": 400.0,
+      "positionQstamp": 410.0,
+      "scoreTime": 113.8889,
+      "timeSeconds": 167.033
+    },
+    {
+      "performanceIndex": 202,
+      "measure": 78,
+      "occurrence": 2,
+      "scoreQstamp": 402.0,
+      "positionQstamp": 412.0,
+      "scoreTime": 114.4444,
+      "timeSeconds": 167.867
+    },
+    {
+      "performanceIndex": 203,
+      "measure": 79,
+      "occurrence": 2,
+      "scoreQstamp": 404.0,
+      "positionQstamp": 414.0,
+      "scoreTime": 115.0,
+      "timeSeconds": 168.6
+    },
+    {
+      "performanceIndex": 204,
+      "measure": 80,
+      "occurrence": 2,
+      "scoreQstamp": 406.0,
+      "positionQstamp": 416.0,
+      "scoreTime": 115.5556,
+      "timeSeconds": 169.333
+    },
+    {
+      "performanceIndex": 205,
+      "measure": 81,
+      "occurrence": 2,
+      "scoreQstamp": 408.0,
+      "positionQstamp": 418.0,
+      "scoreTime": 116.1111,
+      "timeSeconds": 169.967
+    },
+    {
+      "performanceIndex": 206,
+      "measure": 82,
+      "occurrence": 2,
+      "scoreQstamp": 410.0,
+      "positionQstamp": 420.0,
+      "scoreTime": 116.6667,
+      "timeSeconds": 170.867
+    },
+    {
+      "performanceIndex": 207,
+      "measure": 83,
+      "occurrence": 2,
+      "scoreQstamp": 412.0,
+      "positionQstamp": 422.0,
+      "scoreTime": 117.2222,
+      "timeSeconds": 171.433
+    },
+    {
+      "performanceIndex": 208,
+      "measure": 84,
+      "occurrence": 2,
+      "scoreQstamp": 414.0,
+      "positionQstamp": 424.0,
+      "scoreTime": 117.7778,
+      "timeSeconds": 172.367
+    },
+    {
+      "performanceIndex": 209,
+      "measure": 85,
+      "occurrence": 2,
+      "scoreQstamp": 416.0,
+      "positionQstamp": 426.0,
+      "scoreTime": 118.3333,
+      "timeSeconds": 173.1
+    },
+    {
+      "performanceIndex": 210,
+      "measure": 86,
+      "occurrence": 2,
+      "scoreQstamp": 418.0,
+      "positionQstamp": 428.0,
+      "scoreTime": 118.8889,
+      "timeSeconds": 173.878
+    },
+    {
+      "performanceIndex": 211,
+      "measure": 87,
+      "occurrence": 2,
+      "scoreQstamp": 420.0,
+      "positionQstamp": 430.0,
+      "scoreTime": 119.4444,
+      "timeSeconds": 174.844
+    },
+    {
+      "performanceIndex": 212,
+      "measure": 88,
+      "occurrence": 2,
+      "scoreQstamp": 422.0,
+      "positionQstamp": 432.0,
+      "scoreTime": 120.0,
+      "timeSeconds": 175.6
+    },
+    {
+      "performanceIndex": 213,
+      "measure": 89,
+      "occurrence": 2,
+      "scoreQstamp": 424.0,
+      "positionQstamp": 434.0,
+      "scoreTime": 120.5556,
+      "timeSeconds": 176.156
+    },
+    {
+      "performanceIndex": 214,
+      "measure": 90,
+      "occurrence": 2,
+      "scoreQstamp": 426.0,
+      "positionQstamp": 436.0,
+      "scoreTime": 121.1111,
+      "timeSeconds": 176.922
+    },
+    {
+      "performanceIndex": 215,
+      "measure": 91,
+      "occurrence": 2,
+      "scoreQstamp": 428.0,
+      "positionQstamp": 438.0,
+      "scoreTime": 121.6667,
+      "timeSeconds": 177.7
+    },
+    {
+      "performanceIndex": 216,
+      "measure": 92,
+      "occurrence": 2,
+      "scoreQstamp": 430.0,
+      "positionQstamp": 440.0,
+      "scoreTime": 122.2222,
+      "timeSeconds": 178.433
+    },
+    {
+      "performanceIndex": 217,
+      "measure": 93,
+      "occurrence": 2,
+      "scoreQstamp": 432.0,
+      "positionQstamp": 442.0,
+      "scoreTime": 122.7778,
+      "timeSeconds": 179.267
+    },
+    {
+      "performanceIndex": 218,
+      "measure": 94,
+      "occurrence": 2,
+      "scoreQstamp": 434.0,
+      "positionQstamp": 444.0,
+      "scoreTime": 123.3333,
+      "timeSeconds": 180.067
+    },
+    {
+      "performanceIndex": 219,
+      "measure": 95,
+      "occurrence": 2,
+      "scoreQstamp": 436.0,
+      "positionQstamp": 446.0,
+      "scoreTime": 123.8889,
+      "timeSeconds": 180.889
+    },
+    {
+      "performanceIndex": 220,
+      "measure": 96,
+      "occurrence": 2,
+      "scoreQstamp": 438.0,
+      "positionQstamp": 448.0,
+      "scoreTime": 124.4444,
+      "timeSeconds": 181.489
+    },
+    {
+      "performanceIndex": 221,
+      "measure": 97,
+      "occurrence": 2,
+      "scoreQstamp": 440.0,
+      "positionQstamp": 450.0,
+      "scoreTime": 125.0,
+      "timeSeconds": 182.4
+    },
+    {
+      "performanceIndex": 222,
+      "measure": 98,
+      "occurrence": 2,
+      "scoreQstamp": 442.0,
+      "positionQstamp": 452.0,
+      "scoreTime": 125.5556,
+      "timeSeconds": 182.956
+    },
+    {
+      "performanceIndex": 223,
+      "measure": 99,
+      "occurrence": 2,
+      "scoreQstamp": 444.0,
+      "positionQstamp": 454.0,
+      "scoreTime": 126.1111,
+      "timeSeconds": 183.667
+    },
+    {
+      "performanceIndex": 224,
+      "measure": 100,
+      "occurrence": 2,
+      "scoreQstamp": 446.0,
+      "positionQstamp": 456.0,
+      "scoreTime": 126.6667,
+      "timeSeconds": 184.3
+    },
+    {
+      "performanceIndex": 225,
+      "measure": 101,
+      "occurrence": 2,
+      "scoreQstamp": 448.0,
+      "positionQstamp": 458.0,
+      "scoreTime": 127.2222,
+      "timeSeconds": 185.033
+    },
+    {
+      "performanceIndex": 226,
+      "measure": 102,
+      "occurrence": 2,
+      "scoreQstamp": 450.0,
+      "positionQstamp": 460.0,
+      "scoreTime": 127.7778,
+      "timeSeconds": 185.778
+    },
+    {
+      "performanceIndex": 227,
+      "measure": 103,
+      "occurrence": 2,
+      "scoreQstamp": 452.0,
+      "positionQstamp": 462.0,
+      "scoreTime": 128.3333,
+      "timeSeconds": 186.533
+    },
+    {
+      "performanceIndex": 228,
+      "measure": 104,
+      "occurrence": 2,
+      "scoreQstamp": 454.0,
+      "positionQstamp": 464.0,
+      "scoreTime": 128.8889,
+      "timeSeconds": 187.333
+    },
+    {
+      "performanceIndex": 229,
+      "measure": 105,
+      "occurrence": 2,
+      "scoreQstamp": 456.0,
+      "positionQstamp": 466.0,
+      "scoreTime": 129.4444,
+      "timeSeconds": 188.044
+    },
+    {
+      "performanceIndex": 230,
+      "measure": 106,
+      "occurrence": 2,
+      "scoreQstamp": 458.0,
+      "positionQstamp": 468.0,
+      "scoreTime": 130.0,
+      "timeSeconds": 188.8
+    },
+    {
+      "performanceIndex": 231,
+      "measure": 107,
+      "occurrence": 2,
+      "scoreQstamp": 460.0,
+      "positionQstamp": 470.0,
+      "scoreTime": 130.5556,
+      "timeSeconds": 189.533
+    },
+    {
+      "performanceIndex": 232,
+      "measure": 108,
+      "occurrence": 2,
+      "scoreQstamp": 462.0,
+      "positionQstamp": 472.0,
+      "scoreTime": 131.1111,
+      "timeSeconds": 190.167
+    },
+    {
+      "performanceIndex": 233,
+      "measure": 109,
+      "occurrence": 2,
+      "scoreQstamp": 464.0,
+      "positionQstamp": 474.0,
+      "scoreTime": 131.6667,
+      "timeSeconds": 190.867
+    },
+    {
+      "performanceIndex": 234,
+      "measure": 110,
+      "occurrence": 2,
+      "scoreQstamp": 466.0,
+      "positionQstamp": 476.0,
+      "scoreTime": 132.2222,
+      "timeSeconds": 191.622
+    },
+    {
+      "performanceIndex": 235,
+      "measure": 111,
+      "occurrence": 2,
+      "scoreQstamp": 468.0,
+      "positionQstamp": 478.0,
+      "scoreTime": 132.7778,
+      "timeSeconds": 192.267
+    },
+    {
+      "performanceIndex": 236,
+      "measure": 112,
+      "occurrence": 2,
+      "scoreQstamp": 470.0,
+      "positionQstamp": 480.0,
+      "scoreTime": 133.3333,
+      "timeSeconds": 192.933
+    },
+    {
+      "performanceIndex": 237,
+      "measure": 113,
+      "occurrence": 2,
+      "scoreQstamp": 472.0,
+      "positionQstamp": 482.0,
+      "scoreTime": 133.8889,
+      "timeSeconds": 193.689
+    },
+    {
+      "performanceIndex": 238,
+      "measure": 114,
+      "occurrence": 2,
+      "scoreQstamp": 474.0,
+      "positionQstamp": 484.0,
+      "scoreTime": 134.4444,
+      "timeSeconds": 194.444
+    },
+    {
+      "performanceIndex": 239,
+      "measure": 115,
+      "occurrence": 2,
+      "scoreQstamp": 476.0,
+      "positionQstamp": 486.0,
+      "scoreTime": 135.0,
+      "timeSeconds": 195.1
+    },
+    {
+      "performanceIndex": 240,
+      "measure": 116,
+      "occurrence": 2,
+      "scoreQstamp": 478.0,
+      "positionQstamp": 488.0,
+      "scoreTime": 135.5556,
+      "timeSeconds": 195.956
+    },
+    {
+      "performanceIndex": 241,
+      "measure": 117,
+      "occurrence": 2,
+      "scoreQstamp": 480.0,
+      "positionQstamp": 490.0,
+      "scoreTime": 136.1111,
+      "timeSeconds": 196.711
+    },
+    {
+      "performanceIndex": 242,
+      "measure": 118,
+      "occurrence": 2,
+      "scoreQstamp": 482.0,
+      "positionQstamp": 492.0,
+      "scoreTime": 136.6667,
+      "timeSeconds": 197.267
+    },
+    {
+      "performanceIndex": 243,
+      "measure": 119,
+      "occurrence": 2,
+      "scoreQstamp": 484.0,
+      "positionQstamp": 494.0,
+      "scoreTime": 137.22222,
+      "timeSeconds": 197.856
+    },
+    {
+      "performanceIndex": 244,
+      "measure": 120,
+      "occurrence": 2,
+      "scoreQstamp": 486.0,
+      "positionQstamp": 496.0,
+      "scoreTime": 137.7778,
+      "timeSeconds": 198.978
+    },
+    {
+      "performanceIndex": 245,
+      "measure": 121,
+      "occurrence": 2,
+      "scoreQstamp": 488.0,
+      "positionQstamp": 498.0,
+      "scoreTime": 138.33332,
+      "timeSeconds": 199.533
+    },
+    {
+      "performanceIndex": 246,
+      "measure": 122,
+      "occurrence": 2,
+      "scoreQstamp": 490.0,
+      "positionQstamp": 500.0,
+      "scoreTime": 138.8889,
+      "timeSeconds": 200.489
+    },
+    {
+      "performanceIndex": 247,
+      "measure": 123,
+      "occurrence": 2,
+      "scoreQstamp": 492.0,
+      "positionQstamp": 503.84615384615387,
+      "scoreTime": 139.95726923076924,
+      "timeSeconds": 200.6
+    },
+    {
+      "performanceIndex": 248,
+      "measure": 124,
+      "occurrence": 2,
+      "scoreQstamp": 494.0,
+      "positionQstamp": 507.6923076923077,
+      "scoreTime": 141.02563846153845,
+      "timeSeconds": 201.626
+    },
+    {
+      "performanceIndex": 249,
+      "measure": 125,
+      "occurrence": 1,
+      "scoreQstamp": 496.0,
+      "positionQstamp": 511.53846153846155,
+      "scoreTime": 142.09400769230768,
+      "timeSeconds": 202.694
+    },
+    {
+      "performanceIndex": 250,
+      "measure": 126,
+      "occurrence": 1,
+      "scoreQstamp": 498.0,
+      "positionQstamp": 514.0,
+      "scoreTime": 142.7778,
+      "timeSeconds": 204.067
+    },
+    {
+      "performanceIndex": 251,
+      "measure": 127,
+      "occurrence": 1,
+      "scoreQstamp": 500.0,
+      "positionQstamp": 516.0,
+      "scoreTime": 143.3333,
+      "timeSeconds": 205.667
+    },
+    {
+      "performanceIndex": 252,
+      "measure": 128,
+      "occurrence": 1,
+      "scoreQstamp": 502.0,
+      "positionQstamp": 518.0,
+      "scoreTime": 143.8889,
+      "timeSeconds": 207.289
+    },
+    {
+      "performanceIndex": 253,
+      "measure": 129,
+      "occurrence": 1,
+      "scoreQstamp": 504.0,
+      "positionQstamp": 520.0,
+      "scoreTime": 144.44442,
+      "timeSeconds": 207.844
+    },
+    {
+      "performanceIndex": 254,
+      "measure": 130,
+      "occurrence": 1,
+      "scoreQstamp": 506.0,
+      "positionQstamp": 522.0,
+      "scoreTime": 145.0,
+      "timeSeconds": 208.5
+    },
+    {
+      "performanceIndex": 255,
+      "measure": 131,
+      "occurrence": 1,
+      "scoreQstamp": 508.0,
+      "positionQstamp": 524.0,
+      "scoreTime": 145.5556,
+      "timeSeconds": 209.356
+    },
+    {
+      "performanceIndex": 256,
+      "measure": 132,
+      "occurrence": 1,
+      "scoreQstamp": 510.0,
+      "positionQstamp": 526.0,
+      "scoreTime": 146.1111,
+      "timeSeconds": 210.022
+    },
+    {
+      "performanceIndex": 257,
+      "measure": 133,
+      "occurrence": 1,
+      "scoreQstamp": 512.0,
+      "positionQstamp": 528.0,
+      "scoreTime": 146.6667,
+      "timeSeconds": 210.867
+    },
+    {
+      "performanceIndex": 258,
+      "measure": 134,
+      "occurrence": 1,
+      "scoreQstamp": 514.0,
+      "positionQstamp": 530.0,
+      "scoreTime": 147.2222,
+      "timeSeconds": 211.444
+    },
+    {
+      "performanceIndex": 259,
+      "measure": 135,
+      "occurrence": 1,
+      "scoreQstamp": 516.0,
+      "positionQstamp": 532.0,
+      "scoreTime": 147.7778,
+      "timeSeconds": 212.378
+    },
+    {
+      "performanceIndex": 260,
+      "measure": 136,
+      "occurrence": 1,
+      "scoreQstamp": 518.0,
+      "positionQstamp": 534.0,
+      "scoreTime": 148.3333,
+      "timeSeconds": 213.133
+    },
+    {
+      "performanceIndex": 261,
+      "measure": 137,
+      "occurrence": 1,
+      "scoreQstamp": 520.0,
+      "positionQstamp": 536.0,
+      "scoreTime": 148.8889,
+      "timeSeconds": 213.889
+    },
+    {
+      "performanceIndex": 262,
+      "measure": 138,
+      "occurrence": 1,
+      "scoreQstamp": 522.0,
+      "positionQstamp": 538.0,
+      "scoreTime": 149.4444,
+      "timeSeconds": 214.489
+    },
+    {
+      "performanceIndex": 263,
+      "measure": 139,
+      "occurrence": 1,
+      "scoreQstamp": 524.0,
+      "positionQstamp": 540.0,
+      "scoreTime": 150.0,
+      "timeSeconds": 215.5
+    },
+    {
+      "performanceIndex": 264,
+      "measure": 140,
+      "occurrence": 1,
+      "scoreQstamp": 526.0,
+      "positionQstamp": 542.0,
+      "scoreTime": 150.5556,
+      "timeSeconds": 216.156
+    },
+    {
+      "performanceIndex": 265,
+      "measure": 141,
+      "occurrence": 1,
+      "scoreQstamp": 528.0,
+      "positionQstamp": 544.0,
+      "scoreTime": 151.1111,
+      "timeSeconds": 216.867
+    },
+    {
+      "performanceIndex": 266,
+      "measure": 142,
+      "occurrence": 1,
+      "scoreQstamp": 530.0,
+      "positionQstamp": 546.0,
+      "scoreTime": 151.6667,
+      "timeSeconds": 217.6
+    },
+    {
+      "performanceIndex": 267,
+      "measure": 143,
+      "occurrence": 1,
+      "scoreQstamp": 532.0,
+      "positionQstamp": 548.0,
+      "scoreTime": 152.2222,
+      "timeSeconds": 218.233
+    },
+    {
+      "performanceIndex": 268,
+      "measure": 144,
+      "occurrence": 1,
+      "scoreQstamp": 534.0,
+      "positionQstamp": 550.0,
+      "scoreTime": 152.7778,
+      "timeSeconds": 219.167
+    },
+    {
+      "performanceIndex": 269,
+      "measure": 145,
+      "occurrence": 1,
+      "scoreQstamp": 536.0,
+      "positionQstamp": 552.0,
+      "scoreTime": 153.3333,
+      "timeSeconds": 219.9
+    },
+    {
+      "performanceIndex": 270,
+      "measure": 146,
+      "occurrence": 1,
+      "scoreQstamp": 538.0,
+      "positionQstamp": 554.0,
+      "scoreTime": 153.8889,
+      "timeSeconds": 220.633
+    },
+    {
+      "performanceIndex": 271,
+      "measure": 147,
+      "occurrence": 1,
+      "scoreQstamp": 540.0,
+      "positionQstamp": 556.0,
+      "scoreTime": 154.4444,
+      "timeSeconds": 221.244
+    },
+    {
+      "performanceIndex": 272,
+      "measure": 148,
+      "occurrence": 1,
+      "scoreQstamp": 542.0,
+      "positionQstamp": 558.0,
+      "scoreTime": 155.0,
+      "timeSeconds": 222.2
+    },
+    {
+      "performanceIndex": 273,
+      "measure": 149,
+      "occurrence": 1,
+      "scoreQstamp": 544.0,
+      "positionQstamp": 560.0,
+      "scoreTime": 155.5556,
+      "timeSeconds": 223.033
+    },
+    {
+      "performanceIndex": 274,
+      "measure": 150,
+      "occurrence": 1,
+      "scoreQstamp": 546.0,
+      "positionQstamp": 562.0,
+      "scoreTime": 156.1111,
+      "timeSeconds": 223.767
+    },
+    {
+      "performanceIndex": 275,
+      "measure": 151,
+      "occurrence": 1,
+      "scoreQstamp": 548.0,
+      "positionQstamp": 564.0,
+      "scoreTime": 156.6667,
+      "timeSeconds": 224.467
+    },
+    {
+      "performanceIndex": 276,
+      "measure": 152,
+      "occurrence": 1,
+      "scoreQstamp": 550.0,
+      "positionQstamp": 566.0,
+      "scoreTime": 157.2222,
+      "timeSeconds": 225.033
+    },
+    {
+      "performanceIndex": 277,
+      "measure": 153,
+      "occurrence": 1,
+      "scoreQstamp": 552.0,
+      "positionQstamp": 568.0,
+      "scoreTime": 157.7778,
+      "timeSeconds": 225.967
+    },
+    {
+      "performanceIndex": 278,
+      "measure": 154,
+      "occurrence": 1,
+      "scoreQstamp": 554.0,
+      "positionQstamp": 570.0,
+      "scoreTime": 158.3333,
+      "timeSeconds": 226.733
+    },
+    {
+      "performanceIndex": 279,
+      "measure": 155,
+      "occurrence": 1,
+      "scoreQstamp": 556.0,
+      "positionQstamp": 572.0,
+      "scoreTime": 158.8889,
+      "timeSeconds": 227.433
+    },
+    {
+      "performanceIndex": 280,
+      "measure": 156,
+      "occurrence": 1,
+      "scoreQstamp": 558.0,
+      "positionQstamp": 574.0,
+      "scoreTime": 159.4444,
+      "timeSeconds": 228.089
+    },
+    {
+      "performanceIndex": 281,
+      "measure": 157,
+      "occurrence": 1,
+      "scoreQstamp": 560.0,
+      "positionQstamp": 576.0,
+      "scoreTime": 160.0,
+      "timeSeconds": 229.0
+    },
+    {
+      "performanceIndex": 282,
+      "measure": 158,
+      "occurrence": 1,
+      "scoreQstamp": 562.0,
+      "positionQstamp": 578.0,
+      "scoreTime": 160.5556,
+      "timeSeconds": 229.633
+    },
+    {
+      "performanceIndex": 283,
+      "measure": 159,
+      "occurrence": 1,
+      "scoreQstamp": 564.0,
+      "positionQstamp": 580.0,
+      "scoreTime": 161.1111,
+      "timeSeconds": 230.367
+    },
+    {
+      "performanceIndex": 284,
+      "measure": 160,
+      "occurrence": 1,
+      "scoreQstamp": 566.0,
+      "positionQstamp": 582.0,
+      "scoreTime": 161.6667,
+      "timeSeconds": 231.067
+    },
+    {
+      "performanceIndex": 285,
+      "measure": 161,
+      "occurrence": 1,
+      "scoreQstamp": 568.0,
+      "positionQstamp": 584.0,
+      "scoreTime": 162.2222,
+      "timeSeconds": 231.744
+    },
+    {
+      "performanceIndex": 286,
+      "measure": 162,
+      "occurrence": 1,
+      "scoreQstamp": 570.0,
+      "positionQstamp": 586.0,
+      "scoreTime": 162.7778,
+      "timeSeconds": 232.578
+    },
+    {
+      "performanceIndex": 287,
+      "measure": 163,
+      "occurrence": 1,
+      "scoreQstamp": 572.0,
+      "positionQstamp": 588.0,
+      "scoreTime": 163.3333,
+      "timeSeconds": 233.367
+    },
+    {
+      "performanceIndex": 288,
+      "measure": 164,
+      "occurrence": 1,
+      "scoreQstamp": 574.0,
+      "positionQstamp": 590.0,
+      "scoreTime": 163.8889,
+      "timeSeconds": 234.089
+    },
+    {
+      "performanceIndex": 289,
+      "measure": 165,
+      "occurrence": 1,
+      "scoreQstamp": 576.0,
+      "positionQstamp": 592.0,
+      "scoreTime": 164.4444,
+      "timeSeconds": 234.667
+    },
+    {
+      "performanceIndex": 290,
+      "measure": 166,
+      "occurrence": 1,
+      "scoreQstamp": 578.0,
+      "positionQstamp": 594.0,
+      "scoreTime": 165.0,
+      "timeSeconds": 235.5
+    },
+    {
+      "performanceIndex": 291,
+      "measure": 167,
+      "occurrence": 1,
+      "scoreQstamp": 580.0,
+      "positionQstamp": 596.0,
+      "scoreTime": 165.5556,
+      "timeSeconds": 236.233
+    },
+    {
+      "performanceIndex": 292,
+      "measure": 168,
+      "occurrence": 1,
+      "scoreQstamp": 582.0,
+      "positionQstamp": 598.0,
+      "scoreTime": 166.1111,
+      "timeSeconds": 237.078
+    },
+    {
+      "performanceIndex": 293,
+      "measure": 169,
+      "occurrence": 1,
+      "scoreQstamp": 584.0,
+      "positionQstamp": 600.0,
+      "scoreTime": 166.6667,
+      "timeSeconds": 238.067
+    },
+    {
+      "performanceIndex": 294,
+      "measure": 170,
+      "occurrence": 1,
+      "scoreQstamp": 586.0,
+      "positionQstamp": 602.0,
+      "scoreTime": 167.2222,
+      "timeSeconds": 238.622
+    },
+    {
+      "performanceIndex": 295,
+      "measure": 171,
+      "occurrence": 1,
+      "scoreQstamp": 588.0,
+      "positionQstamp": 604.0,
+      "scoreTime": 167.77779999999998,
+      "timeSeconds": 239.178
+    },
+    {
+      "performanceIndex": 296,
+      "measure": 172,
+      "occurrence": 1,
+      "scoreQstamp": 590.0,
+      "positionQstamp": 606.0,
+      "scoreTime": 168.3333,
+      "timeSeconds": 239.733
+    },
+    {
+      "performanceIndex": 297,
+      "measure": 173,
+      "occurrence": 1,
+      "scoreQstamp": 592.0,
+      "positionQstamp": 608.0,
+      "scoreTime": 168.8889,
+      "timeSeconds": 241.089
+    },
+    {
+      "performanceIndex": 298,
+      "measure": 174,
+      "occurrence": 1,
+      "scoreQstamp": 594.0,
+      "positionQstamp": 610.0,
+      "scoreTime": 169.4444,
+      "timeSeconds": 241.644
+    },
+    {
+      "performanceIndex": 299,
+      "measure": 175,
+      "occurrence": 1,
+      "scoreQstamp": 596.0,
+      "positionQstamp": 612.0,
+      "scoreTime": 170.0,
+      "timeSeconds": 242.2
+    },
+    {
+      "performanceIndex": 300,
+      "measure": 176,
+      "occurrence": 1,
+      "scoreQstamp": 598.0,
+      "positionQstamp": 614.0,
+      "scoreTime": 170.5556,
+      "timeSeconds": 243.156
+    },
+    {
+      "performanceIndex": 301,
+      "measure": 177,
+      "occurrence": 1,
+      "scoreQstamp": 600.0,
+      "positionQstamp": 616.0,
+      "scoreTime": 171.11113333333333,
+      "timeSeconds": 243.711
+    },
+    {
+      "performanceIndex": 302,
+      "measure": 178,
+      "occurrence": 1,
+      "scoreQstamp": 602.0,
+      "positionQstamp": 618.0,
+      "scoreTime": 171.6667,
+      "timeSeconds": 244.667
+    },
+    {
+      "performanceIndex": 303,
+      "measure": 179,
+      "occurrence": 1,
+      "scoreQstamp": 604.0,
+      "positionQstamp": 620.0,
+      "scoreTime": 172.2222,
+      "timeSeconds": 245.422
+    },
+    {
+      "performanceIndex": 304,
+      "measure": 180,
+      "occurrence": 1,
+      "scoreQstamp": 606.0,
+      "positionQstamp": 622.0,
+      "scoreTime": 172.7778,
+      "timeSeconds": 246.067
+    },
+    {
+      "performanceIndex": 305,
+      "measure": 181,
+      "occurrence": 1,
+      "scoreQstamp": 608.0,
+      "positionQstamp": 624.0,
+      "scoreTime": 173.3333,
+      "timeSeconds": 246.733
+    },
+    {
+      "performanceIndex": 306,
+      "measure": 182,
+      "occurrence": 1,
+      "scoreQstamp": 610.0,
+      "positionQstamp": 626.0,
+      "scoreTime": 173.8889,
+      "timeSeconds": 247.333
+    },
+    {
+      "performanceIndex": 307,
+      "measure": 183,
+      "occurrence": 1,
+      "scoreQstamp": 612.0,
+      "positionQstamp": 628.0,
+      "scoreTime": 174.4444,
+      "timeSeconds": 248.044
+    },
+    {
+      "performanceIndex": 308,
+      "measure": 184,
+      "occurrence": 1,
+      "scoreQstamp": 614.0,
+      "positionQstamp": 630.0,
+      "scoreTime": 175.0,
+      "timeSeconds": 248.8
+    },
+    {
+      "performanceIndex": 309,
+      "measure": 185,
+      "occurrence": 1,
+      "scoreQstamp": 616.0,
+      "positionQstamp": 632.0,
+      "scoreTime": 175.5556,
+      "timeSeconds": 249.533
+    },
+    {
+      "performanceIndex": 310,
+      "measure": 186,
+      "occurrence": 1,
+      "scoreQstamp": 618.0,
+      "positionQstamp": 634.0,
+      "scoreTime": 176.1111,
+      "timeSeconds": 250.267
+    },
+    {
+      "performanceIndex": 311,
+      "measure": 187,
+      "occurrence": 1,
+      "scoreQstamp": 620.0,
+      "positionQstamp": 636.0,
+      "scoreTime": 176.6667,
+      "timeSeconds": 250.867
+    },
+    {
+      "performanceIndex": 312,
+      "measure": 188,
+      "occurrence": 1,
+      "scoreQstamp": 622.0,
+      "positionQstamp": 638.0,
+      "scoreTime": 177.2222,
+      "timeSeconds": 251.444
+    },
+    {
+      "performanceIndex": 313,
+      "measure": 189,
+      "occurrence": 1,
+      "scoreQstamp": 624.0,
+      "positionQstamp": 640.0,
+      "scoreTime": 177.7778,
+      "timeSeconds": 252.378
+    },
+    {
+      "performanceIndex": 314,
+      "measure": 190,
+      "occurrence": 1,
+      "scoreQstamp": 626.0,
+      "positionQstamp": 642.0,
+      "scoreTime": 178.3333,
+      "timeSeconds": 252.933
+    },
+    {
+      "performanceIndex": 315,
+      "measure": 191,
+      "occurrence": 1,
+      "scoreQstamp": 628.0,
+      "positionQstamp": 644.0,
+      "scoreTime": 178.8889,
+      "timeSeconds": 253.633
+    },
+    {
+      "performanceIndex": 316,
+      "measure": 192,
+      "occurrence": 1,
+      "scoreQstamp": 630.0,
+      "positionQstamp": 646.0,
+      "scoreTime": 179.4444,
+      "timeSeconds": 254.267
+    },
+    {
+      "performanceIndex": 317,
+      "measure": 193,
+      "occurrence": 1,
+      "scoreQstamp": 632.0,
+      "positionQstamp": 648.0,
+      "scoreTime": 180.0,
+      "timeSeconds": 255.0
+    },
+    {
+      "performanceIndex": 318,
+      "measure": 194,
+      "occurrence": 1,
+      "scoreQstamp": 634.0,
+      "positionQstamp": 650.0,
+      "scoreTime": 180.5556,
+      "timeSeconds": 255.733
+    },
+    {
+      "performanceIndex": 319,
+      "measure": 195,
+      "occurrence": 1,
+      "scoreQstamp": 636.0,
+      "positionQstamp": 652.0,
+      "scoreTime": 181.1111,
+      "timeSeconds": 256.467
+    },
+    {
+      "performanceIndex": 320,
+      "measure": 196,
+      "occurrence": 1,
+      "scoreQstamp": 638.0,
+      "positionQstamp": 654.0,
+      "scoreTime": 181.6667,
+      "timeSeconds": 257.1
+    },
+    {
+      "performanceIndex": 321,
+      "measure": 197,
+      "occurrence": 1,
+      "scoreQstamp": 640.0,
+      "positionQstamp": 656.0,
+      "scoreTime": 182.2222,
+      "timeSeconds": 257.844
+    },
+    {
+      "performanceIndex": 322,
+      "measure": 198,
+      "occurrence": 1,
+      "scoreQstamp": 642.0,
+      "positionQstamp": 658.0,
+      "scoreTime": 182.7778,
+      "timeSeconds": 258.867
+    },
+    {
+      "performanceIndex": 323,
+      "measure": 199,
+      "occurrence": 1,
+      "scoreQstamp": 644.0,
+      "positionQstamp": 660.0,
+      "scoreTime": 183.3333,
+      "timeSeconds": 259.533
+    },
+    {
+      "performanceIndex": 324,
+      "measure": 200,
+      "occurrence": 1,
+      "scoreQstamp": 646.0,
+      "positionQstamp": 662.0,
+      "scoreTime": 183.8889,
+      "timeSeconds": 260.089
+    },
+    {
+      "performanceIndex": 325,
+      "measure": 201,
+      "occurrence": 1,
+      "scoreQstamp": 648.0,
+      "positionQstamp": 664.0,
+      "scoreTime": 184.4444,
+      "timeSeconds": 260.711
+    },
+    {
+      "performanceIndex": 326,
+      "measure": 202,
+      "occurrence": 1,
+      "scoreQstamp": 650.0,
+      "positionQstamp": 666.0,
+      "scoreTime": 185.0,
+      "timeSeconds": 261.8
+    },
+    {
+      "performanceIndex": 327,
+      "measure": 203,
+      "occurrence": 1,
+      "scoreQstamp": 652.0,
+      "positionQstamp": 668.0,
+      "scoreTime": 185.5556,
+      "timeSeconds": 262.433
+    },
+    {
+      "performanceIndex": 328,
+      "measure": 204,
+      "occurrence": 1,
+      "scoreQstamp": 654.0,
+      "positionQstamp": 670.0,
+      "scoreTime": 186.1111,
+      "timeSeconds": 263.111
+    },
+    {
+      "performanceIndex": 329,
+      "measure": 205,
+      "occurrence": 1,
+      "scoreQstamp": 656.0,
+      "positionQstamp": 672.0,
+      "scoreTime": 186.6667,
+      "timeSeconds": 263.7
+    },
+    {
+      "performanceIndex": 330,
+      "measure": 206,
+      "occurrence": 1,
+      "scoreQstamp": 658.0,
+      "positionQstamp": 674.0,
+      "scoreTime": 187.2222,
+      "timeSeconds": 264.444
+    },
+    {
+      "performanceIndex": 331,
+      "measure": 207,
+      "occurrence": 1,
+      "scoreQstamp": 660.0,
+      "positionQstamp": 676.0,
+      "scoreTime": 187.7778,
+      "timeSeconds": 265.467
+    },
+    {
+      "performanceIndex": 332,
+      "measure": 208,
+      "occurrence": 1,
+      "scoreQstamp": 662.0,
+      "positionQstamp": 678.0,
+      "scoreTime": 188.3333,
+      "timeSeconds": 266.133
+    },
+    {
+      "performanceIndex": 333,
+      "measure": 209,
+      "occurrence": 1,
+      "scoreQstamp": 664.0,
+      "positionQstamp": 680.0,
+      "scoreTime": 188.8889,
+      "timeSeconds": 266.689
+    },
+    {
+      "performanceIndex": 334,
+      "measure": 210,
+      "occurrence": 1,
+      "scoreQstamp": 666.0,
+      "positionQstamp": 682.0,
+      "scoreTime": 189.4444,
+      "timeSeconds": 267.311
+    },
+    {
+      "performanceIndex": 335,
+      "measure": 211,
+      "occurrence": 1,
+      "scoreQstamp": 668.0,
+      "positionQstamp": 684.0,
+      "scoreTime": 190.0,
+      "timeSeconds": 268.4
+    },
+    {
+      "performanceIndex": 336,
+      "measure": 212,
+      "occurrence": 1,
+      "scoreQstamp": 670.0,
+      "positionQstamp": 686.0,
+      "scoreTime": 190.5556,
+      "timeSeconds": 269.033
+    },
+    {
+      "performanceIndex": 337,
+      "measure": 213,
+      "occurrence": 1,
+      "scoreQstamp": 672.0,
+      "positionQstamp": 688.0,
+      "scoreTime": 191.1111,
+      "timeSeconds": 269.767
+    },
+    {
+      "performanceIndex": 338,
+      "measure": 214,
+      "occurrence": 1,
+      "scoreQstamp": 674.0,
+      "positionQstamp": 690.0,
+      "scoreTime": 191.6667,
+      "timeSeconds": 270.467
+    },
+    {
+      "performanceIndex": 339,
+      "measure": 215,
+      "occurrence": 1,
+      "scoreQstamp": 676.0,
+      "positionQstamp": 692.0,
+      "scoreTime": 192.2222,
+      "timeSeconds": 271.044
+    },
+    {
+      "performanceIndex": 340,
+      "measure": 216,
+      "occurrence": 1,
+      "scoreQstamp": 678.0,
+      "positionQstamp": 694.0,
+      "scoreTime": 192.7778,
+      "timeSeconds": 272.067
+    },
+    {
+      "performanceIndex": 341,
+      "measure": 217,
+      "occurrence": 1,
+      "scoreQstamp": 680.0,
+      "positionQstamp": 696.0,
+      "scoreTime": 193.3333,
+      "timeSeconds": 272.733
+    },
+    {
+      "performanceIndex": 342,
+      "measure": 218,
+      "occurrence": 1,
+      "scoreQstamp": 682.0,
+      "positionQstamp": 698.0,
+      "scoreTime": 193.8889,
+      "timeSeconds": 273.333
+    },
+    {
+      "performanceIndex": 343,
+      "measure": 219,
+      "occurrence": 1,
+      "scoreQstamp": 684.0,
+      "positionQstamp": 700.0,
+      "scoreTime": 194.4444,
+      "timeSeconds": 274.067
+    },
+    {
+      "performanceIndex": 344,
+      "measure": 220,
+      "occurrence": 1,
+      "scoreQstamp": 686.0,
+      "positionQstamp": 702.0,
+      "scoreTime": 195.0,
+      "timeSeconds": 274.9
+    },
+    {
+      "performanceIndex": 345,
+      "measure": 221,
+      "occurrence": 1,
+      "scoreQstamp": 688.0,
+      "positionQstamp": 704.0,
+      "scoreTime": 195.5556,
+      "timeSeconds": 275.633
+    },
+    {
+      "performanceIndex": 346,
+      "measure": 222,
+      "occurrence": 1,
+      "scoreQstamp": 690.0,
+      "positionQstamp": 706.0,
+      "scoreTime": 196.1111,
+      "timeSeconds": 276.367
+    },
+    {
+      "performanceIndex": 347,
+      "measure": 223,
+      "occurrence": 1,
+      "scoreQstamp": 692.0,
+      "positionQstamp": 708.0,
+      "scoreTime": 196.6667,
+      "timeSeconds": 277.067
+    },
+    {
+      "performanceIndex": 348,
+      "measure": 224,
+      "occurrence": 1,
+      "scoreQstamp": 694.0,
+      "positionQstamp": 710.0,
+      "scoreTime": 197.2222,
+      "timeSeconds": 277.455
+    },
+    {
+      "performanceIndex": 349,
+      "measure": 225,
+      "occurrence": 1,
+      "scoreQstamp": 696.0,
+      "positionQstamp": 712.0,
+      "scoreTime": 197.7778,
+      "timeSeconds": 278.578
+    },
+    {
+      "performanceIndex": 350,
+      "measure": 226,
+      "occurrence": 1,
+      "scoreQstamp": 698.0,
+      "positionQstamp": 714.0,
+      "scoreTime": 198.3333,
+      "timeSeconds": 279.067
+    },
+    {
+      "performanceIndex": 351,
+      "measure": 227,
+      "occurrence": 1,
+      "scoreQstamp": 700.0,
+      "positionQstamp": 716.0,
+      "scoreTime": 198.8889,
+      "timeSeconds": 279.933
+    },
+    {
+      "performanceIndex": 352,
+      "measure": 228,
+      "occurrence": 1,
+      "scoreQstamp": 702.0,
+      "positionQstamp": 718.0,
+      "scoreTime": 199.4444,
+      "timeSeconds": 280.667
+    },
+    {
+      "performanceIndex": 353,
+      "measure": 229,
+      "occurrence": 1,
+      "scoreQstamp": 704.0,
+      "positionQstamp": 720.0,
+      "scoreTime": 200.0,
+      "timeSeconds": 281.5
+    },
+    {
+      "performanceIndex": 354,
+      "measure": 230,
+      "occurrence": 1,
+      "scoreQstamp": 706.0,
+      "positionQstamp": 722.0,
+      "scoreTime": 200.5556,
+      "timeSeconds": 282.156
+    },
+    {
+      "performanceIndex": 355,
+      "measure": 231,
+      "occurrence": 1,
+      "scoreQstamp": 708.0,
+      "positionQstamp": 724.0,
+      "scoreTime": 201.1111,
+      "timeSeconds": 282.878
+    },
+    {
+      "performanceIndex": 356,
+      "measure": 232,
+      "occurrence": 1,
+      "scoreQstamp": 710.0,
+      "positionQstamp": 726.0,
+      "scoreTime": 201.6667,
+      "timeSeconds": 283.867
+    },
+    {
+      "performanceIndex": 357,
+      "measure": 233,
+      "occurrence": 1,
+      "scoreQstamp": 712.0,
+      "positionQstamp": 728.0,
+      "scoreTime": 202.2222,
+      "timeSeconds": 284.422
+    },
+    {
+      "performanceIndex": 358,
+      "measure": 234,
+      "occurrence": 1,
+      "scoreQstamp": 714.0,
+      "positionQstamp": 730.0,
+      "scoreTime": 202.7778,
+      "timeSeconds": 285.067
+    },
+    {
+      "performanceIndex": 359,
+      "measure": 235,
+      "occurrence": 1,
+      "scoreQstamp": 716.0,
+      "positionQstamp": 732.0,
+      "scoreTime": 203.3333,
+      "timeSeconds": 285.733
+    },
+    {
+      "performanceIndex": 360,
+      "measure": 236,
+      "occurrence": 1,
+      "scoreQstamp": 718.0,
+      "positionQstamp": 734.0,
+      "scoreTime": 203.8889,
+      "timeSeconds": 286.378
+    },
+    {
+      "performanceIndex": 361,
+      "measure": 237,
+      "occurrence": 1,
+      "scoreQstamp": 720.0,
+      "positionQstamp": 736.0,
+      "scoreTime": 204.4444,
+      "timeSeconds": 287.244
+    },
+    {
+      "performanceIndex": 362,
+      "measure": 238,
+      "occurrence": 1,
+      "scoreQstamp": 722.0,
+      "positionQstamp": 738.0,
+      "scoreTime": 205.0,
+      "timeSeconds": 288.0
+    },
+    {
+      "performanceIndex": 363,
+      "measure": 239,
+      "occurrence": 1,
+      "scoreQstamp": 724.0,
+      "positionQstamp": 740.0,
+      "scoreTime": 205.5556,
+      "timeSeconds": 288.756
+    },
+    {
+      "performanceIndex": 364,
+      "measure": 240,
+      "occurrence": 1,
+      "scoreQstamp": 726.0,
+      "positionQstamp": 742.0,
+      "scoreTime": 206.1111,
+      "timeSeconds": 289.367
+    },
+    {
+      "performanceIndex": 365,
+      "measure": 241,
+      "occurrence": 1,
+      "scoreQstamp": 728.0,
+      "positionQstamp": 744.0,
+      "scoreTime": 206.6667,
+      "timeSeconds": 290.367
+    },
+    {
+      "performanceIndex": 366,
+      "measure": 242,
+      "occurrence": 1,
+      "scoreQstamp": 730.0,
+      "positionQstamp": 746.0,
+      "scoreTime": 207.2222,
+      "timeSeconds": 291.644
+    },
+    {
+      "performanceIndex": 367,
+      "measure": 243,
+      "occurrence": 1,
+      "scoreQstamp": 732.0,
+      "positionQstamp": 748.0,
+      "scoreTime": 207.7778,
+      "timeSeconds": 292.578
+    },
+    {
+      "performanceIndex": 368,
+      "measure": 244,
+      "occurrence": 1,
+      "scoreQstamp": 734.0,
+      "positionQstamp": 750.0,
+      "scoreTime": 208.3333,
+      "timeSeconds": 293.333
+    },
+    {
+      "performanceIndex": 369,
+      "measure": 245,
+      "occurrence": 1,
+      "scoreQstamp": 736.0,
+      "positionQstamp": 752.0,
+      "scoreTime": 208.8889,
+      "timeSeconds": 294.089
+    },
+    {
+      "performanceIndex": 370,
+      "measure": 246,
+      "occurrence": 1,
+      "scoreQstamp": 738.0,
+      "positionQstamp": 754.0,
+      "scoreTime": 209.4444,
+      "timeSeconds": 294.6
+    },
+    {
+      "performanceIndex": 371,
+      "measure": 247,
+      "occurrence": 1,
+      "scoreQstamp": 740.0,
+      "positionQstamp": 756.0,
+      "scoreTime": 210.0,
+      "timeSeconds": 295.0
+    },
+    {
+      "performanceIndex": 372,
+      "measure": 248,
+      "occurrence": 1,
+      "scoreQstamp": 742.0,
+      "positionQstamp": 758.0,
+      "scoreTime": 210.5556,
+      "timeSeconds": 295.733
+    },
+    {
+      "performanceIndex": 373,
+      "measure": 249,
+      "occurrence": 1,
+      "scoreQstamp": 744.0,
+      "positionQstamp": 760.0,
+      "scoreTime": 211.1111,
+      "timeSeconds": 297.1
+    },
+    {
+      "performanceIndex": 374,
+      "measure": 250,
+      "occurrence": 1,
+      "scoreQstamp": 746.0,
+      "positionQstamp": 762.0,
+      "scoreTime": 211.6667,
+      "timeSeconds": 298.667
+    },
+    {
+      "performanceIndex": 375,
+      "measure": 251,
+      "occurrence": 1,
+      "scoreQstamp": 748.0,
+      "positionQstamp": 764.0,
+      "scoreTime": 212.2222,
+      "timeSeconds": 300.022
+    },
+    {
+      "performanceIndex": 376,
+      "measure": 252,
+      "occurrence": 1,
+      "scoreQstamp": 750.0,
+      "positionQstamp": 766.0,
+      "scoreTime": 212.7778,
+      "timeSeconds": 300.578
+    },
+    {
+      "performanceIndex": 377,
+      "measure": 253,
+      "occurrence": 1,
+      "scoreQstamp": 752.0,
+      "positionQstamp": 768.0,
+      "scoreTime": 213.33332,
+      "timeSeconds": 301.133
+    },
+    {
+      "performanceIndex": 378,
+      "measure": 254,
+      "occurrence": 1,
+      "scoreQstamp": 754.0,
+      "positionQstamp": 770.0,
+      "scoreTime": 213.8889,
+      "timeSeconds": 303.289
+    },
+    {
+      "performanceIndex": 379,
+      "measure": 255,
+      "occurrence": 1,
+      "scoreQstamp": 756.0,
+      "positionQstamp": 772.0,
+      "scoreTime": 214.4444,
+      "timeSeconds": 303.844
+    },
+    {
+      "performanceIndex": 380,
+      "measure": 256,
+      "occurrence": 1,
+      "scoreQstamp": 758.0,
+      "positionQstamp": 774.0,
+      "scoreTime": 215.0,
+      "timeSeconds": 304.4
+    },
+    {
+      "performanceIndex": 381,
+      "measure": 257,
+      "occurrence": 1,
+      "scoreQstamp": 760.0,
+      "positionQstamp": 776.0,
+      "scoreTime": 215.5556,
+      "timeSeconds": 305.667
+    },
+    {
+      "performanceIndex": 382,
+      "measure": 258,
+      "occurrence": 1,
+      "scoreQstamp": 762.0,
+      "positionQstamp": 778.0,
+      "scoreTime": 216.1111,
+      "timeSeconds": 306.467
+    },
+    {
+      "performanceIndex": 383,
+      "measure": 259,
+      "occurrence": 1,
+      "scoreQstamp": 764.0,
+      "positionQstamp": 780.0,
+      "scoreTime": 216.6667,
+      "timeSeconds": 307.067
+    },
+    {
+      "performanceIndex": 384,
+      "measure": 260,
+      "occurrence": 1,
+      "scoreQstamp": 766.0,
+      "positionQstamp": 782.0,
+      "scoreTime": 217.2222,
+      "timeSeconds": 307.655
+    },
+    {
+      "performanceIndex": 385,
+      "measure": 261,
+      "occurrence": 1,
+      "scoreQstamp": 768.0,
+      "positionQstamp": 784.0,
+      "scoreTime": 217.7778,
+      "timeSeconds": 308.778
+    },
+    {
+      "performanceIndex": 386,
+      "measure": 262,
+      "occurrence": 1,
+      "scoreQstamp": 770.0,
+      "positionQstamp": 786.0,
+      "scoreTime": 218.3333,
+      "timeSeconds": 309.533
+    },
+    {
+      "performanceIndex": 387,
+      "measure": 263,
+      "occurrence": 1,
+      "scoreQstamp": 772.0,
+      "positionQstamp": 788.0,
+      "scoreTime": 218.8889,
+      "timeSeconds": 310.089
+    },
+    {
+      "performanceIndex": 388,
+      "measure": 264,
+      "occurrence": 1,
+      "scoreQstamp": 774.0,
+      "positionQstamp": 790.0,
+      "scoreTime": 219.4444,
+      "timeSeconds": 310.989
+    },
+    {
+      "performanceIndex": 389,
+      "measure": 265,
+      "occurrence": 1,
+      "scoreQstamp": 776.0,
+      "positionQstamp": 792.0,
+      "scoreTime": 220.0,
+      "timeSeconds": 311.8
+    },
+    {
+      "performanceIndex": 390,
+      "measure": 266,
+      "occurrence": 1,
+      "scoreQstamp": 778.0,
+      "positionQstamp": 794.0,
+      "scoreTime": 220.5556,
+      "timeSeconds": 312.533
+    },
+    {
+      "performanceIndex": 391,
+      "measure": 267,
+      "occurrence": 1,
+      "scoreQstamp": 780.0,
+      "positionQstamp": 796.0,
+      "scoreTime": 221.1111,
+      "timeSeconds": 313.278
+    },
+    {
+      "performanceIndex": 392,
+      "measure": 268,
+      "occurrence": 1,
+      "scoreQstamp": 782.0,
+      "positionQstamp": 804.0,
+      "scoreTime": 226.7371,
+      "timeSeconds": 320.206
+    },
+    {
+      "performanceIndex": 393,
+      "measure": 269,
+      "occurrence": 1,
+      "scoreQstamp": 792.0,
+      "positionQstamp": 808.421052631579,
+      "scoreTime": 230.2045105263158,
+      "timeSeconds": 324.005
+    },
+    {
+      "performanceIndex": 394,
+      "measure": 270,
+      "occurrence": 1,
+      "scoreQstamp": 794.0,
+      "positionQstamp": 810.0,
+      "scoreTime": 230.6729,
+      "timeSeconds": 324.473
+    },
+    {
+      "performanceIndex": 395,
+      "measure": 271,
+      "occurrence": 1,
+      "scoreQstamp": 796.0,
+      "positionQstamp": 812.0,
+      "scoreTime": 231.2285,
+      "timeSeconds": 325.128
+    },
+    {
+      "performanceIndex": 396,
+      "measure": 272,
+      "occurrence": 1,
+      "scoreQstamp": 798.0,
+      "positionQstamp": 814.0,
+      "scoreTime": 231.784,
+      "timeSeconds": 326.984
+    },
+    {
+      "performanceIndex": 397,
+      "measure": 273,
+      "occurrence": 1,
+      "scoreQstamp": 800.0,
+      "positionQstamp": 816.0,
+      "scoreTime": 232.3396,
+      "timeSeconds": 327.74
+    },
+    {
+      "performanceIndex": 398,
+      "measure": 274,
+      "occurrence": 1,
+      "scoreQstamp": 802.0,
+      "positionQstamp": 818.0,
+      "scoreTime": 232.8951,
+      "timeSeconds": 328.543
+    },
+    {
+      "performanceIndex": 399,
+      "measure": 275,
+      "occurrence": 1,
+      "scoreQstamp": 804.0,
+      "positionQstamp": 820.0,
+      "scoreTime": 233.4507,
+      "timeSeconds": 329.251
+    },
+    {
+      "performanceIndex": 400,
+      "measure": 276,
+      "occurrence": 1,
+      "scoreQstamp": 806.0,
+      "positionQstamp": 822.0,
+      "scoreTime": 234.0063,
+      "timeSeconds": 329.813
+    },
+    {
+      "performanceIndex": 401,
+      "measure": 277,
+      "occurrence": 1,
+      "scoreQstamp": 808.0,
+      "positionQstamp": 824.0,
+      "scoreTime": 234.5618,
+      "timeSeconds": 330.762
+    },
+    {
+      "performanceIndex": 402,
+      "measure": 278,
+      "occurrence": 1,
+      "scoreQstamp": 810.0,
+      "positionQstamp": 826.0,
+      "scoreTime": 235.1174,
+      "timeSeconds": 331.635
+    },
+    {
+      "performanceIndex": 403,
+      "measure": 279,
+      "occurrence": 1,
+      "scoreQstamp": 812.0,
+      "positionQstamp": 828.0,
+      "scoreTime": 235.6729,
+      "timeSeconds": 332.273
+    },
+    {
+      "performanceIndex": 404,
+      "measure": 280,
+      "occurrence": 1,
+      "scoreQstamp": 814.0,
+      "positionQstamp": 830.0,
+      "scoreTime": 236.2285,
+      "timeSeconds": 332.843
+    },
+    {
+      "performanceIndex": 405,
+      "measure": 281,
+      "occurrence": 1,
+      "scoreQstamp": 816.0,
+      "positionQstamp": 832.0,
+      "scoreTime": 236.784,
+      "timeSeconds": 333.584
+    },
+    {
+      "performanceIndex": 406,
+      "measure": 282,
+      "occurrence": 1,
+      "scoreQstamp": 818.0,
+      "positionQstamp": 834.0,
+      "scoreTime": 237.3396,
+      "timeSeconds": 334.479
+    },
+    {
+      "performanceIndex": 407,
+      "measure": 283,
+      "occurrence": 1,
+      "scoreQstamp": 820.0,
+      "positionQstamp": 836.0,
+      "scoreTime": 237.8951,
+      "timeSeconds": 335.143
+    },
+    {
+      "performanceIndex": 408,
+      "measure": 284,
+      "occurrence": 1,
+      "scoreQstamp": 822.0,
+      "positionQstamp": 838.0,
+      "scoreTime": 238.4507,
+      "timeSeconds": 335.851
+    },
+    {
+      "performanceIndex": 409,
+      "measure": 285,
+      "occurrence": 1,
+      "scoreQstamp": 824.0,
+      "positionQstamp": 840.0,
+      "scoreTime": 239.0063,
+      "timeSeconds": 336.413
+    },
+    {
+      "performanceIndex": 410,
+      "measure": 286,
+      "occurrence": 1,
+      "scoreQstamp": 826.0,
+      "positionQstamp": 842.0,
+      "scoreTime": 239.5618,
+      "timeSeconds": 337.362
+    },
+    {
+      "performanceIndex": 411,
+      "measure": 287,
+      "occurrence": 1,
+      "scoreQstamp": 828.0,
+      "positionQstamp": 844.0,
+      "scoreTime": 240.1174,
+      "timeSeconds": 337.976
+    },
+    {
+      "performanceIndex": 412,
+      "measure": 288,
+      "occurrence": 1,
+      "scoreQstamp": 830.0,
+      "positionQstamp": 846.0,
+      "scoreTime": 240.6729,
+      "timeSeconds": 338.709
+    },
+    {
+      "performanceIndex": 413,
+      "measure": 289,
+      "occurrence": 1,
+      "scoreQstamp": 832.0,
+      "positionQstamp": 848.0,
+      "scoreTime": 241.2285,
+      "timeSeconds": 339.457
+    },
+    {
+      "performanceIndex": 414,
+      "measure": 290,
+      "occurrence": 1,
+      "scoreQstamp": 834.0,
+      "positionQstamp": 850.0,
+      "scoreTime": 241.784,
+      "timeSeconds": 340.384
+    },
+    {
+      "performanceIndex": 415,
+      "measure": 291,
+      "occurrence": 1,
+      "scoreQstamp": 836.0,
+      "positionQstamp": 852.0,
+      "scoreTime": 242.3396,
+      "timeSeconds": 340.94
+    },
+    {
+      "performanceIndex": 416,
+      "measure": 292,
+      "occurrence": 1,
+      "scoreQstamp": 838.0,
+      "positionQstamp": 854.0,
+      "scoreTime": 242.8951,
+      "timeSeconds": 341.59
+    },
+    {
+      "performanceIndex": 417,
+      "measure": 293,
+      "occurrence": 1,
+      "scoreQstamp": 840.0,
+      "positionQstamp": 856.0,
+      "scoreTime": 243.4507,
+      "timeSeconds": 342.276
+    },
+    {
+      "performanceIndex": 418,
+      "measure": 294,
+      "occurrence": 1,
+      "scoreQstamp": 842.0,
+      "positionQstamp": 858.0,
+      "scoreTime": 244.0063,
+      "timeSeconds": 343.006
+    },
+    {
+      "performanceIndex": 419,
+      "measure": 295,
+      "occurrence": 1,
+      "scoreQstamp": 844.0,
+      "positionQstamp": 860.0,
+      "scoreTime": 244.5618,
+      "timeSeconds": 343.743
+    },
+    {
+      "performanceIndex": 420,
+      "measure": 296,
+      "occurrence": 1,
+      "scoreQstamp": 846.0,
+      "positionQstamp": 862.0,
+      "scoreTime": 245.1174,
+      "timeSeconds": 344.476
+    },
+    {
+      "performanceIndex": 421,
+      "measure": 297,
+      "occurrence": 1,
+      "scoreQstamp": 848.0,
+      "positionQstamp": 864.0,
+      "scoreTime": 245.6729,
+      "timeSeconds": 345.273
+    },
+    {
+      "performanceIndex": 422,
+      "measure": 298,
+      "occurrence": 1,
+      "scoreQstamp": 850.0,
+      "positionQstamp": 866.0,
+      "scoreTime": 246.2285,
+      "timeSeconds": 346.043
+    },
+    {
+      "performanceIndex": 423,
+      "measure": 299,
+      "occurrence": 1,
+      "scoreQstamp": 852.0,
+      "positionQstamp": 868.0,
+      "scoreTime": 246.784,
+      "timeSeconds": 346.784
+    },
+    {
+      "performanceIndex": 424,
+      "measure": 300,
+      "occurrence": 1,
+      "scoreQstamp": 854.0,
+      "positionQstamp": 870.0,
+      "scoreTime": 247.3396,
+      "timeSeconds": 347.34
+    },
+    {
+      "performanceIndex": 425,
+      "measure": 301,
+      "occurrence": 1,
+      "scoreQstamp": 856.0,
+      "positionQstamp": 873.0,
+      "scoreTime": 248.17295,
+      "timeSeconds": 347.773
+    },
+    {
+      "performanceIndex": 426,
+      "measure": 302,
+      "occurrence": 1,
+      "scoreQstamp": 858.0,
+      "positionQstamp": 876.0,
+      "scoreTime": 249.0063,
+      "timeSeconds": 348.616
+    },
+    {
+      "performanceIndex": 427,
+      "measure": 303,
+      "occurrence": 1,
+      "scoreQstamp": 860.0,
+      "positionQstamp": 878.0,
+      "scoreTime": 249.56182,
+      "timeSeconds": 349.762
+    },
+    {
+      "performanceIndex": 428,
+      "measure": 304,
+      "occurrence": 1,
+      "scoreQstamp": 862.0,
+      "positionQstamp": 880.0,
+      "scoreTime": 250.1174,
+      "timeSeconds": 350.376
+    },
+    {
+      "performanceIndex": 429,
+      "measure": 305,
+      "occurrence": 1,
+      "scoreQstamp": 864.0,
+      "positionQstamp": 882.0,
+      "scoreTime": 250.6729,
+      "timeSeconds": 351.109
+    },
+    {
+      "performanceIndex": 430,
+      "measure": 306,
+      "occurrence": 1,
+      "scoreQstamp": 866.0,
+      "positionQstamp": 884.0,
+      "scoreTime": 251.2285,
+      "timeSeconds": 351.857
+    },
+    {
+      "performanceIndex": 431,
+      "measure": 307,
+      "occurrence": 1,
+      "scoreQstamp": 868.0,
+      "positionQstamp": 886.0,
+      "scoreTime": 251.784,
+      "timeSeconds": 352.784
+    },
+    {
+      "performanceIndex": 432,
+      "measure": 308,
+      "occurrence": 1,
+      "scoreQstamp": 870.0,
+      "positionQstamp": 888.0,
+      "scoreTime": 252.3396,
+      "timeSeconds": 353.509
+    },
+    {
+      "performanceIndex": 433,
+      "measure": 309,
+      "occurrence": 1,
+      "scoreQstamp": 872.0,
+      "positionQstamp": 890.0,
+      "scoreTime": 252.8951,
+      "timeSeconds": 354.29
+    },
+    {
+      "performanceIndex": 434,
+      "measure": 310,
+      "occurrence": 1,
+      "scoreQstamp": 874.0,
+      "positionQstamp": 892.0,
+      "scoreTime": 253.4507,
+      "timeSeconds": 355.127
+    },
+    {
+      "performanceIndex": 435,
+      "measure": 311,
+      "occurrence": 1,
+      "scoreQstamp": 876.0,
+      "positionQstamp": 894.0,
+      "scoreTime": 254.0063,
+      "timeSeconds": 356.006
+    },
+    {
+      "performanceIndex": 436,
+      "measure": 312,
+      "occurrence": 1,
+      "scoreQstamp": 878.0,
+      "positionQstamp": 896.0,
+      "scoreTime": 254.5618,
+      "timeSeconds": 356.562
+    },
+    {
+      "performanceIndex": 437,
+      "measure": 313,
+      "occurrence": 1,
+      "scoreQstamp": 880.0,
+      "positionQstamp": 898.0,
+      "scoreTime": 255.1174,
+      "timeSeconds": 357.335
+    },
+    {
+      "performanceIndex": 438,
+      "measure": 314,
+      "occurrence": 1,
+      "scoreQstamp": 882.0,
+      "positionQstamp": 900.0,
+      "scoreTime": 255.6729,
+      "timeSeconds": 358.073
+    },
+    {
+      "performanceIndex": 439,
+      "measure": 315,
+      "occurrence": 1,
+      "scoreQstamp": 884.0,
+      "positionQstamp": 902.0,
+      "scoreTime": 256.2285,
+      "timeSeconds": 358.643
+    },
+    {
+      "performanceIndex": 440,
+      "measure": 316,
+      "occurrence": 1,
+      "scoreQstamp": 886.0,
+      "positionQstamp": 904.0,
+      "scoreTime": 256.784,
+      "timeSeconds": 359.576
+    },
+    {
+      "performanceIndex": 441,
+      "measure": 317,
+      "occurrence": 1,
+      "scoreQstamp": 888.0,
+      "positionQstamp": 906.0,
+      "scoreTime": 257.3396,
+      "timeSeconds": 360.379
+    },
+    {
+      "performanceIndex": 442,
+      "measure": 318,
+      "occurrence": 1,
+      "scoreQstamp": 890.0,
+      "positionQstamp": 908.0,
+      "scoreTime": 257.8951,
+      "timeSeconds": 361.143
+    },
+    {
+      "performanceIndex": 443,
+      "measure": 319,
+      "occurrence": 1,
+      "scoreQstamp": 892.0,
+      "positionQstamp": 910.0,
+      "scoreTime": 258.4507,
+      "timeSeconds": 361.851
+    },
+    {
+      "performanceIndex": 444,
+      "measure": 320,
+      "occurrence": 1,
+      "scoreQstamp": 894.0,
+      "positionQstamp": 912.0,
+      "scoreTime": 259.0063,
+      "timeSeconds": 362.406
+    },
+    {
+      "performanceIndex": 445,
+      "measure": 321,
+      "occurrence": 1,
+      "scoreQstamp": 896.0,
+      "positionQstamp": 914.0,
+      "scoreTime": 259.5618,
+      "timeSeconds": 363.505
+    },
+    {
+      "performanceIndex": 446,
+      "measure": 322,
+      "occurrence": 1,
+      "scoreQstamp": 898.0,
+      "positionQstamp": 916.0,
+      "scoreTime": 260.1174,
+      "timeSeconds": 364.117
+    },
+    {
+      "performanceIndex": 447,
+      "measure": 323,
+      "occurrence": 1,
+      "scoreQstamp": 900.0,
+      "positionQstamp": 918.0,
+      "scoreTime": 260.6729,
+      "timeSeconds": 364.709
+    },
+    {
+      "performanceIndex": 448,
+      "measure": 324,
+      "occurrence": 1,
+      "scoreQstamp": 902.0,
+      "positionQstamp": 920.0,
+      "scoreTime": 261.2285,
+      "timeSeconds": 365.443
+    },
+    {
+      "performanceIndex": 449,
+      "measure": 325,
+      "occurrence": 1,
+      "scoreQstamp": 904.0,
+      "positionQstamp": 922.0,
+      "scoreTime": 261.784,
+      "timeSeconds": 366.376
+    },
+    {
+      "performanceIndex": 450,
+      "measure": 326,
+      "occurrence": 1,
+      "scoreQstamp": 906.0,
+      "positionQstamp": 924.0,
+      "scoreTime": 262.3396,
+      "timeSeconds": 367.109
+    },
+    {
+      "performanceIndex": 451,
+      "measure": 327,
+      "occurrence": 1,
+      "scoreQstamp": 908.0,
+      "positionQstamp": 926.0,
+      "scoreTime": 262.8951,
+      "timeSeconds": 367.59
+    },
+    {
+      "performanceIndex": 452,
+      "measure": 328,
+      "occurrence": 1,
+      "scoreQstamp": 910.0,
+      "positionQstamp": 928.0,
+      "scoreTime": 263.4507,
+      "timeSeconds": 368.476
+    },
+    {
+      "performanceIndex": 453,
+      "measure": 329,
+      "occurrence": 1,
+      "scoreQstamp": 912.0,
+      "positionQstamp": 930.0,
+      "scoreTime": 264.0063,
+      "timeSeconds": 369.209
+    },
+    {
+      "performanceIndex": 454,
+      "measure": 330,
+      "occurrence": 1,
+      "scoreQstamp": 914.0,
+      "positionQstamp": 932.0,
+      "scoreTime": 264.5618,
+      "timeSeconds": 369.962
+    },
+    {
+      "performanceIndex": 455,
+      "measure": 331,
+      "occurrence": 1,
+      "scoreQstamp": 916.0,
+      "positionQstamp": 934.0,
+      "scoreTime": 265.1174,
+      "timeSeconds": 370.735
+    },
+    {
+      "performanceIndex": 456,
+      "measure": 332,
+      "occurrence": 1,
+      "scoreQstamp": 918.0,
+      "positionQstamp": 936.0,
+      "scoreTime": 265.6729,
+      "timeSeconds": 371.673
+    },
+    {
+      "performanceIndex": 457,
+      "measure": 333,
+      "occurrence": 1,
+      "scoreQstamp": 920.0,
+      "positionQstamp": 938.0,
+      "scoreTime": 266.2285,
+      "timeSeconds": 372.243
+    },
+    {
+      "performanceIndex": 458,
+      "measure": 334,
+      "occurrence": 1,
+      "scoreQstamp": 922.0,
+      "positionQstamp": 940.0,
+      "scoreTime": 266.784,
+      "timeSeconds": 373.176
+    },
+    {
+      "performanceIndex": 459,
+      "measure": 335,
+      "occurrence": 1,
+      "scoreQstamp": 924.0,
+      "positionQstamp": 942.0,
+      "scoreTime": 267.3396,
+      "timeSeconds": 373.74
+    },
+    {
+      "performanceIndex": 460,
+      "measure": 336,
+      "occurrence": 1,
+      "scoreQstamp": 926.0,
+      "positionQstamp": 944.0,
+      "scoreTime": 267.8951,
+      "timeSeconds": 374.49
+    },
+    {
+      "performanceIndex": 461,
+      "measure": 337,
+      "occurrence": 1,
+      "scoreQstamp": 928.0,
+      "positionQstamp": 946.0,
+      "scoreTime": 268.4507,
+      "timeSeconds": 375.251
+    },
+    {
+      "performanceIndex": 462,
+      "measure": 338,
+      "occurrence": 1,
+      "scoreQstamp": 930.0,
+      "positionQstamp": 948.0,
+      "scoreTime": 269.0063,
+      "timeSeconds": 375.809
+    },
+    {
+      "performanceIndex": 463,
+      "measure": 339,
+      "occurrence": 1,
+      "scoreQstamp": 932.0,
+      "positionQstamp": 950.0,
+      "scoreTime": 269.5618,
+      "timeSeconds": 376.743
+    },
+    {
+      "performanceIndex": 464,
+      "measure": 340,
+      "occurrence": 1,
+      "scoreQstamp": 934.0,
+      "positionQstamp": 952.0,
+      "scoreTime": 270.1174,
+      "timeSeconds": 377.535
+    },
+    {
+      "performanceIndex": 465,
+      "measure": 341,
+      "occurrence": 1,
+      "scoreQstamp": 936.0,
+      "positionQstamp": 954.0,
+      "scoreTime": 270.6729,
+      "timeSeconds": 378.273
+    },
+    {
+      "performanceIndex": 466,
+      "measure": 342,
+      "occurrence": 1,
+      "scoreQstamp": 938.0,
+      "positionQstamp": 956.0,
+      "scoreTime": 271.2285,
+      "timeSeconds": 378.843
+    },
+    {
+      "performanceIndex": 467,
+      "measure": 343,
+      "occurrence": 1,
+      "scoreQstamp": 940.0,
+      "positionQstamp": 958.0,
+      "scoreTime": 271.784,
+      "timeSeconds": 379.776
+    },
+    {
+      "performanceIndex": 468,
+      "measure": 344,
+      "occurrence": 1,
+      "scoreQstamp": 942.0,
+      "positionQstamp": 960.0,
+      "scoreTime": 272.3396,
+      "timeSeconds": 380.509
+    },
+    {
+      "performanceIndex": 469,
+      "measure": 345,
+      "occurrence": 1,
+      "scoreQstamp": 944.0,
+      "positionQstamp": 962.0,
+      "scoreTime": 272.8951,
+      "timeSeconds": 381.143
+    },
+    {
+      "performanceIndex": 470,
+      "measure": 346,
+      "occurrence": 1,
+      "scoreQstamp": 946.0,
+      "positionQstamp": 964.0,
+      "scoreTime": 273.4507,
+      "timeSeconds": 381.851
+    },
+    {
+      "performanceIndex": 471,
+      "measure": 347,
+      "occurrence": 1,
+      "scoreQstamp": 948.0,
+      "positionQstamp": 966.0,
+      "scoreTime": 274.0063,
+      "timeSeconds": 382.406
+    },
+    {
+      "performanceIndex": 472,
+      "measure": 348,
+      "occurrence": 1,
+      "scoreQstamp": 950.0,
+      "positionQstamp": 968.0,
+      "scoreTime": 274.5618,
+      "timeSeconds": 383.505
+    },
+    {
+      "performanceIndex": 473,
+      "measure": 349,
+      "occurrence": 1,
+      "scoreQstamp": 952.0,
+      "positionQstamp": 970.0,
+      "scoreTime": 275.1174,
+      "timeSeconds": 384.176
+    },
+    {
+      "performanceIndex": 474,
+      "measure": 350,
+      "occurrence": 1,
+      "scoreQstamp": 954.0,
+      "positionQstamp": 972.0,
+      "scoreTime": 275.6729,
+      "timeSeconds": 384.873
+    },
+    {
+      "performanceIndex": 475,
+      "measure": 351,
+      "occurrence": 1,
+      "scoreQstamp": 956.0,
+      "positionQstamp": 974.0,
+      "scoreTime": 276.2285,
+      "timeSeconds": 385.457
+    },
+    {
+      "performanceIndex": 476,
+      "measure": 352,
+      "occurrence": 1,
+      "scoreQstamp": 958.0,
+      "positionQstamp": 976.0,
+      "scoreTime": 276.784,
+      "timeSeconds": 386.384
+    },
+    {
+      "performanceIndex": 477,
+      "measure": 353,
+      "occurrence": 1,
+      "scoreQstamp": 960.0,
+      "positionQstamp": 978.0,
+      "scoreTime": 277.3396,
+      "timeSeconds": 387.14
+    },
+    {
+      "performanceIndex": 478,
+      "measure": 354,
+      "occurrence": 1,
+      "scoreQstamp": 962.0,
+      "positionQstamp": 980.0,
+      "scoreTime": 277.8951,
+      "timeSeconds": 387.895
+    },
+    {
+      "performanceIndex": 479,
+      "measure": 355,
+      "occurrence": 1,
+      "scoreQstamp": 964.0,
+      "positionQstamp": 982.0,
+      "scoreTime": 278.4507,
+      "timeSeconds": 388.476
+    },
+    {
+      "performanceIndex": 480,
+      "measure": 356,
+      "occurrence": 1,
+      "scoreQstamp": 966.0,
+      "positionQstamp": 984.0,
+      "scoreTime": 279.0063,
+      "timeSeconds": 389.206
+    },
+    {
+      "performanceIndex": 481,
+      "measure": 357,
+      "occurrence": 1,
+      "scoreQstamp": 968.0,
+      "positionQstamp": 986.0,
+      "scoreTime": 279.5618,
+      "timeSeconds": 389.943
+    },
+    {
+      "performanceIndex": 482,
+      "measure": 358,
+      "occurrence": 1,
+      "scoreQstamp": 970.0,
+      "positionQstamp": 988.0,
+      "scoreTime": 280.1174,
+      "timeSeconds": 390.676
+    },
+    {
+      "performanceIndex": 483,
+      "measure": 359,
+      "occurrence": 1,
+      "scoreQstamp": 972.0,
+      "positionQstamp": 990.0,
+      "scoreTime": 280.6729,
+      "timeSeconds": 391.273
+    },
+    {
+      "performanceIndex": 484,
+      "measure": 360,
+      "occurrence": 1,
+      "scoreQstamp": 974.0,
+      "positionQstamp": 992.0,
+      "scoreTime": 281.2285,
+      "timeSeconds": 392.029
+    },
+    {
+      "performanceIndex": 485,
+      "measure": 361,
+      "occurrence": 1,
+      "scoreQstamp": 976.0,
+      "positionQstamp": 994.0,
+      "scoreTime": 281.784,
+      "timeSeconds": 392.676
+    },
+    {
+      "performanceIndex": 486,
+      "measure": 362,
+      "occurrence": 1,
+      "scoreQstamp": 978.0,
+      "positionQstamp": 996.0,
+      "scoreTime": 282.3396,
+      "timeSeconds": 393.509
+    },
+    {
+      "performanceIndex": 487,
+      "measure": 363,
+      "occurrence": 1,
+      "scoreQstamp": 980.0,
+      "positionQstamp": 998.0,
+      "scoreTime": 282.8951,
+      "timeSeconds": 394.143
+    },
+    {
+      "performanceIndex": 488,
+      "measure": 364,
+      "occurrence": 1,
+      "scoreQstamp": 982.0,
+      "positionQstamp": 1000.0,
+      "scoreTime": 283.4507,
+      "timeSeconds": 394.876
+    },
+    {
+      "performanceIndex": 489,
+      "measure": 365,
+      "occurrence": 1,
+      "scoreQstamp": 984.0,
+      "positionQstamp": 1002.0,
+      "scoreTime": 284.0063,
+      "timeSeconds": 395.606
+    },
+    {
+      "performanceIndex": 490,
+      "measure": 366,
+      "occurrence": 1,
+      "scoreQstamp": 986.0,
+      "positionQstamp": 1004.0,
+      "scoreTime": 284.5618,
+      "timeSeconds": 396.243
+    },
+    {
+      "performanceIndex": 491,
+      "measure": 367,
+      "occurrence": 1,
+      "scoreQstamp": 988.0,
+      "positionQstamp": 1006.0,
+      "scoreTime": 285.1174,
+      "timeSeconds": 396.976
+    },
+    {
+      "performanceIndex": 492,
+      "measure": 368,
+      "occurrence": 1,
+      "scoreQstamp": 990.0,
+      "positionQstamp": 1008.0,
+      "scoreTime": 285.6729,
+      "timeSeconds": 397.673
+    },
+    {
+      "performanceIndex": 493,
+      "measure": 369,
+      "occurrence": 1,
+      "scoreQstamp": 992.0,
+      "positionQstamp": 1010.0,
+      "scoreTime": 286.2285,
+      "timeSeconds": 398.443
+    },
+    {
+      "performanceIndex": 494,
+      "measure": 370,
+      "occurrence": 1,
+      "scoreQstamp": 994.0,
+      "positionQstamp": 1012.0,
+      "scoreTime": 286.784,
+      "timeSeconds": 399.184
+    },
+    {
+      "performanceIndex": 495,
+      "measure": 371,
+      "occurrence": 1,
+      "scoreQstamp": 996.0,
+      "positionQstamp": 1014.0,
+      "scoreTime": 287.3396,
+      "timeSeconds": 399.74
+    },
+    {
+      "performanceIndex": 496,
+      "measure": 372,
+      "occurrence": 1,
+      "scoreQstamp": 998.0,
+      "positionQstamp": 1016.0,
+      "scoreTime": 287.8951,
+      "timeSeconds": 400.59
+    },
+    {
+      "performanceIndex": 497,
+      "measure": 373,
+      "occurrence": 1,
+      "scoreQstamp": 1000.0,
+      "positionQstamp": 1018.0,
+      "scoreTime": 288.45070000000004,
+      "timeSeconds": 401.476
+    },
+    {
+      "performanceIndex": 498,
+      "measure": 374,
+      "occurrence": 1,
+      "scoreQstamp": 1002.0,
+      "positionQstamp": 1020.0,
+      "scoreTime": 289.0063,
+      "timeSeconds": 402.209
+    },
+    {
+      "performanceIndex": 499,
+      "measure": 375,
+      "occurrence": 1,
+      "scoreQstamp": 1004.0,
+      "positionQstamp": 1022.0,
+      "scoreTime": 289.5618,
+      "timeSeconds": 402.962
+    },
+    {
+      "performanceIndex": 500,
+      "measure": 376,
+      "occurrence": 1,
+      "scoreQstamp": 1006.0,
+      "positionQstamp": 1024.0,
+      "scoreTime": 290.1174,
+      "timeSeconds": 403.576
+    },
+    {
+      "performanceIndex": 501,
+      "measure": 377,
+      "occurrence": 1,
+      "scoreQstamp": 1008.0,
+      "positionQstamp": 1026.0,
+      "scoreTime": 290.6729,
+      "timeSeconds": 404.273
+    },
+    {
+      "performanceIndex": 502,
+      "measure": 378,
+      "occurrence": 1,
+      "scoreQstamp": 1010.0,
+      "positionQstamp": 1028.0,
+      "scoreTime": 291.2285,
+      "timeSeconds": 404.871
+    },
+    {
+      "performanceIndex": 503,
+      "measure": 379,
+      "occurrence": 1,
+      "scoreQstamp": 1012.0,
+      "positionQstamp": 1030.0,
+      "scoreTime": 291.784,
+      "timeSeconds": 405.984
+    },
+    {
+      "performanceIndex": 504,
+      "measure": 380,
+      "occurrence": 1,
+      "scoreQstamp": 1014.0,
+      "positionQstamp": 1032.0,
+      "scoreTime": 292.3396,
+      "timeSeconds": 406.609
+    },
+    {
+      "performanceIndex": 505,
+      "measure": 381,
+      "occurrence": 1,
+      "scoreQstamp": 1016.0,
+      "positionQstamp": 1034.0,
+      "scoreTime": 292.8951,
+      "timeSeconds": 407.295
+    },
+    {
+      "performanceIndex": 506,
+      "measure": 382,
+      "occurrence": 1,
+      "scoreQstamp": 1018.0,
+      "positionQstamp": 1036.0,
+      "scoreTime": 293.4507,
+      "timeSeconds": 407.851
+    },
+    {
+      "performanceIndex": 507,
+      "measure": 383,
+      "occurrence": 1,
+      "scoreQstamp": 1020.0,
+      "positionQstamp": 1038.0,
+      "scoreTime": 294.0063,
+      "timeSeconds": 408.806
+    },
+    {
+      "performanceIndex": 508,
+      "measure": 384,
+      "occurrence": 1,
+      "scoreQstamp": 1022.0,
+      "positionQstamp": 1040.0,
+      "scoreTime": 294.5618,
+      "timeSeconds": 409.362
+    },
+    {
+      "performanceIndex": 509,
+      "measure": 385,
+      "occurrence": 1,
+      "scoreQstamp": 1024.0,
+      "positionQstamp": 1042.0,
+      "scoreTime": 295.1174,
+      "timeSeconds": 409.917
+    },
+    {
+      "performanceIndex": 510,
+      "measure": 386,
+      "occurrence": 1,
+      "scoreQstamp": 1026.0,
+      "positionQstamp": 1044.0,
+      "scoreTime": 295.6729,
+      "timeSeconds": 410.473
+    },
+    {
+      "performanceIndex": 511,
+      "measure": 387,
+      "occurrence": 1,
+      "scoreQstamp": 1028.0,
+      "positionQstamp": 1046.0,
+      "scoreTime": 296.2285,
+      "timeSeconds": 411.1
+    },
+    {
+      "performanceIndex": 512,
+      "measure": 388,
+      "occurrence": 1,
+      "scoreQstamp": 1030.0,
+      "positionQstamp": 1048.0,
+      "scoreTime": 296.784,
+      "timeSeconds": 412.584
+    },
+    {
+      "performanceIndex": 513,
+      "measure": 389,
+      "occurrence": 1,
+      "scoreQstamp": 1032.0,
+      "positionQstamp": 1050.888888888889,
+      "scoreTime": 297.5864888888889,
+      "timeSeconds": 412.6
+    },
+    {
+      "performanceIndex": 514,
+      "measure": 390,
+      "occurrence": 1,
+      "scoreQstamp": 1034.0,
+      "positionQstamp": 1053.7777777777778,
+      "scoreTime": 298.3889777777778,
+      "timeSeconds": 412.989
+    },
+    {
+      "performanceIndex": 515,
+      "measure": 391,
+      "occurrence": 1,
+      "scoreQstamp": 1036.0,
+      "positionQstamp": 1056.0,
+      "scoreTime": 299.0063,
+      "timeSeconds": 415.806
+    },
+    {
+      "performanceIndex": 516,
+      "measure": 392,
+      "occurrence": 1,
+      "scoreQstamp": 1038.0,
+      "positionQstamp": 1058.0,
+      "scoreTime": 299.5618,
+      "timeSeconds": 416.362
+    },
+    {
+      "performanceIndex": 517,
+      "measure": 393,
+      "occurrence": 1,
+      "scoreQstamp": 1040.0,
+      "positionQstamp": 1060.0,
+      "scoreTime": 300.1174,
+      "timeSeconds": 416.917
+    },
+    {
+      "performanceIndex": 518,
+      "measure": 394,
+      "occurrence": 1,
+      "scoreQstamp": 1042.0,
+      "positionQstamp": 1062.0,
+      "scoreTime": 300.6729,
+      "timeSeconds": 417.473
+    },
+    {
+      "performanceIndex": 519,
+      "measure": 395,
+      "occurrence": 1,
+      "scoreQstamp": 1044.0,
+      "positionQstamp": 1064.0,
+      "scoreTime": 301.2285,
+      "timeSeconds": 418.029
+    },
+    {
+      "performanceIndex": 520,
+      "measure": 396,
+      "occurrence": 1,
+      "scoreQstamp": 1046.0,
+      "positionQstamp": 1066.0,
+      "scoreTime": 301.78402,
+      "timeSeconds": 418.584
+    },
+    {
+      "performanceIndex": 521,
+      "measure": 397,
+      "occurrence": 1,
+      "scoreQstamp": 1048.0,
+      "positionQstamp": 1068.0,
+      "scoreTime": 302.3396,
+      "timeSeconds": 419.14
+    },
+    {
+      "performanceIndex": 522,
+      "measure": 398,
+      "occurrence": 1,
+      "scoreQstamp": 1050.0,
+      "positionQstamp": 1070.0,
+      "scoreTime": 302.89512,
+      "timeSeconds": 419.695
+    },
+    {
+      "performanceIndex": 523,
+      "measure": 399,
+      "occurrence": 1,
+      "scoreQstamp": 1052.0,
+      "positionQstamp": 1072.0,
+      "scoreTime": 303.4507,
+      "timeSeconds": 420.476
+    },
+    {
+      "performanceIndex": 524,
+      "measure": 400,
+      "occurrence": 1,
+      "scoreQstamp": 1054.0,
+      "positionQstamp": 1074.0,
+      "scoreTime": 304.0063,
+      "timeSeconds": 421.209
+    },
+    {
+      "performanceIndex": 525,
+      "measure": 401,
+      "occurrence": 1,
+      "scoreQstamp": 1056.0,
+      "positionQstamp": 1076.0,
+      "scoreTime": 304.5618,
+      "timeSeconds": 421.962
+    },
+    {
+      "performanceIndex": 526,
+      "measure": 402,
+      "occurrence": 1,
+      "scoreQstamp": 1058.0,
+      "positionQstamp": 1078.0,
+      "scoreTime": 305.1174,
+      "timeSeconds": 422.576
+    },
+    {
+      "performanceIndex": 527,
+      "measure": 403,
+      "occurrence": 1,
+      "scoreQstamp": 1060.0,
+      "positionQstamp": 1080.0,
+      "scoreTime": 305.6729,
+      "timeSeconds": 423.509
+    },
+    {
+      "performanceIndex": 528,
+      "measure": 404,
+      "occurrence": 1,
+      "scoreQstamp": 1062.0,
+      "positionQstamp": 1082.0,
+      "scoreTime": 306.2285,
+      "timeSeconds": 424.228
+    },
+    {
+      "performanceIndex": 529,
+      "measure": 405,
+      "occurrence": 1,
+      "scoreQstamp": 1064.0,
+      "positionQstamp": 1084.0,
+      "scoreTime": 306.784,
+      "timeSeconds": 424.784
+    },
+    {
+      "performanceIndex": 530,
+      "measure": 406,
+      "occurrence": 1,
+      "scoreQstamp": 1066.0,
+      "positionQstamp": 1086.0,
+      "scoreTime": 307.3396,
+      "timeSeconds": 425.679
+    },
+    {
+      "performanceIndex": 531,
+      "measure": 407,
+      "occurrence": 1,
+      "scoreQstamp": 1068.0,
+      "positionQstamp": 1088.0,
+      "scoreTime": 307.8951,
+      "timeSeconds": 426.343
+    },
+    {
+      "performanceIndex": 532,
+      "measure": 408,
+      "occurrence": 1,
+      "scoreQstamp": 1070.0,
+      "positionQstamp": 1090.0,
+      "scoreTime": 308.4507,
+      "timeSeconds": 427.051
+    },
+    {
+      "performanceIndex": 533,
+      "measure": 409,
+      "occurrence": 1,
+      "scoreQstamp": 1072.0,
+      "positionQstamp": 1092.0,
+      "scoreTime": 309.0063,
+      "timeSeconds": 427.609
+    },
+    {
+      "performanceIndex": 534,
+      "measure": 410,
+      "occurrence": 1,
+      "scoreQstamp": 1074.0,
+      "positionQstamp": 1094.0,
+      "scoreTime": 309.5618,
+      "timeSeconds": 428.362
+    },
+    {
+      "performanceIndex": 535,
+      "measure": 411,
+      "occurrence": 1,
+      "scoreQstamp": 1076.0,
+      "positionQstamp": 1096.0,
+      "scoreTime": 310.1174,
+      "timeSeconds": 429.076
+    },
+    {
+      "performanceIndex": 536,
+      "measure": 412,
+      "occurrence": 1,
+      "scoreQstamp": 1078.0,
+      "positionQstamp": 1098.0,
+      "scoreTime": 310.6729,
+      "timeSeconds": 429.709
+    },
+    {
+      "performanceIndex": 537,
+      "measure": 413,
+      "occurrence": 1,
+      "scoreQstamp": 1080.0,
+      "positionQstamp": 1100.0,
+      "scoreTime": 311.2285,
+      "timeSeconds": 430.443
+    },
+    {
+      "performanceIndex": 538,
+      "measure": 414,
+      "occurrence": 1,
+      "scoreQstamp": 1082.0,
+      "positionQstamp": 1102.0,
+      "scoreTime": 311.784,
+      "timeSeconds": 431.184
+    },
+    {
+      "performanceIndex": 539,
+      "measure": 415,
+      "occurrence": 1,
+      "scoreQstamp": 1084.0,
+      "positionQstamp": 1104.0,
+      "scoreTime": 312.3396,
+      "timeSeconds": 431.74
+    },
+    {
+      "performanceIndex": 540,
+      "measure": 416,
+      "occurrence": 1,
+      "scoreQstamp": 1086.0,
+      "positionQstamp": 1106.0,
+      "scoreTime": 312.8951,
+      "timeSeconds": 432.443
+    },
+    {
+      "performanceIndex": 541,
+      "measure": 417,
+      "occurrence": 1,
+      "scoreQstamp": 1088.0,
+      "positionQstamp": 1108.0,
+      "scoreTime": 313.4507,
+      "timeSeconds": 433.251
+    },
+    {
+      "performanceIndex": 542,
+      "measure": 418,
+      "occurrence": 1,
+      "scoreQstamp": 1090.0,
+      "positionQstamp": 1110.0,
+      "scoreTime": 314.0063,
+      "timeSeconds": 433.809
+    },
+    {
+      "performanceIndex": 543,
+      "measure": 419,
+      "occurrence": 1,
+      "scoreQstamp": 1092.0,
+      "positionQstamp": 1112.0,
+      "scoreTime": 314.5618,
+      "timeSeconds": 434.562
+    },
+    {
+      "performanceIndex": 544,
+      "measure": 420,
+      "occurrence": 1,
+      "scoreQstamp": 1094.0,
+      "positionQstamp": 1114.0,
+      "scoreTime": 315.1174,
+      "timeSeconds": 435.335
+    },
+    {
+      "performanceIndex": 545,
+      "measure": 421,
+      "occurrence": 1,
+      "scoreQstamp": 1096.0,
+      "positionQstamp": 1116.0,
+      "scoreTime": 315.6729,
+      "timeSeconds": 436.073
+    },
+    {
+      "performanceIndex": 546,
+      "measure": 422,
+      "occurrence": 1,
+      "scoreQstamp": 1098.0,
+      "positionQstamp": 1118.0,
+      "scoreTime": 316.2285,
+      "timeSeconds": 436.643
+    },
+    {
+      "performanceIndex": 547,
+      "measure": 423,
+      "occurrence": 1,
+      "scoreQstamp": 1100.0,
+      "positionQstamp": 1120.0,
+      "scoreTime": 316.784,
+      "timeSeconds": 437.576
+    },
+    {
+      "performanceIndex": 548,
+      "measure": 424,
+      "occurrence": 1,
+      "scoreQstamp": 1102.0,
+      "positionQstamp": 1122.0,
+      "scoreTime": 317.3396,
+      "timeSeconds": 438.14
+    },
+    {
+      "performanceIndex": 549,
+      "measure": 425,
+      "occurrence": 1,
+      "scoreQstamp": 1104.0,
+      "positionQstamp": 1124.0,
+      "scoreTime": 317.8951,
+      "timeSeconds": 438.743
+    },
+    {
+      "performanceIndex": 550,
+      "measure": 426,
+      "occurrence": 1,
+      "scoreQstamp": 1106.0,
+      "positionQstamp": 1126.0,
+      "scoreTime": 318.4507,
+      "timeSeconds": 439.451
+    },
+    {
+      "performanceIndex": 551,
+      "measure": 427,
+      "occurrence": 1,
+      "scoreQstamp": 1108.0,
+      "positionQstamp": 1128.0,
+      "scoreTime": 319.0063,
+      "timeSeconds": 440.009
+    },
+    {
+      "performanceIndex": 552,
+      "measure": 428,
+      "occurrence": 1,
+      "scoreQstamp": 1110.0,
+      "positionQstamp": 1130.0,
+      "scoreTime": 319.5618,
+      "timeSeconds": 440.762
+    },
+    {
+      "performanceIndex": 553,
+      "measure": 429,
+      "occurrence": 1,
+      "scoreQstamp": 1112.0,
+      "positionQstamp": 1132.0,
+      "scoreTime": 320.1174,
+      "timeSeconds": 441.476
+    },
+    {
+      "performanceIndex": 554,
+      "measure": 430,
+      "occurrence": 1,
+      "scoreQstamp": 1114.0,
+      "positionQstamp": 1134.0,
+      "scoreTime": 320.6729,
+      "timeSeconds": 442.109
+    },
+    {
+      "performanceIndex": 555,
+      "measure": 431,
+      "occurrence": 1,
+      "scoreQstamp": 1116.0,
+      "positionQstamp": 1136.0,
+      "scoreTime": 321.2285,
+      "timeSeconds": 442.829
+    },
+    {
+      "performanceIndex": 556,
+      "measure": 432,
+      "occurrence": 1,
+      "scoreQstamp": 1118.0,
+      "positionQstamp": 1138.0,
+      "scoreTime": 321.784,
+      "timeSeconds": 443.576
+    },
+    {
+      "performanceIndex": 557,
+      "measure": 433,
+      "occurrence": 1,
+      "scoreQstamp": 1120.0,
+      "positionQstamp": 1140.0,
+      "scoreTime": 322.3396,
+      "timeSeconds": 444.309
+    },
+    {
+      "performanceIndex": 558,
+      "measure": 434,
+      "occurrence": 1,
+      "scoreQstamp": 1122.0,
+      "positionQstamp": 1142.0,
+      "scoreTime": 322.8951,
+      "timeSeconds": 444.895
+    },
+    {
+      "performanceIndex": 559,
+      "measure": 435,
+      "occurrence": 1,
+      "scoreQstamp": 1124.0,
+      "positionQstamp": 1144.0,
+      "scoreTime": 323.4507,
+      "timeSeconds": 445.476
+    },
+    {
+      "performanceIndex": 560,
+      "measure": 436,
+      "occurrence": 1,
+      "scoreQstamp": 1126.0,
+      "positionQstamp": 1146.0,
+      "scoreTime": 324.0063,
+      "timeSeconds": 446.209
+    },
+    {
+      "performanceIndex": 561,
+      "measure": 437,
+      "occurrence": 1,
+      "scoreQstamp": 1128.0,
+      "positionQstamp": 1148.0,
+      "scoreTime": 324.5618,
+      "timeSeconds": 446.962
+    },
+    {
+      "performanceIndex": 562,
+      "measure": 438,
+      "occurrence": 1,
+      "scoreQstamp": 1130.0,
+      "positionQstamp": 1150.0,
+      "scoreTime": 325.1174,
+      "timeSeconds": 447.517
+    },
+    {
+      "performanceIndex": 563,
+      "measure": 439,
+      "occurrence": 1,
+      "scoreQstamp": 1132.0,
+      "positionQstamp": 1152.0,
+      "scoreTime": 325.6729,
+      "timeSeconds": 448.109
+    },
+    {
+      "performanceIndex": 564,
+      "measure": 440,
+      "occurrence": 1,
+      "scoreQstamp": 1134.0,
+      "positionQstamp": 1154.0,
+      "scoreTime": 326.2285,
+      "timeSeconds": 448.829
+    },
+    {
+      "performanceIndex": 565,
+      "measure": 441,
+      "occurrence": 1,
+      "scoreQstamp": 1136.0,
+      "positionQstamp": 1156.0,
+      "scoreTime": 326.784,
+      "timeSeconds": 449.576
+    },
+    {
+      "performanceIndex": 566,
+      "measure": 442,
+      "occurrence": 1,
+      "scoreQstamp": 1138.0,
+      "positionQstamp": 1158.0,
+      "scoreTime": 327.3396,
+      "timeSeconds": 450.14
+    },
+    {
+      "performanceIndex": 567,
+      "measure": 443,
+      "occurrence": 1,
+      "scoreQstamp": 1140.0,
+      "positionQstamp": 1160.0,
+      "scoreTime": 327.8951,
+      "timeSeconds": 450.743
+    },
+    {
+      "performanceIndex": 568,
+      "measure": 444,
+      "occurrence": 1,
+      "scoreQstamp": 1142.0,
+      "positionQstamp": 1162.0,
+      "scoreTime": 328.4507,
+      "timeSeconds": 451.451
+    },
+    {
+      "performanceIndex": 569,
+      "measure": 445,
+      "occurrence": 1,
+      "scoreQstamp": 1144.0,
+      "positionQstamp": 1164.0,
+      "scoreTime": 329.0063,
+      "timeSeconds": 452.206
+    },
+    {
+      "performanceIndex": 570,
+      "measure": 446,
+      "occurrence": 1,
+      "scoreQstamp": 1146.0,
+      "positionQstamp": 1166.0,
+      "scoreTime": 329.5618,
+      "timeSeconds": 452.762
+    },
+    {
+      "performanceIndex": 571,
+      "measure": 447,
+      "occurrence": 1,
+      "scoreQstamp": 1148.0,
+      "positionQstamp": 1168.0,
+      "scoreTime": 330.1174,
+      "timeSeconds": 453.535
+    },
+    {
+      "performanceIndex": 572,
+      "measure": 448,
+      "occurrence": 1,
+      "scoreQstamp": 1150.0,
+      "positionQstamp": 1170.0,
+      "scoreTime": 330.6729,
+      "timeSeconds": 454.273
+    },
+    {
+      "performanceIndex": 573,
+      "measure": 449,
+      "occurrence": 1,
+      "scoreQstamp": 1152.0,
+      "positionQstamp": 1172.0,
+      "scoreTime": 331.2285,
+      "timeSeconds": 454.629
+    },
+    {
+      "performanceIndex": 574,
+      "measure": 450,
+      "occurrence": 1,
+      "scoreQstamp": 1154.0,
+      "positionQstamp": 1174.0,
+      "scoreTime": 331.784,
+      "timeSeconds": 455.376
+    },
+    {
+      "performanceIndex": 575,
+      "measure": 451,
+      "occurrence": 1,
+      "scoreQstamp": 1156.0,
+      "positionQstamp": 1176.0,
+      "scoreTime": 332.3396,
+      "timeSeconds": 456.179
+    },
+    {
+      "performanceIndex": 576,
+      "measure": 452,
+      "occurrence": 1,
+      "scoreQstamp": 1158.0,
+      "positionQstamp": 1178.0,
+      "scoreTime": 332.8951,
+      "timeSeconds": 456.895
+    },
+    {
+      "performanceIndex": 577,
+      "measure": 453,
+      "occurrence": 1,
+      "scoreQstamp": 1160.0,
+      "positionQstamp": 1180.0,
+      "scoreTime": 333.4507,
+      "timeSeconds": 457.451
+    },
+    {
+      "performanceIndex": 578,
+      "measure": 454,
+      "occurrence": 1,
+      "scoreQstamp": 1162.0,
+      "positionQstamp": 1182.0,
+      "scoreTime": 334.0063,
+      "timeSeconds": 458.009
+    },
+    {
+      "performanceIndex": 579,
+      "measure": 455,
+      "occurrence": 1,
+      "scoreQstamp": 1164.0,
+      "positionQstamp": 1184.0,
+      "scoreTime": 334.5618,
+      "timeSeconds": 458.762
+    },
+    {
+      "performanceIndex": 580,
+      "measure": 456,
+      "occurrence": 1,
+      "scoreQstamp": 1166.0,
+      "positionQstamp": 1186.0,
+      "scoreTime": 335.1174,
+      "timeSeconds": 459.476
+    },
+    {
+      "performanceIndex": 581,
+      "measure": 457,
+      "occurrence": 1,
+      "scoreQstamp": 1168.0,
+      "positionQstamp": 1188.0,
+      "scoreTime": 335.6729,
+      "timeSeconds": 460.109
+    },
+    {
+      "performanceIndex": 582,
+      "measure": 458,
+      "occurrence": 1,
+      "scoreQstamp": 1170.0,
+      "positionQstamp": 1190.0,
+      "scoreTime": 336.2285,
+      "timeSeconds": 460.643
+    },
+    {
+      "performanceIndex": 583,
+      "measure": 459,
+      "occurrence": 1,
+      "scoreQstamp": 1172.0,
+      "positionQstamp": 1192.0,
+      "scoreTime": 336.784,
+      "timeSeconds": 461.384
+    },
+    {
+      "performanceIndex": 584,
+      "measure": 460,
+      "occurrence": 1,
+      "scoreQstamp": 1174.0,
+      "positionQstamp": 1194.0,
+      "scoreTime": 337.3396,
+      "timeSeconds": 462.109
+    },
+    {
+      "performanceIndex": 585,
+      "measure": 461,
+      "occurrence": 1,
+      "scoreQstamp": 1176.0,
+      "positionQstamp": 1196.0,
+      "scoreTime": 337.8951,
+      "timeSeconds": 462.843
+    },
+    {
+      "performanceIndex": 586,
+      "measure": 462,
+      "occurrence": 1,
+      "scoreQstamp": 1178.0,
+      "positionQstamp": 1198.0,
+      "scoreTime": 338.4507,
+      "timeSeconds": 463.451
+    },
+    {
+      "performanceIndex": 587,
+      "measure": 463,
+      "occurrence": 1,
+      "scoreQstamp": 1180.0,
+      "positionQstamp": 1200.0,
+      "scoreTime": 339.0063,
+      "timeSeconds": 464.009
+    },
+    {
+      "performanceIndex": 588,
+      "measure": 464,
+      "occurrence": 1,
+      "scoreQstamp": 1182.0,
+      "positionQstamp": 1202.0,
+      "scoreTime": 339.5618,
+      "timeSeconds": 464.943
+    },
+    {
+      "performanceIndex": 589,
+      "measure": 465,
+      "occurrence": 1,
+      "scoreQstamp": 1184.0,
+      "positionQstamp": 1204.0,
+      "scoreTime": 340.1174,
+      "timeSeconds": 465.576
+    },
+    {
+      "performanceIndex": 590,
+      "measure": 466,
+      "occurrence": 1,
+      "scoreQstamp": 1186.0,
+      "positionQstamp": 1206.0,
+      "scoreTime": 340.6729,
+      "timeSeconds": 466.273
+    },
+    {
+      "performanceIndex": 591,
+      "measure": 467,
+      "occurrence": 1,
+      "scoreQstamp": 1188.0,
+      "positionQstamp": 1208.0,
+      "scoreTime": 341.2285,
+      "timeSeconds": 466.829
+    },
+    {
+      "performanceIndex": 592,
+      "measure": 468,
+      "occurrence": 1,
+      "scoreQstamp": 1190.0,
+      "positionQstamp": 1210.0,
+      "scoreTime": 341.784,
+      "timeSeconds": 467.384
+    },
+    {
+      "performanceIndex": 593,
+      "measure": 469,
+      "occurrence": 1,
+      "scoreQstamp": 1192.0,
+      "positionQstamp": 1212.0,
+      "scoreTime": 342.3396,
+      "timeSeconds": 468.279
+    },
+    {
+      "performanceIndex": 594,
+      "measure": 470,
+      "occurrence": 1,
+      "scoreQstamp": 1194.0,
+      "positionQstamp": 1214.0,
+      "scoreTime": 342.8951,
+      "timeSeconds": 468.895
+    },
+    {
+      "performanceIndex": 595,
+      "measure": 471,
+      "occurrence": 1,
+      "scoreQstamp": 1196.0,
+      "positionQstamp": 1216.0,
+      "scoreTime": 343.4507,
+      "timeSeconds": 469.851
+    },
+    {
+      "performanceIndex": 596,
+      "measure": 472,
+      "occurrence": 1,
+      "scoreQstamp": 1198.0,
+      "positionQstamp": 1218.0,
+      "scoreTime": 344.0063,
+      "timeSeconds": 470.406
+    },
+    {
+      "performanceIndex": 597,
+      "measure": 473,
+      "occurrence": 1,
+      "scoreQstamp": 1200.0,
+      "positionQstamp": 1220.0,
+      "scoreTime": 344.5618,
+      "timeSeconds": 470.962
+    },
+    {
+      "performanceIndex": 598,
+      "measure": 474,
+      "occurrence": 1,
+      "scoreQstamp": 1202.0,
+      "positionQstamp": 1222.0,
+      "scoreTime": 345.1174,
+      "timeSeconds": 471.676
+    },
+    {
+      "performanceIndex": 599,
+      "measure": 475,
+      "occurrence": 1,
+      "scoreQstamp": 1204.0,
+      "positionQstamp": 1224.0,
+      "scoreTime": 345.6729,
+      "timeSeconds": 472.473
+    },
+    {
+      "performanceIndex": 600,
+      "measure": 476,
+      "occurrence": 1,
+      "scoreQstamp": 1206.0,
+      "positionQstamp": 1226.0,
+      "scoreTime": 346.2285,
+      "timeSeconds": 474.228
+    },
+    {
+      "performanceIndex": 601,
+      "measure": 477,
+      "occurrence": 1,
+      "scoreQstamp": 1208.0,
+      "positionQstamp": 1228.0,
+      "scoreTime": 346.784,
+      "timeSeconds": 474.784
+    },
+    {
+      "performanceIndex": 602,
+      "measure": 478,
+      "occurrence": 1,
+      "scoreQstamp": 1210.0,
+      "positionQstamp": 1230.0,
+      "scoreTime": 347.3396,
+      "timeSeconds": 475.34
+    },
+    {
+      "performanceIndex": 603,
+      "measure": 479,
+      "occurrence": 1,
+      "scoreQstamp": 1212.0,
+      "positionQstamp": 1232.0,
+      "scoreTime": 347.8951,
+      "timeSeconds": 476.323
+    },
+    {
+      "performanceIndex": 604,
+      "measure": 480,
+      "occurrence": 1,
+      "scoreQstamp": 1214.0,
+      "positionQstamp": 1234.0,
+      "scoreTime": 348.45070000000004,
+      "timeSeconds": 478.301
+    },
+    {
+      "performanceIndex": 605,
+      "measure": 481,
+      "occurrence": 1,
+      "scoreQstamp": 1216.0,
+      "positionQstamp": 1236.0,
+      "scoreTime": 349.0063,
+      "timeSeconds": 479.206
+    },
+    {
+      "performanceIndex": 606,
+      "measure": 482,
+      "occurrence": 1,
+      "scoreQstamp": 1218.0,
+      "positionQstamp": 1238.0,
+      "scoreTime": 349.5618,
+      "timeSeconds": 479.762
+    },
+    {
+      "performanceIndex": 607,
+      "measure": 483,
+      "occurrence": 1,
+      "scoreQstamp": 1220.0,
+      "positionQstamp": 1240.0,
+      "scoreTime": 350.11740000000003,
+      "timeSeconds": 480.317
+    },
+    {
+      "performanceIndex": 608,
+      "measure": 484,
+      "occurrence": 1,
+      "scoreQstamp": 1222.0,
+      "positionQstamp": 1242.0,
+      "scoreTime": 350.6729,
+      "timeSeconds": 485.273
+    },
+    {
+      "performanceIndex": 609,
+      "measure": 485,
+      "occurrence": 1,
+      "scoreQstamp": 1224.0,
+      "positionQstamp": 1244.0,
+      "scoreTime": 351.2285,
+      "timeSeconds": 485.843
+    },
+    {
+      "performanceIndex": 610,
+      "measure": 486,
+      "occurrence": 1,
+      "scoreQstamp": 1226.0,
+      "positionQstamp": 1246.0,
+      "scoreTime": 351.784,
+      "timeSeconds": 486.676
+    },
+    {
+      "performanceIndex": 611,
+      "measure": 487,
+      "occurrence": 1,
+      "scoreQstamp": 1228.0,
+      "positionQstamp": 1248.0,
+      "scoreTime": 352.3396,
+      "timeSeconds": 487.509
+    },
+    {
+      "performanceIndex": 612,
+      "measure": 488,
+      "occurrence": 1,
+      "scoreQstamp": 1230.0,
+      "positionQstamp": 1250.0,
+      "scoreTime": 352.8951,
+      "timeSeconds": 488.295
+    },
+    {
+      "performanceIndex": 613,
+      "measure": 489,
+      "occurrence": 1,
+      "scoreQstamp": 1232.0,
+      "positionQstamp": 1252.0,
+      "scoreTime": 353.4507,
+      "timeSeconds": 488.876
+    },
+    {
+      "performanceIndex": 614,
+      "measure": 490,
+      "occurrence": 1,
+      "scoreQstamp": 1234.0,
+      "positionQstamp": 1254.0,
+      "scoreTime": 354.0063,
+      "timeSeconds": 489.609
+    },
+    {
+      "performanceIndex": 615,
+      "measure": 491,
+      "occurrence": 1,
+      "scoreQstamp": 1236.0,
+      "positionQstamp": 1256.0,
+      "scoreTime": 354.5618,
+      "timeSeconds": 490.362
+    },
+    {
+      "performanceIndex": 616,
+      "measure": 492,
+      "occurrence": 1,
+      "scoreQstamp": 1238.0,
+      "positionQstamp": 1258.0,
+      "scoreTime": 355.1174,
+      "timeSeconds": 491.235
+    },
+    {
+      "performanceIndex": 617,
+      "measure": 493,
+      "occurrence": 1,
+      "scoreQstamp": 1240.0,
+      "positionQstamp": 1260.0,
+      "scoreTime": 355.67292,
+      "timeSeconds": 491.873
+    },
+    {
+      "performanceIndex": 618,
+      "measure": 494,
+      "occurrence": 1,
+      "scoreQstamp": 1242.0,
+      "positionQstamp": 1262.0,
+      "scoreTime": 356.2285,
+      "timeSeconds": 492.643
+    },
+    {
+      "performanceIndex": 619,
+      "measure": 495,
+      "occurrence": 1,
+      "scoreQstamp": 1244.0,
+      "positionQstamp": 1264.0,
+      "scoreTime": 356.78402,
+      "timeSeconds": 493.384
+    },
+    {
+      "performanceIndex": 620,
+      "measure": 496,
+      "occurrence": 1,
+      "scoreQstamp": 1246.0,
+      "positionQstamp": 1266.0,
+      "scoreTime": 357.3396,
+      "timeSeconds": 494.14
+    },
+    {
+      "performanceIndex": 621,
+      "measure": 497,
+      "occurrence": 1,
+      "scoreQstamp": 1248.0,
+      "positionQstamp": 1268.0,
+      "scoreTime": 357.8951,
+      "timeSeconds": 494.695
+    },
+    {
+      "performanceIndex": 622,
+      "measure": 498,
+      "occurrence": 1,
+      "scoreQstamp": 1250.0,
+      "positionQstamp": 1270.0,
+      "scoreTime": 358.4507,
+      "timeSeconds": 495.476
+    },
+    {
+      "performanceIndex": 623,
+      "measure": 499,
+      "occurrence": 1,
+      "scoreQstamp": 1252.0,
+      "positionQstamp": 1272.0,
+      "scoreTime": 359.0063,
+      "timeSeconds": 496.806
+    },
+    {
+      "performanceIndex": 624,
+      "measure": 500,
+      "occurrence": 1,
+      "scoreQstamp": 1254.0,
+      "positionQstamp": 1274.0,
+      "scoreTime": 359.5618,
+      "timeSeconds": 498.509
+    },
+    {
+      "performanceIndex": 625,
+      "measure": 501,
+      "occurrence": 1,
+      "scoreQstamp": 1256.0,
+      "positionQstamp": 1276.0,
+      "scoreTime": 360.1174,
+      "timeSeconds": 499.517
+    },
+    {
+      "performanceIndex": 626,
+      "measure": 502,
+      "occurrence": 1,
+      "scoreQstamp": 1258.0,
+      "positionQstamp": 1278.0,
+      "scoreTime": 360.6729,
+      "timeSeconds": 500.0
+    }
+  ]
+}

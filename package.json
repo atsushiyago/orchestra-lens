@@ -13,6 +13,7 @@
     "generate:runtime-score-facts": "tsx tools/generateRuntimeScoreFacts.ts",
     "generate:hauptstimme-evidence": "tsx tools/generateHauptstimmeEvidence.ts",
     "generate:highlights": "tsx tools/generateHighlights.ts",
+    "generate:tour-selection": "tsx tools/generateTourSelection.ts",
     "test:backend": "node --import tsx --test backend/ask-the-score/test/*.test.ts"
   },
   "dependencies": {

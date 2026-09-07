@@ -1,0 +1,17 @@
+{
+  "mappedOccurrences": 626,
+  "firstPerformanceIndex": 1,
+  "lastPerformanceIndex": 626,
+  "durationSeconds": 500.088,
+  "strictlyMonotonic": true,
+  "anchorsUsedAsConstraints": {},
+  "firstTimeSeconds": 0.986,
+  "lastTimeSeconds": 500.0,
+  "minimumMeasureIncrementSeconds": 0.016,
+  "medianMeasureIncrementSeconds": 0.733,
+  "maximumMeasureIncrementSeconds": 6.928,
+  "collapsedMeasurePairs": 0,
+  "numericallyHealthy": true,
+  "instabilityReasons": [],
+  "longJumps": []
+}

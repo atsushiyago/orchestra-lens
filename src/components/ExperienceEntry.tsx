@@ -3,11 +3,15 @@ import {StyleSheet, Text, View} from 'react-native';
 import {highlightsTourSummary} from '../data/listeningExperiences';
 import {TVButton} from './TVButton';
 
-export function ExperienceEntry({highlightCount, ready, onFullMovement, onHighlightsTour}: {
+export function ExperienceEntry({highlightCount, ready, onFullMovement, onHighlightsTour, showHighlightReview = false, onHighlightReview, showTourSelectorReview = false, onTourSelectorReview}: {
   highlightCount: number;
   ready: boolean;
   onFullMovement: () => void;
   onHighlightsTour: () => void;
+  showHighlightReview?: boolean;
+  onHighlightReview?: () => void;
+  showTourSelectorReview?: boolean;
+  onTourSelectorReview?: () => void;
 }) {
   return <View style={styles.screen}>
     <View style={styles.content}>
@@ -17,6 +21,8 @@ export function ExperienceEntry({highlightCount, ready, onFullMovement, onHighli
       <Text style={styles.movement}>Movement IV</Text>
       <Text style={styles.invitation}>See what you’re hearing.</Text>
       <View style={styles.actions}>
+        {showHighlightReview && onHighlightReview && <TVButton label="HIGHLIGHT REVIEW" onPress={onHighlightReview}/>} 
+        {showTourSelectorReview && onTourSelectorReview && <TVButton label="TOUR SELECTOR REVIEW" onPress={onTourSelectorReview}/>} 
         <TVButton label="PLAY FULL MOVEMENT" preferred onPress={onFullMovement}/>
         <TVButton label="HIGHLIGHTS TOUR" onPress={onHighlightsTour}/>
       </View>

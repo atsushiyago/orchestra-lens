@@ -23,3 +23,18 @@ The derivative was made with stream-copy timing semantics for the source
 timeline: audio was re-encoded only; no trim, resample, speed change, or edit
 was applied. It exists because the previously validated Vega path is AAC/MP4,
 while this Commons source is Vorbis/Ogg.
+
+## Beethoven validation recording (offline only)
+
+- **Work:** Ludwig van Beethoven, *Symphony No. 5 in C minor, Op. 67*, I.
+  *Allegro con brio*
+- **Source / performer information:** Musopen; the Commons file page states
+  that Skidmore College Orchestra released the recording worldwide as public
+  domain.
+- **Source page:** https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_symphony_no._5_in_c_minor,_op._67_-_i._allegro_con_brio.ogg
+- **Status:** public domain, as stated on that Commons file page
+- **Original local analysis input:** `beethoven-op67-movement1-musopen-pd.ogg`,
+  Ogg/Vorbis stereo 48 kHz, 500.088 seconds, 8,824,613 bytes.
+
+This file is used only for the offline second-work validation. It is neither
+added to the Fire TV app nor deployed to AWS.
