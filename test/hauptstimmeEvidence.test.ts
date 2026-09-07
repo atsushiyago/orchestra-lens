@@ -31,6 +31,7 @@ test('real Hauptstimme evidence covers the demo measures without changing curate
   assert.deepEqual(getHauptstimmeAnnotationsAtMeasure(285).map(span => [span.part, span.label]), [['Fl 1', 'p']]);
   assert.deepEqual(getHauptstimmeAnnotationsAtMeasure(407).map(span => [span.part, span.label]), [['Fl 1', 'q']]);
   assert.equal(getHauptstimmeAnnotationsAtMeasure(1).length, 0);
-  assert.equal(getThemeLens(285)?.firstHeard.measure, 30);
+  assert.deepEqual(getHauptstimmeAnnotationsAtMeasure(290).map(span => [span.part, span.label]), [['Hn 1', 'e']]);
+  assert.equal(getThemeLens(290)?.firstHeard.measure, 30);
   assert.equal(getThemeLens(407)?.firstHeard.measure, 47);
 });

@@ -7,11 +7,11 @@ export type ThemeLensRelationship = {
 
 /** Hand-authored relationships between cue moments; separate from score assets and UI. */
 export const themeLensByMeasure: Readonly<Record<number, ThemeLensRelationship>> = {
-  285: {
-    currentMeasure: 285,
+  290: {
+    currentMeasure: 290,
     headline: "YOU'VE HEARD THIS BEFORE",
     firstHeard: {measure: 30, instrument: 'Horn', label: 'Alphorn Theme'},
-    now: {measure: 285, label: 'Transformed Return'},
+    now: {measure: 290, label: 'Transformed Return'},
   },
   407: {
     currentMeasure: 407,

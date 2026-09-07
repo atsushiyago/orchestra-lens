@@ -2,7 +2,7 @@ import {useCallback, useLayoutEffect, useRef, useState} from 'react';
 import {AppState} from 'react-native';
 import {VideoPlayer} from '@amazon-devices/react-native-w3cmedia';
 import {LogUtil} from '@amazon-devices/react-native-w3cmedia/dist/LogUtils';
-import {PeekSession, seekTo} from '../playback/controller';
+import {PeekSession, PendingSeekQueue, seekTo} from '../playback/controller';
 
 type PlaybackState = {time: number; duration: number; paused: boolean; ready: boolean; buffering: boolean; error: string};
 const initialState: PlaybackState = {time: 0, duration: 0, paused: true, ready: false, buffering: true, error: ''};
@@ -23,6 +23,7 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
   const [initialized, setInitialized] = useState(false);
   const loadedAttemptRef = useRef(-1);
   const lastLoggedSecond = useRef(-1);
+  const pendingSeek = useRef(new PendingSeekQueue());
   const log = useCallback((message: string) => {
     LogUtil.info(`[OrchestraLens Playback] ${message}`);
     // The VVD's release log stream omits JavaScript console output. Mirror the
@@ -30,6 +31,11 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
     // exact native event order and clock values.
     if (diagnosticUri) void fetch(`${diagnosticUri}?message=${encodeURIComponent(message)}`, {method: 'POST'}).catch(() => {});
   }, [diagnosticUri]);
+  const reportError = useCallback((error: unknown) => {
+    const diagnostic = String(error);
+    LogUtil.error(`[OrchestraLens Playback] action failed ${diagnostic}`);
+    setState(previous => ({...previous, error: diagnostic, buffering: false}));
+  }, []);
 
   // Required Vega ordering step 1: create the W3C media element before using it.
   useLayoutEffect(() => {
@@ -53,9 +59,28 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
       log(`error ${diagnostic}`);
       if (!disposed) setState(previous => ({...previous, buffering: false, error: diagnostic}));
     };
+    const executeSeek = (seconds: number) => {
+      try {
+        log(`seek executing target=${seconds.toFixed(3)} duration=${player.duration.toFixed(3)}`);
+        seekTo(player, seconds);
+      } catch (error) { reportError(error); }
+    };
+    const onLoadedMetadata = () => {
+      log(`loadedmetadata duration=${player.duration.toFixed(3)} readyState=${player.readyState}`);
+      update();
+    };
     const onCanPlay = () => {
       log(`canplay duration=${player.duration.toFixed(2)}`);
       if (!disposed) setState(previous => ({...previous, buffering: false, ready: true}));
+      const target = pendingSeek.current.flush(true, executeSeek);
+      if (target !== undefined) log(`pending seek executed target=${target.toFixed(3)}`);
+      if (player.paused) {
+        log('play requested after canplay');
+        void player.play().then(() => log('play resolved after canplay')).catch(error => {
+          log(`play rejected after canplay ${String(error)}`);
+          reportError(error);
+        });
+      }
     };
     const onPlaying = () => {
       log('playing');
@@ -66,13 +91,14 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
       if (!disposed) setState(previous => ({...previous, buffering: true}));
     };
     const listeners: ReadonlyArray<readonly [string, () => void]> = [
-      ['loadstart', mark('loadstart')], ['loadedmetadata', mark('loadedmetadata')], ['loadeddata', mark('loadeddata')],
-      ['canplay', onCanPlay], ['playing', onPlaying], ['stalled', mark('stalled')], ['timeupdate', update],
+      ['loadstart', mark('loadstart')], ['loadedmetadata', onLoadedMetadata], ['loadeddata', mark('loadeddata')],
+      ['canplay', onCanPlay], ['playing', onPlaying], ['seeking', mark('seeking')], ['stalled', mark('stalled')], ['timeupdate', update],
       ['seeked', mark('seeked')], ['durationchange', mark('durationchange')], ['play', mark('play')],
       ['pause', mark('pause')], ['ended', mark('ended')], ['waiting', onWaiting], ['error', onError],
     ];
     loadedAttemptRef.current = -1;
     lastLoggedSecond.current = -1;
+    pendingSeek.current.clear();
     setInitialized(false);
     setState(initialState);
     log(`initialize requested attempt=${attempt}`);
@@ -99,11 +125,10 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
       player.pause();
       void initialization.then(() => player.deinitialize()).catch(() => {});
     };
-  }, [attempt, log, peek, player]);
+  }, [attempt, log, peek, player, reportError]);
 
-  // KeplerVideoView owns the render-surface lifecycle for one direct URL player.
-  // Assigning src starts Vega's resource-selection algorithm, so do it once after
-  // initialize() and do not call load() a second time.
+  // KeplerVideoView stays mounted for the whole application lifecycle. For URL
+  // mode, initialize first, attach listeners, assign src, then explicitly load.
   useLayoutEffect(() => {
     if (!initialized || loadedAttemptRef.current === attempt) return;
     loadedAttemptRef.current = attempt;
@@ -111,31 +136,30 @@ export function usePlayback(uri: string, diagnosticUri?: string) {
       player.preload = 'auto';
       player.src = uri;
       log(`src assigned uri=${player.src}`);
-      // Vega's URL-mode reference implementation starts playback immediately
-      // after source selection; it must not depend on canplay being dispatched.
-      void player.play().then(() => log('initial play() resolved')).catch(error => {
-        log(`initial play() rejected ${String(error)}`);
-        reportError(error);
-      });
+      player.load();
+      log('load called after src assignment');
     } catch (error) {
       const diagnostic = `source setup failed: ${String(error)}`;
       LogUtil.error(`[OrchestraLens Playback] ${diagnostic}`);
       setState(previous => ({...previous, buffering: false, error: diagnostic}));
     }
-  }, [attempt, initialized, log, player, uri]);
-  const reportError = useCallback((error: unknown) => {
-    const diagnostic = String(error);
-    LogUtil.error(`[OrchestraLens Playback] action failed ${diagnostic}`);
-    setState(previous => ({...previous, error: diagnostic, buffering: false}));
-  }, []);
+  }, [attempt, initialized, log, player, reportError, uri]);
 
   return {
-    player, peek, ...state,
+    player, peek, ...state, debugLog: log,
     retry: () => setAttempt(value => value + 1),
-    seek: (seconds: number) => {if (state.ready) try {seekTo(player, seconds);} catch (error) {reportError(error);}},
+    seek: (seconds: number) => {
+      const disposition = pendingSeek.current.request(seconds, state.ready, target => {
+        try {
+          log(`seek executing target=${target.toFixed(3)} duration=${player.duration.toFixed(3)}`);
+          seekTo(player, target);
+        } catch (error) { reportError(error); }
+      });
+      if (disposition === 'queued') log(`pending seek target=${seconds.toFixed(3)}; waiting for canplay`);
+    },
     toggle: () => {
       if (!state.ready) return;
-      if (player.paused) {if (player.ended) player.currentTime = 0; void player.play().catch(reportError);}
+      if (player.paused) {if (player.ended) player.currentTime = 0; log('play requested by user'); void player.play().catch(reportError);}
       else player.pause();
     },
     reportError,

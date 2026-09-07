@@ -779,140 +779,144 @@
       ],
       "textureDensity": 7
     },
-    "285": {
+    "290": {
       "parts": [
         {
           "name": "Flute 1",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "C6",
-          "highestPitch": "Db6",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Flute 2",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G5",
-          "highestPitch": "Bb5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Oboe 1",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "C5",
-          "highestPitch": "Db5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Oboe 2",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G4",
-          "highestPitch": "Bb4",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Bb Clarinet 1",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "C5",
-          "highestPitch": "D5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Bb Clarinet 2",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "A4",
-          "highestPitch": "A4",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Bassoon 1",
           "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G3",
-          "highestPitch": "Bb3",
+          "noteCount": 1,
+          "lowestPitch": "G2",
+          "highestPitch": "G2",
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Bassoon 2",
           "active": true,
-          "noteCount": 4,
-          "lowestPitch": "Eb3",
-          "highestPitch": "E3",
+          "noteCount": 1,
+          "lowestPitch": "G2",
+          "highestPitch": "G2",
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Contrabassoon",
           "active": true,
-          "noteCount": 4,
-          "lowestPitch": "Eb3",
-          "highestPitch": "E3",
-          "dynamics": [],
+          "noteCount": 1,
+          "lowestPitch": "G2",
+          "highestPitch": "G2",
+          "dynamics": [
+            "p"
+          ],
           "articulations": []
         },
         {
           "name": "C Horn 1",
           "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G4",
-          "highestPitch": "C5",
-          "dynamics": [],
+          "noteCount": 3,
+          "lowestPitch": "C5",
+          "highestPitch": "E5",
+          "dynamics": [
+            "f"
+          ],
           "articulations": []
         },
         {
           "name": "C Horn 2",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G3",
-          "highestPitch": "C4",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "E Horn 3",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "Eb5",
-          "highestPitch": "Gb5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "E Horn 4",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "Cb4",
-          "highestPitch": "Eb5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "C Trumpet 1",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G4",
-          "highestPitch": "C5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "C Trumpet 2",
-          "active": true,
-          "noteCount": 4,
-          "lowestPitch": "G3",
-          "highestPitch": "C4",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
@@ -945,6 +949,17 @@
         },
         {
           "name": "Timpani",
+          "active": true,
+          "noteCount": 2,
+          "lowestPitch": "G2",
+          "highestPitch": "G2",
+          "dynamics": [
+            "p"
+          ],
+          "articulations": []
+        },
+        {
+          "name": "Violin 1",
           "active": false,
           "noteCount": 0,
           "lowestPitch": null,
@@ -953,74 +968,59 @@
           "articulations": []
         },
         {
-          "name": "Violin 1",
-          "active": true,
-          "noteCount": 6,
-          "lowestPitch": "G5",
-          "highestPitch": "Db6",
-          "dynamics": [],
-          "articulations": []
-        },
-        {
           "name": "Violin 2",
-          "active": true,
-          "noteCount": 6,
-          "lowestPitch": "G4",
-          "highestPitch": "Db5",
+          "active": false,
+          "noteCount": 0,
+          "lowestPitch": null,
+          "highestPitch": null,
           "dynamics": [],
           "articulations": []
         },
         {
           "name": "Viola",
           "active": true,
-          "noteCount": 24,
-          "lowestPitch": "G3",
-          "highestPitch": "Bb4",
-          "dynamics": [],
+          "noteCount": 4,
+          "lowestPitch": "C3",
+          "highestPitch": "F#3",
+          "dynamics": [
+            "p"
+          ],
           "articulations": []
         },
         {
           "name": "Violoncello",
           "active": true,
           "noteCount": 4,
-          "lowestPitch": "Eb3",
-          "highestPitch": "E3",
-          "dynamics": [],
+          "lowestPitch": "E3",
+          "highestPitch": "A3",
+          "dynamics": [
+            "p"
+          ],
           "articulations": []
         },
         {
           "name": "Contrabass",
           "active": true,
-          "noteCount": 4,
-          "lowestPitch": "Eb3",
-          "highestPitch": "E3",
-          "dynamics": [],
+          "noteCount": 1,
+          "lowestPitch": "G2",
+          "highestPitch": "G2",
+          "dynamics": [
+            "p"
+          ],
           "articulations": []
         }
       ],
       "activeInstruments": [
-        "Flute 1",
-        "Flute 2",
-        "Oboe 1",
-        "Oboe 2",
-        "Bb Clarinet 1",
-        "Bb Clarinet 2",
         "Bassoon 1",
         "Bassoon 2",
         "Contrabassoon",
         "C Horn 1",
-        "C Horn 2",
-        "E Horn 3",
-        "E Horn 4",
-        "C Trumpet 1",
-        "C Trumpet 2",
-        "Violin 1",
-        "Violin 2",
+        "Timpani",
         "Viola",
         "Violoncello",
         "Contrabass"
       ],
-      "textureDensity": 104
+      "textureDensity": 17
     },
     "407": {
       "parts": [

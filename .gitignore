@@ -11,6 +11,8 @@ buildinfo.json
 
 # Generated local media and runtime diagnostics
 assets/demo*.mp4
+scores/media/*
+!scores/media/README.md
 playback-vvd.log
 VERIFICATION.md
 logs/
@@ -43,3 +45,4 @@ coverage/
 .idea/
 *.swp
 *~
+work/score-alignment-python/

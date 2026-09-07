@@ -5,7 +5,7 @@ export type SmartScoreAsset =
   | 'm62-violins'
   | 'm62-lower-strings'
   | 'm62-horn'
-  | 'm285-horn'
+  | 'm290-horn'
   | 'm47-chorale'
   | 'm407-chorale';
 
@@ -32,8 +32,8 @@ export const smartScorePartsByMeasure: Readonly<Record<number, readonly SmartSco
     {instrument: 'Lower Strings', asset: 'm62-lower-strings'},
     {instrument: 'Horn', asset: 'm62-horn'},
   ],
-  285: [
-    {instrument: 'Horn', asset: 'm285-horn'},
+  290: [
+    {instrument: 'Horn', asset: 'm290-horn'},
   ],
   407: [
     {instrument: 'Brass', asset: 'm407-chorale'},

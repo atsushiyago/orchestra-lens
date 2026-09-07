@@ -40,8 +40,8 @@ test('merged objective data responds to regenerated score facts without changing
 });
 
 test('Theme Lens relationships remain curated while runtime facts power all current cue measures', () => {
-  for (const measure of [30, 62, 285, 407]) assert.ok(getRuntimeCue(measure)?.objectiveFacts);
-  assert.deepEqual(getThemeLens(285)?.firstHeard.measure, 30);
+  for (const measure of [30, 62, 290, 407]) assert.ok(getRuntimeCue(measure)?.objectiveFacts);
+  assert.deepEqual(getThemeLens(290)?.firstHeard.measure, 30);
   assert.deepEqual(getThemeLens(407)?.firstHeard.measure, 47);
   const m30Strings = getRuntimeCue(30)?.smartScoreParts.find(part => part.instrument === 'Strings')?.objectiveParts;
   assert.deepEqual(m30Strings?.filter(part => part.active).map(part => part.name), ['Violoncello', 'Contrabass']);

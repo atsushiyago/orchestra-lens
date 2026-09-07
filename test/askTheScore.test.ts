@@ -31,7 +31,7 @@ test('Ask the Score sends only the structured measure-62 context after an explic
 
 test('Ask the Score rejects unsupported cues and leaves curated Theme Lens relationships unchanged', () => {
   assert.throws(() => buildAskTheScoreRequest(getRuntimeCue(30)!), /measure 62/);
-  assert.equal(getThemeLens(285)?.firstHeard.measure, 30);
+  assert.equal(getThemeLens(290)?.firstHeard.measure, 30);
   assert.equal(getThemeLens(407)?.firstHeard.measure, 47);
 });
 

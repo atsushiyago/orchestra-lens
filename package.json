@@ -6,11 +6,13 @@
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test test/*.test.ts",
     "build:app": "react-native build-vega --build-type Release",
+    "build:app:debug": "react-native build-vega --build-type Debug",
     "start": "react-native start",
     "demo:serve": "node scripts/serve-demo.mjs",
     "generate:score-manifest": "tsx tools/generateScoreManifest.ts",
     "generate:runtime-score-facts": "tsx tools/generateRuntimeScoreFacts.ts",
     "generate:hauptstimme-evidence": "tsx tools/generateHauptstimmeEvidence.ts",
+    "generate:highlights": "tsx tools/generateHighlights.ts",
     "test:backend": "node --import tsx --test backend/ask-the-score/test/*.test.ts"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ import type {ScoreManifest} from './generateScoreManifest';
 import type {RuntimeScoreFactsManifest} from '../src/types/scoreFacts';
 
 /** Includes each current demo cue and m.47, needed by the m.407 comparison view. */
-export const runtimeCueMeasures = [30, 47, 62, 285, 407] as const;
+export const runtimeCueMeasures = [30, 47, 62, 290, 407] as const;
 
 export function deriveRuntimeScoreFacts(
   source: ScoreManifest,

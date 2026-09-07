@@ -1,10 +1,8 @@
 # Orchestra Lens — non-AI prototype
 
-Orchestra Lens is a React Native TV prototype for Amazon Vega OS. It plays a
-known-working HTTPS MP4 and uses the video clock to select hand-authored Brahms
-score cues. Score Peek presents real public-domain excerpts from the IMSLP score
-alongside manually authored musical context. No Bedrock, generative AI, automatic
-theme detection, or automatic score analysis is implemented.
+Orchestra Lens is a React Native TV prototype for Amazon Vega OS. It uses the
+media clock to select Brahms score cues. Score Peek presents real public-domain
+excerpts from the IMSLP score alongside manually authored musical context.
 
 ## Implemented milestones
 
@@ -15,10 +13,12 @@ theme detection, or automatic score analysis is implemented.
   with the roles Main Theme, Upcoming Theme Handoff, and Harmonic Support.
 - **m.62 Smart Score:** Violins, Lower Strings, and Horn excerpts show the start
   of the main Allegro theme.
-- **m.285 Theme Lens:** a horn excerpt relates the transformed return to the
+- **m.290 Theme Lens:** a horn excerpt relates the transformed return to the
   m.30 Alphorn Theme. COMPARE shows both real excerpts in an in-place view.
 - **m.407 Theme Lens:** a climactic chorale excerpt relates back to m.47.
   COMPARE shows the m.47 and m.407 excerpts in the same in-place view.
+- **Ask the Score:** an explicit m.62 action sends compact structured context to
+  the protected Bedrock backend and displays a short, grounded response.
 
 All musical roles and relationships are static data. The source excerpts are
 cropped from the existing IMSLP public-domain Brahms Symphony No. 1 score.
@@ -64,21 +64,79 @@ vega device launch-app --device VirtualDevice \
 
 1. Launch the app and confirm the main playback screen shows Orchestra Lens,
    Brahms Symphony No. 1, transport controls, current cue, and playback time.
-2. Use **SCORE** during the placeholder cue windows below.
+2. Once the prepared Brahms media has been deployed, use **SCORE** during the
+   recording-specific cue windows below.
 3. Use **BACK** or the VVD remote Back button to return to playback. The player
    remains mounted, preserving time, pause state, and the active cue.
-4. At m.285 and m.407, select **COMPARE**. It replaces the Theme Lens body in
+4. At m.290 and m.407, select **COMPARE**. It replaces the Theme Lens body in
    place; **BACK** returns to that cue's Theme Lens without resetting playback.
 
-| Demo seconds | Cue | Score Peek content |
+| Recording seconds | Cue | Score Peek content |
 | --- | --- | --- |
-| 5–20 | m.30 | Smart Score and Orchestra X-Ray |
-| 20–40 | m.62 | Smart Score |
-| 40–60 | m.285 | Theme Lens: m.30 → m.285 |
-| 60–80 | m.407 | Theme Lens: m.47 → m.407 |
+| 126.36–141.36 | m.30 | Smart Score and Orchestra X-Ray |
+| 271.00–286.00 | m.62 | Smart Score and Ask the Score |
+| 712.239–727.239 | m.290 | Theme Lens: m.30 → m.290 |
+| 965.28–980.28 | m.407 | Theme Lens: m.47 → m.407 |
 
-The cue times are intentionally placeholder annotations for the demo video, not
-timestamps for a specific Brahms recording.
+### Performance-specific media and synchronization
+
+The target demo performance is [Brahms, *Symphony No. 1*, Op. 68, movement IV
+(Musopen Symphony Orchestra)](https://commons.wikimedia.org/wiki/File:Brahms,_Symphony_No._1_in_C_Minor,_Op._68_-_IV._Adagio_-_Pi%C3%B9_andante_-_Allegro_non_troppo,_ma_con_brio.ogg).
+Its Commons Summary identifies the source/author as **Musopen Symphony
+Orchestra** and explicitly dedicates the file under **CC0 1.0 Universal**. Its
+embedded file metadata also names **Czech National Symphony Orchestra**; both
+attributions are preserved without inference. The source is 1,016.928 seconds
+of Ogg/Vorbis stereo audio at 48 kHz (23,396,499 bytes). Attribution and local
+preparation details are kept in
+[`scores/media/README.md`](scores/media/README.md).
+
+The local deployment input is an AAC-LC 48 kHz M4A/MP4 derivative at 192 kbps
+(24,801,149 bytes). Re-encoding changes neither trim nor playback speed, so its
+duration remains 1,016.928 seconds. It is prepared because Vega compatibility
+with Ogg/Vorbis is unverified while the app's working playback path is AAC/MP4.
+The application deliberately does **not** hotlink Commons. The prepared object
+is private in S3 and is delivered only by its dedicated CloudFront HTTPS URL.
+
+`src/data/performanceAlignment.ts` stores only the selected recording identity
+and timing anchors. The alignment was produced by matching score-position
+pitch-class frames to the actual recording's audio chroma, then retaining the
+reviewed anchors: m.30 126.36s, m.47 168.36s, m.62 271.00s, the validated
+m.290 712.239s automatic prediction, and m.407 965.28s. This is a
+performance-specific score/audio mapping, not a
+calculation from tempo markings. Score facts, curated roles, Hauptstimme
+evidence, assets, and Theme Lens relationships remain measure-based and do not
+contain playback timestamps.
+
+### Offline score-to-audio alignment
+
+`tools/alignScoreToPerformance.py` is a preprocessing pipeline for a specific
+recording, separate from the Fire TV app. It converts MusicXML score positions
+into a pitch-class timeline, extracts CQT chroma from locally decoded audio at
+22,050 Hz (5 Hz alignment frames), and applies monotonic dynamic time warping.
+The generated map is written to
+`src/data/generated/brahms-op68-movement4-performance-alignment.json` with a
+CSV counterpart. A different performance can therefore share the score facts,
+Hauptstimme evidence, and curated interpretation while receiving its own map.
+
+The current Brahms run explicitly constrains only the manually verified
+landmarks m.30 = 126.36s and m.62 = 271.00s. The m.290 prediction is the
+validated user-facing Horn cue; the prior m.285 cue is not user-facing. Run it
+locally after installing the Python tool
+dependencies in an ignored workspace directory:
+
+```bash
+python3 -m pip install --target work/score-alignment-python scipy librosa pandas music21 synctoolbox
+MPLCONFIGDIR=work/mpl PYTHONPATH=work/score-alignment-python python3 tools/alignScoreToPerformance.py \
+  --musicxml scores/real/Brahms_Op68_Movement4.musicxml \
+  --positions scores/real/Brahms_Op68_Movement4_positions.csv \
+  --audio scores/media/brahms-op68-movement4-musopen-cc0.m4a \
+  --output src/data/generated/brahms-op68-movement4-performance-alignment.json \
+  --csv src/data/generated/brahms-op68-movement4-performance-alignment.csv \
+  --report work/brahms-op68-movement4-alignment-report.json
+```
+
+Generated alignment remains review material until approved for a cue.
+`performanceAlignment.ts` uses the approved generated m.290 prediction.
 
 ## Offline MusicXML preprocessing
 
@@ -108,7 +166,42 @@ Hauptstimme annotations → human-authored main-voice evidence ─────�
 curated Orchestra Lens interpretation → presentation semantics ─────────┘
 ```
 
-`generate:runtime-score-facts` selects only m.30, m.47, m.62, m.285, and
+### Offline Highlight Detector
+
+`generate:highlights` is a separate, deterministic preprocessing step for
+human review. It reads the complete objective score manifest and the published
+Hauptstimme evidence, then ranks measurable transitions across all 458
+measures. It has no dependency on Orchestra Lens's curated cue points, roles,
+or Theme Lens relationships.
+
+```sh
+npm run generate:highlights -- \
+  ./src/data/generated/brahms-op68-movement4-manifest.json \
+  ./src/data/generated/hauptstimmeEvidence.json \
+  ./src/data/generated/brahms-op68-movement4-performance-alignment.json
+```
+
+It writes a machine-readable ranked list to
+`src/data/generated/brahms-op68-movement4-highlights.json` and the top 15
+review candidates to `reports/brahms-op68-movement4-highlights.md`. Candidate
+reasons are derived from active-instrument changes, entries and dropouts,
+note-density and written-marking changes, pitch-range expansion, sparse/full
+texture contrast, and Hauptstimme span, instrument, and label events. The
+generated performance map supplies timestamps only.
+
+The weights and 12-measure event-deduplication window are recorded in each
+output. They intentionally form an explainable heuristic, not an automatic
+claim that a passage is a climax, theme, or definitive musical highlight.
+Human review decides whether a ranked candidate becomes an Orchestra Lens cue.
+
+```text
+MusicXML → objective score analysis ──────┐
+                                           ├→ Highlight Detector → ranked candidate moments → human review → Fire TV presentation
+Hauptstimme → main-voice evidence ────────┘                                      ↑
+performance alignment → candidate timestamps ───────────────────────────────────┘
+```
+
+`generate:runtime-score-facts` selects only m.30, m.47, m.62, m.290, and
 m.407 from a full generated manifest. This produces the 31 KiB
 `src/data/generated/runtimeScoreFacts.json` bundled by the app instead of the
 2.63 MiB full-score manifest.
@@ -237,7 +330,7 @@ npm run generate:score-manifest -- \
 ```
 
 The resulting `brahms-op68-movement4-manifest.json` is approximately 2.63 MiB
-and includes measures 30, 62, 285, and 407. It remains objective source data;
+and includes measures 30, 62, 290, and 407. It remains objective source data;
 it has not been connected to the Fire TV app or used to alter curated roles.
 
 ## Architecture
