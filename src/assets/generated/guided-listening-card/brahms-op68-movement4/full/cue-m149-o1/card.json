@@ -1,0 +1,30 @@
+{
+  "cueId": "cue-m149-o1",
+  "label": "STRINGS TAKE THE LEAD",
+  "listenerHint": "Listen as new instruments enter.",
+  "activeInstruments": [
+    "Violin I",
+    "Viola",
+    "Violin II",
+    "Contrabass"
+  ],
+  "scoreAsset": "score.svg",
+  "work": {
+    "composer": "Brahms",
+    "title": "Symphony No. 1",
+    "movement": "Movement IV"
+  },
+  "provenance": {
+    "generated": [
+      "Listening Cue label and recommended staves",
+      "Hauptstimme evidence",
+      "MusicXML selected active parts",
+      "Verovio SVG asset"
+    ],
+    "derived": [
+      "Main-voice display only when Hauptstimme evidence is present",
+      "Listener-facing hint"
+    ],
+    "curated": []
+  }
+}

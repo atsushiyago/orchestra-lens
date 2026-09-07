@@ -8,6 +8,7 @@ import {mediaSource} from './media';
 import {scoreEvents} from './brahms1Movement4';
 import type {ScoreEvent} from '../types/score';
 import {releaseTourCandidatesFrom, type ReleaseTourCandidate} from './tourCandidates';
+import {brahmsGuidedListeningCues} from './guidedListening';
 
 export type WorkId = 'brahms-op68-4' | 'beethoven-op67-1';
 export type WorkCapabilities = {
@@ -17,6 +18,7 @@ export type WorkCapabilities = {
   orchestraXRay: boolean;
   askTheScore: boolean;
   themeLens: boolean;
+  guidedListening: boolean;
 };
 
 export type OrchestraLensWork = {
@@ -36,6 +38,8 @@ export type OrchestraLensWork = {
   capabilities: WorkCapabilities;
   scoreEvents: readonly ScoreEvent[];
   tourCandidates: readonly ReleaseTourCandidate[];
+  /** Pre-generated, read-only cards; omitted for works without this capability. */
+  guidedListeningCues?: readonly import('../../tools/generateGuidedListeningRuntime').GuidedListeningRuntimeCue[];
 };
 
 const brahms: OrchestraLensWork = {
@@ -45,9 +49,10 @@ const brahms: OrchestraLensWork = {
     alignment: brahmsAlignment, highlights: brahmsHighlights, tourSelector: brahmsTourSelection,
     runtimeScoreFactsPath: 'src/data/generated/runtimeScoreFacts.json', hauptstimmeEvidencePath: 'src/data/generated/hauptstimmeEvidence.json',
   },
-  capabilities: {fullMovement: true, highlightsTour: true, smartScore: true, orchestraXRay: true, askTheScore: true, themeLens: true},
+  capabilities: {fullMovement: true, highlightsTour: true, smartScore: true, orchestraXRay: true, askTheScore: true, themeLens: true, guidedListening: true},
   scoreEvents,
   tourCandidates: releaseTourCandidatesFrom(brahmsTourSelection),
+  guidedListeningCues: brahmsGuidedListeningCues,
 };
 
 const beethoven: OrchestraLensWork = {
@@ -57,7 +62,7 @@ const beethoven: OrchestraLensWork = {
     alignment: beethovenAlignment, highlights: beethovenHighlights, tourSelector: beethovenTourSelection,
     hauptstimmeEvidencePath: 'src/data/generated/beethoven-op67-movement1-hauptstimme-evidence.json',
   },
-  capabilities: {fullMovement: true, highlightsTour: true, smartScore: false, orchestraXRay: false, askTheScore: false, themeLens: false},
+  capabilities: {fullMovement: true, highlightsTour: true, smartScore: false, orchestraXRay: false, askTheScore: false, themeLens: false, guidedListening: false},
   scoreEvents: [],
   tourCandidates: releaseTourCandidatesFrom(beethovenTourSelection),
 };

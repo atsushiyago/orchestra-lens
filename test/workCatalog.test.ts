@@ -21,7 +21,7 @@ test('capabilities keep unsupported Beethoven editorial controls out of Release'
   const beethoven = workById('beethoven-op67-1');
   assert.equal(brahms.capabilities.smartScore, true);
   assert.equal(brahms.capabilities.askTheScore, true);
-  assert.deepEqual(beethoven.capabilities, {fullMovement: true, highlightsTour: true, smartScore: false, orchestraXRay: false, askTheScore: false, themeLens: false});
+  assert.deepEqual(beethoven.capabilities, {fullMovement: true, highlightsTour: true, smartScore: false, orchestraXRay: false, askTheScore: false, themeLens: false, guidedListening: false});
 });
 
 test('switching catalog works requires the new media URI and does not retain the prior source', () => {

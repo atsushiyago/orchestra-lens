@@ -27,7 +27,7 @@ test('m.47 is skipped and generated cue times read the alignment artifact', () =
   assert.equal(developmentValidationCueTime(290), generatedAlignment.measures['290'].timeSeconds);
   assert.equal(developmentValidationCueTime(407), generatedAlignment.measures['407'].timeSeconds);
   assert.equal(alignedCueTime(290), generatedAlignment.measures['290'].timeSeconds);
-  assert.equal(alignedCueTime(407), 965.28);
+  assert.equal(alignedCueTime(407), generatedAlignment.measures['407'].timeSeconds);
   assert.equal(debugCueClock(developmentValidationCueTime(290)), '11:52.24');
 });
 
@@ -44,5 +44,5 @@ test('Release resolver exposes the approved m.290 cue while m.285 is not user-fa
   assert.equal(selectScoreEvent(scoreEvents, alignedCueTime(290))?.measure, 290);
   assert.equal(selectScoreEvent(scoreEvents, generatedAlignment.measures['285'].timeSeconds), undefined);
   assert.equal(selectScoreEvent(scoreEvents, alignedCueTime(407))?.measure, 407);
-  assert.equal(selectScoreEvent(scoreEvents, developmentValidationCueTime(407)), undefined);
+  assert.equal(selectScoreEvent(scoreEvents, developmentValidationCueTime(407))?.measure, 407);
 });

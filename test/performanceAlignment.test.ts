@@ -6,6 +6,7 @@ import {mediaSource} from '../src/data/media';
 import {selectScoreEvent} from '../src/hooks/scoreSynchronization';
 import {getRuntimeCue} from '../src/data/runtimeCue';
 import {buildAskTheScoreRequest} from '../src/askTheScore';
+import generatedAlignment from '../src/data/generated/brahms-op68-movement4-performance-alignment.json';
 
 test('the staged demo recording is the CC0 Brahms movement-IV performance', () => {
   assert.equal(brahmsMovement4Recording.license, 'CC0-1.0');
@@ -35,4 +36,9 @@ test('aligned cue lookup preserves score experiences and Ask the Score at m.62',
   const cue = getRuntimeCue(62);
   assert.ok(cue);
   assert.equal(buildAskTheScoreRequest(cue).context.measure, 62);
+});
+
+test('Release m.407 contextual timing derives from the validated generated alignment', () => {
+  assert.equal(brahmsMovement4PerformanceAlignment.cues[407].timeSeconds, generatedAlignment.measures['407'].timeSeconds);
+  assert.equal(brahmsMovement4PerformanceAlignment.cues[47].timeSeconds, 168.36);
 });

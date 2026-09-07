@@ -1,0 +1,188 @@
+{
+  "generator": {
+    "version": 2,
+    "renderer": "Orchestra Lens deterministic MusicXML subset SVG renderer (Node/TypeScript, project source)",
+    "source": "Structured MusicXML; no IMSLP raster source or cloud service.",
+    "writtenPitchPolicy": "Renders MusicXML <pitch> values unchanged. MusicXML <transpose> is detected and reported but is not applied, so transposing parts retain the source score’s written notation.",
+    "notationLimitations": [
+      "Multiple voices are detected and rendered in one simplified horizontal stream.",
+      "Tuplets are detected but not bracketed or numbered.",
+      "Basic beams, ties, dynamics, staccato, and accent marks are supported; slurs and advanced collision avoidance are not."
+    ]
+  },
+  "cues": [
+    {
+      "cueId": "cue-m1-o1",
+      "measure": 1,
+      "timestampSec": 0.6,
+      "label": "STRINGS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      },
+      "renderWindow": {
+        "startMeasure": 1,
+        "endMeasure": 4
+      },
+      "asset": "cue-cue-m1-o1.svg",
+      "unsupportedNotation": [],
+      "writtenPitch": true,
+      "transposingParts": []
+    },
+    {
+      "cueId": "cue-m30-o1",
+      "measure": 30,
+      "timestampSec": 126.36,
+      "label": "BRASS TAKE THE LEAD",
+      "recommendedStaves": [
+        "C Horn 1",
+        "Trombone 1",
+        "Trombone 2",
+        "Trombone 3"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "BRASS",
+        "selectedFamilyCounts": {
+          "BRASS": 4
+        },
+        "message": "BRASS provides 4/4 displayed staves."
+      },
+      "renderWindow": {
+        "startMeasure": 29,
+        "endMeasure": 32
+      },
+      "asset": "cue-cue-m30-o1.svg",
+      "unsupportedNotation": [],
+      "writtenPitch": true,
+      "transposingParts": []
+    },
+    {
+      "cueId": "cue-m38-o1",
+      "measure": 38,
+      "timestampSec": 165.8,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Flute 1",
+        "Bassoon 1",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "WOODWINDS",
+        "selectedFamilyCounts": {
+          "WOODWINDS": 4
+        },
+        "message": "WOODWINDS provides 4/4 displayed staves."
+      },
+      "renderWindow": {
+        "startMeasure": 37,
+        "endMeasure": 40
+      },
+      "asset": "cue-cue-m38-o1.svg",
+      "unsupportedNotation": [],
+      "writtenPitch": true,
+      "transposingParts": [
+        "Bb Clarinet 1",
+        "Bb Clarinet 2"
+      ]
+    },
+    {
+      "cueId": "cue-m97-o1",
+      "measure": 97,
+      "timestampSec": 343.639,
+      "label": "STRINGS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Violin 1",
+        "Viola",
+        "Contrabass",
+        "Violin 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      },
+      "renderWindow": {
+        "startMeasure": 96,
+        "endMeasure": 99
+      },
+      "asset": "cue-cue-m97-o1.svg",
+      "unsupportedNotation": [],
+      "writtenPitch": true,
+      "transposingParts": [
+        "Contrabass"
+      ]
+    },
+    {
+      "cueId": "cue-m280-o1",
+      "measure": 280,
+      "timestampSec": 676.493,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Bassoon 1",
+        "Bassoon 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "WOODWINDS",
+        "selectedFamilyCounts": {
+          "WOODWINDS": 4
+        },
+        "message": "WOODWINDS provides 4/4 displayed staves."
+      },
+      "renderWindow": {
+        "startMeasure": 279,
+        "endMeasure": 282
+      },
+      "asset": "cue-cue-m280-o1.svg",
+      "unsupportedNotation": [],
+      "writtenPitch": true,
+      "transposingParts": []
+    },
+    {
+      "cueId": "cue-m404-o1",
+      "measure": 404,
+      "timestampSec": 942.83,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "WOODWINDS",
+        "selectedFamilyCounts": {
+          "WOODWINDS": 4
+        },
+        "message": "WOODWINDS provides 4/4 displayed staves."
+      },
+      "renderWindow": {
+        "startMeasure": 403,
+        "endMeasure": 406
+      },
+      "asset": "cue-cue-m404-o1.svg",
+      "unsupportedNotation": [],
+      "writtenPitch": true,
+      "transposingParts": []
+    }
+  ]
+}

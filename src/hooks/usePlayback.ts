@@ -3,6 +3,7 @@ import {AppState} from 'react-native';
 import {VideoPlayer} from '@amazon-devices/react-native-w3cmedia';
 import {LogUtil} from '@amazon-devices/react-native-w3cmedia/dist/LogUtils';
 import {PeekSession, PendingSeekQueue, seekTo} from '../playback/controller';
+import {SourceTransitionCoordinator, maySeekActiveSource, sourceIsReady} from '../playback/mediaSourceLifecycle';
 
 type PlaybackState = {time: number; duration: number; paused: boolean; ready: boolean; buffering: boolean; error: string};
 const initialState: PlaybackState = {time: 0, duration: 0, paused: true, ready: false, buffering: true, error: ''};
@@ -25,6 +26,8 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
   const loadedAttemptRef = useRef(-1);
   const loadedUriRef = useRef<string | undefined>(undefined);
   const requestedUriRef = useRef(uri); requestedUriRef.current = uri;
+  const sourceTransitions = useRef(new SourceTransitionCoordinator());
+  const activeSourceGeneration = useRef(0);
   const lastLoggedSecond = useRef(-1);
   const pendingSeek = useRef(new PendingSeekQueue());
   const shouldPlayWhenReady = useRef(autoPlay);
@@ -57,7 +60,7 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
       setState(previous => previous.time === time && previous.duration === duration && previous.paused === player.paused
         ? previous : {...previous, time, duration, paused: player.paused});
     };
-    const mark = (name: string) => () => {log(`${name} readyState=${player.readyState} currentTime=${player.currentTime.toFixed(2)}`); update();};
+    const mark = (name: string) => () => {log(`${name} readyState=${player.readyState} currentTime=${player.currentTime.toFixed(2)} duration=${player.duration.toFixed(2)} paused=${player.paused} ended=${player.ended}`); update();};
     const onError = () => {
       const diagnostic = mediaError(player);
       log(`error ${diagnostic}`);
@@ -65,8 +68,9 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
     };
     const executeSeek = (seconds: number) => {
       try {
-        log(`seek executing target=${seconds.toFixed(3)} duration=${player.duration.toFixed(3)}`);
+        log(`seek executing target=${seconds.toFixed(3)} currentTime=${player.currentTime.toFixed(3)} duration=${player.duration.toFixed(3)} readyState=${player.readyState} paused=${player.paused} ended=${player.ended}`);
         seekTo(player, seconds);
+        log(`seek assigned target=${seconds.toFixed(3)} currentTime=${player.currentTime.toFixed(3)} duration=${player.duration.toFixed(3)} paused=${player.paused} ended=${player.ended}`);
       } catch (error) { reportError(error); }
     };
     const onLoadedMetadata = () => {
@@ -74,8 +78,15 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
       update();
     };
     const onCanPlay = () => {
-      log(`canplay duration=${player.duration.toFixed(2)}`);
-      if (!disposed) { setReadyUri(requestedUriRef.current); setState(previous => ({...previous, buffering: false, ready: true})); }
+      const requestedUri = requestedUriRef.current;
+      // A late canplay from a replaced source is not allowed to make a new URI
+      // look ready. Vega retains the prior event briefly during URL switches.
+      if (player.src !== requestedUri || loadedUriRef.current !== requestedUri) {
+        log(`canplay ignored stale source playerUri=${player.src} requestedUri=${requestedUri} loadedUri=${loadedUriRef.current ?? 'none'} generation=${activeSourceGeneration.current}`);
+        return;
+      }
+      log(`canplay duration=${player.duration.toFixed(2)} uri=${requestedUri} generation=${activeSourceGeneration.current}`);
+      if (!disposed) { setReadyUri(requestedUri); setState(previous => ({...previous, buffering: false, ready: true})); }
       const target = pendingSeek.current.flush(true, executeSeek);
       if (target !== undefined) log(`pending seek executed target=${target.toFixed(3)}`);
       if (player.paused && shouldPlayWhenReady.current) {
@@ -87,7 +98,7 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
       }
     };
     const onPlaying = () => {
-      log('playing');
+      log(`playing currentTime=${player.currentTime.toFixed(3)} duration=${player.duration.toFixed(3)} paused=${player.paused} ended=${player.ended}`);
       if (!disposed) setState(previous => ({...previous, buffering: false, ready: true, paused: false}));
     };
     const onWaiting = () => {
@@ -137,16 +148,19 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
     if (!initialized || (loadedAttemptRef.current === attempt && loadedUriRef.current === uri)) return;
     loadedAttemptRef.current = attempt;
     loadedUriRef.current = uri;
+    const generation = sourceTransitions.current.begin();
+    activeSourceGeneration.current = generation;
     try {
       shouldPlayWhenReady.current = false;
       pendingSeek.current.clear();
       setReadyUri(undefined);
       setState(initialState);
       player.preload = 'auto';
+      log(`source transition generation=${generation} requestedUri=${uri} previousUri=${player.src || 'none'} attempt=${attempt}`);
       player.src = uri;
-      log(`src assigned uri=${player.src}`);
+      log(`src assigned uri=${player.src} generation=${generation}`);
       player.load();
-      log('load called after src assignment');
+      log(`load called after src assignment generation=${generation}`);
     } catch (error) {
       const diagnostic = `source setup failed: ${String(error)}`;
       LogUtil.error(`[OrchestraLens Playback] ${diagnostic}`);
@@ -155,16 +169,18 @@ export function usePlayback(uri: string, diagnosticUri?: string, autoPlay = true
   }, [attempt, initialized, log, player, reportError, uri]);
 
   return {
-    player, peek, readyUri, ...state, debugLog: log,
-    retry: () => setAttempt(value => value + 1),
+    player, peek, readyUri, sourceReady: sourceIsReady(requestedUriRef.current, readyUri, state.ready), sourceGeneration: activeSourceGeneration.current, ...state, debugLog: log,
+    retry: () => { log(`retry requested uri=${requestedUriRef.current} currentUri=${player.src || 'none'} readyUri=${readyUri ?? 'none'} generation=${activeSourceGeneration.current}`); setAttempt(value => value + 1); },
     seek: (seconds: number) => {
-      const disposition = pendingSeek.current.request(seconds, state.ready, target => {
+      const canSeek = maySeekActiveSource({requestedUri: requestedUriRef.current, readyUri, ready: state.ready, duration: player.duration});
+      const disposition = pendingSeek.current.request(seconds, canSeek, target => {
         try {
-          log(`seek executing target=${target.toFixed(3)} duration=${player.duration.toFixed(3)}`);
+          log(`seek executing target=${target.toFixed(3)} currentTime=${player.currentTime.toFixed(3)} duration=${player.duration.toFixed(3)} readyState=${player.readyState} paused=${player.paused} ended=${player.ended}`);
           seekTo(player, target);
+          log(`seek assigned target=${target.toFixed(3)} currentTime=${player.currentTime.toFixed(3)} duration=${player.duration.toFixed(3)} paused=${player.paused} ended=${player.ended}`);
         } catch (error) { reportError(error); }
       });
-      if (disposition === 'queued') log(`pending seek target=${seconds.toFixed(3)}; waiting for canplay`);
+      if (disposition === 'queued') log(`pending seek target=${seconds.toFixed(3)}; waiting for current URI canplay requestedUri=${requestedUriRef.current} readyUri=${readyUri ?? 'none'} duration=${player.duration.toFixed(3)} generation=${activeSourceGeneration.current}`);
     },
     play: () => {
       shouldPlayWhenReady.current = true;

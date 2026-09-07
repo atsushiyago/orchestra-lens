@@ -1,0 +1,30 @@
+{
+  "cueId": "cue-m290-o1",
+  "label": "TEXTURE THINS",
+  "listenerHint": "Listen as new instruments enter.",
+  "activeInstruments": [
+    "C Horn I",
+    "Timpani",
+    "Violoncello",
+    "Viola"
+  ],
+  "scoreAsset": "score.svg",
+  "work": {
+    "composer": "Brahms",
+    "title": "Symphony No. 1",
+    "movement": "Movement IV"
+  },
+  "provenance": {
+    "generated": [
+      "Listening Cue label and recommended staves",
+      "Hauptstimme evidence",
+      "MusicXML selected active parts",
+      "Verovio SVG asset"
+    ],
+    "derived": [
+      "Main-voice display only when Hauptstimme evidence is present",
+      "Listener-facing hint"
+    ],
+    "curated": []
+  }
+}

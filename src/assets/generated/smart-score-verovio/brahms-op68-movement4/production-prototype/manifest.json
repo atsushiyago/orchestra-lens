@@ -1,0 +1,254 @@
+{
+  "generator": {
+    "version": 1,
+    "renderer": {
+      "name": "Verovio",
+      "version": "6.3.0-425dd7b",
+      "package": "verovio",
+      "license": "LGPL-3.0-or-later"
+    },
+    "options": {
+      "pageWidth": 1200,
+      "pageHeight": 500,
+      "pageMarginLeft": 14,
+      "pageMarginRight": 14,
+      "pageMarginTop": 12,
+      "pageMarginBottom": 12,
+      "scale": 55,
+      "breaks": "none",
+      "adjustPageHeight": true,
+      "footer": "none",
+      "header": "none",
+      "svgViewBox": true
+    },
+    "pipeline": "Listening Cue → recommended staves → standalone MusicXML excerpt → local Verovio WASM → SVG"
+  },
+  "cues": [
+    {
+      "cueId": "cue-m1-o1",
+      "measure": 1,
+      "timestampSec": 0.6,
+      "label": "STRINGS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "renderWindow": {
+        "startMeasure": 1,
+        "endMeasure": 3
+      },
+      "musicxml": "cue-cue-m1-o1.musicxml",
+      "svg": "cue-cue-m1-o1.svg",
+      "extractionWarnings": [
+        "Part groups and non-selected parts are omitted; selected MusicXML note and direction payloads are retained verbatim.",
+        "Excerpt boundary intersects one or more MusicXML slurs; Verovio retains the in-window notation and may warn about the open boundary."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "ties": true,
+        "beams": false,
+        "dynamics": true,
+        "articulations": false,
+        "transpose": false,
+        "warnings": []
+      },
+      "layout": {
+        "systemCount": 1,
+        "viewBox": "0 0 770 460",
+        "structurallyFitsTvOverlay": true,
+        "status": "STRUCTURAL PASS — USER VISUAL REVIEW REQUIRED"
+      }
+    },
+    {
+      "cueId": "cue-m30-o1",
+      "measure": 30,
+      "timestampSec": 126.36,
+      "label": "BRASS TAKE THE LEAD",
+      "recommendedStaves": [
+        "C Horn 1",
+        "Trombone 1",
+        "Trombone 2",
+        "Trombone 3"
+      ],
+      "renderWindow": {
+        "startMeasure": 29,
+        "endMeasure": 32
+      },
+      "musicxml": "cue-cue-m30-o1.musicxml",
+      "svg": "cue-cue-m30-o1.svg",
+      "extractionWarnings": [
+        "Part groups and non-selected parts are omitted; selected MusicXML note and direction payloads are retained verbatim.",
+        "Excerpt boundary intersects one or more MusicXML ties; Verovio retains the in-window notation and may warn about the open boundary."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "ties": true,
+        "beams": true,
+        "dynamics": true,
+        "articulations": false,
+        "transpose": false,
+        "warnings": []
+      },
+      "layout": {
+        "systemCount": 1,
+        "viewBox": "0 0 825 434",
+        "structurallyFitsTvOverlay": true,
+        "status": "STRUCTURAL PASS — USER VISUAL REVIEW REQUIRED"
+      }
+    },
+    {
+      "cueId": "cue-m38-o1",
+      "measure": 38,
+      "timestampSec": 165.8,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Flute 1",
+        "Bassoon 1",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 37,
+        "endMeasure": 40
+      },
+      "musicxml": "cue-cue-m38-o1.musicxml",
+      "svg": "cue-cue-m38-o1.svg",
+      "extractionWarnings": [
+        "Part groups and non-selected parts are omitted; selected MusicXML note and direction payloads are retained verbatim.",
+        "Excerpt boundary intersects one or more MusicXML ties; Verovio retains the in-window notation and may warn about the open boundary.",
+        "Excerpt boundary intersects one or more MusicXML slurs; Verovio retains the in-window notation and may warn about the open boundary."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "ties": true,
+        "beams": true,
+        "dynamics": true,
+        "articulations": false,
+        "transpose": true,
+        "warnings": []
+      },
+      "layout": {
+        "systemCount": 1,
+        "viewBox": "0 0 830 439",
+        "structurallyFitsTvOverlay": true,
+        "status": "STRUCTURAL PASS — USER VISUAL REVIEW REQUIRED"
+      }
+    },
+    {
+      "cueId": "cue-m97-o1",
+      "measure": 97,
+      "timestampSec": 343.639,
+      "label": "STRINGS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Violin 1",
+        "Viola",
+        "Contrabass",
+        "Violin 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 96,
+        "endMeasure": 99
+      },
+      "musicxml": "cue-cue-m97-o1.musicxml",
+      "svg": "cue-cue-m97-o1.svg",
+      "extractionWarnings": [
+        "Part groups and non-selected parts are omitted; selected MusicXML note and direction payloads are retained verbatim."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "ties": false,
+        "beams": true,
+        "dynamics": true,
+        "articulations": true,
+        "transpose": true,
+        "warnings": []
+      },
+      "layout": {
+        "systemCount": 1,
+        "viewBox": "0 0 995 498",
+        "structurallyFitsTvOverlay": true,
+        "status": "STRUCTURAL PASS — USER VISUAL REVIEW REQUIRED"
+      }
+    },
+    {
+      "cueId": "cue-m280-o1",
+      "measure": 280,
+      "timestampSec": 676.493,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Bassoon 1",
+        "Bassoon 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 279,
+        "endMeasure": 282
+      },
+      "musicxml": "cue-cue-m280-o1.musicxml",
+      "svg": "cue-cue-m280-o1.svg",
+      "extractionWarnings": [
+        "Part groups and non-selected parts are omitted; selected MusicXML note and direction payloads are retained verbatim."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "ties": false,
+        "beams": true,
+        "dynamics": true,
+        "articulations": false,
+        "transpose": false,
+        "warnings": []
+      },
+      "layout": {
+        "systemCount": 1,
+        "viewBox": "0 0 1038 495",
+        "structurallyFitsTvOverlay": true,
+        "status": "STRUCTURAL PASS — USER VISUAL REVIEW REQUIRED"
+      }
+    },
+    {
+      "cueId": "cue-m404-o1",
+      "measure": 404,
+      "timestampSec": 942.83,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "recommendedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 403,
+        "endMeasure": 406
+      },
+      "musicxml": "cue-cue-m404-o1.musicxml",
+      "svg": "cue-cue-m404-o1.svg",
+      "extractionWarnings": [
+        "Part groups and non-selected parts are omitted; selected MusicXML note and direction payloads are retained verbatim."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "ties": false,
+        "beams": true,
+        "dynamics": true,
+        "articulations": true,
+        "transpose": false,
+        "warnings": []
+      },
+      "layout": {
+        "systemCount": 1,
+        "viewBox": "0 0 812 474",
+        "structurallyFitsTvOverlay": true,
+        "status": "STRUCTURAL PASS — USER VISUAL REVIEW REQUIRED"
+      }
+    }
+  ]
+}

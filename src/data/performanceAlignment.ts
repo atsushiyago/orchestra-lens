@@ -24,7 +24,7 @@ export const brahmsMovement4PerformanceAlignment = {
     47: {timeSeconds: 168.36},
     62: {timeSeconds: 271.0},
     290: {timeSeconds: generatedAlignment.measures['290'].timeSeconds},
-    407: {timeSeconds: 965.28},
+    407: {timeSeconds: generatedAlignment.measures['407'].timeSeconds},
   },
 } as const;
 

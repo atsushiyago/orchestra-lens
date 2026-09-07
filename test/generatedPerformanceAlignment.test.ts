@@ -26,7 +26,7 @@ test('accepted anchors are explicitly recorded and the approved Horn cue is pres
   assert.equal(generated.measures['62'].timeSeconds, 271);
   assert.equal(generated.measures['290'].timeSeconds, 712.239);
   assert.notEqual(generated.measures['285'].timeSeconds, 761.8);
-  assert.notEqual(generated.measures['407'].timeSeconds, 965.28);
+  assert.equal(generated.measures['407'].timeSeconds, 946.315);
 });
 
 test('generated alignment identifies deterministic local inputs', () => {

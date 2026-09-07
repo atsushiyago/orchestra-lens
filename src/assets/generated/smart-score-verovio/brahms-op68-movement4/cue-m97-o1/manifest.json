@@ -1,0 +1,55 @@
+{
+  "cue": {
+    "id": "cue-m97-o1",
+    "measure": 97,
+    "timestampSec": 343.639,
+    "label": "STRINGS TAKE THE LEAD",
+    "recommendedStaves": [
+      "Violin 1",
+      "Viola",
+      "Contrabass",
+      "Violin 2"
+    ],
+    "window": {
+      "startMeasure": 96,
+      "endMeasure": 99
+    }
+  },
+  "renderer": {
+    "name": "Verovio",
+    "version": "6.3.0-425dd7b",
+    "package": "verovio",
+    "license": "LGPL-3.0-or-later",
+    "method": "Official local npm WASM toolkit: setOptions → loadData(standalone MusicXML) → renderToSVG(1).",
+    "options": {
+      "pageWidth": 1200,
+      "pageHeight": 460,
+      "pageMarginLeft": 14,
+      "pageMarginRight": 14,
+      "pageMarginTop": 12,
+      "pageMarginBottom": 12,
+      "scale": 55,
+      "breaks": "none",
+      "adjustPageHeight": true,
+      "footer": "none",
+      "header": "none",
+      "svgViewBox": true
+    }
+  },
+  "assets": {
+    "musicxml": "excerpt.musicxml",
+    "customSvg": "custom-renderer.svg",
+    "verovioSvg": "verovio.svg",
+    "reviewHtml": "review.html"
+  },
+  "extraction": {
+    "preserved": [
+      "Selected MusicXML parts",
+      "Measure payloads 96–99",
+      "Clefs, key/time signatures, beams, ties, tuplets, multiple voices, directions/dynamics, articulations, and transpose metadata carried in selected source XML."
+    ],
+    "lost": [
+      "Part groups and all non-selected parts are omitted. No note-level payload is flattened or rewritten."
+    ]
+  }
+}

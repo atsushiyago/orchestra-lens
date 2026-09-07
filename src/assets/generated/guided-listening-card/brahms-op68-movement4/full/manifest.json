@@ -1,0 +1,989 @@
+{
+  "generator": {
+    "version": 1,
+    "renderer": {
+      "name": "Verovio",
+      "version": "6.3.0-425dd7b",
+      "options": {
+        "pageWidth": 1200,
+        "pageHeight": 500,
+        "pageMarginLeft": 14,
+        "pageMarginRight": 14,
+        "pageMarginTop": 12,
+        "pageMarginBottom": 12,
+        "scale": 55,
+        "breaks": "none",
+        "adjustPageHeight": true,
+        "footer": "none",
+        "header": "none",
+        "svgViewBox": true
+      }
+    },
+    "filtering": "Remove only <lyric> annotations with red color, a single ASCII letter, syllabic=single, and a synthetic relative-y offset. Preserve ordinary lyrics, directions, dynamics, tempo/expression text, articulation, and rehearsal marks."
+  },
+  "cards": [
+    {
+      "status": "generated",
+      "cueId": "cue-m1-o1",
+      "measure": 1,
+      "timestampSec": 0.6,
+      "region": {
+        "startSec": 0.6,
+        "endSec": 14.6
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "renderWindow": {
+        "startMeasure": 1,
+        "endMeasure": 3
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m1-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m12-o1",
+      "measure": 12,
+      "timestampSec": 45.338,
+      "region": {
+        "startSec": 45.338,
+        "endSec": 59.338
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Violin 2",
+        "Violoncello"
+      ],
+      "renderWindow": {
+        "startMeasure": 11,
+        "endMeasure": 14
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m12-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m20-o1",
+      "measure": 20,
+      "timestampSec": 81.98,
+      "region": {
+        "startSec": 81.98,
+        "endSec": 95.98
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Viola",
+        "Violoncello",
+        "Contrabass",
+        "C Horn 1"
+      ],
+      "renderWindow": {
+        "startMeasure": 19,
+        "endMeasure": 22
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m20-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m30-o1",
+      "measure": 30,
+      "timestampSec": 126.36,
+      "region": {
+        "startSec": 126.36,
+        "endSec": 140.36
+      },
+      "label": "BRASS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "C Horn 1",
+        "Trombone 1",
+        "Trombone 2",
+        "Trombone 3"
+      ],
+      "renderWindow": {
+        "startMeasure": 29,
+        "endMeasure": 32
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m30-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m38-o1",
+      "measure": 38,
+      "timestampSec": 165.8,
+      "region": {
+        "startSec": 165.8,
+        "endSec": 179.8
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Bassoon 1",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 37,
+        "endMeasure": 40
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m38-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m47-o1",
+      "measure": 47,
+      "timestampSec": 208.262,
+      "region": {
+        "startSec": 208.262,
+        "endSec": 222.262
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Bassoon I",
+      "listenerHint": "Follow Bassoon I — the annotated main voice.",
+      "selectedStaves": [
+        "Bassoon 1",
+        "Bassoon 2",
+        "Contrabassoon",
+        "Trombone 1"
+      ],
+      "renderWindow": {
+        "startMeasure": 46,
+        "endMeasure": 49
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m47-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m62-o1",
+      "measure": 62,
+      "timestampSec": 271,
+      "region": {
+        "startSec": 271,
+        "endSec": 285
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "renderWindow": {
+        "startMeasure": 61,
+        "endMeasure": 64
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m62-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m78-o1",
+      "measure": 78,
+      "timestampSec": 306.626,
+      "region": {
+        "startSec": 306.626,
+        "endSec": 320.626
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Bb Clarinet 1",
+        "Bb Clarinet 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 77,
+        "endMeasure": 80
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m78-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m97-o1",
+      "measure": 97,
+      "timestampSec": 343.639,
+      "region": {
+        "startSec": 343.639,
+        "endSec": 357.639
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice instruments dropping out.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Contrabass",
+        "Violin 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 96,
+        "endMeasure": 99
+      },
+      "extractionWarnings": [
+        "Removed 2 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 2,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m97-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m115-o1",
+      "measure": 115,
+      "timestampSec": 376.639,
+      "region": {
+        "startSec": 376.639,
+        "endSec": 390.639
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Bb Clarinet 1"
+      ],
+      "renderWindow": {
+        "startMeasure": 114,
+        "endMeasure": 117
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m115-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m133-o1",
+      "measure": 133,
+      "timestampSec": 408.292,
+      "region": {
+        "startSec": 408.292,
+        "endSec": 422.292
+      },
+      "label": "TEXTURE THINS",
+      "mainVoice": "Oboe I",
+      "listenerHint": "Follow Oboe I — the annotated main voice.",
+      "selectedStaves": [
+        "Oboe 1",
+        "Contrabass",
+        "Viola",
+        "Violin 1"
+      ],
+      "renderWindow": {
+        "startMeasure": 132,
+        "endMeasure": 135
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": true,
+        "warnings": [
+          "Oboe 1, m.135: Tuplets are shown at their written positions but are not bracketed or numbered."
+        ]
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m133-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m149-o1",
+      "measure": 149,
+      "timestampSec": 436.439,
+      "region": {
+        "startSec": 436.439,
+        "endSec": 450.439
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Violin 2",
+        "Contrabass"
+      ],
+      "renderWindow": {
+        "startMeasure": 148,
+        "endMeasure": 151
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m149-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m165-o1",
+      "measure": 165,
+      "timestampSec": 464.639,
+      "region": {
+        "startSec": 464.639,
+        "endSec": 478.639
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Contrabassoon",
+        "Bassoon 1"
+      ],
+      "renderWindow": {
+        "startMeasure": 164,
+        "endMeasure": 167
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m165-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m181-o1",
+      "measure": 181,
+      "timestampSec": 493.893,
+      "region": {
+        "startSec": 493.893,
+        "endSec": 507.893
+      },
+      "label": "BRASS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "E Horn 3",
+        "E Horn 4",
+        "Contrabass",
+        "Violin 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 180,
+        "endMeasure": 183
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m181-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m212-o1",
+      "measure": 212,
+      "timestampSec": 551.959,
+      "region": {
+        "startSec": 551.959,
+        "endSec": 565.959
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Oboe I",
+      "listenerHint": "Follow Oboe I — the annotated main voice.",
+      "selectedStaves": [
+        "Oboe 1",
+        "Flute 1",
+        "Flute 2",
+        "Oboe 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 211,
+        "endMeasure": 214
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m212-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m226-o1",
+      "measure": 226,
+      "timestampSec": 576.739,
+      "region": {
+        "startSec": 576.739,
+        "endSec": 590.739
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice the texture thinning.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Contrabass",
+        "Violoncello"
+      ],
+      "renderWindow": {
+        "startMeasure": 225,
+        "endMeasure": 228
+      },
+      "extractionWarnings": [
+        "Removed 2 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 2,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m226-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m258-o1",
+      "measure": 258,
+      "timestampSec": 634.026,
+      "region": {
+        "startSec": 634.026,
+        "endSec": 648.026
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Contrabass",
+        "Viola"
+      ],
+      "renderWindow": {
+        "startMeasure": 257,
+        "endMeasure": 260
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 2 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 2,
+      "verovioWarnings": [
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m258-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m280-o1",
+      "measure": 280,
+      "timestampSec": 676.493,
+      "region": {
+        "startSec": 676.493,
+        "endSec": 690.493
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Bassoon 1",
+        "Bassoon 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 279,
+        "endMeasure": 282
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m280-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m290-o1",
+      "measure": 290,
+      "timestampSec": 712.239,
+      "region": {
+        "startSec": 712.239,
+        "endSec": 726.239
+      },
+      "label": "TEXTURE THINS",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "C Horn 1",
+        "Timpani",
+        "Violoncello",
+        "Viola"
+      ],
+      "renderWindow": {
+        "startMeasure": 289,
+        "endMeasure": 292
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Removed 2 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 2,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": true,
+        "warnings": [
+          "Timpani, m.290: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Timpani, m.291: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Timpani, m.292: Tuplets are shown at their written positions but are not bracketed or numbered."
+        ]
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m290-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m298-o1",
+      "measure": 298,
+      "timestampSec": 750.88,
+      "region": {
+        "startSec": 750.88,
+        "endSec": 764.88
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice instruments dropping out.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Violoncello",
+        "Violin 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 297,
+        "endMeasure": 300
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [
+        "[Warning] tie '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m298-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m315-o1",
+      "measure": 315,
+      "timestampSec": 793.239,
+      "region": {
+        "startSec": 793.239,
+        "endSec": 807.239
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice the texture thinning.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Violin 2",
+        "Contrabass"
+      ],
+      "renderWindow": {
+        "startMeasure": 314,
+        "endMeasure": 317
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 2 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 2,
+      "verovioWarnings": [
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.",
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.",
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.",
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.",
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'.",
+        "[Warning] slur '<generated-id>' is ignored, since start '<generated-id>' does not occur temporally before end '<generated-id>'."
+      ],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m315-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m333-o1",
+      "measure": 333,
+      "timestampSec": 824.659,
+      "region": {
+        "startSec": 824.659,
+        "endSec": 838.659
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Violin 2",
+        "Contrabass"
+      ],
+      "renderWindow": {
+        "startMeasure": 332,
+        "endMeasure": 335
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m333-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m353-o1",
+      "measure": 353,
+      "timestampSec": 860.573,
+      "region": {
+        "startSec": 860.573,
+        "endSec": 874.573
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 352,
+        "endMeasure": 355
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": true,
+        "warnings": [
+          "Flute 1, m.353: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Flute 1, m.354: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Flute 2, m.353: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Flute 2, m.354: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Oboe 1, m.353: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Oboe 1, m.354: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Oboe 2, m.353: Tuplets are shown at their written positions but are not bracketed or numbered.",
+          "Oboe 2, m.354: Tuplets are shown at their written positions but are not bracketed or numbered."
+        ]
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m353-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m372-o1",
+      "measure": 372,
+      "timestampSec": 895.298,
+      "region": {
+        "startSec": 895.298,
+        "endSec": 909.298
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 371,
+        "endMeasure": 374
+      },
+      "extractionWarnings": [
+        "Excerpt boundary intersects an open MusicXML tie.",
+        "Excerpt boundary intersects an open MusicXML slur.",
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m372-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m404-o1",
+      "measure": 404,
+      "timestampSec": 942.83,
+      "region": {
+        "startSec": 942.83,
+        "endSec": 956.83
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "mainVoice": "Flute I",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "selectedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2"
+      ],
+      "renderWindow": {
+        "startMeasure": 403,
+        "endMeasure": 406
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m404-o1"
+    },
+    {
+      "status": "generated",
+      "cueId": "cue-m448-o1",
+      "measure": 448,
+      "timestampSec": 995.573,
+      "region": {
+        "startSec": 995.573,
+        "endSec": 1009.573
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice the texture building.",
+      "selectedStaves": [
+        "Violin 1",
+        "Viola",
+        "Violin 2",
+        "Contrabass"
+      ],
+      "renderWindow": {
+        "startMeasure": 447,
+        "endMeasure": 450
+      },
+      "extractionWarnings": [
+        "Removed 1 red single-character analytical lyric annotation(s)."
+      ],
+      "removedAnalyticalLyrics": 1,
+      "verovioWarnings": [],
+      "complexity": {
+        "multipleVoices": false,
+        "tuplets": false,
+        "warnings": []
+      },
+      "semanticConsistency": true,
+      "noStrayAnalyticalLetters": true,
+      "path": "cue-m448-o1"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "cueId": "cue-m30-o1",
+  "label": "BRASS TAKE THE LEAD",
+  "listenerHint": "Listen as new instruments enter.",
+  "activeInstruments": [
+    "C Horn I",
+    "Trombone I",
+    "Trombone II",
+    "Trombone III"
+  ],
+  "scoreAsset": "score.svg",
+  "work": {
+    "composer": "Brahms",
+    "title": "Symphony No. 1",
+    "movement": "Movement IV"
+  },
+  "provenance": {
+    "generated": [
+      "Listening Cue label and recommended staves",
+      "Hauptstimme evidence",
+      "MusicXML selected active parts",
+      "Verovio SVG asset"
+    ],
+    "derived": [
+      "Main-voice display only when Hauptstimme evidence is present",
+      "Listener-facing hint"
+    ],
+    "curated": []
+  }
+}

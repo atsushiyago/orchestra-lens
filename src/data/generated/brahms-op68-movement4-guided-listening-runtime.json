@@ -1,0 +1,559 @@
+{
+  "version": 1,
+  "workId": "brahms-op68-4",
+  "cues": [
+    {
+      "id": "cue-m1-o1",
+      "startTime": 0.6,
+      "endTime": 14.6,
+      "measure": 1,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Violin I",
+        "Violin II",
+        "Viola",
+        "Violoncello"
+      ],
+      "scoreAssetKey": "cue-m1-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m12-o1",
+      "startTime": 45.338,
+      "endTime": 59.338,
+      "measure": 12,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Violin II",
+        "Violoncello"
+      ],
+      "scoreAssetKey": "cue-m12-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m20-o1",
+      "startTime": 81.98,
+      "endTime": 95.98,
+      "measure": 20,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Viola",
+        "Violoncello",
+        "Contrabass",
+        "C Horn I"
+      ],
+      "scoreAssetKey": "cue-m20-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m30-o1",
+      "startTime": 126.36,
+      "endTime": 140.36,
+      "measure": 30,
+      "label": "BRASS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "C Horn I",
+        "Trombone I",
+        "Trombone II",
+        "Trombone III"
+      ],
+      "scoreAssetKey": "cue-m30-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m38-o1",
+      "startTime": 165.8,
+      "endTime": 179.8,
+      "measure": 38,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Bassoon I",
+        "B♭ Clarinet I",
+        "B♭ Clarinet II"
+      ],
+      "scoreAssetKey": "cue-m38-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m47-o1",
+      "startTime": 208.262,
+      "endTime": 222.262,
+      "measure": 47,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Bassoon I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Bassoon I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Bassoon II",
+        "Contrabassoon",
+        "Trombone I"
+      ],
+      "scoreAssetKey": "cue-m47-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m62-o1",
+      "startTime": 271,
+      "endTime": 285,
+      "measure": 62,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Violin I",
+        "Violin II",
+        "Viola",
+        "Violoncello"
+      ],
+      "scoreAssetKey": "cue-m62-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m78-o1",
+      "startTime": 306.626,
+      "endTime": 320.626,
+      "measure": 78,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute II",
+        "B♭ Clarinet I",
+        "B♭ Clarinet II"
+      ],
+      "scoreAssetKey": "cue-m78-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m97-o1",
+      "startTime": 343.639,
+      "endTime": 357.639,
+      "measure": 97,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice instruments dropping out.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Contrabass",
+        "Violin II"
+      ],
+      "scoreAssetKey": "cue-m97-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m115-o1",
+      "startTime": 376.639,
+      "endTime": 390.639,
+      "measure": 115,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Bassoon I",
+        "Bassoon II",
+        "B♭ Clarinet I"
+      ],
+      "scoreAssetKey": "cue-m115-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m133-o1",
+      "startTime": 408.292,
+      "endTime": 422.292,
+      "measure": 133,
+      "label": "TEXTURE THINS",
+      "listenerHint": "Follow Oboe I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Oboe I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Contrabass",
+        "Viola",
+        "Violin I"
+      ],
+      "scoreAssetKey": "cue-m133-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m149-o1",
+      "startTime": 436.439,
+      "endTime": 450.439,
+      "measure": 149,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Violin II",
+        "Contrabass"
+      ],
+      "scoreAssetKey": "cue-m149-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m165-o1",
+      "startTime": 464.639,
+      "endTime": 478.639,
+      "measure": 165,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute II",
+        "Contrabassoon",
+        "Bassoon I"
+      ],
+      "scoreAssetKey": "cue-m165-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m181-o1",
+      "startTime": 493.893,
+      "endTime": 507.893,
+      "measure": 181,
+      "label": "BRASS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "E Horn III",
+        "E Horn IV",
+        "Contrabass",
+        "Violin II"
+      ],
+      "scoreAssetKey": "cue-m181-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m212-o1",
+      "startTime": 551.959,
+      "endTime": 565.959,
+      "measure": 212,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Oboe I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Oboe I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute I",
+        "Flute II",
+        "Oboe II"
+      ],
+      "scoreAssetKey": "cue-m212-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m226-o1",
+      "startTime": 576.739,
+      "endTime": 590.739,
+      "measure": 226,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice the texture thinning.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Contrabass",
+        "Violoncello"
+      ],
+      "scoreAssetKey": "cue-m226-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m258-o1",
+      "startTime": 634.026,
+      "endTime": 648.026,
+      "measure": 258,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Violin I",
+        "Violin II",
+        "Contrabass",
+        "Viola"
+      ],
+      "scoreAssetKey": "cue-m258-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m280-o1",
+      "startTime": 676.493,
+      "endTime": 690.493,
+      "measure": 280,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute II",
+        "Bassoon I",
+        "Bassoon II"
+      ],
+      "scoreAssetKey": "cue-m280-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m290-o1",
+      "startTime": 712.239,
+      "endTime": 726.239,
+      "measure": 290,
+      "label": "TEXTURE THINS",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "C Horn I",
+        "Timpani",
+        "Violoncello",
+        "Viola"
+      ],
+      "scoreAssetKey": "cue-m290-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m298-o1",
+      "startTime": 750.88,
+      "endTime": 764.88,
+      "measure": 298,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice instruments dropping out.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Violoncello",
+        "Violin II"
+      ],
+      "scoreAssetKey": "cue-m298-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m315-o1",
+      "startTime": 793.239,
+      "endTime": 807.239,
+      "measure": 315,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice the texture thinning.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Violin II",
+        "Contrabass"
+      ],
+      "scoreAssetKey": "cue-m315-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m333-o1",
+      "startTime": 824.659,
+      "endTime": 838.659,
+      "measure": 333,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Listen as new instruments enter.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Violin II",
+        "Contrabass"
+      ],
+      "scoreAssetKey": "cue-m333-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m353-o1",
+      "startTime": 860.573,
+      "endTime": 874.573,
+      "measure": 353,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute II",
+        "Oboe I",
+        "Oboe II"
+      ],
+      "scoreAssetKey": "cue-m353-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m372-o1",
+      "startTime": 895.298,
+      "endTime": 909.298,
+      "measure": 372,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute II",
+        "Oboe I",
+        "Oboe II"
+      ],
+      "scoreAssetKey": "cue-m372-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m404-o1",
+      "startTime": 942.83,
+      "endTime": 956.83,
+      "measure": 404,
+      "label": "WOODWINDS TAKE THE LEAD",
+      "listenerHint": "Follow Flute I — the annotated main voice.",
+      "mainVoice": {
+        "instrument": "Flute I",
+        "evidence": "hauptstimme"
+      },
+      "activeInstruments": [
+        "Flute II",
+        "Oboe I",
+        "Oboe II"
+      ],
+      "scoreAssetKey": "cue-m404-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    },
+    {
+      "id": "cue-m448-o1",
+      "startTime": 995.573,
+      "endTime": 1009.573,
+      "measure": 448,
+      "label": "STRINGS TAKE THE LEAD",
+      "listenerHint": "Notice the texture building.",
+      "activeInstruments": [
+        "Violin I",
+        "Viola",
+        "Violin II",
+        "Contrabass"
+      ],
+      "scoreAssetKey": "cue-m448-o1",
+      "work": {
+        "composer": "Brahms",
+        "title": "Symphony No. 1",
+        "movement": "Movement IV"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "work": {
+    "title": "Symphony No.5",
+    "composer": "Beethoven, Ludwig van"
+  },
+  "generator": {
+    "version": 1,
+    "description": "Deterministic, objective score-change cues for full-movement listening. Separate from Highlight Detector ranking and Tour Selector diversity.",
+    "config": {
+      "maxCues": 26,
+      "minimumTimeSeparationSeconds": 24,
+      "regionSeconds": 14,
+      "minimumStrength": 3
+    },
+    "sourceMeasures": 502
+  },
+  "cues": [
+    {
+      "id": "cue-m1-o1",
+      "measure": 1,
+      "occurrence": 1,
+      "timestampSec": 0.986,
+      "region": {
+        "startSec": 0.986,
+        "endSec": 14.986
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 34,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-entry",
+          "text": "7 instruments enter: B♭ CLARINET, B♭ CLARINET 2, VIOLIN 1, VIOLIN 2",
+          "strength": 6
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density increases by 21",
+          "strength": 5
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation grows by 7 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: ff",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range expands by 26 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Bb Clarinet",
+        "Bb Clarinet 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m25-o1",
+      "measure": 25,
+      "occurrence": 1,
+      "timestampSec": 26.133,
+      "region": {
+        "startSec": 26.133,
+        "endSec": 40.133
+      },
+      "label": "TEXTURE THINS",
+      "strength": 18,
+      "reasons": [
+        {
+          "kind": "instrument-dropout",
+          "text": "14 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density decreases by 12",
+          "strength": 3
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation contracts by 14 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: p",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range contracts by 36 semitones",
+          "strength": 2
+        }
+      ],
+      "activeInstruments": [
+        "Violin 1"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": false
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": null,
+        "selectedFamilyCounts": {
+          "STRINGS": 1
+        },
+        "message": "Neutral label: no family claim to validate."
+      }
+    },
+    {
+      "id": "cue-m59-o1",
+      "measure": 59,
+      "occurrence": 1,
+      "timestampSec": 51.978,
+      "region": {
+        "startSec": 51.978,
+        "endSec": 65.978
+      },
+      "label": "BRASS TAKE THE LEAD",
+      "strength": 32,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Hn 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "13 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density decreases by 13",
+          "strength": 4
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation contracts by 13 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: ff",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range contracts by 32 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Eb Horn 1",
+        "Eb Horn 2"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Hn 1",
+          "instrument": "Hn",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Eb Horn 1",
+        "Eb Horn 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "BRASS",
+        "selectedFamilyCounts": {
+          "BRASS": 2
+        },
+        "message": "BRASS provides 2/2 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m95-o1",
+      "measure": 95,
+      "occurrence": 1,
+      "timestampSec": 79.578,
+      "region": {
+        "startSec": 79.578,
+        "endSec": 93.578
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 20,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1",
+          "strength": 10
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density increases by 19",
+          "strength": 5
+        },
+        {
+          "kind": "articulation-change",
+          "text": "New articulation: staccato",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Eb Horn 1",
+        "Eb Horn 2",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Contrabass",
+        "Viola"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m129-o1",
+      "measure": 129,
+      "occurrence": 1,
+      "timestampSec": 207.844,
+      "region": {
+        "startSec": 207.844,
+        "endSec": 221.844
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 30,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 2",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "10 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density decreases by 8",
+          "strength": 2
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation contracts by 10 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: p",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range contracts by 40 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Violin 2"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 2",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 1
+        },
+        "message": "STRINGS provides 1/1 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m186-o1",
+      "measure": 186,
+      "occurrence": 1,
+      "timestampSec": 250.267,
+      "region": {
+        "startSec": 250.267,
+        "endSec": 264.267
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 30,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-entry",
+          "text": "6 instruments enter: FLUTE 1, FLUTE 2, BASSOON 1, BASSOON 2",
+          "strength": 6
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density increases by 14",
+          "strength": 4
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation grows by 6 parts",
+          "strength": 5
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range expands by 15 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Contrabass",
+        "Viola"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m240-o1",
+      "measure": 240,
+      "occurrence": 1,
+      "timestampSec": 289.367,
+      "region": {
+        "startSec": 289.367,
+        "endSec": 303.367
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 36,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1, Hn 1",
+          "strength": 12
+        },
+        {
+          "kind": "instrument-entry",
+          "text": "7 instruments enter: EB HORN 1, EB HORN 2, VIOLIN 1, VIOLIN 2",
+          "strength": 6
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "4 instruments drop out",
+          "strength": 4
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density increases by 17",
+          "strength": 5
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation grows by 3 parts",
+          "strength": 3
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: ff, f",
+          "strength": 3
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Bassoon 1",
+        "Bassoon 2",
+        "Eb Horn 1",
+        "Eb Horn 2",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Hn 1",
+          "instrument": "Hn",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m269-o1",
+      "measure": 269,
+      "occurrence": 1,
+      "timestampSec": 324.005,
+      "region": {
+        "startSec": 324.005,
+        "endSec": 338.005
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 30,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "15 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density decreases by 29",
+          "strength": 5
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation contracts by 15 parts",
+          "strength": 5
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range contracts by 40 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Violin 1"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 1
+        },
+        "message": "STRINGS provides 1/1 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m303-o1",
+      "measure": 303,
+      "occurrence": 1,
+      "timestampSec": 349.762,
+      "region": {
+        "startSec": 349.762,
+        "endSec": 363.762
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "strength": 32,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Bsn 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "16 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density decreases by 15",
+          "strength": 4
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation contracts by 16 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: ff",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range contracts by 48 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Bassoon 1",
+        "Bassoon 2"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Bsn 1",
+          "instrument": "Bsn",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Bassoon 1",
+        "Bassoon 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "WOODWINDS",
+        "selectedFamilyCounts": {
+          "WOODWINDS": 2
+        },
+        "message": "WOODWINDS provides 2/2 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m346-o1",
+      "measure": 346,
+      "occurrence": 1,
+      "timestampSec": 381.851,
+      "region": {
+        "startSec": 381.851,
+        "endSec": 395.851
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 27,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-entry",
+          "text": "6 instruments enter: FLUTE 2, OBOE 1, OBOE 2, C TRUMPET 1",
+          "strength": 6
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation grows by 6 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: ff",
+          "strength": 3
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Eb Horn 1",
+        "Eb Horn 2",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "C, G Timpani",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1",
+        "Viola",
+        "Contrabass",
+        "Violin 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m390-o1",
+      "measure": 390,
+      "occurrence": 1,
+      "timestampSec": 412.989,
+      "region": {
+        "startSec": 412.989,
+        "endSec": 426.989
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 34,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-entry",
+          "text": "18 instruments enter: FLUTE 1, FLUTE 2, OBOE 1, OBOE 2",
+          "strength": 6
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density increases by 60",
+          "strength": 5
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation grows by 18 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: ff",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range expands by 45 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Eb Horn 1",
+        "Eb Horn 2",
+        "C Trumpet 1",
+        "C Trumpet 2",
+        "C, G Timpani",
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello",
+        "Contrabass"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 1",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 1",
+        "Violin 2",
+        "Viola",
+        "Violoncello"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 4
+        },
+        "message": "STRINGS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m448-o1",
+      "measure": 448,
+      "occurrence": 1,
+      "timestampSec": 454.273,
+      "region": {
+        "startSec": 454.273,
+        "endSec": 468.273
+      },
+      "label": "WOODWINDS TAKE THE LEAD",
+      "strength": 33,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Fl 1",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-entry",
+          "text": "10 instruments enter: FLUTE 1, FLUTE 2, OBOE 1, OBOE 2",
+          "strength": 6
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "6 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density increases by 11",
+          "strength": 3
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation grows by 4 parts",
+          "strength": 4
+        },
+        {
+          "kind": "articulation-change",
+          "text": "New articulation: staccato",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2",
+        "Bb Clarinet",
+        "Bb Clarinet 2",
+        "Bassoon 1",
+        "Bassoon 2",
+        "Eb Horn 1",
+        "Eb Horn 2",
+        "C Trumpet 1",
+        "C Trumpet 2"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Fl 1",
+          "instrument": "Fl",
+          "label": "e",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Flute 1",
+        "Flute 2",
+        "Oboe 1",
+        "Oboe 2"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "WOODWINDS",
+        "selectedFamilyCounts": {
+          "WOODWINDS": 4
+        },
+        "message": "WOODWINDS provides 4/4 displayed staves."
+      }
+    },
+    {
+      "id": "cue-m483-o1",
+      "measure": 483,
+      "occurrence": 1,
+      "timestampSec": 480.317,
+      "region": {
+        "startSec": 480.317,
+        "endSec": 494.317
+      },
+      "label": "STRINGS TAKE THE LEAD",
+      "strength": 32,
+      "reasons": [
+        {
+          "kind": "hauptstimme-start",
+          "text": "Hauptstimme begins in Vln 2",
+          "strength": 10
+        },
+        {
+          "kind": "instrument-dropout",
+          "text": "16 instruments drop out",
+          "strength": 5
+        },
+        {
+          "kind": "texture-change",
+          "text": "Note density decreases by 14",
+          "strength": 4
+        },
+        {
+          "kind": "orchestration-change",
+          "text": "Active instrumentation contracts by 16 parts",
+          "strength": 5
+        },
+        {
+          "kind": "dynamic-change",
+          "text": "New written dynamic: p, pp",
+          "strength": 3
+        },
+        {
+          "kind": "pitch-range-change",
+          "text": "Written pitch range contracts by 53 semitones",
+          "strength": 2
+        },
+        {
+          "kind": "highlight-region",
+          "text": "Begins a Highlight Detector candidate region",
+          "strength": 3
+        }
+      ],
+      "activeInstruments": [
+        "Bassoon 1",
+        "Violin 2"
+      ],
+      "hauptstimme": [
+        {
+          "part": "Vln 2",
+          "instrument": "Vln",
+          "label": "a",
+          "startsHere": true
+        }
+      ],
+      "recommendedStaves": [
+        "Violin 2",
+        "Bassoon 1"
+      ],
+      "staffConsistency": {
+        "valid": true,
+        "labelFamily": "STRINGS",
+        "selectedFamilyCounts": {
+          "STRINGS": 1,
+          "WOODWINDS": 1
+        },
+        "message": "STRINGS provides 1/2 displayed staves."
+      }
+    }
+  ]
+}

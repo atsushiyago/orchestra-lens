@@ -1,0 +1,34 @@
+{
+  "cueId": "cue-m372-o1",
+  "label": "WOODWINDS TAKE THE LEAD",
+  "listenerHint": "Follow Flute I — the annotated main voice.",
+  "mainVoice": {
+    "instrument": "Flute I",
+    "evidence": "hauptstimme",
+    "basis": "Hauptstimme marks this part as the main voice at this cue."
+  },
+  "activeInstruments": [
+    "Flute II",
+    "Oboe I",
+    "Oboe II"
+  ],
+  "scoreAsset": "score.svg",
+  "work": {
+    "composer": "Brahms",
+    "title": "Symphony No. 1",
+    "movement": "Movement IV"
+  },
+  "provenance": {
+    "generated": [
+      "Listening Cue label and recommended staves",
+      "Hauptstimme evidence",
+      "MusicXML selected active parts",
+      "Verovio SVG asset"
+    ],
+    "derived": [
+      "Main-voice display only when Hauptstimme evidence is present",
+      "Listener-facing hint"
+    ],
+    "curated": []
+  }
+}

@@ -13,26 +13,35 @@
     "generate:runtime-score-facts": "tsx tools/generateRuntimeScoreFacts.ts",
     "generate:hauptstimme-evidence": "tsx tools/generateHauptstimmeEvidence.ts",
     "generate:highlights": "tsx tools/generateHighlights.ts",
+    "generate:listening-cues": "tsx tools/generateListeningCues.ts",
+    "generate:smart-score-prototype": "tsx tools/generateSmartScorePrototype.ts",
+    "generate:verovio-smart-score-proof": "tsx tools/generateVerovioSmartScoreProof.ts",
+    "generate:verovio-smart-score-prototype": "tsx tools/generateVerovioSmartScorePrototype.ts",
+    "generate:guided-listening-card": "tsx tools/generateGuidedListeningCard.ts",
+    "generate:brahms-guided-listening": "tsx tools/generateBrahmsGuidedListeningCards.ts",
+    "generate:guided-listening-runtime": "tsx tools/generateGuidedListeningRuntime.ts",
     "generate:tour-selection": "tsx tools/generateTourSelection.ts",
     "test:backend": "node --import tsx --test backend/ask-the-score/test/*.test.ts"
   },
   "dependencies": {
-    "react": "19.2.0",
-    "react-native": "0.83.0",
     "@amazon-devices/react-native-kepler": "~4.0.0+rn0.83.0",
-    "@amazon-devices/react-native-w3cmedia": "2.3.2"
+    "@amazon-devices/react-native-w3cmedia": "2.3.2",
+    "react": "19.2.0",
+    "react-native": "0.83.0"
   },
   "devDependencies": {
     "@amazon-devices/kepler-cli-platform": "0.22.14",
+    "@aws-sdk/client-bedrock-runtime": "^3.1000.0",
+    "@babel/core": "^7.25.2",
     "@react-native-community/cli": "^20.0.0",
     "@react-native/babel-preset": "0.83.0",
     "@react-native/metro-config": "0.83.0",
-    "@babel/core": "^7.25.2",
-    "@types/react": "^19.2.0",
-    "typescript": "5.8.3",
-    "tsx": "^4.20.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^22.0.0",
-    "@aws-sdk/client-bedrock-runtime": "^3.1000.0"
+    "@types/react": "^19.2.0",
+    "tsx": "^4.20.0",
+    "typescript": "5.8.3",
+    "verovio": "^6.3.0"
   },
   "kepler": {
     "projectType": "application",

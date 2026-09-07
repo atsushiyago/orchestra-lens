@@ -3,8 +3,9 @@
 Orchestra Lens is a React Native TV prototype for Amazon Vega OS. Its Release
 catalog currently offers Brahms Symphony No. 1, movement IV and Beethoven
 Symphony No. 5, movement I. The media clock drives each selected work’s
-generated Highlights Tour. Brahms additionally has curated Score Peek content
-from real public-domain IMSLP excerpts.
+generated Highlights Tour. Brahms additionally has a 26-card, generated
+Guided Listening experience built from its aligned Listening Cues and
+pre-rendered Verovio score assets.
 
 ## Implemented milestones
 
@@ -29,6 +30,10 @@ from real public-domain IMSLP excerpts.
   audible playback, and measure each 20-second excerpt by advancing media
   time. Brahms retains SCORE; Beethoven does not render editorial controls that
   have not been authored or validated.
+- **Guided Listening:** Brahms Full Movement uses a compact generated runtime
+  manifest. The media clock selects one of 26 pre-rendered cards; cards only
+  observe `currentTime` and cannot seek, pause, play, reload, or change source
+  ownership. Beethoven intentionally does not expose Guided Listening yet.
 
 All musical roles and relationships are static data. The source excerpts are
 cropped from the existing IMSLP public-domain Brahms Symphony No. 1 score.
@@ -72,16 +77,19 @@ vega device launch-app --device VirtualDevice \
 
 ## Manual demo flow
 
-1. Launch the app, choose **BRAHMS** or **BEETHOVEN**, then choose **PLAY FULL
-   MOVEMENT** or that work’s generated **HIGHLIGHTS TOUR**.
+1. Launch the app and choose a work. Brahms offers **GUIDED LISTENING** for the
+   complete movement and a separate generated **HIGHLIGHTS TOUR**. Beethoven
+   retains **PLAY FULL MOVEMENT** and its generated **HIGHLIGHTS TOUR**.
 2. In a Highlights Tour, use **Previous**, **Next**, **SCORE**, and **EXIT
    TOUR**. Exiting stops the tour cleanly and returns to the entry screen.
-3. Use **SCORE** during the
-   recording-specific cue windows below.
+3. During Brahms Guided Listening, the card appears and clears solely from the
+   current media time. The card can offer **COMPARE** at existing curated Theme
+   Lens moments and **ASK THE SCORE** only for the supported m.62 context;
+   neither action changes playback automatically.
 4. Use **BACK** or the VVD remote Back button to return through the selected
    work and catalog without exiting to the Vega app picker. The player remains
    mounted when returning inside a work, preserving time and pause state.
-5. At m.290 and m.407, select **COMPARE**. It replaces the Theme Lens body in
+5. At m.290 and m.407, select **COMPARE** when it appears. It replaces the Theme Lens body in
    place; **BACK** returns to that cue's Theme Lens without resetting playback.
 
 | Recording seconds | Cue | Score Peek content |
@@ -89,7 +97,34 @@ vega device launch-app --device VirtualDevice \
 | 126.36–141.36 | m.30 | Smart Score and Orchestra X-Ray |
 | 271.00–286.00 | m.62 | Smart Score and Ask the Score |
 | 712.239–727.239 | m.290 | Theme Lens: m.30 → m.290 |
-| 965.28–980.28 | m.407 | Theme Lens: m.47 → m.407 |
+| 946.315–961.315 | m.407 | Theme Lens: m.47 → m.407 |
+
+### Guided Listening runtime assets
+
+The offline production path is:
+
+```text
+Listening Cues → grounded card JSON → recommended MusicXML staves
+               → Verovio SVG → deterministic PNG → compact runtime manifest
+               → Fire TV card selected by media currentTime
+```
+
+`tools/generateGuidedListeningRuntime.ts` converts the reviewed offline Verovio
+SVGs to 1200-pixel PNGs with local `@resvg/resvg-js`, then emits only the 26
+runtime fields and static asset map used by Fire TV. Raw MusicXML, review HTML,
+Verovio, and preprocessing reports are not loaded by the runtime.
+
+```sh
+npm run generate:brahms-guided-listening -- \
+  scores/real/Brahms_Op68_Movement4.musicxml \
+  src/data/generated/brahms-op68-movement4-manifest.json \
+  src/data/generated/brahms-op68-movement4-listening-cues.json \
+  src/assets/generated/guided-listening-card/brahms-op68-movement4/full
+npm run generate:guided-listening-runtime -- \
+  src/assets/generated/guided-listening-card/brahms-op68-movement4/full \
+  src/data/generated/brahms-op68-movement4-guided-listening-runtime.json \
+  src/data/generated/brahmsGuidedListeningAssets.ts
+```
 
 ### Performance-specific media and synchronization
 
@@ -114,7 +149,7 @@ is private in S3 and is delivered only by its dedicated CloudFront HTTPS URL.
 and timing anchors. The alignment was produced by matching score-position
 pitch-class frames to the actual recording's audio chroma, then retaining the
 reviewed anchors: m.30 126.36s, m.47 168.36s, m.62 271.00s, the validated
-m.290 712.239s automatic prediction, and m.407 965.28s. This is a
+m.290 712.239s automatic prediction, and m.407 946.315s. This is a
 performance-specific score/audio mapping, not a
 calculation from tempo markings. Score facts, curated roles, Hauptstimme
 evidence, assets, and Theme Lens relationships remain measure-based and do not
@@ -212,6 +247,92 @@ of treating only loud or dense passages as worthwhile. Its listener-facing
 “Why this moment?” text comes from the generated evidence; it does not expose
 raw heuristic scores or debug timestamps. Highlight Review, alignment clocks,
 and fine seek controls remain development-only.
+
+### Automatic Listening Cue Generator
+
+`generate:listening-cues` is a separate offline preprocessing step for the
+full-movement experience. It answers “what changes in the score right now?”
+rather than the Highlight Detector’s “is this an especially interesting
+moment?” or the Tour Selector’s “does this add variety to a short tour?”
+
+It combines generated MusicXML facts, Hauptstimme evidence, occurrence-aware
+performance timing, and Highlight Detector region membership. It deterministically
+selects spaced cue regions, supplies grounded labels and reasons, and recommends
+two to four active staves. It does not read curated Smart Score, Theme Lens, or
+UI data, and it is not yet connected to the Fire TV runtime.
+
+```sh
+npm run generate:listening-cues -- \
+  src/data/generated/brahms-op68-movement4-manifest.json \
+  src/data/generated/hauptstimmeEvidence.json \
+  src/data/generated/brahms-op68-movement4-performance-alignment.json \
+  src/data/generated/brahms-op68-movement4-highlights.json \
+  src/data/generated/brahms-op68-movement4-listening-cues.json \
+  reports/brahms-op68-movement4-listening-cues.md
+```
+
+The same configuration has also generated Beethoven 5/I artifacts at
+`src/data/generated/beethoven-op67-movement1-listening-cues.json` and
+`reports/beethoven-op67-movement1-listening-cues.md`. Beethoven’s artifacts
+remain offline review material. Brahms uses its reviewed 26-cue output through
+the separate read-only Guided Listening runtime manifest described above.
+
+### Automatic Smart Score Rendering Prototype
+
+`generate:smart-score-prototype` is an offline proof of the next pipeline
+stage: generated Listening Cue → generated recommended staves → a generic
+two-to-four-measure MusicXML window → SVG score excerpt. It renders a
+deterministically selected six-cue Brahms subset from the Listening Cue artifact
+and writes a manifest plus a local HTML review sheet under
+`src/assets/generated/smart-score/brahms-op68-movement4/`. These custom-renderer
+prototype assets are not imported by Fire TV; production Guided Listening uses
+the separately generated Verovio assets.
+
+```sh
+npm run generate:smart-score-prototype -- \
+  scores/real/Brahms_Op68_Movement4.musicxml \
+  src/data/generated/brahms-op68-movement4-listening-cues.json \
+  src/assets/generated/smart-score/brahms-op68-movement4
+```
+
+No local Verovio, MuseScore, or LilyPond executable was available, so the
+prototype uses the project’s deterministic Node/TypeScript MusicXML-subset SVG
+renderer in `tools/generateSmartScorePrototype.ts`. The renderer is covered by
+this repository’s MIT license; the structured OpenScore Orchestra MusicXML
+input remains CC0. V2 renders MusicXML clefs, written key and time signatures,
+basic explicit beams and ties, dynamics, staccato/accent marks, real note
+pitches, rests, labels, staff lines, barlines, stems, and accidentals. It
+preserves the source MusicXML’s written pitches: `<transpose>` is detected and
+reported but is not applied. Multiple voices and tuplets are detected and
+reported as simplified-rendering limitations. Cue/staff family consistency is
+validated before rendering, so an unsupported family claim becomes a neutral
+objective label. There are no handcrafted crop coordinates or post-render
+notation edits.
+
+### Verovio Smart Score Proof of Concept
+
+`generate:verovio-smart-score-proof` is a one-cue, offline engraving comparison.
+It keeps the generated m.97 Listening Cue, its recommended staves, and the
+same generic m.96–99 window, then extracts a standalone MusicXML score and
+renders it locally with Verovio. The side-by-side review artifact is intentionally
+separate from the Fire TV app and does not replace the custom renderer.
+
+```sh
+npm run generate:verovio-smart-score-proof -- \
+  scores/real/Brahms_Op68_Movement4.musicxml \
+  src/data/generated/brahms-op68-movement4-listening-cues.json \
+  src/assets/generated/smart-score/brahms-op68-movement4 \
+  src/assets/generated/smart-score-verovio/brahms-op68-movement4/cue-m97-o1
+```
+
+The proof uses the official `verovio` npm package v6.3.0 as a local WASM
+development dependency (LGPL-3.0-or-later). The deterministic invocation is
+`setOptions → loadData(standalone MusicXML) → renderToSVG(1)`. It retains the
+selected source MusicXML payloads, including notation directions and
+transposition metadata; it omits only non-selected parts and part-group
+structure. The proof manifest records the exact layout options and renderer
+version. The proof remains as a comparison artifact; Verovio is the selected
+offline engraving path for Guided Listening production assets.
 
 ### Offline Tour Selector
 

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
+import {readFileSync} from 'node:fs';
 import generatedSelection from '../src/data/generated/brahms-op68-movement4-tour-selection.json';
 import {listeningExperiences, highlightsTourSummary, showDevelopmentControls} from '../src/data/listeningExperiences';
 import {highlightsTourCandidates, highlightsTourConfig, hasPlayedExcerpt, mayBeginExcerpt, transitionSteps} from '../src/hooks/useHighlightsTour';
@@ -26,4 +27,7 @@ test('Release tour retains the proven no-fade media-time coordinator', () => {
 test('development controls are absent from Release', () => {
   assert.equal(showDevelopmentControls(false), false);
   assert.equal(showDevelopmentControls(true), true);
+  const app = readFileSync(new URL('../src/App.tsx', import.meta.url), 'utf8');
+  assert.match(app, /showDevelopmentControls\(__DEV__\) && <>\s*<TVButton compact label="−10 SEC"/);
+  assert.match(app, /showDevelopmentControls\(__DEV__\) && <View style=\{styles\.debugArea\}>/);
 });

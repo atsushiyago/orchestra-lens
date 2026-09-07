@@ -26,7 +26,7 @@ export function ExperienceEntry({work, highlightCount, ready, onFullMovement, on
       <View style={styles.actions}>
         {showHighlightReview && onHighlightReview && <TVButton label="HIGHLIGHT REVIEW" onPress={onHighlightReview}/>} 
         {showTourSelectorReview && onTourSelectorReview && <TVButton label="TOUR SELECTOR REVIEW" onPress={onTourSelectorReview}/>} 
-        {work.capabilities.fullMovement && <TVButton label="PLAY FULL MOVEMENT" preferred onPress={onFullMovement}/>} 
+        {work.capabilities.fullMovement && <View style={styles.listeningAction}><TVButton label={work.capabilities.guidedListening ? 'GUIDED LISTENING' : 'PLAY FULL MOVEMENT'} preferred onPress={onFullMovement}/>{work.capabilities.guidedListening && <Text style={styles.listeningHint}>Follow the orchestra as the music unfolds.</Text>}</View>}
         {work.capabilities.highlightsTour && <TVButton label="HIGHLIGHTS TOUR" onPress={onHighlightsTour}/>} 
         <TVButton label="BACK TO CATALOG" onPress={onBackToCatalog}/>
       </View>
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
   title: {fontSize: 34, lineHeight: 42, color: '#f7f5f0', fontWeight: '700', textAlign: 'center', marginTop: 6},
   movement: {fontSize: 25, color: '#dce9c9', marginTop: 8},
   invitation: {fontSize: 25, color: '#e0e5ec', marginTop: 24},
-  actions: {alignItems: 'center', marginTop: 18, gap: 12},
+  actions: {alignItems: 'center', marginTop: 18, gap: 12}, listeningAction: {alignItems: 'center', gap: 5}, listeningHint: {fontSize: 17, color: '#c7d6e7'},
   summary: {fontSize: 19, color: '#c7d6e7', marginTop: 10},
 });
