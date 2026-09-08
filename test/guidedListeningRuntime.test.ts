@@ -51,5 +51,27 @@ test('Ask the Score remains an explicit control only for the supported m.62 card
   assert.equal(m62.measure === 62 && brahms.capabilities.askTheScore, true);
   assert.equal(m30.measure === 62 && brahms.capabilities.askTheScore, false);
   assert.match(overlay, /onPress=\{\(\) => void ask\(askCue\)\}/);
-  assert.doesNotMatch(overlay, /useEffect/);
+  assert.match(overlay, /useEffect\(\(\) => \{ if \(status\.kind === 'success'\) setAnswerOpen\(true\); \}, \[status\.kind\]\)/);
+});
+
+test('Guided Listening reserves its transport zone and keeps Theme Lens actions above it', () => {
+  const overlay = readFileSync(new URL('../src/components/GuidedListeningCardOverlay.tsx', import.meta.url), 'utf8');
+  const app = readFileSync(new URL('../src/App.tsx', import.meta.url), 'utf8');
+  assert.match(app, /style=\{styles\.transportZone\}/);
+  assert.match(app, /transportZone: \{width: '100%', flexShrink: 0, minHeight: 76\}/);
+  assert.match(app, /fullMovementBody: \{flex: 1, minHeight: 0, marginTop: 6, paddingBottom: 10\}/);
+  assert.match(overlay, /contextualActions: \{marginTop: 'auto', flexShrink: 0\}/);
+  assert.match(overlay, /TVButton compact label="COMPARE" onPress=\{onCompare\}/);
+});
+
+test('Ask the Score response uses a viewport-scale modal and closing it cannot own playback', () => {
+  const overlay = readFileSync(new URL('../src/components/GuidedListeningCardOverlay.tsx', import.meta.url), 'utf8');
+  assert.match(overlay, /<Modal visible=\{answerOpen\} transparent animationType="fade" onRequestClose=\{\(\) => setAnswerOpen\(false\)\}>/);
+  assert.match(overlay, /style=\{styles\.answerScrim\} accessibilityViewIsModal/);
+  assert.match(overlay, /answerCard: \{width: '84%', height: '84%', maxWidth: 1100, maxHeight: 640/);
+  assert.match(overlay, /answerText: \{fontSize: 25, lineHeight: 35/);
+  assert.match(overlay, /\{status\.answer\}/);
+  assert.match(overlay, /Powered by Amazon Bedrock/);
+  assert.match(overlay, /label="CLOSE \/ BACK" onPress=\{\(\) => setAnswerOpen\(false\)\}/);
+  assert.doesNotMatch(overlay, /\.play\(|\.pause\(|\.seek\(|\.load\(|\.src\s*=/);
 });
