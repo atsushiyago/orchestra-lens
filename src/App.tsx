@@ -286,7 +286,7 @@ export default function App() {
         </View>}
       </View>}
       {tour.active && tour.candidate && (
-        <HighlightsTourPanel candidate={tour.candidate} total={selectedWork.tourCandidates.length} nextMeasure={selectedWork.tourCandidates[tour.index + 1]?.measure} onNext={tour.next} onPrevious={tour.previous} onScore={open} onToggle={playback.toggle} paused={playback.paused} onExit={exitTour} showScore={selectedWork.capabilities.smartScore}/>
+        <HighlightsTourPanel work={selectedWork} candidate={tour.candidate} total={selectedWork.tourCandidates.length} nextMeasure={selectedWork.tourCandidates[tour.index + 1]?.measure} onNext={tour.next} onPrevious={tour.previous} onScore={open} onToggle={playback.toggle} paused={playback.paused} onExit={exitTour} showScore={selectedWork.capabilities.smartScore}/>
       )}
       {__DEV__ && selectorTour.active && selectorTour.candidate && (
         <TourSelectorReviewPanel work={selectorTourWork} candidate={selectorTour.candidate} total={selectorTourCandidates.length} paused={playback.paused} onPrevious={selectorTour.previous} onNext={selectorTour.next} onToggle={playback.toggle} onExit={exitSelectorTour}/>

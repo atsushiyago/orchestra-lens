@@ -1,9 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {formatHighlightsTourWork} from '../data/highlightsTourMetadata';
+import type {OrchestraLensWork} from '../data/workCatalog';
 import type {HighlightReviewCandidate} from '../playback/highlightReview';
 import {TVButton} from './TVButton';
 
-export function HighlightsTourPanel({candidate, total, nextMeasure, onNext, onPrevious, onScore, showScore = true, onToggle, paused, onExit}: {
+export function HighlightsTourPanel({work, candidate, total, nextMeasure, onNext, onPrevious, onScore, showScore = true, onToggle, paused, onExit}: {
+  work: Pick<OrchestraLensWork, 'composer' | 'workTitle' | 'movementNumber'>;
   candidate: HighlightReviewCandidate;
   total: number;
   nextMeasure?: number;
@@ -17,7 +20,7 @@ export function HighlightsTourPanel({candidate, total, nextMeasure, onNext, onPr
 }) {
   return <View style={styles.panel}>
     <Text style={styles.eyebrow}>HIGHLIGHT {candidate.rank} OF {total}</Text>
-    <Text style={styles.work}>BRAHMS · SYMPHONY NO. 1 · IV</Text>
+    <Text style={styles.work}>{formatHighlightsTourWork(work)}</Text>
     <Text style={styles.title}>m.{candidate.measure}</Text>
     <Text style={styles.heading}>WHY THIS MOMENT?</Text>
     {candidate.reasons.slice(0, 3).map(reason => <Text key={reason} style={styles.reason}>• {reason}</Text>)}

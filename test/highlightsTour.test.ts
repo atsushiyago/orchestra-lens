@@ -4,6 +4,8 @@ import generatedSelection from '../src/data/generated/brahms-op68-movement4-tour
 import {scoreEvents} from '../src/data/brahms1Movement4';
 import {hasPlayedExcerpt, highlightsTourCandidates, highlightsTourConfig, mayBeginExcerpt, transitionSteps} from '../src/hooks/useHighlightsTour';
 import {TourTransitionCoordinator} from '../src/playback/tourTransitionCoordinator';
+import {formatHighlightsTourWork} from '../src/data/highlightsTourMetadata';
+import {workById} from '../src/data/workCatalog';
 
 test('Release Highlights Tour reads generated selector moments in performance order without authored measures', () => {
   assert.deepEqual(
@@ -20,6 +22,14 @@ test('Tour overlay uses concise selector-derived reasons while retaining generat
   assert.equal(candidate.score, generated.detectorScore);
   assert.equal(candidate.selectorScore, generated.selectorScore);
   assert.ok(candidate.reasons.every(reason => !reason.startsWith('High detector score')));
+});
+
+test('Tour work label derives from the selected catalog work without stale Brahms text', () => {
+  const brahms = workById('brahms-op68-4');
+  const beethoven = workById('beethoven-op67-1');
+  assert.equal(formatHighlightsTourWork(brahms), 'BRAHMS · SYMPHONY NO. 1 IN C MINOR, OP. 68 · IV');
+  assert.equal(formatHighlightsTourWork(beethoven), 'BEETHOVEN · SYMPHONY NO. 5 IN C MINOR, OP. 67 · I');
+  assert.notEqual(formatHighlightsTourWork(brahms), formatHighlightsTourWork(beethoven));
 });
 
 test('Tour transition seeks, explicitly stabilizes with a pause/play kick, then starts playback', () => {
