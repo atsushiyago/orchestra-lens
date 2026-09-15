@@ -29,10 +29,12 @@ test('cue-jump UI owns only position while selected-work lifecycle owns URI repl
   assert.doesNotMatch(app, /JUMP TO CUE[\s\S]{0,800}setActiveMediaUri/);
 });
 
-test('retry reloads the hook URI, which is the selected work URI after leaving DEV review', () => {
+test('retry reloads the hook URI without reinitializing the native player', () => {
   const app = readFileSync(new URL('../src/App.tsx', import.meta.url), 'utf8');
   const hook = readFileSync(new URL('../src/hooks/usePlayback.ts', import.meta.url), 'utf8');
   assert.match(app, /if \(activeMediaUri !== selectedWork\.media\.uri\)/);
-  assert.match(hook, /retry requested uri=\$\{requestedUriRef\.current\}/);
+  assert.match(hook, /retry reload requested uri=\$\{requestedUriRef\.current\}/);
+  assert.match(hook, /setReload\(value => value \+ 1\)/);
+  assert.doesNotMatch(hook, /setAttempt/);
   assert.match(hook, /player\.src = uri/);
 });
